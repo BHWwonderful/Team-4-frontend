@@ -1,0 +1,18 @@
+.travelSubcribe_hotEvent_wrap_wrap img{
+    width: 1920px;
+}
+.travelSubcribe_hotEvent_wrap > img{
+    width: 440px;
+}
+.travelSubcribe_hotEvent_box{
+}
+.travelSubcribe_hotEvent_box > img{
+    width: 600px;
+    position: absolute;
+}
+.travelSubcribe_hotEvent_wrap>img:nth-child(3){
+    width: 130px;
+}
+.travelSubcribe_movingText{
+    display: flex;
+}
