@@ -1,0 +1,25 @@
+.event_content{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.event_content_main_title_wrap{
+    width: 940px;
+    border-bottom: 2px solid black;
+    ;
+}
+.event_content_main_title_wrap img{
+   margin-bottom: 13px ;   
+}
+.event_content_main_title_wrap h2{
+    font-size: 36px;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+.event_content_wrap_section1{
+    display: flex;
+    justify-content: center;
+}
+.event_content_eventggul_wrap{
+    display: inline-block;
+}
