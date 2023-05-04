@@ -3,20 +3,25 @@
 * {
     font-family: 'Noto Sans KR', sans-serif;
 }
+
+
 .region_slider_container {
     display: none;
 }
 
+/* 메인 컨텐트 */
 .region_content {
     width: 100%;
 }
 
+/* 슬라이더 컨테이너 */
 .region_slider_container {
     width: 100%;
     height: 675px;
     position: relative;
 }
 
+/* 슬라이더 컨테이너 백그라운드 어둡게 */
 .region_slider_container::after {
     content: '';
     display: block;
@@ -29,6 +34,7 @@
     overflow: hidden;
 }
 
+/* 이미지 블러 처리 */
 .region_slider_container > img {
     width: 100%;
     height: 100%;
@@ -81,17 +87,21 @@
 
 -68.76 */
 
+/* 도시 컨텐츠 */
 .region_city_content {
     background: #edeef2;
     padding-top: 31px;
     position: relative;
 }
 
+/* 도시 컨테이너 */
 .region_city_container {
     width: 940px;
+    padding-bottom: 50px;
     margin: auto;
 }
 
+/* 도시 제목랩 */
 .region_city_title_wrap {
     display: flex;
     justify-content: space-between;
@@ -99,6 +109,7 @@
     border-bottom: 2px solid #333;
 }
 
+/* 도시 제목 */
 .region_city_title_wrap h2 {
     font-weight: 800;
     font-size: 22px;
@@ -107,6 +118,7 @@
     line-height: 59px;
 }
 
+/* 내위치 */
 .region_myPlace_box {
     display: flex;
     align-items: center;
@@ -121,14 +133,15 @@
     margin-right: 5px;
 }
 
-.top_wrap {
+
+.region_myPlace_slider_wrap {
     position: relative;
     display: inline-block;
     width: 36px;
     height: 21px;
 }
 
-.slider {
+.region_myPlace_slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -141,7 +154,7 @@
     transition: .4s;
 }
 
-.slider::before {
+.region_myPlace_slider::before {
     position: absolute;
     content: "";
     height: 17px;
@@ -154,6 +167,7 @@
     border-radius: 50%;
 }
 
+/* 도시 선택 */
 .region_citySelect_box {
     width: 100%;
     margin: 10px 0 20px;
@@ -175,6 +189,7 @@
     box-shadow: 4px 5px 12px 0px rgba(19, 41, 75, 0.3);
 }
 
+/* 도시 디테일 */
 .region_cityDetail_wrap {
     padding: 0 30px 23px 30px;
     background: #fff;
@@ -226,10 +241,12 @@
     background: url(../images/zone_link.png)100% 0px no-repeat;
 }
 
+/* 도시 디테일 컨텐츠 */
 .region_cityDetailCont_wrap {
     display: flex;
 }
 
+/* 왼쪽 컨텐츠 */
 .region_cityFestivaLeftCover_wrap {
     width: 257px;
     height:325px;
@@ -261,6 +278,7 @@
     transition: all 0.8s;
 }
 
+/* 가운데 컨텐츠 */
 .region_cityFestivalMid_wrap {
     width: 322px;
 }
@@ -295,6 +313,7 @@
     font-size: 15px;
 }
 
+/* 오른쪽 컨텐츠 */
 .region_cityFestivalRight_wrap ul {
     width: 300px;
     height: 320px;
@@ -346,9 +365,10 @@
     color: #fff;
 }
 
+/* 하단 도시 시/군/구 */
 .region_citySubdetail_wrap {
     width: 100%;
-    height: 25px;
+    height: auto;
     padding: 24px 95px 12px 0;
     box-sizing: border-box;
     display: flex;
@@ -357,8 +377,53 @@
 
 .region_citySubdetail_wrap ul {
     display: flex;
+    height: auto;
+    flex-wrap: wrap;
 }
 
 .region_citySubdetail_wrap ul li {
-    
+    margin-left: 20px;
+    font-size: 15px;
+    color: #666;
+}
+
+/* 축제 컨텐츠 */
+
+.region_festivalContent {
+    width: 940px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.region_festivalContentTitle_box h2 {
+    float: left;
+    width: 172px;
+    height: 77px;
+    background: url(../images/festivalTitle.png) no-repeat;
+    text-indent: -9999px;
+}
+
+.region_fetivalContent_slider_container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    margin-left: 192px;
+}
+
+.region_festivalContent_slider_wrap {
+    width: 236px;
+    height:235px;
+    margin-right:20px;
+}
+
+.region_festivalContent_slider_wrap img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f4f3f3;
+    border-radius: 10px;
+}
+
+.region_festivalContentImgText_box {
+
 }
