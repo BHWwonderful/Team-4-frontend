@@ -313,6 +313,12 @@
     font-size: 15px;
 }
 
+
+.region_cityFestivalMid_wrap a:hover {
+    border: 1px solid #000;
+    color: #000;
+}
+
 /* 오른쪽 컨텐츠 */
 .region_cityFestivalRight_wrap ul {
     width: 300px;
@@ -403,27 +409,167 @@
     text-indent: -9999px;
 }
 
-.region_fetivalContent_slider_container {
+.region_fetivalContent_slider_cover {
     position: relative;
     display: flex;
     flex-direction: row;
     white-space: nowrap;
     margin-left: 192px;
+    overflow: hidden;
 }
 
 .region_festivalContent_slider_wrap {
     width: 236px;
     height:235px;
     margin-right:20px;
+    position: relative;
+    /* 자바스크립트로 클릭시 256px씩 컨트롤 */
+    /* transform: translateX(-512px); */
 }
 
-.region_festivalContent_slider_wrap img {
-    width: 100%;
-    height: 100%;
+/* 슬라이더 테두리 */
+.region_festivalContent_slider_wrap a::after {
+    content: '';
+    display: block;
+    width: 236px;
+    height: 235px;
     border: 1px solid #f4f3f3;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 4;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
-.region_festivalContentImgText_box {
+/* 백그라운드 이미지 */
+.region_festivalContent_slider_wrap > a > span {
+    height: 235px;
+    display: block;
+    width: 236px;
+    box-sizing: border-box;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 13px;
+}
 
+/* 슬라이더 이미지 */
+.region_festival_slider_img1 {
+    background: url(../images/festival_slide_img1.jpeg);
+}
+.region_festival_slider_img2 {
+    background: url(../images/festival_slide_img2.jpeg);
+}
+.region_festival_slider_img3 {
+    background: url(../images/festival_slide_img3.jpeg);
+}
+.region_festival_slider_img4 {
+    background: url(../images/festival_slide_img4.jpeg);
+}
+.region_festival_slider_img5 {
+    background: url(../images/festival_slide_img5.jpeg);
+}
+.region_festival_slider_img6 {
+    background: url(../images/festival_slide_img6.jpeg);
+}
+
+/* 슬라이더 호버 텍스트 */
+.region_festivalContentImgText_box {
+    position: absolute;
+    width: 236px;
+    height: 95px;
+    bottom: 0;
+    background: #fff;
+    padding: 17px 18px 0;
+}
+
+.region_festivalContentImgText_box span {
+    display: block;
+}
+
+.region_festivalTextBlue {
+    padding: 0 0 6px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #357cae;
+    letter-spacing: -0.5px;
+}
+
+.region_festivalTitleText {
+    font-size: 16px;
+    letter-spacing: -0.7px;
+    color: #000;
+    line-height: 20px;
+}
+
+.region_festivalSubCityText {
+    padding: 5px 0 0;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #666;
+}
+
+.region_festivalSlider_prevBtn {
+    position: absolute;
+    margin-top: 0;
+    top: 96px;
+    left:172px;
+    text-indent: -9999px;
+    width: 50px;
+    height: 50px;
+    background: url(../images/slider_zone_prevbtn.png);
+    background-size: cover;
+    z-index: 5;
+}
+.region_festivalSlider_nextBtn {
+    position: absolute;
+    margin-top: 0;
+    top: 96px;
+    right:-20px;
+    text-indent: -9999px;
+    width: 50px;
+    height: 50px;
+    background: url(../images/slider_zone_nextbtn.png);
+    background-size: cover;
+    z-index: 5;
+}
+
+.region_festival_more_icon {
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    top: 107px;
+    line-height: 17px;
+}
+
+.region_festival_more_icon::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    vertical-align: -1px;
+    background: url(../images/festival_more_icon.png) no-repeat;
+}
+
+.region_festivalcalendar_link span {
+    color: #ef386e;
+}
+
+.region_festivalcalendar_link {
+    display: inline-block;
+    height: 32px;
+    padding: 0 12px;
+    font-size: 15px;
+    color: #333;
+    line-height: 30px;
+    letter-spacing: -0.5px;
+    border: 1px solid #e6e6e6;
+    border-radius: 50px;
+    position: absolute;
+    top: 199px;
 }
