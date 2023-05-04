@@ -1,0 +1,20 @@
+html, body, header, main, footer, section, div, ul, li, span, h1, h2, h3, h4, h5 ,h6, a{
+     padding:0;
+     margin:0;
+     box-sizing:border-box;
+     font-family: NotoSansKR,NotoSansJP;
+     font-size:13px;
+}
+
+.hidden{
+     display:none;
+}
+
+ul, li{
+     list-style: none;
+}
+
+a{
+     text-decoration:none;
+     color:#000;
+}

@@ -89,18 +89,19 @@
 }
 
 /* 여러분이 직접 만든 코스를 소개합니다! */
-.course_userCourse_wrap{
+.course_content_wrap{
      position:relative;
 }
 
-.course_userCourseTitle{
+.course_contentTitle{
      font-size:16px;
      padding-left:10px;
      letter-spacing: -0.5px;
      margin-bottom:12px;
+     margin-top:10px;
 }
 
-.course_userCourseTitle::before{
+.course_contentTitle::before{
      content:"";
      background:url();
      width:3px;
@@ -111,20 +112,139 @@
      left:0px;
 }
 
-.course_userCourseLink{
+.course_contentLink{
      display:block;
-     margin-bottom:5px;
+     margin-bottom:20px;
 }
 
-.course_userCourseImg{
+.course_contentImg{
      display:block;
      width:100%;
 }
 
-.course_userCourseCombo_wrap{
+/* 코스 소개 카드 */
+
+.course_courseCardPack_wrap{
+     height:auto;
+     border-bottom:1px solid #ccc;
+}
+
+.course_courseCard_wrap{
+     height:auto;
+     margin-bottom:15px;
+}
+
+.course_courseInfo_box{
+     position:relative;
+     height:80px;
+}
+
+.course_courseInfoLink{
+     padding:12px 20px;
+     display:block;
+     position:relative;
+     z-index:10;
+     width:100%;
+     height:100%;
+     color:white;
+     background:linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.7));
+}
+
+.course_courseInfoTitle{
+     font-size:14px;
+     font-weight:700;
+     margin-bottom:7px;
+}
+
+.course_courseInfoListItem{
+     width:100%;
+     display:inline-block;
+     text-overflow:ellipsis;
+     white-space:nowrap;
+     font-size:12px;
+     line-height:15px;
+     overflow:hidden;
+     color:#e4f0fa;
+}
+
+.course_courseInfoListItemProfile{
+     position:absolute;
+     height:15px;
+     bottom:11px;
+     right:10px;;
+}
+
+.course_InfoListItemProfileImg{
+     width:18px;
+     height:18px;
+     border-radius: 50%;
+}
+
+.course_courseInfoListItemProfileName{
+     font-size:12px;
+     font-weight:400;
+     color:#fff;
+}
+
+.course_courseInfoImg{
+     height:80px;
+     width:910px;
+     position:absolute;
+     top:0;
+     left:0;
+     object-fit:cover;
+     object-position:center;
+}
+
+.course_courseRoute_box{
      position:relative;
 }
 
-.course_userCourseItem_box{
-     
+.course_courseRouteList{
+     padding:0 20px 6px;
+     border:1px solid #e5e4e4;
 }
+
+.course_courseRouteListItem{
+     height:42px;
+     background: url(../../images/line_leftobj.png) repeat-y;
+     vertical-align: center;
+}
+
+.course_courseRouteListItem:nth-of-type(1){
+     height:52px;
+     padding-top:10px;
+}
+
+.course_courseRouteListItem:last-of-type{
+     background: url(../../images/line_leftobj.png) no-repeat;
+}
+
+.course_courseRouteListLink{
+     line-height:42px;
+     background:url(../../images/ico_leftobj.png) no-repeat 0 50%;
+     padding-left:20px;
+     margin-left:-5px;
+}
+
+.courseRouteListText{
+     font-size:13px;
+}
+
+.course_banner_wrap{
+     margin-top:10px;
+}
+
+.course_bannerList{
+     display:flex;
+     justify-content: space-between;
+}
+
+.course_bannerListImg{
+     width:450px;
+     height:160px;
+}
+
+
+
+
