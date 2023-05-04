@@ -4,25 +4,30 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-
-.region_slider_container {
-    display: none;
-}
-
 /* 메인 컨텐트 */
 .region_content {
     width: 100%;
 }
 
-/* 슬라이더 컨테이너 */
 .region_slider_container {
+    position: relative;
     width: 100%;
     height: 675px;
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 
+.region_sliderBackImg_box {
+    position: absolute;
+}
+
+.region_sliderBackImg_box img {
+    width: 100%;
+    height: 100%;
+    filter: blur(6px);
+}
 /* 슬라이더 컨테이너 백그라운드 어둡게 */
-.region_slider_container::after {
+.region_sliderBackImg_box::after {
     content: '';
     display: block;
     width: 100%;
@@ -34,14 +39,13 @@
     overflow: hidden;
 }
 
-/* 이미지 블러 처리 */
-.region_slider_container > img {
+.region_slider_wrap {
+    position: absolute;
     width: 100%;
-    height: 100%;
-    filter: blur(6px);
+    height: 675px;
 }
 
-.region_slider_wrap {
+/* .region_slider_wrap {
     position: absolute;
     top: 75px;
     width: 100%;
@@ -56,6 +60,7 @@
     height: 520px;
     margin: auto;
     display: flex;
+    white-space: nowrap;
 }
 
 .region_slider_cover div img {
@@ -82,7 +87,7 @@
     height: 520px;
     border: 1px solid #000;
     z-index: 3;
-}
+} */
 /* 15.63 -53.13 -121.88
 
 -68.76 */
@@ -483,6 +488,8 @@
     bottom: 0;
     background: #fff;
     padding: 17px 18px 0;
+    /* 자바스크립트로 show hide */
+    /* display: none; */
 }
 
 .region_festivalContentImgText_box span {
@@ -572,4 +579,55 @@
     border-radius: 50px;
     position: absolute;
     top: 199px;
+}
+
+.region_oneCutView_content {
+    width: 100%;
+    background: #fff;
+    margin-top: 30px;
+}
+
+.region_oneCutView_content h2 {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -1px;
+    padding: 4px 0 15px;
+    color: #333;
+}
+
+.region_oneCutView_container {
+    width: 940px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.region_oneCutView_wrap {
+    width: 300px;
+    height: 219px;
+    padding: 21px 19px 20px;
+    box-sizing: border-box;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+}
+
+.region_oneCutView_wrap h3 {
+    margin-top: -5px;
+    height: 38px;
+    padding: 3px 15px 0 2px;
+    font-weight: 800;
+    color: #000;
+    font-size: 16px;
+}
+
+.region_oneCutView_box {
+    width: 260px;
+    height: 140px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.region_oneCutView_box img {
+    width: 100%;
+    height: 100%;
 }
