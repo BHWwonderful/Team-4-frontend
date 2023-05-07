@@ -2,7 +2,6 @@
     width: 940px;
     margin: 0 auto;
 }
-
 .event_content_main_title_wrap{
     width: 940px;
     border-bottom: 2px solid black;
@@ -42,7 +41,7 @@
     margin-top: 25px;
 }
 .event_content_eventHoney_wrap{
-    border-left: 4px solid magenta;
+    border-left: 4px solid #0a97cd;
     height: 28px;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -58,43 +57,57 @@
 .event_content_eventHoney_wrap span{
     color: #666;
 }
-/* .event_blueImg_div{
-    width:4px;
-    height: 22px;
-    background-color:blue;
-    line-height: 30px;
-} */
 .event_content_eventHoney_wrap h3{
     display: inline-block;
 } 
+.event_content_section_wrap{
+    box-sizing: border-box;
+}
 .event_content_section_wrap div{
     display: flex;
     justify-content: center;
 }
 .event_content_section_wrap img{
-    border: 0.5px solid #333;
+    border: 0.5px solid #ccc;
 }
 .event_content_section1_box{
-    border-bottom: 0.5px solid #666;
-    padding-top: 20px;
-    padding-bottom: 20px;   
+    box-sizing: border-box;   
+    width: 100%;
+    height: 420px;
+}
+.event_content_section1_box div{
+    box-sizing: content-box;   
 }
 .event_content_section2_box{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 0.5px solid #666;
+    box-sizing: border-box;
+    width: 100%;
+    height: 420px;
 }
-.event_content_section3_box{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 0.5px solid #666;
+.event_content_section2_box div{
+    box-sizing: content-box;
 }
 .event_content_section1_left{
-    padding-right: 20px;
+    margin-right: 20px;
+    height: 420px;
 }
 .event_content_section2_left{
-    padding-right: 20px;
+    margin-right: 20px;
+}
+.event_content_section3_box{
+    box-sizing: border-box;
+    width: 100%;
+    height: 420px;
+}
+.event_content_section3_box div{
+    box-sizing: content-box;
 }
 .event_content_section3_left{
-    padding-right: 20px;
+    margin-right: 20px;
+}
+.event_content_section_wrap hr{
+    margin-top: 20px;   
+    margin-bottom: 20px;
+    height: 1px;
+    background-color: #ccc;
+    border: 0px;
 }
