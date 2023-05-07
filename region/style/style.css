@@ -4,6 +4,10 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+.region_slider_container {
+    display: none;
+}
+
 /* 메인 컨텐트 */
 .region_content {
     width: 100%;
