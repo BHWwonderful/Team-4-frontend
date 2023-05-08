@@ -26,7 +26,15 @@ for (var i = 0; i <= lastDate; i++) {
       i++;
     }
   }
-  innerhtml += '<td><a href="#none"><span><strong>' + i + '</strong><em></em><span></span></span></a></td>';
+  if (getday == 0) {
+    innerhtml += '<td><a href="#none"><span><strong class="holly">' + i + '</strong><em></em><span></span></span></a></td>';
+  } else if (getday == 6) {
+    innerhtml += '<td><a href="#none"><span><strong  class="saturday">' + i + '</strong><em></em><span></span></span></a></td>';
+  } else {
+    innerhtml += '<td><a href="#none"><span><strong>' + i + '</strong><em></em><span></span></span></a></td>';
+  }
+
+
   if (getday == 6) {
     //arr.push("</tr>");
     innerhtml += "</tr>";
@@ -34,3 +42,7 @@ for (var i = 0; i <= lastDate; i++) {
   }
 }
 $(".calendar_body").append(innerhtml);
+
+(function () {
+  document.querySelector(".festival_calendar tbody tr td a strong").classList.add('holly');
+})
