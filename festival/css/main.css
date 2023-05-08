@@ -3,6 +3,26 @@
     margin: auto;
     text-align: center;
 }
+.festival_top_box{
+    width: 940px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.home_black{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/main__black_ico.png) no-repeat 50% 50% / 32px;
+    background-size: 24px 24px;
+}
+.festival_top_box button{
+    width: 24px;
+    height: 24px;
+    background: url(../images/searc_blackh_btn.png) no-repeat 50% 50% / 32px;
+    background-size: 24px 24px;
+}
 form fieldset{
 display: flex;
 justify-content: space-between;

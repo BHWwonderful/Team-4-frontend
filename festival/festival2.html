@@ -12,16 +12,24 @@
 
 <body>
     <main id="main" class="main">
-        전국축제
-
-        문화관광축제
-        전국축제
+        <div class="festival_top_box">
+            <a href="#none">
+                <span class="home_black"></span>
+                <span>축제 메인</span>
+            </a>
+            <button>검색</button>
+        </div>  
+        <div>
+            전국축제
+            문화관광축제
+            전국축제
+        </div>
         <div class="screen_out">검색영역</div>
         <form action="get">
             <fieldset>
                 <div class="festival_searchDate_box">
                     <legend class="screen_out">축제 검색</legend>
-                    <label for="searchDate"  class="screen_out">시기 선택</label>
+                    <label for="searchDate" class="screen_out">시기 선택</label>
                     <select name="searchDate" id="searchDate">
                         <option value="">시기</option>
                         <option value="">개최중</option>
@@ -41,58 +49,58 @@
                     </select>
                 </div>
                 <div class="festival_searchArea_box">
-                <label for="searchArea"  class="screen_out">지역 선택</label>
-                <select name="searchArea" id="searchArea" title="지역 선택">
-                    <option value="">지역</option>
+                    <label for="searchArea" class="screen_out">지역 선택</label>
+                    <select name="searchArea" id="searchArea" title="지역 선택">
+                        <option value="">지역</option>
 
-                    <option value="1">서울</option>
+                        <option value="1">서울</option>
 
-                    <option value="2">인천</option>
+                        <option value="2">인천</option>
 
-                    <option value="3">대전</option>
+                        <option value="3">대전</option>
 
-                    <option value="4">대구</option>
+                        <option value="4">대구</option>
 
-                    <option value="5">광주</option>
+                        <option value="5">광주</option>
 
-                    <option value="6">부산</option>
+                        <option value="6">부산</option>
 
-                    <option value="7">울산</option>
+                        <option value="7">울산</option>
 
-                    <option value="8">세종시</option>
+                        <option value="8">세종시</option>
 
-                    <option value="31">경기도</option>
+                        <option value="31">경기도</option>
 
-                    <option value="32">강원도</option>
+                        <option value="32">강원도</option>
 
-                    <option value="33">충청북도</option>
+                        <option value="33">충청북도</option>
 
-                    <option value="34">충청남도</option>
+                        <option value="34">충청남도</option>
 
-                    <option value="35">경상북도</option>
+                        <option value="35">경상북도</option>
 
-                    <option value="36">경상남도</option>
+                        <option value="36">경상남도</option>
 
-                    <option value="37">전라북도</option>
+                        <option value="37">전라북도</option>
 
-                    <option value="38">전라남도</option>
+                        <option value="38">전라남도</option>
 
-                    <option value="39">제주도</option>
+                        <option value="39">제주도</option>
 
-                </select>
-            </div>
-            <div class="festival_searchCate_box">
-                <label for="searchCate"  class="screen_out">카테고리 선택</label>
-                <select name="searchCate" id="searchCate" title="카테고리 선택">
-                    <option value="">카테고리</option>
-                    <option value="먹거리">먹거리</option>
-                    <option value="야경">야경</option>
-                    <option value="체험">체험</option>
-                    <option value="봄꽃">봄꽃</option>
-                    <option value="음악">음악</option>
-                    <option value="아이와함께">아이와함께</option>
-                </select>
-            </div>
+                    </select>
+                </div>
+                <div class="festival_searchCate_box">
+                    <label for="searchCate" class="screen_out">카테고리 선택</label>
+                    <select name="searchCate" id="searchCate" title="카테고리 선택">
+                        <option value="">카테고리</option>
+                        <option value="먹거리">먹거리</option>
+                        <option value="야경">야경</option>
+                        <option value="체험">체험</option>
+                        <option value="봄꽃">봄꽃</option>
+                        <option value="음악">음악</option>
+                        <option value="아이와함께">아이와함께</option>
+                    </select>
+                </div>
                 <button class="btn_reset"><span class="screen_out">초기화</span></button>
                 <button class="btn_search" id="btnSearch"><span>검색</span></button>
             </fieldset>
