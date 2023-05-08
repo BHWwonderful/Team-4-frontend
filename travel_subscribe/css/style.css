@@ -278,3 +278,9 @@
     50% {scale: 1.4}
     100% {scale: 1}
 }
+
+/* swiper */
+.swiper {
+    width: 600px;
+    height: 750px;
+  }
