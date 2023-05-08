@@ -53,7 +53,7 @@
             font-style: normal
         }
 
-        .festival_hide {
+        .screen_out {
             width: 0px;
             height: 0px;
             overflow: hidden;
