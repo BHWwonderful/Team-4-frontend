@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>festivalcalendar</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/festival.css">
+
 </head>
 
 <body>
@@ -25,8 +27,8 @@
         <div class="festival_calendartitle_box">
             <h3>축제달력</h3>
             <span>
-                <strong>5</strong>
-                <span>2023 MAY</span>
+                <strong class="month"></strong>
+                <span class="year"></span>
             </span>
             <button type="button">이전</button>
             <button type="button">다음</button>
@@ -44,298 +46,8 @@
                     <th class="saturday">토 <span>SAT</span></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong class="holly"></strong>
-                                <em></em><span></span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>1</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>2</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>3</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>4</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>5</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong class="saturday">6</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong class="holly">7</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>8</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>9</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>10</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>11</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>12</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong class="saturday">13</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong class="holly">14</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>15</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>16</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>17</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>18</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>19</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong class="saturday">20</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong class="holly">21</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>22</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>23</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>24</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>25</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>26</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong class="saturday">27</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong class="holly">28</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>29</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>30</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong>31</strong>
-                                <em>75</em> <span>축제 ▼</span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong></strong>
-                                <em></em> <span></span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong></strong>
-                                <em></em> <span></span>
-                            </span>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#none">
-                            <span>
-                                <strong class="saturday"></strong>
-                                <em></em> <span></span>
-                            </span>
-                        </a>
-                    </td>
-
-                </tr>
+            <tbody class="calendar_body">
+                <!--자바스크립트-->
             </tbody>
         </table>
         <div>Hot축제</div>
@@ -428,7 +140,7 @@
                 <a href="#none">코스에 담기</a>
             </li>
             <li>
-                <a href="#none"><img src="./images/festivalfood7.JPG" alt="산청한방약초축제"></a>
+                <a href="#none"><img src="./images/festivalfood7.png" alt="산청한방약초축제"></a>
                 <span>진행전</span>
                 <h3>산청한방약초축제</h3>
                 <p>[2023. 10. 6.~10.10]</p>
@@ -452,7 +164,7 @@
                 <a href="#none">코스에 담기</a>
             </li>
             <li>
-                <a href="#none"><img src="./images/festivalfood9.JPG" alt="순창장류축제"></a>
+                <a href="#none"><img src="./images/festivalfood9.png" alt="순창장류축제"></a>
                 <span>진행전</span>
                 <h3>순창장류축제</h3>
                 <p>[2023. 10. 13.~10.15]</p>
@@ -560,7 +272,7 @@
         처음이전 1 2 3현재 위치 4 5 다음끝
         월별·지역별 축제 보러가기 -->
         <main>
-
+            <script src="./js/calendar.js"></script>
 </body>
 
 </html>
