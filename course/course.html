@@ -10,12 +10,388 @@
      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700;900&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="css/reset.css">
      <link rel="stylesheet" href="css/main/course.css">
+     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
 <body>
      <header class="psuedo_header">
 
      </header>
-     <main>
+     <main class="main">
+          <div class="main_content">
+               <section class="course_title_wrap">
+                    <section class="course_title_box">
+                         <h2 class="course_title">코스</h2>
+                         <span class="easy_icon">Easy</span>
+                    </section>
+                    <section class="course_hashtag_wrap">
+                         <ul class="course_hashtagList">
+                              <li class="course_hashtagListItem course_hashtagListItem--bold">
+                                   <a class="course_hashtagListItemLink" href="#none">#전체</a>
+                              </li>
+                              <li class="course_hashtagListItem">
+                                   <a class="course_hashtagListItemLink" href="#none">#힐링코스</a>
+                              </li>
+                              <li class="course_hashtagListItem">
+                                   <a class="course_hashtagListItemLink" href="#none">#가족코스</a>
+                              </li>
+                              <li class="course_hashtagListItem">
+                                   <a class="course_hashtagListItemLink" href="#none">#자녀와함께</a>
+                              </li>
+                              <li class="course_hashtagListItem">
+                                   <a class="course_hashtagListItemLink" href="#none">#연인코스</a>
+                              </li>
+                              <li class="course_hashtagListItem">
+                                   <a class="course_hashtagListItemLink" href="#none">#자연코스</a>
+                              </li>
+                              <li class="course_hashtagListItem">
+                                   <a class="course_hashtagListItemLink" href="#none">#데이트코스</a>
+                              </li>
+                              <li class="course_hashtagListItem">
+                                   <a class="course_hashtagListItemLink" href="#none">#친구와함께</a>
+                              </li>
+                              <li class="course_hashtagListItem">
+                                   <a class="course_hashtagListItemLink" href="#none">#자연</a>
+                              </li>
+                              <li class="course_hashtagListItem">
+                                   <a class="course_hashtagListItemLink" href="#none">#나들이</a>
+                              </li>
+                              <li class="course_hashtagListItem">
+                                   <a class="course_hashtagListItemLink" href="#none">#가족여행</a>
+                              </li>
+                         </ul>
+                    </section>
+               </section>
+               <section class="course_region_wrap">
+                    <h3 class="course_regionTitle">지역</h3>
+                    <ul class="course_regionList">
+                         <li class="course_regionListItem">
+                              <a class="course_regionListItemLink" href="#none">서울</a>
+                         </li>
+                         <li class="course_regionListItem">
+                              <a class="course_regionListItemLink" href="#none">인천</a>
+                         </li>
+                         <li class="course_regionListItem">
+                              <a class="course_regionListItemLink" href="#none">대전</a>
+                         </li>
+                         <li class="course_regionListItem">
+                              <a class="course_regionListItemLink" href="#none">대구</a>
+                         </li>
+                         <li class="course_regionListItem">
+                              <a class="course_regionListItemLink" href="#none">광주</a>
+                         </li>
+                         <li class="course_regionListItem">
+                              <a class="course_regionListItemLink" href="#none">부산</a>
+                         </li>
+                         <li class="course_regionListItem">
+                              <a class="course_regionListItemLink" href="#none">울산</a>
+                         </li>
+                         <li class="course_regionListItem">
+                              <a class="course_regionListItemLink" href="#none">세종</a>
+                         </li>
+                         <li class="course_regionListItem">
+                              <a class="course_regionListItemLink" href="#none">경기</a>
+                         </li>
+                         <li class="course_regionListItem course_regionListItem--borderTop">
+                              <a class="course_regionListItemLink" href="#none">강원</a>
+                         </li>
+                         <li class="course_regionListItem course_regionListItem--borderTop">
+                              <a class="course_regionListItemLink" href="#none">충북</a>
+                         </li>
+                         <li class="course_regionListItem course_regionListItem--borderTop">
+                              <a class="course_regionListItemLink" href="#none">충남</a>
+                         </li>
+                         <li class="course_regionListItem course_regionListItem--borderTop">
+                              <a class="course_regionListItemLink" href="#none">경북</a>
+                         </li>
+                         <li class="course_regionListItem course_regionListItem--borderTop">
+                              <a class="course_regionListItemLink" href="#none">경남</a>
+                         </li>
+                         <li class="course_regionListItem course_regionListItem--borderTop">
+                              <a class="course_regionListItemLink" href="#none">전북</a>
+                         </li>
+                         <li class="course_regionListItem course_regionListItem--borderTop">
+                              <a class="course_regionListItemLink" href="#none">전남</a>
+                         </li>
+                         <li class="course_regionListItem course_regionListItem--borderTop">
+                              <a class="course_regionListItemLink" href="#none">제주</a>
+                         </li>
+                         <li class="course_regionListItem course_regionListItem--borderTop">
+                              <a class="course_regionListItemLink" href="#none">전체보기</a>
+                         </li>
+                    </ul>
+               </section>
+               <section class="course_content_wrap">
+                    <h3 class="course_contentTitle">여러분이 직접 만든 코스를 소개합니다!</h3>
+                    <div class="course_contentUser_box">
+                         <a href="#none">
+                              <img class="course_contentUserImg" src="images/banner_cos_top3.gif" alt="프로계획러 사용자가 직접 만든 풀코스 여행">
+                         </a>
+                    </div>
+                    <section class="course_contentCustom_wrap grid">
+                         <section class="course_contentCustomContent_wrap grid-item">
+                              <section class="course_contentCustomInfo_box">
+                                   <a class="course_contentCustomInfoLink" href="#none">
+                                        <h4 class="course_contentCustomInfoTitle">안면도 여행</h4>
+                                        <ul class="course_contentCustomInfoList">
+                                             <li class="course_contentCustomInfoListItem">지역: 충남 홍성군</li>
+                                             <li class="course_contentCustomInfoListItem">총거리: 86.4km</li>
+                                        </ul>
+                                        <span class="course_contentCustomInfoUser">
+                                             <img class="course_contentCustomInfoUserImg" src="images/img_profile.png" alt="">
+                                             <span class="course_contentCustomInfoUserText">장*옥</span>
+                                        </span>
+                                   </a>
+                                   <img class="course_contentCustomInfoImg" src="images/Anmyeondo.jpg" alt="">
+                              </section>
+                              <section class="course_contentCustomCourse_box">
+                                   <ul class="course_contentCustomCourseList">
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">궁리포구</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">속동전망대</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">남당항</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">홍성방조제</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">보령방조제</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">보령 충청수영성</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">대천항</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">안면암(태안)</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">고남패총박물관</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">꽃지해수욕장</a>
+                                        </li>
+                                   </ul>
+                              </section>
+                         </section>
+                         <section class="course_contentCustomContent_wrap grid-item">
+                              <section class="course_contentCustomInfo_box">
+                                   <a class="course_contentCustomInfoLink" href="#none">
+                                        <h4 class="course_contentCustomInfoTitle">마포 나만의 여행</h4>
+                                        <ul class="course_contentCustomInfoList">
+                                             <li class="course_contentCustomInfoListItem">지역: 서울 마포구</li>
+                                             <li class="course_contentCustomInfoListItem">총거리: 10.5km</li>
+                                        </ul>
+                                        <span class="course_contentCustomInfoUser">
+                                             <img class="course_contentCustomInfoUserImg" src="images/강_환" alt="">
+                                             <span class="course_contentCustomInfoUserText">강*환</span>
+                                        </span>
+                                   </a>
+                                   <img class="course_contentCustomInfoImg" src="images/Mapogu.JPG" alt="">
+                              </section>
+                              <section class="course_contentCustomCourse_box">
+                                   <ul class="course_contentCustomCourseList">
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">경의선책거리</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">홍대 프리마켓</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">공덕동 족발 골목</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">월드컵공원</a>
+                                        </li>
+                                   </ul>
+                              </section>
+                         </section>
+                         <section class="course_contentCustomContent_wrap grid-item">
+                              <section class="course_contentCustomInfo_box">
+                                   <a class="course_contentCustomInfoLink" href="#none">
+                                        <h4 class="course_contentCustomInfoTitle">익산여행</h4>
+                                        <ul class="course_contentCustomInfoList">
+                                             <li class="course_contentCustomInfoListItem">지역: 전북 익산시</li>
+                                             <li class="course_contentCustomInfoListItem">총거리: 40.2km</li>
+                                        </ul>
+                                        <span class="course_contentCustomInfoUser">
+                                             <img class="course_contentCustomInfoUserImg" src="images/소_미.jpg" alt="">
+                                             <span class="course_contentCustomInfoUserText">소*미</span>
+                                        </span>
+                                   </a>
+                                   <img class="course_contentCustomInfoImg" src="images/Iksan.jpg" alt="">
+                              </section>
+                              <section class="course_contentCustomCourse_box">
+                                   <ul class="course_contentCustomCourseList">
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">국립익산박물관</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">나바위 성당(화산천주교회)</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">익산교도소세트장</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">익산 미륵사지 (유네스코 세계유산)</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">익산 왕궁리유적 (유네스코 세계유산)</a>
+                                        </li>
+                                   </ul>
+                              </section>
+                         </section>
+                    </section>
+               </section>
+               <section class="course_content_wrap">
+                    <h3 class="course_contentTitle">따뜻한 봄바람 맞으러 떠나는 드라이브 코스</h3>
+                    <section class="course_contentCustom_wrap grid">
+                         <section class="course_contentCustomContent_wrap grid-item">
+                              <section class="course_contentCustomInfo_box">
+                                   <a class="course_contentCustomInfoLink" href="#none">
+                                        <h4 class="course_contentCustomInfoTitle">안면도 여행</h4>
+                                        <ul class="course_contentCustomInfoList">
+                                             <li class="course_contentCustomInfoListItem">지역: 충남 홍성군</li>
+                                             <li class="course_contentCustomInfoListItem">총거리: 86.4km</li>
+                                        </ul>
+                                        <span class="course_contentCustomInfoUser">
+                                             <img class="course_contentCustomInfoUserImg" src="images/img_profile.png" alt="">
+                                             <span class="course_contentCustomInfoUserText">장*옥</span>
+                                        </span>
+                                   </a>
+                                   <img class="course_contentCustomInfoImg" src="images/Anmyeondo.jpg" alt="">
+                              </section>
+                              <section class="course_contentCustomCourse_box">
+                                   <ul class="course_contentCustomCourseList">
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">궁리포구</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">속동전망대</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">남당항</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">홍성방조제</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">보령방조제</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">보령 충청수영성</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">대천항</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">안면암(태안)</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">고남패총박물관</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">꽃지해수욕장</a>
+                                        </li>
+                                   </ul>
+                              </section>
+                         </section>
+                         <section class="course_contentCustomContent_wrap grid-item">
+                              <section class="course_contentCustomInfo_box">
+                                   <a class="course_contentCustomInfoLink" href="#none">
+                                        <h4 class="course_contentCustomInfoTitle">마포 나만의 여행</h4>
+                                        <ul class="course_contentCustomInfoList">
+                                             <li class="course_contentCustomInfoListItem">지역: 서울 마포구</li>
+                                             <li class="course_contentCustomInfoListItem">총거리: 10.5km</li>
+                                        </ul>
+                                        <span class="course_contentCustomInfoUser">
+                                             <img class="course_contentCustomInfoUserImg" src="images/강_환" alt="">
+                                             <span class="course_contentCustomInfoUserText">강*환</span>
+                                        </span>
+                                   </a>
+                                   <img class="course_contentCustomInfoImg" src="images/Mapogu.JPG" alt="">
+                              </section>
+                              <section class="course_contentCustomCourse_box">
+                                   <ul class="course_contentCustomCourseList">
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">경의선책거리</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">홍대 프리마켓</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">공덕동 족발 골목</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">월드컵공원</a>
+                                        </li>
+                                   </ul>
+                              </section>
+                         </section>
+                         <section class="course_contentCustomContent_wrap grid-item">
+                              <section class="course_contentCustomInfo_box">
+                                   <a class="course_contentCustomInfoLink" href="#none">
+                                        <h4 class="course_contentCustomInfoTitle">익산여행</h4>
+                                        <ul class="course_contentCustomInfoList">
+                                             <li class="course_contentCustomInfoListItem">지역: 전북 익산시</li>
+                                             <li class="course_contentCustomInfoListItem">총거리: 40.2km</li>
+                                        </ul>
+                                        <span class="course_contentCustomInfoUser">
+                                             <img class="course_contentCustomInfoUserImg" src="images/소_미.jpg" alt="">
+                                             <span class="course_contentCustomInfoUserText">소*미</span>
+                                        </span>
+                                   </a>
+                                   <img class="course_contentCustomInfoImg" src="images/Iksan.jpg" alt="">
+                              </section>
+                              <section class="course_contentCustomCourse_box">
+                                   <ul class="course_contentCustomCourseList">
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">국립익산박물관</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">나바위 성당(화산천주교회)</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">익산교도소세트장</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">익산 미륵사지 (유네스코 세계유산)</a>
+                                        </li>
+                                        <li class="course_contentCustomCourseListItem">
+                                             <a class="course_contentCustomCourseListItemLink" href="#none">익산 왕궁리유적 (유네스코 세계유산)</a>
+                                        </li>
+                                   </ul>
+                              </section>
+                         </section>
+                    </section>
+               </section>
+          </div>
+     </main>
+ 
+     <footer>
+
+     </footer>
+     <script>
+          var grids = document.querySelectorAll('.grid');
+
+          grids.forEach(function(grid) {
+          var masonry = new Masonry(grid, {
+          itemSelector: '.grid-item',
+          columnWidth: 320
+               });
+          });
+        </script>
+
+
+     
+</body>
+</html>
+
+    <!-- <main>
           <div class="main_content">
                <section class="course_hashtag_wrap">
                     <section class="course_hashtagTitle_box">
@@ -714,12 +1090,4 @@
                     </ul>
                </section>
           </div>
-     </main>
-     <footer>
-
-     </footer>
-
-
-
-</body>
-</html>
+     </main> -->

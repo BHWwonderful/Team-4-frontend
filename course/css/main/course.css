@@ -1,250 +1,254 @@
 /* 임시 헤더 */
 .psuedo_header{
      width:100%;
-     height:105px;
+     height:129px;
+     border-bottom: 2px solid black;
 }
 
 /* main */
 .main_content{
-     width:940px;
-     margin:0 auto;
-     padding:25px 15px 30px;
+     width:980px;
+     margin: 0 auto;
+     padding: 0 20px 27px 20px;
 }
 
-/* 해시태그 목록 */
-.course_hashtag_wrap{
-     width:911px;
-     height:83px;
+/* 제목 */
+.course_title_wrap{
      position:relative;
-     margin-bottom:10px;
+     margin-bottom:24px;
 }
 
-.course_hashtagTitle_box{
-     height:44px;
-     border-bottom:2px solid #000;
+.course_title_box{
+     width:940px;
+     border-bottom: 2px solid #000;
+     margin-bottom:15px;
 }
 
-.course_hashtagTitle{
-     padding:6px 0px 10px 23px;
+.course_title{
+     padding: 6px 0 10px 28px;
+     overflow:hidden;
      font-weight:800;
-     font-size:20px;
      color:#333;
+     font-size:36px;
      letter-spacing: -1px;
+     word-break: keep-all;
 }
 
 .easy_icon{
-     display:block;
-     background:url(https://korean.visitkorea.or.kr/resources/images/sub/ico_tit_cos_pc.png) no-repeat;
-     text-indent: -9999px;
+     display:inline-block;
      position:absolute;
+     width:26px;
+     height:24px;
      top:4px;
      left:0px;
-     width:20px;
-     height:23px;
-     background-size:20px;
+     text-indent: -9999px;
+     background:url(../../images/ico_tit_cos_pc.png) no-repeat;
+     background-size: 26px auto;
 }
 
-.course_hashtagList_box{
-     margin-top:10px;
-     height:27px;
+/* 해시태그 */
+.course_hashtag_wrap{
+     overflow:hidden;
+     position:relative;
 }
 
 .course_hashtagList{
      display:flex;
-     margin-left:-10px;
-     height:29px;
-     padding:2px 0 0 2px;
+     flex-wrap:wrap;
+     margin-left:-25px;
 }
 
 .course_hashtagListItem{
-     font-size:13px;
-     margin-left:10px;
+     margin-left:25px;
+     line-height:34px;
+     
+}
+
+.course_hashtagListItemLink{
+     font-size:16px;
 }
 
 .course_hashtagListItem--bold{
      font-weight: 800;
 }
 
-/* 지역 목록 */
-.course_region_box{
+/* 지역 */
+.course_region_wrap{
      position:relative;
+     margin-bottom: 24px;
 }
 
 .course_regionTitle{
-     font-size:16px;
-     letter-spacing: -0.5px;
-     margin-bottom:10px;
+     display:inline-block;
+     margin-top:11px;
+     font-size:22px;
+     color:#000;
 }
 
-.course_regionSelect{
-     display:block;
-     width:100%;
-     height:46px;
-     padding:10px 10px;
-     border:1px solid #bbb;
-     color:#666;
-     font-size:1.1em;
-     line-height:18px;
-     margin-bottom:10px;
+.course_regionList{
+     margin-top:15px;
+     display:flex;
+     flex-wrap:wrap;
+     border:1px solid #ccc;
 }
 
-/* 여러분이 직접 만든 코스를 소개합니다! */
+.course_regionListItem{
+     width:104px;
+     height:49px;
+     border-right:1px solid #ccc;
+     line-height: 49px;
+     text-align: center;
+}
+
+.course_regionListItem--borderTop{
+     border-top:1px solid #ccc;
+}
+
+.course_regionListItemLink{
+     font-size:18px;
+     color:#000;
+}
+
+/* 코스 예시들 */
 .course_content_wrap{
      position:relative;
 }
 
 .course_contentTitle{
-     font-size:16px;
-     padding-left:10px;
-     letter-spacing: -0.5px;
-     margin-bottom:12px;
-     margin-top:10px;
+     display: inline-block;
+     padding-left:15px;
+     margin-top:11px;
+     font-size:22px;
+     color:#000;
 }
 
 .course_contentTitle::before{
      content:"";
-     background:url();
-     width:3px;
-     height:13px;
-     background-color:#0a97cd;
      position:absolute;
-     top:5px;
-     left:0px;
+     display:inline-block;
+     width:4px;
+     height:20px;
+     background-color:#0a97cd;
+     top:17px;
+     left:0;
 }
 
-.course_contentLink{
-     display:block;
-     margin-bottom:20px;
+.course_contentUser_box{
+     margin:16px 0 16px;
 }
 
-.course_contentImg{
-     display:block;
-     width:100%;
+.course_contentUserImg{
+    vertical-align: middle;
+    width:940px;
 }
 
-/* 코스 소개 카드 */
-
-.course_courseCardPack_wrap{
-     height:auto;
-     border-bottom:1px solid #ccc;
+/* 코스 콘텐츠 */
+.course_contentCustom_wrap{
+     width:960px;
+     margin-top:-4px;
+     margin-bottom:24px;
+     padding-bottom: 20px;
+     border-bottom: 1px solid #ccc;
 }
 
-.course_courseCard_wrap{
-     height:auto;
-     margin-bottom:15px;
+.course_contentCustomContent_wrap{
+     width:300px;
+     margin-right:20px;
+     margin-top:20px;
 }
 
-.course_courseInfo_box{
+.course_contentCustomInfo_box{
+     width:300px;
      position:relative;
-     height:80px;
+     height:125px;
 }
 
-.course_courseInfoLink{
-     padding:12px 20px;
-     display:block;
-     position:relative;
-     z-index:10;
-     width:100%;
-     height:100%;
-     color:white;
-     background:linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.7));
+.course_contentCustomInfoLink{
+     position:absolute;
+     left:0;
+     top:0;
+     right:0;
+     bottom:0;
+     z-index:100;
+     padding:20px 20px;
+     background:rgba(0,0,0,0.3);
 }
 
-.course_courseInfoTitle{
-     font-size:14px;
-     font-weight:700;
+.course_contentCustomInfoTitle{
+     overflow:hidden;
+     height:47px;
+     font-size:20px;
+     color:#fff;
      margin-bottom:7px;
+     font-weight:700;
+     line-height: 1.2;
+     text-overflow: ellipsis;
 }
 
-.course_courseInfoListItem{
+.course_contentCustomInfoList{
+     width:120px;
+}
+
+.course_contentCustomInfoListItem{
      width:100%;
+     overflow:hidden;
      display:inline-block;
      text-overflow:ellipsis;
-     white-space:nowrap;
+     white-space: nowrap;
      font-size:12px;
-     line-height:15px;
-     overflow:hidden;
      color:#e4f0fa;
 }
 
-.course_courseInfoListItemProfile{
+.course_contentCustomInfoUser{
      position:absolute;
-     height:15px;
-     bottom:11px;
-     right:10px;;
+     right:6px;
+     bottom:0px;
+     display: block;
+     max-width:131px;
+     line-height:30px;
 }
 
-.course_InfoListItemProfileImg{
-     width:18px;
-     height:18px;
-     border-radius: 50%;
+.course_contentCustomInfoUserImg{
+     width:28px;
+     height:28px;
+     border-radius: 50%;   
 }
 
-.course_courseInfoListItemProfileName{
-     font-size:12px;
-     font-weight:400;
+.course_contentCustomInfoUserText{
+     overflow:hidden;
+     display:inline-block;
+     white-space:nowrap;
+     text-overflow:ellipsis;
+     font-size:16px;
      color:#fff;
+     font-weight:400;
 }
 
-.course_courseInfoImg{
-     height:80px;
-     width:910px;
-     position:absolute;
-     top:0;
-     left:0;
-     object-fit:cover;
-     object-position:center;
+.course_contentCustomInfoImg{
+     width:100%;
+     height:100%;
+     object-fit: cover;
+     object-position: top;
 }
 
-.course_courseRoute_box{
-     position:relative;
+.course_contentCustomCourse_box{
+     height:auto;
 }
 
-.course_courseRouteList{
-     padding:0 20px 6px;
-     border:1px solid #e5e4e4;
+.course_contentCustomCourseList{
+     width:300px;
+     border: 1px solid #e5e4e4;
+     padding: 0 20px 16px 20px;
+     
 }
 
-.course_courseRouteListItem{
-     height:42px;
-     background: url(../../images/line_leftobj.png) repeat-y;
-     vertical-align: center;
+.course_contentCustomCourseListItem{
+     padding-top:20px;
+     background:url(../../images/line_leftobj.png) repeat-y;
 }
 
-.course_courseRouteListItem:nth-of-type(1){
-     height:52px;
-     padding-top:10px;
-}
-
-.course_courseRouteListItem:last-of-type{
-     background: url(../../images/line_leftobj.png) no-repeat;
-}
-
-.course_courseRouteListLink{
-     line-height:42px;
-     background:url(../../images/ico_leftobj.png) no-repeat 0 50%;
-     padding-left:20px;
+.course_contentCustomCourseListItemLink{
+     background:url(../../images/ico_leftobj.png) no-repeat left center;
      margin-left:-5px;
+     padding-left: 20px;
 }
-
-.courseRouteListText{
-     font-size:13px;
-}
-
-.course_banner_wrap{
-     margin-top:10px;
-}
-
-.course_bannerList{
-     display:flex;
-     justify-content: space-between;
-}
-
-.course_bannerListImg{
-     width:450px;
-     height:160px;
-}
-
-
-
-
