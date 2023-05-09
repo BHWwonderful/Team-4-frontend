@@ -290,29 +290,37 @@
     height: 850px;
   }
 .swiper-button-prev{
-    background-color: #fff;
+    background-color: #000;
     opacity: 0.5;
-    padding: 12px 3px;
-    border-radius: 15px;
-    color: black !important;
+    padding: 50px 10px;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* border-radius: 15px; */
+    color: white !important;
     position: absolute;
-    top: 250px !important;
-    left: 5px !important;
+    top: 260px !important;
+    left: calc(50% - 380px) !important;
 }
 .swiper-button-next{
-    background-color: #fff;
+    background-color: #000;
     opacity: 0.5;
-    padding: 12px 3px;
-    border-radius: 15px;
-    color: black !important;
+    padding: 50px 10px;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    /* border-radius: 15px; */
+    color: white !important;
     position: absolute;
-    top: 250px !important;
-    right: 5px !important;
+    top: 260px !important;
+    right: calc(50% - 380px) !important;
 }
 .swiper-button-prev:after,
 .swiper-button-next:after{
-    font-size: 17px !important;
-    font: bolder !important;
+    font-size: 25px !important;
+    font: 500 !important;
 }
 .swiper-scrollbar{
     position: absolute;
