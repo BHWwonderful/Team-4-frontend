@@ -7,19 +7,19 @@ $(window).on("scroll", function () {
     let floatBtnPos = $(window).scrollTop();
     if(floatBtnPos == 0){
         $(".travelSubscribe_floatBtn_wrap").stop().animate({right: '-138px'},"fast");
-    }else if(floatBtnPos <= 100 && floatBtnPos > 0){
+    }else if(floatBtnPos <= 10 && floatBtnPos > 0){
         $(".travelSubscribe_floatBtn_wrap").stop().animate({right: 0},"fast");
     }
 
     // icon pop
     let scrollPos = $(window).scrollTop();
     console.log(scrollPos);
-    if(scrollPos >= 200){
+    if(scrollPos >= 130){
     $(".travelSubscribe_tryTitle_img").addClass("pop");
     }else{
     $(".travelSubscribe_tryTitle_img").removeClass("pop");
     }
-    if(scrollPos >= 1300){
+    if(scrollPos >= 1200){
         $(".travelSubscribe_mission_icon").addClass("pop");
         }else{
         $(".travelSubscribe_mission_icon").removeClass("pop");
