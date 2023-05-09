@@ -110,6 +110,7 @@
     justify-content: end;
     align-items: center;
     margin-bottom: 50px;
+    box-sizing: border-box;
 }
 .travelSubscribe_try_title em{
     color: #FFFFFF;
@@ -117,6 +118,7 @@
     font-weight: lighter;
     letter-spacing: -1.3px;
     line-height: 28px;
+    margin-bottom: 10px;
 }
 .travelSubscribe_try_title strong{
     color: #FFFFFF;
@@ -173,6 +175,9 @@
 .travelSubscribe_trySliderImg_contBox a{
     font-size: 16px;
     color: #555;
+}
+.travelSubscribe_trySliderImg_contBox a svg{
+    padding-left: 5px;
 }
 .travelSubscribe_trySlider_prevBtn{
     width: 74px;
@@ -258,6 +263,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
+    z-index: 100;
 }
 .travelSubscribe_floatBtn_wrap img{
     width: 138px;
@@ -278,9 +284,37 @@
     50% {scale: 1.4}
     100% {scale: 1}
 }
-
 /* swiper */
 .swiper {
     width: 600px;
-    height: 750px;
+    height: 850px;
   }
+.swiper-button-prev{
+    background-color: #fff;
+    opacity: 0.5;
+    padding: 12px 3px;
+    border-radius: 15px;
+    color: black !important;
+    position: absolute;
+    top: 250px !important;
+    left: 5px !important;
+}
+.swiper-button-next{
+    background-color: #fff;
+    opacity: 0.5;
+    padding: 12px 3px;
+    border-radius: 15px;
+    color: black !important;
+    position: absolute;
+    top: 250px !important;
+    right: 5px !important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after{
+    font-size: 17px !important;
+    font: bolder !important;
+}
+.swiper-scrollbar{
+    position: absolute;
+    top: 750px !important;
+}

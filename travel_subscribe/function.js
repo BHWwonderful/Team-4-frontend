@@ -1,9 +1,16 @@
 // 스크롤 시 
 $(window).on("scroll", function () {
     // floating button 
-    let floatBtnPos = ($(window).scrollTop() === 0)? "-138px": "0";
-    $(".travelSubscribe_floatBtn_wrap").stop().animate({right: floatBtnPos},"fast");
+    // let floatBtnPos = ($(window).scrollTop() === 0)? "-138px": "0";
+    // $(".travelSubscribe_floatBtn_wrap").stop().animate({right: floatBtnPos},"fast");
    
+    let floatBtnPos = $(window).scrollTop();
+    if(floatBtnPos == 0){
+        $(".travelSubscribe_floatBtn_wrap").stop().animate({right: '-138px'},"fast");
+    }else if(floatBtnPos <= 100 && floatBtnPos > 0){
+        $(".travelSubscribe_floatBtn_wrap").stop().animate({right: 0},"fast");
+    }
+
     // 개구리 fade
     let scrollPos = $(window).scrollTop();
     console.log(scrollPos);
@@ -22,7 +29,6 @@ $(window).on("scroll", function () {
         }else{
             $(".travelSubscribe_img_tit03").removeClass("pop");
         }
-    
 });
 // moving text
 $(document).ready(function() {
@@ -111,7 +117,8 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-  
+    effect: 'fade',
+    
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
