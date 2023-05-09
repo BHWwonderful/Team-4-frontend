@@ -11,7 +11,7 @@ $(window).on("scroll", function () {
         $(".travelSubscribe_floatBtn_wrap").stop().animate({right: 0},"fast");
     }
 
-    // 개구리 fade
+    // icon pop
     let scrollPos = $(window).scrollTop();
     console.log(scrollPos);
     if(scrollPos >= 200){
@@ -82,11 +82,11 @@ $(document).ready(function() {
             $(".travelSubscribe_hotEvent_tit1").animate({
                 top: '175px',
                 left: '420px'
-            }, 700, function(){
+            }, 700, "linear", function(){
                 $(this).animate({
                     top: '180px',
                     left: '425px'
-                }, 700, function(){
+                }, 700, "linear", function(){
                     $(this).animate({
                         top: '180px',
                         left: '420px'
@@ -104,7 +104,7 @@ $(document).ready(function() {
                 $(this).animate({
                     width:'600px',
                     height: '162.2px'
-                }, 1500 ,"linear")
+                }, 1500)
                 divMove();
             })
         }
