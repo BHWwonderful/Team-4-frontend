@@ -1,5 +1,118 @@
+/* main title img */
 .main_special_title{
     width: 1903px;
     height: 330px;
-    background: url(../img_k/10.jpg);
+    margin: auto;
+    background: url(../img_k/20210812154421.jpg) center;
+}
+.main_special_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main_special_title h3{
+    margin-left: 400px;
+    font-size: 48px;
+    color: #fff;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px #888888;
+}
+.main_special_title span{
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 15px;
+}   
+.main_special_route{
+    width: 1903px;
+    height: 51px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dfdfdf;
+    
+}
+.main_special_route img{
+    width: 18px;
+    height: 21px;
+    margin: 0 60px 0 360px;
+}
+.main_special_route h4{
+    margin-right: 60px;
+    position: relative;
+}
+.main_special_route h4::before{
+    content: "";
+    width: 30px;
+    height: 50px;
+    background: url(../img_k/nav_arw.png) center no-repeat;
+    position: absolute;
+    top: -17px;
+    left: -50px
+}
+.main_special_route h4::after{
+    content: "";
+    width: 30px;
+    height: 50px;
+    background: url(../img_k/nav_arw.png) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -17px;
+    left: 110px
+}
+.main_special_route h5{
+    position: relative;
+    color: #5289e6;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #5289e6;
+    box-sizing: border-box;
+}
+.main_special_route h5::after{
+    content: " ▼";
+    font-size: 13px;
+    color: #5289e6;
+    position: absolute;
+    right: -20px;
+}
+
+.main_content{
+    width: 1180px;
+    margin: 130px auto auto auto;
+    border-top: 2px solid #2d58a0;
+}
+.special_listImg_wrap{
+    display: flex;
+    padding: 15px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dfdfdf;
+}
+.special_list_img1{
+    width: 353.98px;
+    height: 188.79px;
+    background: #f4f4f4 url(../img/c3099f26-c5e9-40ef-9e34-ebf14bdd2a5c.png) 50% 80% no-repeat;
+    background-size: calc(60%);
+}
+.special_listText_box{
+    width: 825.98px;
+    height: 161.74px;
+    padding-left: 52px;
+    box-sizing: border-box;
+}
+.special_listText_box em, span{
+    display: block;
+    
+}
+.special_listText_box em{
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333333;
+}
+.special_listText_box span{
+    margin-bottom: 110px;
+    font-size: 15px;
+    color: #777777;
+}
+.special_listText_box a{
+    font-size: 14px;
+    color: #777777;
 }
