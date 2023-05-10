@@ -46,3 +46,58 @@ $(".calendar_body").append(innerhtml);
 (function () {
   document.querySelector(".festival_calendar tbody tr td a strong").classList.add('holly');
 })
+
+
+
+
+
+//축제 json 
+$('#more').click(function () {
+  $.get('https://github.com/BHWwonderful/Team-4-frontend-project/tree/master/festival/js/전국문화축제표준데이터.json').done(function (data) {
+    console.log(data);
+
+    data.forEach((a, i) => {
+      var 템플릿 =
+        `
+                <div class="col-sm-4">
+                    <img src="https://via.placeholder.com/600" class="w-100">
+                    <h5>${data[i].title}</h5>
+                    <p>가격 : ${data[i].price}</p>
+
+               </div>`;
+      $('.row').append(템플릿)
+    })
+  })
+})
+
+// var xhr = new XMLHttpRequest();
+// var url = 'http://api.data.go.kr/openapi/tn_pubr_public_cltur_fstvl_api'; /*URL*/
+// var queryParams = '?' + encodeURIComponent('serviceKey') + '=' + '서비스키'; /*Service Key*/
+// queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
+// queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('100'); /**/
+// queryParams += '&' + encodeURIComponent('type') + '=' + encodeURIComponent('xml'); /**/
+// queryParams += '&' + encodeURIComponent('fstvlNm') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('opar') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('fstvlStartDate') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('fstvlEndDate') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('fstvlCo') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('mnnst') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('auspcInstt') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('suprtInstt') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('phoneNumber') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('homepageUrl') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('relateInfo') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('rdnmadr') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('lnmadr') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('latitude') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('longitude') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('referenceDate') + '=' + encodeURIComponent(''); /**/
+// queryParams += '&' + encodeURIComponent('instt_code') + '=' + encodeURIComponent(''); /**/
+// xhr.open('GET', url + queryParams);
+// xhr.onreadystatechange = function () {
+//   if (this.readyState == 4) {
+//     alert('Status: ' + this.status + 'nHeaders: ' + JSON.stringify(this.getAllResponseHeaders()) + 'nBody: ' + this.responseText);
+//   }
+// };
+
+// xhr.send('');
