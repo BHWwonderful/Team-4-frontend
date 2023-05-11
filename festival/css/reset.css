@@ -20,8 +20,8 @@
         body,
         input,
         button {
-            font-family: "나눔고딕", "맑은 고딕", sans-serif;
-            font-size: 14px;
+            font-family: "Noto Sans Kr","나눔고딕", "맑은 고딕", sans-serif;
+            font-size: 12px;
             line-height: 1.5
         }
 

@@ -1,261 +1,153 @@
-.festival_skip {
-    position: relative;
-    width: 100%
-}
+/*
+색상
+선택상자 : 0051A4
 
-.festival_skip a {
-    padding: 10px 20px;
-    border: 3px solid #333;
-    background: #fff;
-    position: absolute;
-    left: 5px;
-    top: -100px;
-    z-index: 1000
-}
+넓이
+컨텐츠 영역 넓이 :  1180px
 
-.festival_skip a:active,
-.festival_skip a:focus {
-    top: 5px
-}
+폰트
+Noto Sans Kr
 
-.festival_title_box {
-    width: 940px;
-    margin: 0 auto 100px;
-    border-bottom: 2px solid black;
-}
+폰트 사이즈 용도별
+제목 : 20 ~ 32px(h1~6)
+본문 : 16 ~ 18px
+캡션 : 10 ~ 12px
+*/
 
-.festival_topimg_wrap {
-    width: 940px;
+
+/*축제페이지 시작*/
+/*컨텐츠 넓이*/
+.main {
+    width: 1140px;
     margin: auto;
+}
+
+/*컨텐츠 제목 안쪽여백*/
+.main .festival_list_title {
+    padding: 50px;
+}
+
+/*컨텐츠 제목 가운데 정렬 글자크기 조절*/
+.main .festival_list_title h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
+/*지역 필터 시작*/
+/*지역선택 배경색,테두리, 패팅 추가 버튼 정렬*/
+.festival_fillter_wrap .festival_region_fillter_box {
+    background: #eee;
+    border-top: 2px solid #999;
     display: flex;
     justify-content: space-between;
 }
 
-.festival_topimg_box div {
-    width: 260px;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #eee;
-    font-size: 14px;
-    border-radius: 10px;
-}
-
-.festival_topimg_box div img {
-    width: 100%;
-}
-
-.festival_bottomimg_wrap {
-    width: 940px;
-    margin: auto;
-    display: flex;
-    position: relative;
-}
-
-.festival_bottomimg_box {
-    width: 260px;
-    padding: 20px;
-    margin: 0 20px 0 0;
-    border: 1px solid #eee;
-    font-size: 14px;
-    border-radius: 10px;
-    position: relative;
-    top: -50px;
-}
-
-.festival_bottomimg_box img {
-    width: 100%;
-}
-
-
-
-.festival_calendartitle_box {
-    width: 100%;
-    margin: auto;
-    padding: 50px 0;
-    text-align: center;
-    background: #f1efef;
-    position: relative;
-
-}
-
-.festival_calendartitle_box h3 {
-    height: 60px;
-    margin: 0 0 23px;
-    background: url(/images/festival_calendar_tit.png) 50% 0 no-repeat;
-    text-indent: -9999px;
-}
-
-.festival_calendartitle_box span strong {
-    display: inline-block;
-    width: 162px;
-    font-weight: 700;
-    vertical-align: middle;
-    font-size: 100px;
-    height: 86px;
-    line-height: 86px;
-    color: #ef386e;
-    letter-spacing: -8px;
-}
-
-.festival_calendartitle_box span span {
-    display: block;
-    padding: 19px 0 33px;
-    font-size: 20px;
-    line-height: 23px;
-    letter-spacing: -1px;
-    color: #000;
-}
-
-.festival_calendartitle_box button {
-    height: 55px;
-    vertical-align: middle;
-    width: 55px;
-    text-indent: -9999px;
+/*지역선택 버튼 테두리 제거*/
+.festival_fillter_wrap .festival_region_fillter_box button {
+    padding: 15px;
+    font-size: 16px;
     border: 0;
 }
 
-.festival_calendar_prev {
-    position: relative;
-    background: url(../images/festival_calendar_prev.png) no-repeat;
-    z-index: 10;
-    top: -140px;
-    left: -80px;
+/*지역선택 버튼 호버효과 추가*/
+.festival_fillter_wrap .festival_region_fillter_box button:hover {
+    background: #0051A4;
+    color: #fff;
+    transition: all 0.3s;
 }
 
-.festival_calendar_next {
-    position: relative;
-    background: url(../images/festival_calendar_next.png) no-repeat;
-    z-index: 10;
-    top: -140px;
-    right: -80px;
-}
+/*지역 필터 끝*/
 
-.festival_calendar {
-    width: 940px;
-    margin: auto;
-    text-align: center;
-    box-shadow: 4px 4px 0px 0px rgba(36, 36, 37, 0.16);
-    border: 2px solid black;
-    border-spacing: 0;
-    border-collapse: collapse;
-    position: relative;
-    top: -50px;
+/*여행목적필터 시작*/
+/*여행목적선택 바깥여백조절 버튼정렬*/
+.festival_fillter_wrap .festival_concept_fillter_box {
+    margin: 40px 0 60px 0;
+    display: flex;
+    justify-content: space-between;
 }
-
-.festival_calendar thead tr {
-    border: 2px solid black;
-}
-
-.festival_calendar thead tr th {
-    height: 80px;
-    font-size: 45px;
-    line-height: 50px;
-    color: #333;
-    border-left: 1px solid #efeded;
+/*여행목적선택 버튼 */
+.festival_fillter_wrap .festival_concept_fillter_box button {
+    width: 240px;
+    height: 60px;
     background: #fff;
-
+    border: 1px solid #0051A4;
+    font-size: 18px;
 }
 
-.festival_calendar thead tr th span {
-    display: block;
-    font-size: 13px;
-    line-height: 16px;
-    font-weight: 300;
+/*여행목적선택 버튼 호버효과*/
+.festival_fillter_wrap .festival_concept_fillter_box button:hover {
+    background: #0051A4;
+    color: #fff;
+    transition: all 0.3s;
 }
 
-.festival_calendar tbody tr td {
-    border: 1px solid #eee;
+/*여행목적필터 끝*/
+
+
+/*축제리스트 시작*/
+/*축제목록 상단 테두리 추가*/
+.festival_list_wrap {
+    border-top: 2px solid black;
+}
+
+/*축제목록 하단 바깥여백 조절*/
+.festival_list_content_box {
+    margin-bottom: 40px;
+}
+
+/*축제목록 패딩조절, 이미지 텍스트 정렬, 하단 테두리 추가*/
+.festival_list_content_box ul li {
+    padding: 15px 0;
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+/*축제목록 이미지박스 오른쪽 바깥여백 조절*/
+.festival_list_content_box ul li .festival_list_img_box {
+    margin-right: 50px;
+}
+
+/*축제목록 텍스트 정렬*/
+.festival_list_content_box ul li .festival_list_text_box div {
+    display: flex;
+}
+
+/*축제목록 텍스트 바깥여백 추가 글자크기 조절*/
+.festival_list_content_box ul li .festival_list_text_box>p {
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/*축제목록 텍스트 안쪽, 바깥쪽여백조절 배경색변경 글자색,크기변경*/
+.festival_list_content_box ul li .festival_list_text_box p span {
+    padding: 5px;
+    margin-right: 10px;
+    background: #0051A4;
+    color: #fff;
+    font-size: 16px;
+}
+
+/*축제목록 텍스트 오른쪽 바깥여백 조절 */
+.festival_list_content_box ul li .festival_list_text_box div p {
+    margin-right: 20px;
+}
+
+/*축제리스트 끝*/
+
+/*축제페이징 시작*/
+/*축제목록 페이징 가운데정렬*/
+.festival_list_paging_box {
+    text-align: center;
+}
+
+/*축제목록 페이징 테두리 추가, 안쪽여백 조절*/
+.festival_list_paging_box a {
+    border: 1px solid #dfdfdf;
     padding: 10px;
 }
-
-.festival_calendar tbody tr td:hover {
-    background: wheat;
-}
-
-.festival_calendar tbody tr td a em {
-    font-weight: 800;
-    font-size: 15px;
-    color: #7d42c9;
-}
-
-.festival_calendar .holly {
-    color: #ef386e;
-}
-
-.festival_calendar .saturday {
-    color: #1b8bd7;
-}
-
-.festival_calendar tbody tr td a strong {
-    display: block;
-    padding: 13px 0 22px;
-    font-weight: 800;
-    font-size: 55px;
-    line-height: 60px;
-    letter-spacing: -2px;
-    color: #000;
-}
-
-.festival_calendar tbody tr td a>span {
-    display: block;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 18px;
-}
-
-.festival_list_wrap {
-    width: 940px;
-    margin: auto;
-}
-
-.festival_list_wrap ul li {
-    border-top: 1px solid #e6e6e6;
-}
-
-.festival_calendarList_box {
-    padding: 20px 0;
-    display: flex;
-}
-.festival_calendarImg_box{
-    position: relative;
-}
-.festival_calendarImg_box a span{
-    width: 48px;
-    position: absolute;
-    left: 0;
-    background: #ff3333;
+.festival_list_paging_box a:hover {
+    background: #0051A4;
     color: #fff;
-    text-align: center;
+    transition: all 0.3s;
 }
-
-.festival_calendarText_box {
-    padding: 10px 30px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.festival_calendarText_box a {
-    font-size: 20px;
-}
-
-.festival_calendarText_box p {
-    font-size: 14px;
-    color: #666;
-}
-
-.festival_calendarMore_box {
-    width: 50px;
-    position: relative;
-}
-
-.festival_calendarMore_box button {
-    overflow: hidden;
-    position: absolute;
-    z-index: 90;
-    width: 20px;
-    height: 20px;
-    background: url(../images/btn_dot2.png) 0 0 no-repeat;
-    text-indent: -9999px;
-    border: 0;
-}
+/*축제페이징 끝*/
