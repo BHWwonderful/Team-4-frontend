@@ -5,34 +5,166 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         .psuedo_header{
             height:130px;
             border-bottom:2px solid black;
-        }
-
-        .main_title{
-            height: auto;
-        }
-
-        .course_titleImg{
-            width:100%;
-            height:330px;
         }
     </style>
 </head>
 <body>
     <header class="psuedo_header"></header>
     <main class="main">
-        <div class="main_title">
-            <img class="course_titleImg" src="images/course_recommendation.jpg" alt="추천코스">
-            <h2 class="course_title">추천코스</h2>
+        <div class="course_title_wrap">
+            <div class="course_titleContent_box">
+                <h2 class="course_title">추천코스</h2>
+            </div>
+        </div>
+        <div class="course_subGnb_wrap">
+            <div class="course_subGnbContent_wrap">
+                <ul class="course_subGnbList">
+                    <li class="course_subGnbListFirstItem">
+                        <a class="course_subGnbListFirstItemLink" href="#none">
+                            <img src="images/home_ic.jpg" alt="메인 페이지로">
+                        </a>
+                    </li>
+                    <li class="course_subGnbListItem">
+                        <span class="course_subGnbListItemText">여행정보</span>
+                    </li>
+                    <li class="course_subGnbListItem">
+                        <a class="course_subGnbListItemLink" href="#none">
+                            추천코스
+                            <span class="course_subGnbListItemLinkText"></span>
+                            <i class="fa-solid fa-caret-down course_subGnbListItemLinkTriangle"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="course_subGnbSns_box">
+                    <ul class="course_subGnbSnsFuncList">
+                        <li class="course_subGnbSnsFuncListItem">
+                            <a href="#none">
+                                <img src="images/mail_ic.png" alt="">
+                            </a>
+                        </li>
+                        <li class="course_subGnbSnsFuncListItem">
+                            <a href="#none">
+                                <img src="images/print_ic.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="course_subGnbSnsList">
+                        <li class="course_subGnbSnsListItem course_subGnbSnsListItem--noMargin">
+                            <a href="#none">
+                                <img class="course_subGnbSnsListItemLinkImg" src="images/copy2_ic.png" alt="">
+                            </a>
+                        </li>
+                        <li class="course_subGnbSnsListItem">
+                            <a href="#none">
+                                <img class="course_subGnbSnsListItemLinkImg" src="images/face_ic.png" alt="">
+                            </a>
+                        </li>
+                        <li class="course_subGnbSnsListItem">
+                            <a href="#none">
+                                <img class="course_subGnbSnsListItemLinkImg" src="images/twi_ic.png" alt="">
+                            </a>
+                        </li>
+                        <li class="course_subGnbSnsListItem">
+                            <a href="#none">
+                                <img class="course_subGnbSnsListItemLinkImg" src="images/kakao_ic.png" alt="">
+                            </a>
+                        </li>
+                        <li class="course_subGnbSnsListItem">
+                            <a href="#none">
+                                <img class="course_subGnbSnsListItemLinkImg" src="images/naver_ic.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="main_content">
-
+            <section class="course_courseLnb_box">
+                <ul class="course_courseLnbList">
+                    <li class="course_courseLnbListItem">
+                        <a class="course_courseLnbListItemLink course_courseLnbListItemLink--blue" href="#none">지역, 테마별 여행지</a>
+                    </li>
+                    <li class="course_courseLnbListItem">
+                        <a class="course_courseLnbListItemLink" href="#none">프로계획러 사용자가 직접 만든 풀코스 여행</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="course_list_wrap">
+                <section class="course_search_box">
+                    <form>
+                        <div class="course_form">
+                            <div class="course_formRegionHashtag_wrap">
+                                <div class="course_regionFilter_box">
+                                    <label class="course_regionfilterLabel">지역</label>
+                                    <select class="course_regionFilterSelect">
+                                        <option>전체</option>
+                                        <option>서울</option>
+                                        <option>부산</option>
+                                        <option>대구</option>
+                                        <option>인천</option>
+                                        <option>광주</option>
+                                        <option>대전</option>
+                                        <option>울산</option>
+                                        <option>세종</option>
+                                        <option>경기</option>
+                                        <option>강원</option>
+                                        <option>충북</option>
+                                        <option>충남</option>
+                                        <option>경북</option>
+                                        <option>경남</option>
+                                        <option>전북</option>
+                                        <option>전남</option>
+                                        <option>제주</option>
+                                    </select>
+                                </div>
+                                <div class="course_hastagFilter_box">
+                                    <label class="course_hashtagfilterLabel">해시태그</label>
+                                    <select class="course_hashtagFilterSelect">
+                                        <option>전체</option>
+                                        <option>#자연코스</option>
+                                        <option>#데이트코스</option>
+                                        <option>#자녀와함께</option>
+                                        <option>#연인코스</option>
+                                        <option>#가족코스</option>
+                                        <option>#친구와함께</option>
+                                        <option>#힐링코스</option>
+                                        <option>#한국관광의별</option>
+                                        <option>#휴가문화개선</option>
+                                        <option>#산업관광</option>
+                                        <option>#지역명사문화여행</option>
+                                        <option>#관광누리</option>
+                                        <option>#열린 관광 모두의 여행</option>
+                                        <option>#전통한옥</option>
+                                        <option>#생태녹색관광</option>
+                                        <option>#생활관광</option>
+                                        <option>#추천! 웰니스 관광지</option>
+                                        <option>#추천! 가볼만한 곳</option>
+                                        <option>#DMZ 평화관광</option>
+                                        <option>#한국관광품질인증</option>
+                                        <option>#한국관광100선</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="course_searchFilter_box">
+                                <label class="course_searchFilterLabel">키워드</label>
+                                <input class="course_searchFilterInput" type="text" placeholder="검색어를 입력하세요">
+                            </div>
+                        </div>
+                        <button class="course_formButton">검색</button>
+                    </form>
+                </section>
+            </section>
         </div>
-
     </main>
     <footer class="footer"></footer>
 </body>

@@ -1,0 +1,271 @@
+/* main 제목 */
+        .course_title_wrap{
+            background:url(../images/course_recommendation.jpg) repeat-x center;
+            height:330px;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .course_titleContent_box{
+            margin-left:62px;
+            margin-right:62px;
+            width:1180px;
+        }
+
+        .course_title{
+            color:#ffffff;
+            text-shadow: 2px 2px 4px #888888;
+            font-size:50px;
+        }
+
+        /* 서브GNB */
+        .course_subGnb_wrap{
+            width:100%;
+            height:50px;
+            border-bottom:1px solid #dfdfdf;
+            box-sizing: content-box;
+            margin-bottom:70px;
+        }
+
+        .course_subGnbContent_wrap{
+            width:1180px;
+            margin:0 auto;
+            background:#fff;
+            height:50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .course_subGnbList{
+            width:304px;
+            display:flex;
+            align-items: center;
+            position:relative;
+        }
+
+        .course_subGnbListFirstItem{
+            width:40px;
+        }
+
+        .course_subGnbListFirstItemLink{
+            display:block;
+            width:40px;
+            vertical-align: middle;
+        }
+
+        .course_subGnbListItem{
+            width:141px;
+            background:url(../images/nav_arw.png) left no-repeat;
+            height:50px;
+            padding:13px 20px 0 50px;
+            position:relative;
+        }
+
+        .course_subGnbListItemText{
+            font-size:15.4px;
+        }
+
+        .course_subGnbListItemLink{
+            font-size:15.4px;
+            position:relative;
+            color:#5289e6;
+        }
+
+        .course_subGnbListItemLinkText::before{
+            position:absolute;
+            bottom:-4px;
+            left:1px;
+            content:'';
+            height:1px;
+            width:100%;
+            background-color: #5289e6;
+        }
+
+        .course_subGnbListItemLinkTriangle{
+            position:absolute;
+            top:3px;
+            right:-15px;
+        }
+
+        .course_subGnbSns_box{
+            width:268px;
+            height:50px;
+            position:relative;
+            display: flex;
+        }
+
+        .course_subGnbSnsFuncList{
+            display:flex;
+            width:72px;
+            height:50px;
+            align-items: center;
+        }
+
+        .course_subGnbSnsFuncListItem{
+            margin-right:15px;
+        }
+
+        .course_subGnbSnsFuncList::after{
+            content:'';
+            position:absolute;
+            left:72px;
+            top:16px;
+            width:1px;
+            height:17px;
+            background-color:#e5e5e5;
+        }
+
+        .course_subGnbSnsList{
+            display:flex;
+            width:196px;
+            padding-left:15px;
+            padding-top:10px;            
+        }
+
+        .course_subGnbSnsListItem{
+            margin-left:4px;
+        }
+
+        .course_subGnbSnsListItem--noMargin{
+            margin-left:0px;
+        }
+
+        .course_subGnbSnsListItemLinkImg{
+            width:33px;
+            height:32px;
+        }
+
+        /* main 컨텐츠 */
+        .main_content{
+            width:1180px;
+            margin:0 auto;
+        }
+
+        /* LNB 링크 */
+        .course_courseLnb_box{
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+            margin-bottom:30px;
+        }
+
+        .course_courseLnbList{
+            display:flex;
+        }
+
+        .course_courseLnbListItem{
+            width:590px;
+            height:60px;
+        }
+
+        .course_courseLnbListItemLink{
+            display: inline-block;
+            width:590px;
+            height:60px;
+            line-height:60px;
+            text-align: center;
+            font-size:18px;
+            color:black;
+            border-left:1px solid #e6e6e6;
+            border-right:1px solid #e6e6e6;
+        }
+
+        .course_courseLnbListItemLink--blue{
+            background-color: #0051A4;
+            border-color:#0051A4;
+            color:#ffffff;
+        }
+
+        /* 코스 목록 컨텐츠 */
+        .course_list_wrap{
+            width:1180px;
+            height:auto;
+        }
+
+        .course_search_box{
+            background-color:#fafafa;
+            height:75px;
+            border: 1px solid #dfdfdf;
+            padding:20px;
+        }
+
+        .course_regionFilter_box{
+            width:160px;
+            display:flex;
+        }
+
+        .course_regionfilterLabel{
+            font-size:15.4px;
+            width:40px;
+        }
+
+        .course_regionFilterSelect{
+            width:120px;
+            height:30px;
+            padding-left:10px;
+            padding-right:60px;
+            appearance: none;
+            background:url(../images/select_btn.png) no-repeat right;
+            border:1px solid #dfdfdf;
+            color:#a3a3a3;
+        }
+
+        .course_hastagFilter_box{
+            width:432px;
+            margin-left:23px;
+            display:flex;
+        }
+
+        .course_hashtagfilterLabel{
+            width:70px;
+            font-size:15.4px;
+        }
+
+        .course_hashtagFilterSelect{
+            width:200px;
+            height:30px;
+            padding-left:10px;
+            padding-right:60px;
+            appearance: none;
+            border:1px solid #dfdfdf;
+            background:url(../images/select_btn.png) no-repeat right;
+            color:#a3a3a3;
+        }
+
+        .course_form{
+            display:flex;
+            justify-content: space-between;
+            margin-bottom:45px;
+        }
+
+        .course_formRegionHashtag_wrap{
+            display:flex;
+            width:430px;
+        }
+
+        .course_searchFilter_box{
+            width:524px;
+            display:flex;
+        }
+
+        .course_searchFilterLabel{
+            width:55px;
+            font-size:15.4px;
+        }
+
+        .course_searchFilterInput{
+            width:458px;
+            padding-left:10px;
+            color:#a3a3a3;
+            border:1px solid #dfdfdf;
+        }
+
+        .course_formButton{
+            display:block;
+            width:97px;
+            height:37px;
+            margin:0 auto;
+            border:none;
+            background-color:#2d58a0;
+            padding:10px 35px;
+        }
