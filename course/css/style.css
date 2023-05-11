@@ -177,9 +177,10 @@
         }
 
         /* 코스 목록 컨텐츠 */
-        .course_list_wrap{
+        .course_search_wrap{
             width:1180px;
             height:auto;
+            margin-bottom:108px;
         }
 
         .course_search_box{
@@ -267,5 +268,57 @@
             margin:0 auto;
             border:none;
             background-color:#2d58a0;
-            padding:10px 35px;
+            padding:10px 30px;
+            font-size:15.4px;
+            color:#fff;
+            text-align:center;
+        }
+
+        /* 코스 컨텐츠 목록 */
+        .course_content_wrap{
+            border-top:2px solid #ebc94c;
+            padding-top:20px;
+        }
+
+        .course_list{
+            display:flex;
+        }
+
+        .course_listItem{
+            width:251px;
+            height:274px;
+        }
+
+        .course_listItemLink{
+            display: block;
+            height:274px;
+        }
+
+        .course_listItemLinkImg{
+            width:246px;
+            height:143px;
+        }
+
+        .course_listItemLinkTitle{
+            color:#000;
+            font-size:15.4px;
+            display:inline-block;
+            width:100%;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            font-weight: normal;
+            padding-bottom:4px;
+        }
+
+        .course_listItemLinkText{
+            overflow:hidden;
+            display:-webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            color:#777;
+            font-size:14.7px;
+            line-height:1.5;
+            font-weight: normal;
+            margin-bottom:15px;
         }
