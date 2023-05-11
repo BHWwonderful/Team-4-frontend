@@ -34,10 +34,8 @@
     justify-content: left;
     align-items: center;
 }
-.main_special_route img:first-child{
-    margin-left: 3px;
-}
 .main_special_route img{
+    margin-left: 3px;
     width: 18px;
     height: 21px;
     padding-right:70px;
@@ -365,6 +363,9 @@ h3{
     bottom: 50px;
     right: 50px;
 }
+
+/* float btn */
 .special_float_btn img{
     vertical-align: -10px;
+    cursor: pointer;
 }
