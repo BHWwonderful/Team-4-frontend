@@ -1,0 +1,105 @@
+/* main title img */
+.main_sample_title{
+    width: 100%;
+    height: 330px;
+    margin: auto;
+    background: url(../img_k/20210812154421.jpg) center;
+}
+.main_sample_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main_sample_title h2{
+    margin: auto;
+    padding-left: 20px;
+    width: 1180px;
+    font-size: 48px;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px #888888;
+}
+
+/* route bar */
+.main_sampleRoute_wrap{
+    width: 100%;
+    height: 51px;
+    border-bottom: 1px solid #dfdfdf;
+}
+.main_sample_ulWrap{
+    width: 1180px;
+    margin: auto;
+}
+.main_sampleRoute_wrap ul{
+    margin-left: 205px;
+    position: relative;
+    background-color: #FFFFFF;
+    border: 1px solid #dfdfdf;
+    display: none;
+    width: 225px;
+}
+.main_sampleRoute_wrap li a{
+    display: block;
+    padding: 15px 40px;
+    color: #777;
+}
+.main_sample_nowRoute{
+    border-bottom: 1px solid #dfdfdf;
+}
+.main_sample_route{
+    width: 1180px;
+    height: 51px;
+    margin: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.main_sample_route img{
+    margin-left: 3px;
+    width: 18px;
+    height: 21px;
+    padding-right:70px;
+}
+.main_sample_route h4{
+    font-size: 15px;
+    margin-right: 60px;
+    position: relative;
+    color: #777;
+}
+.main_sample_route h4::before{
+    content: "";
+    width: 30px;
+    height: 50px;
+    background: url(../img_k/nav_arw.png) center no-repeat;
+    position: absolute;
+    top: -17px;
+    left: -50px
+}
+.main_sample_route h4::after{
+    content: "";
+    width: 30px;
+    height: 50px;
+    background: url(../img_k/nav_arw.png) center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -17px;
+    left: 110px
+}
+.main_sample_route h5{
+    position: relative;
+    color: #5289e6;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #5289e6;
+    box-sizing: border-box;
+}
+.main_sample_route h5 a{
+    padding: 15px 0;
+}
+.main_sample_route h5::after{
+    content: " ▼";
+    font-size: 13px;
+    color: #5289e6;
+    position: absolute;
+    right: -20px;
+    pointer-events: auto;
+}
