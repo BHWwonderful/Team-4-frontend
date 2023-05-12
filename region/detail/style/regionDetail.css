@@ -189,9 +189,8 @@
     text-align: center;
     font-size: 28px;
     margin-top: 30px;
-    padding-bottom: 40px;
+    padding-bottom:40px;
     border-bottom: 2px solid rgb(45, 88, 160);
-    box-sizing: border-box;
 }
 
 .detail_imgSlider_container {
