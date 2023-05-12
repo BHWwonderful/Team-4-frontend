@@ -1,6 +1,8 @@
-$(".gnb_1dp > li").hover(
-    function () {
-        $(this).find(".gnb_2dp_bg").show();
-    }, function () {
-        $(this).find(".gnb_2dp_bg").hide();
-    })
+$(".gnb_1dp > li").mouseover(function () {
+    $(".gnb_2dp_bg").stop().slideUp(100);
+    $(this).find(".gnb_2dp_bg").stop().slideDown("fast");
+})
+
+$(".main").mouseover(function () {
+    $(".gnb_2dp_bg").stop().slideUp(100);
+})

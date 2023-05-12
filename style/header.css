@@ -59,6 +59,16 @@
     box-sizing: border-box;
 }
 
+.gnb_1dp>li:hover>a{
+    color: #0051a4;
+    border-bottom: 3px solid #0051a4;
+}
+
+.gnb_2dp>li:hover>a{
+    color: #0051a4;
+    border-bottom: 3px solid #0051a4;
+}
+
 .gnb_2dp_bg {
     position: absolute;
     top: 90px;
