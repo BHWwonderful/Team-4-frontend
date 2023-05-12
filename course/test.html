@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <style>
+        .swiper {
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+        <img src="images/044faa98-3076-494b-a752-54ab8b8ffb4f.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+        <img src="images/22a3996e-8c58-4c50-8b45-4bbe6f55b72c.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+        <img src="images/3cdc6db3-4093-4d11-aebb-3a069a564ead.jpg">
+    </div>
+     ...
+    </div>
+    <!-- If we need pagination -->
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {            
+            slidesPerView: 1,
+            direction: 'horizontal',
+            loop:false,
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextE1: '.swiper-button-next',
+                prevE1: '.swiper-button-prev',
+            },
+
+            scrollbar: {
+                el: '.swiper-scroller',
+            },
+        });
+    </script>
+</body>
+</html>
