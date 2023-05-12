@@ -1,0 +1,296 @@
+/* 메인 상단 이미지 */
+.region_topImg_wrap {
+    width: 100%;
+    height: 330px;
+    background: url("../../images/mainBackground.jpeg") center;
+    display: flex;
+    align-items: center;
+}
+
+.region_topImgText_box {
+    width: 1180px;
+    margin: auto;
+    color: #fff;
+    font-size: 30px;
+}
+
+/* 이미지 하단 가이드 바 */
+.region_guideSns_container {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.region_guideSns_wrap {
+    width: 1180px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.region_guideList {
+    display: flex;
+    height: 100%;
+}
+
+.region_guideList>li {
+    height: 100%;
+    padding: 0 35px 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../../images/nav_arw.png") no-repeat top left/contain
+}
+
+.region_guideList>li:first-child {
+    background: none;
+    padding: 0;
+    justify-content: start;
+    width: 40px;
+}
+
+.region_guideList>li:last-child {
+    position: relative;
+}
+
+.region_guideList>li:last-child>a {
+    color: #5289e6;
+    position: relative;
+}
+
+.region_guideList>li:last-child>a::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #5289e6;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.region_guideList>li:nth-child(3)>a::before {
+    content: '▼';
+    position: absolute;
+    top: 0;
+    right: -20px;
+}
+
+/* 가이드바 3depth */
+.region_3depthList {
+    position: absolute;
+    background: #fff;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    display: none;
+}
+
+.region_3depthList li {
+    text-align: center;
+    line-height: 50px;
+}
+
+.region_3depthList li>a {
+    color: #777;
+}
+
+/* 메일, 프린트, sns */
+.region_share_box {
+    display: flex;
+    align-items: center;
+}
+
+.region_share_box ul {
+    display: flex;
+}
+
+.region_share_box ul li {
+    margin-left: 4px;
+}
+
+.region_share_box ul li:first-child {
+    margin-left: 0;
+}
+
+.region_sendList {
+    position: relative;
+}
+
+.region_sendList li {
+    margin-right: 15px;
+}
+
+.region_sendList::after {
+    content: '';
+    width: 1px;
+    height: 17px;
+    background: #e5e5e5;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+
+.region_snsList {
+    margin-left: 15px;
+}
+
+/* 여행지 목록 */
+.screenout {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    position: absolute;
+    z-index: -9999;
+}
+
+.region_cityContent_wrap {
+    width: 1180px;
+    margin: 90px auto 50px;
+}
+
+.region_cityContent_wrap h2 {
+    font-size: 30px;
+}
+
+.region_city_box {
+    width: 1180px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    margin-top: 50px;
+}
+
+.region_city_box a {
+    display: block;
+    width: 196.59px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    border-bottom: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+
+.region_city_box_active {
+    background: #0051a4;
+    color: #fff;
+    border-color: #0051a4;
+}
+
+.detail_title_box {
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 30px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid rgb(45, 88, 160);
+    box-sizing: border-box;
+}
+
+.detail_imgSlider_container {
+    margin-top: 45px;
+    height: 625px;
+    position: relative;
+}
+
+.detail_imgSlider_wrap {
+    position: relative;
+    width: 1120px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.detail_imgSlider_box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* transform: translateX(-1120px); */
+}
+
+.detail_imgSlider_box img {
+    width: 100%;
+    height: 100%;
+}
+
+.detail_sliderPrevBtn, .detail_sliderNextBtn {
+    position: absolute;
+    border: 0;
+    text-indent: -9999px;
+    width: 63px;
+    height: 63px;
+    overflow: hidden;
+    background: url("../images/slide_prevbtn.png");
+    top: 281px;
+}
+
+.detail_imgSlider_wrap .detail_sliderNextBtn {
+    transform: rotate(180deg);
+    right: 0;
+}
+
+.detail_imgSlider_wrap>span {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    background:rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    top: 20px;
+    right: 20px;
+}
+
+.detail_moreText_wrap {
+    width: 1120px;
+    margin: 24px auto 0;
+}
+
+.detail_moreText_wrap>h4 {
+    font-size: 26px;
+    padding: 31px 0 9px;
+    border-bottom: 2px solid rgb(45, 88, 160);
+}
+
+.detail_moreText_wrap>p {
+    padding-top: 30px;
+    color: #333;
+}
+
+.detail_guideText_box {
+    padding-top: 30px;
+}
+
+.detail_guideText_box>ul>h5 {
+    padding-left: 40px;
+    font-size: 24px;
+    background: url("../images/pinpoint.png") no-repeat left/contain;
+}
+
+.detail_guideText_box>ul>li {
+    padding-left: 30px;
+    margin-top: 17px;
+    background: url("../images/listFlag.png") no-repeat left top;
+    font-size: 18px;
+    display: flex;
+}
+
+.detail_guideText_box>ul>li>span:first-child {
+    display: block;
+    width: 112px;
+    color: #2d58a0;
+}
+
+.detail_guideText_box>ul>li>span:last-child {
+}
