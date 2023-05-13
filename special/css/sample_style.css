@@ -2,6 +2,18 @@
 .main_content{
     width: 100%;
 }
+.sample_title h3{
+    width: 1180px;
+    height: 132px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+    border-bottom: 2px solid #2d58a0;
+}
 /* slider */
 .sample_slider{
     margin: 45px 0;

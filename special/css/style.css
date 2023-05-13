@@ -23,47 +23,49 @@
 /* route bar */
 .main_specialRoute_wrap{
     width: 100%;
-    height: 51px;
+    height: 50px;
     border-bottom: 1px solid #dfdfdf;
+    box-sizing: border-box;
 }
 .main_special_ulWrap{
     width: 1180px;
     margin: auto;
 }
 .main_specialRoute_wrap ul{
-    margin-left: 205px;
     position: relative;
+    display: none;
+    top: -1px;
+    width: 200px;
+    margin: 0 202px;
     background-color: #FFFFFF;
     border: 1px solid #dfdfdf;
-    display: none;
-    width: 225px;
     z-index: 100;
 }
 .main_specialRoute_wrap li a{
     display: block;
-    padding: 15px 40px;
+    padding: 20px 0;
     color: #777;
+    text-align: center;
 }
 .main_special_nowRoute{
     border-bottom: 1px solid #dfdfdf;
 }
 .main_special_route{
-    width: 1180px;
-    height: 51px;
-    margin: auto;
     display: flex;
     justify-content: left;
     align-items: center;
+    width: 1180px;
+    height: 50px;
+    margin: auto;
 }
 .main_special_route img{
-    margin-left: 3px;
     width: 18px;
     height: 21px;
-    padding-right:70px;
+    margin-right:35px;
 }
 .main_special_route h4{
     font-size: 15px;
-    margin-right: 60px;
+    margin: 0 35px;
     position: relative;
     color: #777;
 }
@@ -73,7 +75,7 @@
     height: 50px;
     background: url(../img_k/nav_arw.png) center no-repeat;
     position: absolute;
-    top: -17px;
+    top: -18px;
     left: -50px
 }
 .main_special_route h4::after{
@@ -83,13 +85,15 @@
     background: url(../img_k/nav_arw.png) center no-repeat;
     background-size: cover;
     position: absolute;
-    top: -17px;
+    top: -18px;
     left: 110px
 }
 .main_special_route h5{
     position: relative;
+    top: 2px;
     color: #5289e6;
-    padding-bottom: 5px;
+    margin: 0 35px;
+    padding-bottom: 7px;
     border-bottom: 1px solid #5289e6;
     box-sizing: border-box;
 }
@@ -115,10 +119,10 @@ h3{
     margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 26px;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-size: 30px;
     color: #000000;
-    line-height: 1.6;
     border-bottom: 2px solid #2d58a0;
 }
 .main{
