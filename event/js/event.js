@@ -1,5 +1,8 @@
 $(document).ready(function(){
     // params feature
+    $(".header").load("../header/header.html");
+
+
     const resultData = $.getJSON( "./data/event.json", function(data) {
         console.log(data.data)
         console.log("json 데이터 길어 " , data.data.length);

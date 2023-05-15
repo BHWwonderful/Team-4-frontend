@@ -2,21 +2,21 @@
     "data" : [
         {
             "index": 1,
-            "title" : "가을 산성투어",
-            "content" :"경기도 가을 에서 작은 희망을 발견하는 안전한 비대면 여행 경기도",
+            "title" : "2023 찾아가고 싶은 섬 <봄X섬 인증샷 이벤트>",
+            "content" :"봄 찾아가고싶은 이벤트",
             "img":"../images/example.png",
             "eventStatus":"ing",
             "createdBy":"콘텐츠관리자",
-            "createdAt":"2021-10-08"
+            "createdAt":"2023-04-17"
         },
         {
             "index": 2,
-            "title" : "4월 찬란한 '봄 날의 피크닉",
-            "content" :"4월 찬란한 봄날의 피크닉 완연한 봄기운",
-            "img":"../images/example.png",
+            "title" : "하이커와 함께 하는 특별한 5월! <하이커로 여행가정>",
+            "content" :"하이커와 함께 하는 봄",
+            "img":"",
             "eventStatus":"due",
             "createdBy":"콘텐츠관리자",
-            "createdAt":"2021-10-03"
+            "createdAt":"2023-04-01"
         },
         {
             "index": 3,

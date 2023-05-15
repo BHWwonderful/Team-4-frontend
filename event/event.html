@@ -7,43 +7,98 @@
     <title>Event</title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
     <script src="./js/event.js"></script>
 </head>
 <body>
-    <header>
-        <img src="images/header_img.jpg" alt="">
-    </header>
-    <div class="event_nav_wrap">
-            <div><img src="images/home_ic.jpg" alt=""></div>
-            <div>여행정보</div>
-            <div>이 달의 가볼만한 곳</div>
+
+    <header class="header" id="header"></header>
+    <div class="event_main_banner">
+        <img src="images/banner_ev_main.png" alt="">
     </div>
-    <div class="event_nav_Mail_wrap">
-       <a href=""><img src="images/mail_ic.png" alt=""></a> 
-       <a href=""><img src="images/print_ic.png" alt=""></a> 
-    </div>
-    <div class="event_nav_sosical_wrap">
-        <img src="images/copy2_ic.png" alt="">
-        <img src="images/face_ic.png" alt="">
-        <img src="images/twi_ic.png" alt="">
-        <img src="images/kakao_ic.png" alt="">
-        <img src="images/naver_ic.png" alt="">
-    </div>
-    <div class="event_button_wrap">
-            <button type="button">진행중</button>
-            <button type="button">진행 예정</button>
-            <button type="button">진행 완료</button>
-    </div>
-   <div class="event_main_list_wrap">
-        <div class="event_main_serch_box">
-            <span>page 1/21 검색결과 총 00건이 검색 되었습니다.</span>
-            제목<button type="button">검색어를 입력하세요.</button>
-            <button type="button">검색</button>
-        </div>
-        <div class="event_main_board">
-            <div class="event_main_board_content_wrap">
+    <div class="course_subGnb_wrap">
+        <div class="course_subGnbContent_wrap">
+            <ul class="course_subGnbList">
+                <li class="course_subGnbListFirstItem">
+                    <a class="course_subGnbListFirstItemLink" href="#none">
+                        <img src="images/home_ic.jpg" alt="메인 페이지로">
+                    </a>
+                </li>
+                <li class="course_subGnbListItem">
+                    <span class="course_subGnbListItemText">여행정보</span>
+                </li>
+                <li class="course_subGnbListItem">
+                    <a class="course_subGnbListItemLink" href="#none">
+                        추천코스
+                        <span class="course_subGnbListItemLinkText"></span>
+                        <i class="fa-solid fa-caret-down course_subGnbListItemLinkTriangle"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="course_subGnbSns_box">
+                <ul class="course_subGnbSnsFuncList">
+                    <li class="course_subGnbSnsFuncListItem">
+                        <a href="#none">
+                            <img src="images/mail_ic.png" alt="">
+                        </a>
+                    </li>
+                    <li class="course_subGnbSnsFuncListItem">
+                        <a href="#none">
+                            <img src="images/print_ic.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="course_subGnbSnsList">
+                    <li class="course_subGnbSnsListItem course_subGnbSnsListItem--noMargin">
+                        <a href="#none">
+                            <img class="course_subGnbSnsListItemLinkImg" src="images/copy2_ic.png" alt="">
+                        </a>
+                    </li>
+                    <li class="course_subGnbSnsListItem">
+                        <a href="#none">
+                            <img class="course_subGnbSnsListItemLinkImg" src="images/face_ic.png" alt="">
+                        </a>
+                    </li>
+                    <li class="course_subGnbSnsListItem">
+                        <a href="#none">
+                            <img class="course_subGnbSnsListItemLinkImg" src="images/twi_ic.png" alt="">
+                        </a>
+                    </li>
+                    <li class="course_subGnbSnsListItem">
+                        <a href="#none">
+                            <img class="course_subGnbSnsListItemLinkImg" src="images/kakao_ic.png" alt="">
+                        </a>
+                    </li>
+                    <li class="course_subGnbSnsListItem">
+                        <a href="#none">
+                            <img class="course_subGnbSnsListItemLinkImg" src="images/naver_ic.png" alt="">
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-   </div>
+    </div>
+    <div class="event_main_content_wrap">
+        <div class="event_button_wrap">
+                <button type="text">진행중</button>
+                <button type="button">진행 예정</button>
+                <button type="button">진행 완료</button>
+        </div>
+        <div class="event_main_list_wrap">
+            <div class="event_main_search_box">
+                <div class="event_main_total_content">
+                    <span>page 1/21 검색결과 총 00건이 검색 되었습니다.</span>
+                </div>
+                <div class="event_main_search_content">
+                    <label for="searchbox">제목</label><input id="searchbox" type="text" value="검색어를 입력하세요.">
+                    <button type="button">검색</button>
+                </div>
+            </div>
+            <div class="event_main_board">
+                <div class="event_main_board_content_wrap">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
