@@ -2,11 +2,22 @@
 .main_content{
     width: 100%;
 }
+.sample_title h3{
+    width: 1180px;
+    height: 132px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+    border-bottom: 2px solid #2d58a0;
+}
 /* slider */
 .sample_slider{
     margin: 45px 0;
     position: relative;
-    display: none;
 }
 .sample_slideImg_wrap{
     margin: auto;
@@ -73,11 +84,17 @@
 
 /* card type 2 */
 .sample_cardWrap_type2{
+    width: 1180px;
     display: flex;
 }
 .sample_card_type2{
-    width: 570px;
+    width: 557px;
     border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.sample_card_type2 h4{
+    margin: 5px 0 15px;
 }
 .sample_card_type2:first-child{
     margin-right: 10px;
@@ -86,4 +103,26 @@
 .sample_card_type2:last-child{
     margin-left: 10px;
     padding: 10px
+}
+.sample_cardType2Parts_wrap{
+    display: flex;
+}
+.sample_cardType2_parts{
+    margin-right: 20px;
+}
+.sample_cardType2_parts img{
+    width: 268px;
+    height: 180px;
+    border-radius: 5px;
+}
+.sample_cardType2_parts h5{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.sample_cardType2_parts span{
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+    
 }

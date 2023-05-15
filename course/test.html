@@ -7,58 +7,275 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <style>
+        html, body, em, div, a, ul, li{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        ul, li{
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .slider-wrap{
+            width:1140px;
+            height:300px;
+            background-color: #ccc;
+            margin:0 auto;
+        }
+
         .swiper {
-            width: 600px;
+            position:relative;
+            width: 1100px;
             height: 300px;
+        }
+
+        .swiper-button-prev{
+            position:absolute;
+            top:58%;
+            left:0;
+            background-image:url(images/btn_cos_prev.png);
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-position: center;
+        }
+
+        .swiper-button-next{
+            position:absolute;
+            top:58%;
+            right:0;
+            background-image:url(images/btn_cos_next.png);
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-position: center;
+        }
+
+        .swiper-button-prev::after{
+            content:'';
+        }
+
+        .swiper-button-next::after{
+            content:'';
+        }
+
+        .swiper-wrapper{
+            width:1240px;
+            margin:0 auto;
+        }
+
+        .swiper-slide{
+            width:244px !important;
+            position:relative;
+            padding-top:85px;
+            padding-bottom:39px;
+        }
+
+        .swiper-slide::after{
+            position:absolute;
+            top:47px;
+            left:0;
+            content:'';
+            width:99.5%;
+            height:2px;
+            border-bottom:2px dotted black;
+            z-index:10;
+        }
+
+        .swiper-slide:hover .slide-link::after{
+            background-color: rgba(0,0,130,0.8);
+        }
+
+        .slide-course{
+            display:inline-block;
+            position:absolute;
+            top:34px;
+            left:50%;
+            border-radius: 100%;
+            border:2px solid black;
+            width:30px;
+            height:30px;
+            text-align: center;
+            line-height:25px;
+            font-style:normal;
+            transform:translateX(-50%);
+            background-color: white;
+            z-index:20;
+        }
+
+        .slide-course--blue{
+            border:2px solid blue;
+        }
+
+        .slide-link{
+            display: block;
+            position:relative;
+            width:180px;
+            height:180px;
+            margin:0 auto;
+        }
+
+        .slide-link::after{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:180px;
+            height:180px;
+            background-color: rgba(0,0,0,0.3);
+        }
+
+        .slide-linkImg01{
+            position:absolute;
+            top:0;
+            left:0;
+            width:180px;
+            height:180px;
+            background:url(images/Taegot_01.jpg) no-repeat 50% 50%;
+        }
+
+        .slide-linkText{
+            position:absolute;
+            width:100%;
+            left:0;
+            top:50%;
+            transform:translateY(-50%);
+            text-align: center;
+            z-index:10;
+            color:white;
+            display:-webkit-box;
+            -webkit-line-clamp:2;
+            -webkit-box-orient: vertical;
+            overflow:hidden;
+            text-overflow:ellipsis;
         }
     </style>
 </head>
 <body>
-    <!-- Slider main container -->
-<div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">
-        <img src="images/044faa98-3076-494b-a752-54ab8b8ffb4f.jpg" alt="">
+    <div class="slider-wrap">
+        <div class="swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <em class="slide-course">1</em>
+                    <a class="slide-link" href="#none">
+                        <span class="slide-linkImg01"></span>
+                        <div class="slide-limkText_box">
+                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <em class="slide-course">2</em>
+                    <a class="slide-link" href="#none">
+                        <span class="slide-linkImg01"></span>
+                        <div class="slide-limkText_box">
+                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <em class="slide-course">3</em>
+                    <a class="slide-link" href="#none">
+                        <span class="slide-linkImg01"></span>
+                        <div class="slide-limkText_box">
+                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <em class="slide-course">4</em>
+                    <a class="slide-link" href="#none">
+                        <span class="slide-linkImg01"></span>
+                        <div class="slide-limkText_box">
+                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <em class="slide-course">5</em>
+                    <a class="slide-link" href="#none">
+                        <span class="slide-linkImg01"></span>
+                        <div class="slide-limkText_box">
+                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <em class="slide-course">6</em>
+                    <a class="slide-link" href="#none">
+                        <span class="slide-linkImg01"></span>
+                        <div class="slide-limkText_box">
+                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <em class="slide-course">7</em>
+                    <a class="slide-link" href="#none">
+                        <span class="slide-linkImg01"></span>
+                        <div class="slide-limkText_box">
+                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <em class="slide-course">8</em>
+                    <a class="slide-link" href="#none">
+                        <span class="slide-linkImg01"></span>
+                        <div class="slide-limkText_box">
+                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                        </div>
+                    </a>
+                </li>
+                
+            </ul>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </div>
-    <div class="swiper-slide">
-        <img src="images/22a3996e-8c58-4c50-8b45-4bbe6f55b72c.jpg" alt="">
-    </div>
-    <div class="swiper-slide">
-        <img src="images/3cdc6db3-4093-4d11-aebb-3a069a564ead.jpg">
-    </div>
-     ...
-    </div>
-    <!-- If we need pagination -->
-  
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
-  </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {            
-            slidesPerView: 1,
-            direction: 'horizontal',
-            loop:false,
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 4,
+            slidesPerGroup: 3,
+            loop: false,
 
             pagination: {
                 el: '.swiper-pagination',
             },
 
             navigation: {
-                nextE1: '.swiper-button-next',
-                prevE1: '.swiper-button-prev',
-            },
-
-            scrollbar: {
-                el: '.swiper-scroller',
-            },
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
         });
+
+        swiper.on('slideChange', function(){
+            const prevButton = document.querySelector('.swiper-button-prev');
+            const nextButton = document.querySelector('.swiper-button-next');
+            
+            if(swiper.activeIndex === 0){
+                prevButton.classList.add('swiper-button-disabled');
+            } else {
+                prevButton.classList.remove('swiper-button-disabled');
+            }
+
+            if(swiper.activeIndex >= 3){
+                nextButton.classList.add('swiper-button-disabled');
+            } else{
+                nextButton.classList.remove('swiper-button-disabled');
+            }
+        });
+
+        const sliderLinks = document.querySelectorAll('slide-link');
+
+        sliderLinks.forEach((sliderLink, index)=>{
+            for(let i=0; i <= index; i++){
+
+            }
+        })
+        
+
     </script>
 </body>
 </html>
