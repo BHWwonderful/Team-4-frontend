@@ -113,7 +113,7 @@
     width: 100%;
     margin: auto;
 }
-h3{
+.main_contentTitle_wrap h3{
     width: 1180px;
     height: 132px;
     margin: auto;
@@ -132,7 +132,6 @@ h3{
 .main_content{
     width: 1180px;
     margin: auto;
-    /* border-top: 2px solid #2d58a0; */
 }
 .theme_listImg_box{
     display: flex;
@@ -300,6 +299,18 @@ h3{
 }
 
 /* sub content */
+.theme_may_event h3{
+    width: 1180px;
+    height: 132px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+    border-bottom: 2px solid #2d58a0;
+}
 .event_title{
     margin: 30px 0;
     font-size: 20px;
@@ -351,7 +362,7 @@ h3{
     width: 267.49px;
     height: 177.98px;
     border-radius: 5px;
-    padding: 10px 10px 0;
+    margin: 10px 10px 0;
 }
 .theme_family_imgBox span{
     padding: 10px 10px 0;
@@ -369,31 +380,25 @@ h3{
 .theme_spring_imgBox1 img, .theme_spring_imgBox2 img{
     width: 267.49px;
     height: 177.98px;
-    padding: 10px 10px 0;
+    margin: 10px 10px 0;
     border-radius: 5px;
 }
 .theme_springImgBox_wrap span{
-    padding: 10px 10px 0;
+    margin: 10px 10px 0;
     width: 267.49px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 .theme_float_btn{
     text-align: center;
     width: 30px;
     height: 30px;
     border: 1px solid #00000040;
     border-radius: 50%;
-    background: #FFFFFF;
+    background: #FFFFFF url(../img/ico_arrow_top.png) no-repeat center;
+    background-size: 60%;
     position: fixed;
     bottom: 50px;
     right: 50px;
-}
-
-/* float btn */
-.theme_float_btn img{
-    vertical-align: -10px;
-    cursor: pointer;
 }
