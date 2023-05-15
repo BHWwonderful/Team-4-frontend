@@ -6,6 +6,7 @@
     width: 100%;
     position: fixed;
     background: #fff;
+    z-index: 1000;
 }
 
 .header_wrap {
@@ -67,6 +68,11 @@
 .gnb_2dp>li:hover>a{
     color: #0051a4;
     border-bottom: 3px solid #0051a4;
+}
+
+.gnb_path_active {
+    color: #0051a4 !important;
+    border-bottom: 3px solid #0051a4 !important;
 }
 
 .gnb_2dp_bg {

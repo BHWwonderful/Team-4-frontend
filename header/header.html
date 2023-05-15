@@ -28,10 +28,10 @@
                             <div class="gnb_2dpListCont_box">
                                 <ul class="gnb_2dp">
                                     <li>
-                                        <a href="">추천 코스</a>
+                                        <a href="../course/course.html">추천 코스</a>
                                     </li>
                                     <li>
-                                        <a href="">지역 여행지</a>
+                                        <a href="../region/region.html">지역 여행지</a>
                                     </li>
                                     <li>
                                         <a href="">여행 콕콕</a>
@@ -51,10 +51,10 @@
                             <div class="gnb_2dpListCont_box">
                                 <ul class="gnb_2dp">
                                     <li>
-                                        <a href="">이벤트</a>
+                                        <a href="../event/event.html">이벤트</a>
                                     </li>
                                     <li>
-                                        <a href="">축제</a>
+                                        <a href="../festival/festival.html">축제</a>
                                     </li>
                                 </ul>
                             </div>
@@ -71,10 +71,10 @@
                             <div class="gnb_2dpListCont_box">
                                 <ul class="gnb_2dp">
                                     <li>
-                                        <a href="">여행 패키지 상품</a>
+                                        <a href="../package/package.html">여행 패키지 상품</a>
                                     </li>
                                     <li>
-                                        <a href="">테마별 여행추천</a>
+                                        <a href="../theme/theme.html">테마별 여행추천</a>
                                     </li>
                                 </ul>
                             </div>
@@ -89,7 +89,7 @@
     </div>
 </div>
 
-<script>
+<script type="text/javascript">
     $(".gnb_1dp > li").mouseover(function () {
         $(".gnb_2dp_bg").stop().slideUp(100);
         $(this).find(".gnb_2dp_bg").stop().slideDown("fast");
@@ -97,5 +97,26 @@
 
     $(".main").mouseover(function () {
         $(".gnb_2dp_bg").stop().slideUp(100);
+    })
+
+    var path = window.location.pathname;
+
+    var arSplitPath = path.split("/");
+
+    $(window).on("scroll", function () {
+        let scroll = $(window).scrollTop();
+        if (scroll >= 381) {
+            if (arSplitPath[1] == "region" || "course") {
+                $(".gnb_1dp li:eq(0) a").addClass("gnb_path_active");
+            } else if(arSplitPath[1] == "evnet" || "festival") {
+                $(".gnb_1dp li:eq(1) a").addClass("gnb_path_active");
+            } else if(arSplitPath[1] == "package" || "theme") {
+                $(".gnb_1dp li:eq(2) a").addClass("gnb_path_active");
+            } else if(arSplitPath[1] == "region") {
+                $(".gnb_1dp li:eq(3) a").addClass("gnb_path_active");
+            }
+        } else {
+            $(".gnb_1dp li a").removeClass("gnb_path_active");
+        }
     })
 </script>
