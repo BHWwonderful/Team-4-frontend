@@ -105,9 +105,14 @@ Noto Sans Kr
 
 /*축제목록 이미지박스 오른쪽 바깥여백 조절*/
 .festival_list_content_box ul li .festival_list_img_box {
+    width: 300px;
+    height: 200px;
     margin-right: 50px;
 }
-
+.festival_list_content_box ul li .festival_list_img_box img{
+    width: 100%;
+    height: 200px;
+}
 /*축제목록 텍스트 정렬*/
 .festival_list_content_box ul li .festival_list_text_box div {
     display: flex;
@@ -183,9 +188,11 @@ Noto Sans Kr
     justify-content: space-between;
     margin-bottom: 20px;
 }
+
 .festivalDetail_post_wrap div span {
     margin: 5px;
 }
+
 .festivalDetail_post_wrap div button {
     margin: 5px;
     border: 0;
@@ -239,7 +246,7 @@ Noto Sans Kr
     border-bottom: 1px solid #eee;
 }
 
-.festivalDetail_tab_box button {
+.festivalDetail_tab_box a {
     width: 100%;
     height: 100%;
     padding: 20px;
@@ -274,7 +281,7 @@ Noto Sans Kr
 }
 
 #festivalDetail_map {
-    width: 1000px;
+    width: 1180px;
     height: 500px;
     margin: auto;
     margin-bottom: 50px;
@@ -293,4 +300,119 @@ Noto Sans Kr
 .festivalDetail_detailInfo_box div p strong {
     display: inline-block;
     width: 100px;
+}
+
+.user_expression {
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+    padding: 62px 0;
+    justify-content: space-between;
+    word-break: keep-all;
+}
+
+.user_expression strong:before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    vertical-align: 14px;
+    background: url(/images/icon_user_expression02.png) no-repeat;
+}
+
+.user_expression strong {
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -1px;
+    line-height: 24px;
+    color: #333;
+}
+.user_expression span.good {
+    margin-left: 80px;
+}
+.user_expression .form span {
+    float: left;
+    margin-left: 20px;
+    background: #f1f1f1;
+    height: 71px;
+    width: 152px;
+    text-align: center;
+    border-radius: 50px;
+    padding: 13px 0 0;
+    box-sizing: border-box;
+}
+.user_expression input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.user_expression input[type="radio"] + label {
+    position: relative;
+    display: inline-block;
+    min-height: 45px;
+    padding-left: 60px;
+    line-height: 45px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #666;
+    vertical-align: middle;
+}
+
+.user_expression input[type="radio"] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    vertical-align: 14px;
+    background: url(/images/icon_user_expression.png) no-repeat;
+    border: 0;
+}
+
+.user_expression .not input[type="radio"] + label:before {
+    background-position: 0 -90px;
+}
+
+.user_expression input[type="radio"] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    vertical-align: 14px;
+    background: url(/images/icon_user_expression.png) no-repeat;
+    border: 0;
+}
+.festivalDetail_recommend_title{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.festivalDetail_recommend_wrap{
+    display: flex;
+}
+.festivalDetail_recommend_wrap .festivalDetail_recommendImg_box{
+    width: 380px;
+}
+.festivalDetail_recommend_wrap .festivalDetail_recommendImg_box div{
+    margin: 0 20px 20px 0;
+}
+.festivalDetail_recommend_wrap .festivalDetail_recommendImg_box img{
+    width: 100%
+}
+.festivalDetail_aiImg{
+    width: 360px;
+}
+.festivalDetail_aiImg img{
+    width: 100%;
 }

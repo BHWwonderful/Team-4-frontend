@@ -1,18 +1,7 @@
 const log = console.log;
 
-let video_list = [
-     {"TITLE" : "[디자인 패턴] 자바의 싱글톤 패턴 (static)", "WRITE_DATE" : "2022.11.09"}
-    ,{"TITLE" : "[Spring Security] GET 로그아웃 처리", "WRITE_DATE" : "2022.11.10"}
-    ,{"TITLE" : "[JAVA 8] 분할 가능한 Itortater인 Spliterator 인터페이스", "WRITE_DATE" : "2022.11.11"}
-    ,{"TITLE" : "[Spring Security] 스프링 시큐리티를 이용하여 로그인, 회원가입 구현하기", "WRITE_DATE" : "2022.11.13"}
-    ,{"TITLE" : "[Spring Security] 유저별 권한 설정", "WRITE_DATE" : "2022.11.13"}
-    ,{"TITLE" : "[Spring Security] 동시 로그인 제한하기(동시 세션 제어)", "WRITE_DATE" : "2022.11.13"}
-    ,{"TITLE" : "[thymeleaf] < > 이스케이프(escape) 해제 (그대로 출력)", "WRITE_DATE" : "2022.11.13"}
-    ,{"TITLE" : "[MQ] rabbitMQ", "WRITE_DATE" : "2022.11.13"}
-    ,{"TITLE" : "[디자인패턴] PRG (Post -> Redirect -> Get) pattern 이란?", "WRITE_DATE" : "2022.11.13"}
-    ,{"TITLE" : "[DB] RDB와 NoSQL 차이", "WRITE_DATE" : "2022.11.13"}
-    ,{"TITLE" : "[OS] 멀티 프로세스(multi process)와 멀티 스레드(multi thread)", "WRITE_DATE" : "2022.11.13"}
-];
+let video_list = JSON.parse(data);
+
 video_list = video_list.reverse();
 
 const totalCount = video_list.length;
@@ -99,8 +88,8 @@ function showList(startPage, endPage){
 
     for(let i = (startPage - 1) ; i < endPage; i++) {
 
-        let title = video_list[i].TITLE;
-        let writeDt = video_list[i].WRITE_DATE;
+        let title = video_list[i].명칭;
+        let writeDt = video_list[i].관리자;
 
         html += `<tr className="alert" role="alert">
                     <th scope="row">${totalCount - i}</th>

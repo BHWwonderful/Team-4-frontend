@@ -1,12 +1,379 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://korean.visitkorea.or.kr/resources/images/favicon.ico">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/travalAi.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <title>여행 콕콕 - AI콕콕</title>
 </head>
+
 <body>
-    
+    <header class="header"></header>
+
+    <main class="main">
+        <div class="travelAi_topImg_wrap">
+            <div class="travelAi_topImgText_box">
+                <h2>AI콕콕</h2>
+            </div>
+        </div>
+
+        <div class="travelAi_guideSns_container">
+            <div class="travelAi_guideSns_wrap">
+                <ul class="travelAi_guideList">
+                    <li>
+                        <a href="">
+                            <img src="./images/home_icon.jpeg" alt="메인으로 이동">
+                        </a>
+                    </li>
+                    <li>여행정보</li>
+                    <li>
+                        <a href="#none">AI콕콕</a>
+                        <ul class="travelAi_3depthList">
+                            <li>
+                                <a href="/course/course.html">추천 코스</a>
+                            </li>
+                            <li>
+                                <a href="/region/region.html">지역 여행지</a>
+                            </li>
+                            <li>
+                                <a href="/travelAi/travelAi.html">AI콕콕</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="travelAi_share_box">
+                    <ul class="travelAi_sendList">
+                        <li>
+                            <a href="">
+                                <img src="./images/mail_icon.png" alt="sendMail">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/print_icon.png" alt="프린트하기">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="travelAi_snsList">
+                        <li>
+                            <a href="">
+                                <img src="./images/copyLink_icon.png" alt="URL복사">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/facebook_icon.png" alt="페이스북">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/twi_icon.png" alt="공유트위터">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/kakao_icon.png" alt="공유카카오스토리">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/naver_icon.png" alt="공유네이버">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="travelAi_content">
+            <h2>여행콕콕</h2>
+            <div class="travelAi_4dp_lnb">
+                <h3>AI콕콕</h3>
+                <h3>AI콕콕 플래너</h3>
+            </div>
+
+            <div class="travelAi_today_content">
+                <h4>오늘 준비한 당신의 맞춤 여행지</h4>
+                <div class="travelAi_today_slide_wrap">
+                    <ul>
+                        <li>
+                            <a href="#none">
+                                <img src="./images/toDayRegion1.jpeg" alt="바람재쉼터">
+                                <div class="travelAi_todayText_box">
+                                    <strong>바람재쉼터</strong>
+                                    <span>세종</span>
+                                </div>
+                                <button>좋아요</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <img src="./images/toDayRegion2.jpeg" alt="현대원서공원">
+                                <div class="travelAi_todayText_box">
+                                    <strong>현대원서공원</strong>
+                                    <span>서울</span>
+                                    <span>종로구</span>
+                                </div>
+                                <button>좋아요</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <img src="./images/toDayRegion3.jpeg" alt="도학오토캠핑장">
+                                <div class="travelAi_todayText_box">
+                                    <strong>도학오토캠핑장</strong>
+                                    <span>대구</span>
+                                    <span>동구</span>
+                                </div>
+                                <button>좋아요</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none">
+                                <img src="./images/toDayRegion4.jpeg" alt="미천공원">
+                                <div class="travelAi_todayText_box">
+                                    <strong>미천공원</strong>
+                                    <span>경북</span>
+                                    <span>고령군</span>
+                                </div>
+                                <button>좋아요</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button>다시 한번 추천받기</button>
+            </div>
+
+            <div class="traverAi_recent_content">
+                <h4>내가 최근 본 여행지와 비슷한 여행지 추천!</h4>
+
+                <div class="travelAi_recent_wrap">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="./images/recentRegion1.jpeg" alt="대한민국 최초의 도심형 수목원, 국립세종수목원">
+                                <div class="travelAi_recentText_box">
+                                    <strong>대한민국 최초의 도심형 수목원, 국립세종수목원</strong>
+                                    <span>세종</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/recentRegion2.jpeg"
+                                    alt="곰이 많다는데? 그런데 곰보다 더 많은 꽃과 나무들이 있는 곳 - 세종 베어트리파크">
+                                <div class="travelAi_recentText_box">
+                                    <strong>곰이 많다는데? 그런데 곰보다 더 많은 꽃과 나무들이 있는 곳 - 세종 베어트리파크</strong>
+                                    <span>세종</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/recentRegion3.jpeg" alt="숲뜰근린공원">
+                                <div class="travelAi_recentText_box">
+                                    <strong>숲뜰근린공원</strong>
+                                    <span>세종</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/recentRegion4.jpeg" alt="금강보행교">
+                                <div class="travelAi_recentText_box">
+                                    <strong>금강보행교</strong>
+                                    <span>세종</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/recentRegion5.jpeg" alt="도토리숲키즈파크">
+                                <div class="travelAi_recentText_box">
+                                    <strong>도토리숲키즈파크</strong>
+                                    <span>세종</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/recentRegion6.jpeg" alt="금강수변공원">
+                                <div class="travelAi_recentText_box">
+                                    <strong>금강수변공원</strong>
+                                    <span>세종</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/recentRegion7.jpeg" alt="세종지혜의숲(지혜의숲)">
+                                <div class="travelAi_recentText_box">
+                                    <strong>세종지혜의숲(지혜의숲)</strong>
+                                    <span>세종</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/recentRegion8.jpeg" alt="원수산MTB공원">
+                                <div class="travelAi_recentText_box">
+                                    <strong>원수산MTB공원</strong>
+                                    <span>세종</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="travelAi_scrollBar_box">
+                        <div class="travelAi_scrollBar"></div>
+                    </div>
+                    <button>이전</button>
+                    <button>다음</button>
+                </div>
+            </div>
+
+            <div class="travelAi_yester_content">
+                <div class="travelAi_yesterTitle_box">
+                    <h4>
+                        어제의
+                        <strong>인기 여행지</strong>
+                    </h4>
+                    <button>레이어열기</button>
+                </div>
+                <div class="travelAi_yesterSub_box">
+                    <span>“대한민국 구석구석”에서 어제 사용자가 많이 조회한 여행지</span>
+                </div>
+
+                <div class="travelAi_yesterList_box">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion1.jpeg" alt="삼성궁">
+                                <strong>삼성궁</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion2.jpeg" alt="삼척 미인폭포">
+                                <strong>삼척 미인폭포</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion3.jpeg" alt="수선사">
+                                <strong>수선사</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion4.jpeg" alt="부소담악(추소정)">
+                                <strong>부소담악(추소정)</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion5.jpeg" alt="반월도·박지도">
+                                <strong>반월도·박지도</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion6.jpeg" alt="김일성 별장">
+                                <strong>김일성 별장</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion7.jpeg" alt="위양지(양양지)">
+                                <strong>위양지(양양지)</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion8.jpeg" alt="수성못 유원지">
+                                <strong>수성못 유원지</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion9.jpeg" alt="오륙도 스카이워크">
+                                <strong>오륙도 스카이워크</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion10.jpeg" alt="밤별생각 낮달이야기">
+                                <strong>밤별생각 낮달이야기</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion11.bmp" alt="순창군 채계산 출렁다리">
+                                <strong>순창군 채계산 출렁다리</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion12.jpeg" alt="단양강 잔도">
+                                <strong>단양강 잔도</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion13.jpeg" alt="대구수목원">
+                                <strong>대구수목원</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion14.jpeg" alt="소매물도">
+                                <strong>소매물도</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion15.jpeg" alt="대구 달성공원">
+                                <strong>대구 달성공원</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/yesterRegion16.jpeg" alt="모란장 / 모란민속시장 (4,9일)">
+                                <strong>모란장 / 모란민속시장 (4,9일)</strong>
+                            </a>
+                            <button>좋아요</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="./js/travelAi.js"></script>
+    <script>
+        // Header
+        $(".header").load("../header/header.html");
+    </script>
 </body>
+
 </html>

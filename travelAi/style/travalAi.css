@@ -1,0 +1,147 @@
+/* 메인 상단 이미지 */
+.travelAi_topImg_wrap {
+    width: 100%;
+    height: 330px;
+    background: url("../images/mainBackground.jpeg") center;
+    display: flex;
+    align-items: center;
+}
+
+.travelAi_topImgText_box {
+    width: 1180px;
+    margin: auto;
+    color: #fff;
+    font-size: 30px;
+}
+
+/* 이미지 하단 가이드 바 */
+.travelAi_guideSns_container {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.travelAi_guideSns_wrap {
+    width: 1180px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.travelAi_guideList {
+    display: flex;
+    height: 100%;
+}
+
+.travelAi_guideList>li {
+    height: 100%;
+    padding: 0 35px 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/nav_arw.png") no-repeat top left/contain
+}
+
+.travelAi_guideList>li:first-child {
+    background: none;
+    padding: 0;
+    justify-content: start;
+    width: 40px;
+}
+
+.travelAi_guideList>li:last-child {
+    position: relative;
+}
+
+.travelAi_guideList>li:last-child>a {
+    color: #5289e6;
+    position: relative;
+}
+
+.travelAi_guideList>li:last-child>a::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #5289e6;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.travelAi_guideList>li:nth-child(3)>a::before {
+    content: '▼';
+    position: absolute;
+    top: 0;
+    right: -20px;
+}
+
+/* 가이드바 3depth */
+.travelAi_3depthList {
+    position: absolute;
+    background: #fff;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    display: none;
+}
+
+.travelAi_3depthList li:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.travelAi_3depthList li {
+    text-align: center;
+    line-height: 50px;
+}
+
+.travelAi_3depthList li:hover a{
+    background: #5289e6;
+    color: #fff;
+}
+
+.travelAi_3depthList li>a {
+    display: block;
+    color: #777;
+}
+
+/* 메일, 프린트, sns */
+.travelAi_share_box {
+    display: flex;
+    align-items: center;
+}
+
+.travelAi_share_box ul {
+    display: flex;
+}
+
+.travelAi_share_box ul li {
+    margin-left: 4px;
+}
+
+.travelAi_share_box ul li:first-child {
+    margin-left: 0;
+}
+
+.travelAi_sendList {
+    position: relative;
+}
+
+.travelAi_sendList li {
+    margin-right: 15px;
+}
+
+.travelAi_sendList::after {
+    content: '';
+    width: 1px;
+    height: 17px;
+    background: #e5e5e5;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+
+.travelAi_snsList {
+    margin-left: 15px;
+}
