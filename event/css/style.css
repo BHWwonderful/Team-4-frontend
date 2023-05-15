@@ -2,7 +2,7 @@
     width: 100%;
     height: 330px;
 }
-.course_subGnb_wrap{
+.event_subGnb_wrap{
     width:100%;
     height:50px;
     border-bottom:1px solid #dfdfdf;
@@ -10,7 +10,7 @@
     margin-bottom:70px;
 }
 
-.course_subGnbContent_wrap{
+.event_subGnbContent_wrap{
     width:1180px;
     margin:0 auto;
     background:#fff;
@@ -19,24 +19,24 @@
     justify-content: space-between;
 }
 
-.course_subGnbList{
+.event_subGnbList{
     width:304px;
     display:flex;
     align-items: center;
     position:relative;
 }
 
-.course_subGnbListFirstItem{
+.event_subGnbListFirstItem{
     width:40px;
 }
 
-.course_subGnbListFirstItemLink{
+.event_subGnbListFirstItemLink{
     display:block;
     width:40px;
     vertical-align: middle;
 }
 
-.course_subGnbListItem{
+.event_subGnbListItem{
     width:141px;
     background:url(../images/nav_arw.png) left no-repeat;
     height:50px;
@@ -44,17 +44,17 @@
     position:relative;
 }
 
-.course_subGnbListItemText{
+.event_subGnbListItemText{
     font-size:15.4px;
 }
 
-.course_subGnbListItemLink{
+.event_subGnbListItemLink{
     font-size:15.4px;
     position:relative;
     color:#5289e6;
 }
 
-.course_subGnbListItemLinkText::before{
+.event_subGnbListItemLinkText::before{
     position:absolute;
     bottom:-4px;
     left:1px;
@@ -64,31 +64,31 @@
     background-color: #5289e6;
 }
 
-.course_subGnbListItemLinkTriangle{
+.event_subGnbListItemLinkTriangle{
     position:absolute;
     top:3px;
     right:-15px;
 }
 
-.course_subGnbSns_box{
+.event_subGnbSns_box{
     width:268px;
     height:50px;
     position:relative;
     display: flex;
 }
 
-.course_subGnbSnsFuncList{
+.event_subGnbSnsFuncList{
     display:flex;
     width:72px;
     height:50px;
     align-items: center;
 }
 
-.course_subGnbSnsFuncListItem{
+.event_subGnbSnsFuncListItem{
     margin-right:15px;
 }
 
-.course_subGnbSnsFuncList::after{
+.event_subGnbSnsFuncList::after{
     content:'';
     position:absolute;
     left:72px;
@@ -98,22 +98,22 @@
     background-color:#e5e5e5;
 }
 
-.course_subGnbSnsList{
+.event_subGnbSnsList{
     display:flex;
     width:196px;
     padding-left:15px;
     padding-top:10px;            
 }
 
-.course_subGnbSnsListItem{
+.event_subGnbSnsListItem{
     margin-left:4px;
 }
 
-.course_subGnbSnsListItem--noMargin{
+.event_subGnbSnsListItem--noMargin{
     margin-left:0px;
 }
 
-.course_subGnbSnsListItemLinkImg{
+.event_subGnbSnsListItemLinkImg{
     width:33px;
     height:32px;
 }
@@ -134,6 +134,9 @@
     width: 150px;
     height: 40px;
     margin-right: 20px;
+    border-radius: 0;
+    background-color: white;
+    border-color: 1px solid #e6e6e6;
 }
 .event_button_wrap button:hover{
     background-color: #0051A4;
