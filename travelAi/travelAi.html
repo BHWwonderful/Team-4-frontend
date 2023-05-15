@@ -4,9 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://korean.visitkorea.or.kr/resources/images/favicon.ico">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/travalAi.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <title>여행 콕콕 - AI콕콕</title>
 </head>
 <body>
-    
+    <header class="header"></header>
+
+    <main class="main">
+        <div class="travelAi_topImg_wrap">
+            <div class="travelAi_topImgText_box">
+                <h2>AI콕콕</h2>
+            </div>
+        </div>
+
+        <div class="travelAi_guideSns_container">
+            <div class="travelAi_guideSns_wrap">
+                <ul class="travelAi_guideList">
+                    <li>
+                        <a href="">
+                            <img src="./images/home_icon.jpeg" alt="메인으로 이동">
+                        </a>
+                    </li>
+                    <li>여행정보</li>
+                    <li>
+                        <a href="#none">AI콕콕</a>
+                        <ul class="travelAi_3depthList">
+                            <li>
+                                <a href="/course/course.html">추천 코스</a>
+                            </li>
+                            <li>
+                                <a href="/region/region.html">지역 여행지</a>
+                            </li>
+                            <li>
+                                <a href="/travelAi/travelAi.html">AI콕콕</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="travelAi_share_box">
+                    <ul class="travelAi_sendList">
+                        <li>
+                            <a href="">
+                                <img src="./images/mail_icon.png" alt="sendMail">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/print_icon.png" alt="프린트하기">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="travelAi_snsList">
+                        <li>
+                            <a href="">
+                                <img src="./images/copyLink_icon.png" alt="URL복사">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/facebook_icon.png" alt="페이스북">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/twi_icon.png" alt="공유트위터">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/kakao_icon.png" alt="공유카카오스토리">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./images/naver_icon.png" alt="공유네이버">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer></footer>
+    <script src="./js/travelAi.js"></script>
+    <script>
+        // Header
+        $(".header").load("../header/header.html");
+    </script>
 </body>
 </html>
