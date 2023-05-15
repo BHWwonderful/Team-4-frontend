@@ -96,7 +96,13 @@
     line-height: 50px;
 }
 
+.travelAi_3depthList li:hover a{
+    background: #5289e6;
+    color: #fff;
+}
+
 .travelAi_3depthList li>a {
+    display: block;
     color: #777;
 }
 
