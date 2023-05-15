@@ -15,8 +15,7 @@
 </head>
 
 <body>
-    <header></header>
-
+    <header class="header" id="header"></header>
 
 
     <main class="region_content">
@@ -499,7 +498,12 @@
     </main>
 
     <footer></footer>
-    <script src="./js/region.js"></script>ㅠ
+    <script src="./js/region.js"></script>
+    <script src="../header/js/header.js"></script>
+    <script>
+        // Header
+        $(".header").load("../header/header.html");
+    </script>
 </body>
 
 </html>
