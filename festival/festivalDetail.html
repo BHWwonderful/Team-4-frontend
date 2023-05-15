@@ -5,14 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>축제</title>
+    <title>축제상세</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/festival.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=619be0633be3c41159b3840f698b0688"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".header").load("../../header/header.html");
+        });
+    </script>
 </head>
 
 <body>
+    <header id="header" class="header"></header>
     <main id="festivalDetail_main" class="festivalDetail_main">
         <section class="festivalDetail_title_box">
             <h2>제2회 전주국제그림책도서전</h2>
@@ -34,13 +43,13 @@
         <section class="festivalDetail_info_wrap">
             <h3 class="screen_out">탭메뉴</h3>
             <div class="festivalDetail_tab_box">
-                <button>사진보기</button>
-                <button>상세정보</button>
-                <button>여행톡</button>
-                <button>추천여행</button>
+                <a href="#festivalDetail_img_box">사진보기</a>
+                <a href="#festivalDetail_text_box">상세정보</a>
+                <a href="#user_expression">좋아요</a>
+                <a href="#festivalDetail_recommend_wrap">추천여행</a>
             </div>
             <h3 class="screen_out">축제사진</h3>
-            <div class="festivalDetail_img_box">
+            <div class="festivalDetail_img_box" id="festivalDetail_img_box">
                 <div>
                     <div><img src="/images/festivalDetail_img01.jpg" alt=""></div>
                     <div><img src="/images/festivalDetail_img01.jpg" alt=""></div>
@@ -49,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="festivalDetail_text_box">
+            <div id="festivalDetail_text_box" class="festivalDetail_text_box">
                 <h3>상세정보</h3>
                 <div>
                     <p>
@@ -86,7 +95,35 @@
                 </div>
             </div>
         </section>
+        <section id="user_expression" class="user_expression">
+            <div class="txt">
+                <strong id="uriTitle">해당 축제가 마음에 드시나요?</strong>
+                <p>평가를 해주시면 개인화 추천 시 활용하여 최적의 여행지를 추천해 드리겠습니다.</p>
+            </div>
+            <div class="form">
+                <span class="good">
+                    <input type="radio" id="expressionForm01" name="userExpression">
+                    <label for="expressionForm01" onclick="clickUserExpressionLog(0)">좋아요!</label>
+                </span>
+                <span class="not">
+                    <input type="radio" id="expressionForm02" name="userExpression">
+                    <label for="expressionForm02" onclick="clickNotLikeExpression()">별로예요</label>
+                </span>
+            </div>
+        </section>
 
+        <h3 class="festivalDetail_recommend_title">유사한 여행지 추천</h3>
+        <section id="festivalDetail_recommend_wrap" class="festivalDetail_recommend_wrap">
+            <div class="festivalDetail_recommendImg_box">
+                <div><img src="/images/detailimg01.jpg" alt=""></div>
+                <div><img src="/images/detailimg01.jpg" alt=""></div>
+            </div>
+            <div class="festivalDetail_recommendImg_box">
+                <div><img src="/images/detailimg01.jpg" alt=""></div>
+                <div><img src="/images/detailimg01.jpg" alt=""></div>
+            </div>
+            <div class="festivalDetail_aiImg"><img src="/images/detailai.jpg" alt=""></div>
+        </section>
     </main>
     <script src="/js/festival.js"></script>
 </body>
