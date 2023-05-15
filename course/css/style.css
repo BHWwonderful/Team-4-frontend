@@ -480,8 +480,348 @@
 
         .courseContent_contentSlider_wrap{
             height:1323px;
-            background:#ccc;
+            background:#f3f2f2;
+            padding-top:35px;
         }
+
+        /* 코스 4depth 페이지 슬라이더 */
+
+        .slider-wrap{
+            width:1140px;
+            height:300px;
+            background-color: #f3f2f2;
+            margin:0 auto;
+        }
+
+        .swiper {
+            position:relative;
+            width: 1100px;
+            height: 300px;
+        }
+
+        .swiper::after{
+            content:'';
+            width:100%;
+            height:4px;
+            position:absolute;
+            background:url(../images/bg_cos_detail.gif) repeat-x;
+            top:28.7px;
+            left:0;
+        }
+
+        .swiper-button-prev{
+            position:absolute;
+            top:58%;
+            left:0;
+            background-image:url(../images/btn_cos_prev.png);
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-position: center;
+        }
+
+        .swiper-button-next{
+            position:absolute;
+            top:58%;
+            right:0;
+            background-image:url(../images/btn_cos_next.png);
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-position: center;
+        }
+
+        .swiper-button-prev::after{
+            content:'';
+        }
+
+        .swiper-button-next::after{
+            content:'';
+        }
+
+        .swiper-wrapper{
+            width:1240px;
+            margin:0 auto;
+        }
+
+        .swiper-slide{
+            width:244px !important;
+            position:relative;
+            padding-top:65px;
+            padding-bottom:39px;
+        }
+
+        .swiper-slide::after{
+            position:absolute;
+            top:27px;
+            left:0;
+            content:'';
+            width:99.3%;
+            height:2px;
+            z-index:10;
+        }
+
+        .swiper-slide--on::before{
+            position:absolute;
+            top:27px;
+            left:0;
+            content:'';
+            width:50%;
+            height:2px;
+            border-bottom:4px solid rgba(45, 88, 160, 1);
+            z-index:10;
+        }
+
+        .swiper-slide--off::before{
+            position:absolute;
+            top:27px;
+            left:0;
+            content:'';
+            width:100%;
+            height:2px;
+            border-bottom:4px solid rgba(45,88,160,1);
+            z-index:11;
+        }
+
+        .swiper-slide:hover .slide-link::before{
+            background-color: rgba(45,88,160,0.6);
+        }
+
+        .slide-course{
+            display:inline-block;
+            position:absolute;
+            top:14px;
+            left:50%;
+            /* border-radius: 100%; */
+            width:30px;
+            height:30px;
+            text-align: center;
+            line-height:25px;
+            font-style:normal;
+            transform:translateX(-50%);
+            background-color: white;
+            border:4px solid black;
+            z-index:20;
+        }
+
+        .slide-course--on{
+            border:4px solid rgba(45, 88, 160, 1);
+        }
+
+        .slide-course--off{
+            border:4px solid black;
+        }
+
+        .slide-link{
+            display: block;
+            position:relative;
+            width:220px;
+            height:220px;
+            margin:0 auto;
+        }
+        
+        .slide-link--on::before{
+            content:"";
+            display:block;
+            position: absolute;
+            left:0;
+            top:0;
+            width:220px;
+            height:220px;
+            background-color:rgba(45,88,160,0.6);
+            z-index:10;
+        }
+
+        .slide-link::after{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .slide-linkImg01{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(../images/Taegot_01.jpg) no-repeat 50% 50%;
+        }
+
+        .slide-linkImg02{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(../images/Taegot_02.jpg) no-repeat 50% 50%;
+        }
+        .slide-linkImg03{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(../images/Taegot_03.jpg) no-repeat 50% 50%;
+        }
+        .slide-linkImg04{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(../images/Taegot_04.jpg) no-repeat 50% 50%;
+        }
+        .slide-linkImg05{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(../images/Taegot_05.jpg) no-repeat 50% 50%;
+        }
+        .slide-linkImg06{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(../images/Taegot_06.jpg) no-repeat 50% 50%;
+        }
+
+        .slide-linkImg07{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(../images/Taegot_07.jpg) no-repeat 50% 50%;
+        }
+
+        .slide-linkImg08{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(../images/Taegot_08.jpg) no-repeat 50% 50%;
+        }
+
+        .slide-limkText_box{
+            position:absolute;
+            left:0;
+            top:50%;
+            transform:translateY(-50%);
+            color:white;
+            font-weight: 700;
+            width:100%;
+            padding:15px 10px 13px;
+            z-index:10;
+        }
+
+        .slide-linkText{
+            position:absolute;
+            word-break:keep-all;
+            left:15px;
+            right:15px;
+            top:50%;
+            transform:translateY(-50%);
+            text-align: center;
+            z-index:20;
+            display:-webkit-box;
+            -webkit-line-clamp:2;
+            -webkit-box-orient: vertical;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            max-height:36px;
+            line-height:17px;
+            letter-spacing: -0.5px;
+        }
+
+        /* 슬라이더를 눌렀을 때 나오는 컨텐츠 */
+
+        .courseContent_sliderCourse_wrap{
+            width:100%;
+            height:auto;
+            margin-top:33.6px;
+        }
+
+        .courseContent_sliderCourseContent_wrap{
+            width:1140px;
+            margin:0 auto;
+        }
+
+        .courseContent_sliderCourseContentInfo_wrap{
+            height:auto;
+            display:flex;
+        }
+
+        .courseContent_sliderCourseContentInfoTitle_wrap{
+            width:210px;
+            height:100%;
+            background-color:rgba(45,88,160,0.6);
+            margin-right:21px;
+            padding:16.8px 12.6px;
+        }
+
+        .courseContent_sliderCourseContentInfoTitleContent_box{
+            width:130px;
+        }
+
+        .courseContent_sliderCourseContentInfoSpot{
+            font-size:42px;
+            font-weight:700;
+            color:#FFFFFF;
+        }
+
+        .courseContent_sliderCourseContentInfoBreak{
+            border:2px solid #FFFFFF;
+            width:130px;
+            margin-top:12.6px;
+            margin-bottom:21px;
+        }
+
+        .courseContent_sliderCourseContentInfoTitle{
+            display:block;
+            width:100%;
+            font-size:29.4px;
+            font-weight: 600;
+            color:#FFFFFF;
+        }
+
+        .courseContent_sliderCourseContentInfoTitleText{
+            display:block;
+            font-size:29.4px;
+            font-weight:200;
+        }
+
+        .courseContent_sliderCourseContentInfoText_wrap{
+            width:915px;
+            height:220px;
+        }
+
+        .courseContent_sliderCourseContentInfoText_box{
+            padding-left:10.5px;
+            padding-right:10.5px;
+            height:100%;
+        }
+
+        .courseContent_sliderCourseContentInfoTextTitle{
+            font-size:25.2px;
+            margin-bottom:12.6px;
+            color:rgba(45,88,160,0.6);
+            font-weight:500;
+        }
+
+        .courseContent_sliderCourseContentInfoTextText{
+            font-size:18.9px;
+            line-height:34.02px;
+        }
+
+        
+
+        
 
         
 
