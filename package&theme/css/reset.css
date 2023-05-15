@@ -64,3 +64,9 @@ button{
 	left: 0;
 	overflow: hidden;
 }
+
+li{
+	margin: 0;
+    padding: 0;
+    border: 0;
+}
