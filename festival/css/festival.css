@@ -65,6 +65,7 @@ Noto Sans Kr
     display: flex;
     justify-content: space-between;
 }
+
 /*여행목적선택 버튼 */
 .festival_fillter_wrap .festival_concept_fillter_box button {
     width: 240px;
@@ -145,9 +146,151 @@ Noto Sans Kr
     border: 1px solid #dfdfdf;
     padding: 10px;
 }
+
 .festival_list_paging_box a:hover {
     background: #0051A4;
     color: #fff;
     transition: all 0.3s;
 }
+
 /*축제페이징 끝*/
+
+/*축제상세페이지 시작*/
+/*페이지 넓이 조정 콘텐츠 가운데 정렬*/
+.festivalDetail_main {
+    width: 1180px;
+    margin: auto;
+}
+
+.festivalDetail_title_box {
+    text-align: center;
+}
+
+.festivalDetail_title_box h2 {
+    font-size: 20px;
+}
+
+.festivalDetail_title_box>p {
+    margin-bottom: 20px;
+}
+
+.festivalDetail_title_box .festivalDetail_caption {
+    font-size: 18px;
+}
+
+.festivalDetail_post_wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.festivalDetail_post_wrap div span {
+    margin: 5px;
+}
+.festivalDetail_post_wrap div button {
+    margin: 5px;
+    border: 0;
+}
+
+.festival_postLike {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 21px;
+    height: 19px;
+    background: url(/images/ico_post01.png) no-repeat;
+}
+
+.festival_postView {
+    vertical-align: middle;
+    display: inline-block;
+    text-indent: -9999px;
+    font-size: 0;
+    width: 24px;
+    height: 18px;
+    background: url(/images/ico_post07.png) no-repeat;
+}
+
+.festivalDetail_postBook {
+    text-indent: -9999px;
+    position: relative;
+    width: 16px;
+    height: 18px;
+    background: url(/images/ico_post03.png) no-repeat;
+}
+
+.festivalDetail_postPrint {
+    text-indent: -9999px;
+    width: 20px;
+    height: 18px;
+    background: url(/images/ico_post04.png) no-repeat;
+}
+
+.festivalDetail_postShare {
+    text-indent: -9999px;
+    width: 20px;
+    height: 18px;
+    background: url(/images/ico_post02.png)no-repeat;
+}
+
+
+.festivalDetail_tab_box {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.festivalDetail_tab_box button {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    font-size: 18px;
+    border: 0;
+    background: none;
+}
+
+
+.festivalDetail_img_box {
+    width: 670px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.festivalDetail_img_box>div {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.festivalDetail_text_box h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.festivalDetail_text_box div {
+    margin-bottom: 50px;
+    padding: 20px 0;
+    border-top: 2px solid black;
+
+}
+
+#festivalDetail_map {
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.festivalDetail_detailInfo_box {
+    margin-bottom: 50px;
+    display: flex;
+    font-size: 18px;
+}
+
+.festivalDetail_detailInfo_box div {
+    margin-right: 100px;
+}
+
+.festivalDetail_detailInfo_box div p strong {
+    display: inline-block;
+    width: 100px;
+}
