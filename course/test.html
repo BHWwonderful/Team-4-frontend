@@ -67,32 +67,53 @@
         .swiper-slide{
             width:244px !important;
             position:relative;
-            padding-top:85px;
+            padding-top:65px;
             padding-bottom:39px;
         }
 
         .swiper-slide::after{
             position:absolute;
-            top:47px;
+            top:27px;
             left:0;
             content:'';
-            width:99.5%;
+            width:99.3%;
             height:2px;
             border-bottom:2px dotted black;
             z-index:10;
         }
 
-        .swiper-slide:hover .slide-link::after{
+        .swiper-slide--on::before{
+            position:absolute;
+            top:27px;
+            left:0;
+            content:'';
+            width:50%;
+            height:2px;
+            border-bottom:2px solid blue;
+            z-index:10;
+        }
+
+        .swiper-slide--off::before{
+            position:absolute;
+            top:27px;
+            left:0;
+            content:'';
+            width:100%;
+            height:2px;
+            border-bottom:2px solid blue;
+            z-index:11;
+        }
+
+        .swiper-slide:hover .slide-link::before{
             background-color: rgba(0,0,130,0.8);
         }
 
         .slide-course{
             display:inline-block;
             position:absolute;
-            top:34px;
+            top:14px;
             left:50%;
-            border-radius: 100%;
-            border:2px solid black;
+            /* border-radius: 100%; */
             width:30px;
             height:30px;
             text-align: center;
@@ -100,19 +121,36 @@
             font-style:normal;
             transform:translateX(-50%);
             background-color: white;
+            border:2px solid black;
             z-index:20;
         }
 
-        .slide-course--blue{
+        .slide-course--on{
             border:2px solid blue;
+        }
+
+        .slide-course--off{
+            border:2px solid black;
         }
 
         .slide-link{
             display: block;
             position:relative;
-            width:180px;
-            height:180px;
+            width:220px;
+            height:220px;
             margin:0 auto;
+        }
+        
+        .slide-link--on::before{
+            content:"";
+            display:block;
+            position: absolute;
+            left:0;
+            top:0;
+            width:220px;
+            height:220px;
+            background-color:rgba(0,0,130,0.8);
+            z-index:10;
         }
 
         .slide-link::after{
@@ -120,34 +158,108 @@
             position:absolute;
             top:0;
             left:0;
-            width:180px;
-            height:180px;
-            background-color: rgba(0,0,0,0.3);
+            width:220px;
+            height:220px;
+            background-color: rgba(0,0,0,0.4);
         }
 
         .slide-linkImg01{
             position:absolute;
             top:0;
             left:0;
-            width:180px;
-            height:180px;
+            width:220px;
+            height:220px;
             background:url(images/Taegot_01.jpg) no-repeat 50% 50%;
+        }
+
+        .slide-linkImg02{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(images/Taegot_02.jpg) no-repeat 50% 50%;
+        }
+        .slide-linkImg03{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(images/Taegot_03.jpg) no-repeat 50% 50%;
+        }
+        .slide-linkImg04{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(images/Taegot_04.jpg) no-repeat 50% 50%;
+        }
+        .slide-linkImg05{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(images/Taegot_05.jpg) no-repeat 50% 50%;
+        }
+        .slide-linkImg06{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(images/Taegot_06.jpg) no-repeat 50% 50%;
+        }
+
+        .slide-linkImg07{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(images/Taegot_07.jpg) no-repeat 50% 50%;
+        }
+
+        .slide-linkImg08{
+            position:absolute;
+            top:0;
+            left:0;
+            width:220px;
+            height:220px;
+            background:url(images/Taegot_08.jpg) no-repeat 50% 50%;
+        }
+
+        .slide-limkText_box{
+            position:absolute;
+            left:0;
+            top:50%;
+            transform:translateY(-50%);
+            color:white;
+            font-weight: 700;
+            width:100%;
+            padding:15px 10px 13px;
+            z-index:10;
         }
 
         .slide-linkText{
             position:absolute;
-            width:100%;
-            left:0;
+            word-break:keep-all;
+            left:15px;
+            right:15px;
             top:50%;
             transform:translateY(-50%);
             text-align: center;
-            z-index:10;
-            color:white;
+            z-index:20;
             display:-webkit-box;
             -webkit-line-clamp:2;
             -webkit-box-orient: vertical;
             overflow:hidden;
             text-overflow:ellipsis;
+            max-height:36px;
+            line-height:17px;
+            letter-spacing: -0.5px;
         }
     </style>
 </head>
@@ -167,63 +279,63 @@
                 <li class="swiper-slide">
                     <em class="slide-course">2</em>
                     <a class="slide-link" href="#none">
-                        <span class="slide-linkImg01"></span>
+                        <span class="slide-linkImg02"></span>
                         <div class="slide-limkText_box">
-                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                            <span class="slide-linkText">강원평화누리길 17코스 고성 송지호 철새길</span>
                         </div>
                     </a>
                 </li>
                 <li class="swiper-slide">
                     <em class="slide-course">3</em>
                     <a class="slide-link" href="#none">
-                        <span class="slide-linkImg01"></span>
+                        <span class="slide-linkImg03"></span>
                         <div class="slide-limkText_box">
-                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                            <span class="slide-linkText">비수구미마을 (비수구미계곡)</span>
                         </div>
                     </a>
                 </li>
                 <li class="swiper-slide">
                     <em class="slide-course">4</em>
                     <a class="slide-link" href="#none">
-                        <span class="slide-linkImg01"></span>
+                        <span class="slide-linkImg04"></span>
                         <div class="slide-limkText_box">
-                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                            <span class="slide-linkText">고성 통일전망타워</span>
                         </div>
                     </a>
                 </li>
                 <li class="swiper-slide">
                     <em class="slide-course">5</em>
                     <a class="slide-link" href="#none">
-                        <span class="slide-linkImg01"></span>
+                        <span class="slide-linkImg05"></span>
                         <div class="slide-limkText_box">
-                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                            <span class="slide-linkText">전곡선사박물관</span>
                         </div>
                     </a>
                 </li>
                 <li class="swiper-slide">
                     <em class="slide-course">6</em>
                     <a class="slide-link" href="#none">
-                        <span class="slide-linkImg01"></span>
+                        <span class="slide-linkImg06"></span>
                         <div class="slide-limkText_box">
-                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                            <span class="slide-linkText">화천 반지교&아를테마수목공원</span>
                         </div>
                     </a>
                 </li>
                 <li class="swiper-slide">
                     <em class="slide-course">7</em>
                     <a class="slide-link" href="#none">
-                        <span class="slide-linkImg01"></span>
+                        <span class="slide-linkImg07"></span>
                         <div class="slide-limkText_box">
-                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                            <span class="slide-linkText">철원 한탄강 주상절리길(잔도)</span>
                         </div>
                     </a>
                 </li>
                 <li class="swiper-slide">
                     <em class="slide-course">8</em>
                     <a class="slide-link" href="#none">
-                        <span class="slide-linkImg01"></span>
+                        <span class="slide-linkImg08"></span>
                         <div class="slide-limkText_box">
-                            <span class="slide-linkText">국립 방태산자연휴양림</span>
+                            <span class="slide-linkText">재인폭포 (한탄강 국가지질공원)</span>
                         </div>
                     </a>
                 </li>
@@ -233,16 +345,13 @@
             <div class="swiper-button-next"></div>
         </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
             slidesPerView: 4,
             slidesPerGroup: 3,
             loop: false,
-
-            pagination: {
-                el: '.swiper-pagination',
-            },
 
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -267,12 +376,55 @@
             }
         });
 
-        const sliderLinks = document.querySelectorAll('slide-link');
+        // const sliderLinks = document.querySelectorAll('.slide-link');
+        // const sliderItems = document.querySelectorAll('.swiper-slide');
+        
+        // sliderLinks.forEach((sliderLink, index)=>{
+        //     sliderLink.addEventListener('click', () => {
+        //         for(i=0; i<sliderLinks.length; i++){
+        //             sliderItems[i].classList.remove('swiper-slide--off');
+        //             sliderItems[i].classList.remove('swiper-slide--on');
+        //             sliderItems[index].classList.add('swiper-slide--on');
+        //             for(i=0; i<index;i++){
+        //                 sliderItems[i].classList.add('swiper-slide--off');
+        //             }
+        //         }
+        //     })
+        // })
 
+        const sliderLinks = document.querySelectorAll('.slide-link');
+        const sliderItems = document.querySelectorAll('.swiper-slide');
+        const sliderCourses = document.querySelectorAll('.slide-course')
+        
         sliderLinks.forEach((sliderLink, index)=>{
-            for(let i=0; i <= index; i++){
+            sliderLink.addEventListener('click', () => {
+                sliderItems.forEach((sliderItem, i)=>{
+                    sliderCourses.forEach((sliderCourse, ind)=>{
+                        sliderItem.classList.remove('swiper-slide--off');
+                        sliderItem.classList.remove('swiper-slide--on');
 
-            }
+                        if (i === index) {
+                            sliderLink.classList.add('slide-link--on')
+                            sliderItem.classList.add('swiper-slide--on');
+                        } else if(i < index) {
+                            sliderItem.classList.add('swiper-slide--off');
+                            sliderLink.classList.remove('slide-link--on');
+                            
+                        } else{
+                            sliderItem.classList.remove('swiper-slide--off');
+                            sliderLink.classList.remove('slide-link--on');
+                        }
+
+                        // if(ind === index){
+                        //     sliderCourses[ind].classList.add('slide-course--on');
+                        // } else if(ind < index) {
+                        //     sliderCourses[ind].classList.add('slide-course--on');
+                        // } else{
+                        //     sliderCourses[ind].classList.remove('slide-course--on')
+                        // }
+                    })
+                })
+            })
         })
         
 

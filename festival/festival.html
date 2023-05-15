@@ -8,6 +8,8 @@
     <title>축제</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/festival.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../json/festival_data100.json" type="text/javascript"></script>
 </head>
 
 <body>
@@ -48,29 +50,10 @@
 
         <section class="festival_list_wrap">
             <h3 class="screen_out">축제목록</h3>
-            <div class="festival_list_content_box">
-                <ul>
-                    <li>
-                        <div class="festival_list_img_box">
-                            <a href="#none">
-                                <img src="/images/festivallist01.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="festival_list_text_box">
-                            <p><span>행사기간</span>2023-05-26 ~ 2023-05-28</p>
-                            <a href="#none">
-                                <h4>여주금사참외축제</h4>
-                            </a>
-                            <div>
-                                <p>지역 : 여주</p>
-                                <p>장소 : 여주시 금사면 근린고원</p>
-                                <p>연락처 : 031-887-3902</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+            <div id="festival_list_content_box" class="festival_list_content_box">
+                <!--json data -->
             </div>
-            <div class="festival_list_paging_box">
+            <div class="festival_list_paging_box" id="pagination">
                 <a href="#none">&lt;&lt;</a>
                 <a href="#none">&lt;</a>
                 <a href="#none">1</a>
@@ -82,6 +65,7 @@
 
     </main>
     <script src="/js/festival.js"></script>
+    <script src="/pagetext2.js"></script>
 </body>
 
 </html>

@@ -87,12 +87,22 @@
     display: none;
 }
 
+.travelAi_3depthList li:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+}
+
 .region_3depthList li {
     text-align: center;
     line-height: 50px;
 }
 
+.region_3depthList li:hover a {
+    background: #5289e6;
+    color: #fff;
+}
+
 .region_3depthList li>a {
+    display: block;
     color: #777;
 }
 
