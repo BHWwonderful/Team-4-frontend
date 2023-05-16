@@ -23,7 +23,7 @@
     margin: auto;
     width: 1180px;
     height: 435px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .sample_slideImg_box{
     position: relative;
