@@ -237,14 +237,14 @@
     bottom: 0;
     left: 0;
     height: 40%;
-    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.6));
+    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.9));
 }
 
 .travelAi_today_hover_wrap>ul>li:last-child {
     margin-right: 0;
 }
 
-.travelAi_today_hover_wrap>ul>.travelAi_todayList_this {
+.travelAi_today_hover_wrap>ul>li:first-child {
     width: 370px;
     box-shadow: 11px 12px 29px 0px rgba(32, 54, 90, 0.27);
 }
@@ -296,6 +296,9 @@
     border: 0 none;
     background-color: transparent;
     cursor: pointer;
-    /* outline: 0 none; */
     z-index: 10;
+}
+
+.travelAi_today_likeBtnOn {
+    background-position: 50% -31px;
 }
