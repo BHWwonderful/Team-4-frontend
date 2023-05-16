@@ -23,13 +23,14 @@
     margin: auto;
     width: 1180px;
     height: 435px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-.sample_slide_img{
+.sample_slideImg_box{
     position: relative;
+    left: -1180px;
     display: flex;
 }
-.sample_slide_img img{
+.sample_slideImg_box img{
     width: 1180px;
     height: 435px;
 }

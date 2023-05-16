@@ -109,11 +109,11 @@
     pointer-events: auto;
 }
 /* main content */
-.main_contentTitle_wrap{
+.main_content_title{
     width: 100%;
     margin: auto;
 }
-.main_contentTitle_wrap h3{
+.main_content_title h3{
     width: 1180px;
     height: 132px;
     margin: auto;

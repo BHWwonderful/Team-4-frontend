@@ -97,61 +97,71 @@
 
         <div class="travelAi_content">
             <h2>여행콕콕</h2>
-            <div class="travelAi_4dp_lnb">
-                <h3>AI콕콕</h3>
-                <h3>AI콕콕 플래너</h3>
+            <div class="travelAi_4dp_lnb_box">
+                <ul>
+                    <li>
+                        <a href="/travelAi/travelAi.html">
+                            <h3 class="travelAi_4dp_focus">AI콕콕</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/travelAi/travelAiPlanner.html">
+                            <h3>AI콕콕 플래너</h3>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <div class="travelAi_today_content">
                 <h4>오늘 준비한 당신의 맞춤 여행지</h4>
-                <div class="travelAi_today_slide_wrap">
+                <div class="travelAi_today_hover_wrap">
                     <ul>
                         <li>
                             <a href="#none">
-                                <img src="./images/toDayRegion1.jpeg" alt="바람재쉼터">
+                                <span class="traverAi_today_hoverImg1"></span>
                                 <div class="travelAi_todayText_box">
                                     <strong>바람재쉼터</strong>
                                     <span>세종</span>
                                 </div>
-                                <button>좋아요</button>
+                                <button type="button" class="travelAi_today_likeBtn" title="x">좋아요</button>
                             </a>
                         </li>
                         <li>
                             <a href="#none">
-                                <img src="./images/toDayRegion2.jpeg" alt="현대원서공원">
+                                <span class="traverAi_today_hoverImg2"></span>
                                 <div class="travelAi_todayText_box">
                                     <strong>현대원서공원</strong>
                                     <span>서울</span>
                                     <span>종로구</span>
                                 </div>
-                                <button>좋아요</button>
+                                <button type="button" class="travelAi_today_likeBtn" title="x">좋아요</button>
                             </a>
                         </li>
                         <li>
                             <a href="#none">
-                                <img src="./images/toDayRegion3.jpeg" alt="도학오토캠핑장">
+                                <span class="traverAi_today_hoverImg3"></span>
                                 <div class="travelAi_todayText_box">
                                     <strong>도학오토캠핑장</strong>
                                     <span>대구</span>
                                     <span>동구</span>
                                 </div>
-                                <button>좋아요</button>
+                                <button type="button" class="travelAi_today_likeBtn" title="x">좋아요</button>
                             </a>
                         </li>
                         <li>
                             <a href="#none">
-                                <img src="./images/toDayRegion4.jpeg" alt="미천공원">
+                                <span class="traverAi_today_hoverImg4"></span>
                                 <div class="travelAi_todayText_box">
                                     <strong>미천공원</strong>
                                     <span>경북</span>
                                     <span>고령군</span>
                                 </div>
-                                <button>좋아요</button>
+                                <button type="button" class="travelAi_today_likeBtn" title="x">좋아요</button>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <button>다시 한번 추천받기</button>
+                <!-- <button>다시 한번 추천받기</button> -->
             </div>
 
             <div class="traverAi_recent_content">
@@ -161,7 +171,7 @@
                     <ul>
                         <li>
                             <a href="">
-                                <img src="./images/recentRegion1.jpeg" alt="대한민국 최초의 도심형 수목원, 국립세종수목원">
+                                <span class="traverAi_recentImg1"></span>
                                 <div class="travelAi_recentText_box">
                                     <strong>대한민국 최초의 도심형 수목원, 국립세종수목원</strong>
                                     <span>세종</span>
@@ -170,8 +180,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/recentRegion2.jpeg"
-                                    alt="곰이 많다는데? 그런데 곰보다 더 많은 꽃과 나무들이 있는 곳 - 세종 베어트리파크">
+                                <span class="traverAi_recentImg2"></span>
                                 <div class="travelAi_recentText_box">
                                     <strong>곰이 많다는데? 그런데 곰보다 더 많은 꽃과 나무들이 있는 곳 - 세종 베어트리파크</strong>
                                     <span>세종</span>
@@ -180,7 +189,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/recentRegion3.jpeg" alt="숲뜰근린공원">
+                                <span class="traverAi_recentImg3"></span>
                                 <div class="travelAi_recentText_box">
                                     <strong>숲뜰근린공원</strong>
                                     <span>세종</span>
@@ -188,7 +197,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href=""><img src="./images/recentRegion4.jpeg" alt="금강보행교">
+                            <a href="">
+                                <span class="traverAi_recentImg4"></span>
                                 <div class="travelAi_recentText_box">
                                     <strong>금강보행교</strong>
                                     <span>세종</span>
@@ -196,7 +206,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href=""><img src="./images/recentRegion5.jpeg" alt="도토리숲키즈파크">
+                            <a href="">
+                                <span class="traverAi_recentImg5"></span>
                                 <div class="travelAi_recentText_box">
                                     <strong>도토리숲키즈파크</strong>
                                     <span>세종</span>
@@ -204,7 +215,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href=""><img src="./images/recentRegion6.jpeg" alt="금강수변공원">
+                            <a href="">
+                                <span class="traverAi_recentImg6"></span>
                                 <div class="travelAi_recentText_box">
                                     <strong>금강수변공원</strong>
                                     <span>세종</span>
@@ -212,7 +224,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href=""><img src="./images/recentRegion7.jpeg" alt="세종지혜의숲(지혜의숲)">
+                            <a href="">
+                                <span class="traverAi_recentImg7"></span>
                                 <div class="travelAi_recentText_box">
                                     <strong>세종지혜의숲(지혜의숲)</strong>
                                     <span>세종</span>
@@ -220,7 +233,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href=""><img src="./images/recentRegion8.jpeg" alt="원수산MTB공원">
+                            <a href="">
+                                <span class="traverAi_recentImg8"></span>
                                 <div class="travelAi_recentText_box">
                                     <strong>원수산MTB공원</strong>
                                     <span>세종</span>
@@ -231,8 +245,8 @@
                     <div class="travelAi_scrollBar_box">
                         <div class="travelAi_scrollBar"></div>
                     </div>
-                    <button>이전</button>
-                    <button>다음</button>
+                    <button class="traverAi_recentSlide_prevBtn">이전</button>
+                    <button class="traverAi_recentSlide_nextBtn">다음</button>
                 </div>
             </div>
 
