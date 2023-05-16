@@ -19,7 +19,7 @@
         <nav class="header_gnb_container">
             <ul class="gnb_1dp">
                 <li>
-                    <a href="javascript:void(0);">여행정보</a>
+                    <a href="javascript:void(0);" class="gnb_1dp_link">여행정보</a>
                     <div class="gnb_2dp_bg">
                         <div class="gnb_2dpList_wrap">
                             <div class="gnb_2dpListTitle_box">
@@ -42,7 +42,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="javascript:void(0);">행사</a>
+                    <a href="javascript:void(0);" class="gnb_1dp_link">행사</a>
                     <div class="gnb_2dp_bg">
                         <div class="gnb_2dpList_wrap">
                             <div class="gnb_2dpListTitle_box">
@@ -62,7 +62,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="javascript:void(0);">패키지 & 테마</a>
+                    <a href="javascript:void(0);" class="gnb_1dp_link">패키지 & 테마</a>
                     <div class="gnb_2dp_bg">
                         <div class="gnb_2dpList_wrap">
                             <div class="gnb_2dpListTitle_box">
@@ -82,7 +82,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#none">여행지도</a>
+                    <a href="#none" class="gnb_1dp_link">여행지도</a>
                 </li>
             </ul>
         </nav>
@@ -102,18 +102,21 @@
     var path = window.location.pathname;
 
     var arSplitPath = path.split("/");
-
+    var avx = $(".gnb_1dp_link:eq(0)")
     $(window).on("scroll", function () {
         let scroll = $(window).scrollTop();
         if (scroll >= 381) {
-            if (arSplitPath[1] == "region" || "course") {
-                $(".gnb_1dp li:eq(0) a").addClass("gnb_path_active");
-            } else if(arSplitPath[1] == "evnet" || "festival") {
-                $(".gnb_1dp li:eq(1) a").addClass("gnb_path_active");
-            } else if(arSplitPath[1] == "package" || "theme") {
-                $(".gnb_1dp li:eq(2) a").addClass("gnb_path_active");
-            } else if(arSplitPath[1] == "region") {
-                $(".gnb_1dp li:eq(3) a").addClass("gnb_path_active");
+            if(arSplitPath[1] == "region" || arSplitPath[1] == "course") {
+                $(".gnb_1dp_link:eq(0)").addClass("gnb_path_active");
+            }
+            if(arSplitPath[1] == "evnet" || arSplitPath[1] == "festival") {
+                $(".gnb_1dp_link:eq(1)").addClass("gnb_path_active");
+            }
+            if(arSplitPath[1] == "package&theme") {
+                $(".gnb_1dp_link:eq(2)").addClass("gnb_path_active");
+            }
+            if(arSplitPath[1] == "map" || arSplitPath[1] == "course") {
+                $(".gnb_1dp_link:eq(3)").addClass("gnb_path_active");
             }
         } else {
             $(".gnb_1dp li a").removeClass("gnb_path_active");
