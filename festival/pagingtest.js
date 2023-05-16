@@ -45,14 +45,14 @@ $(document).ready(function () {
                             </a>
                         </div>
                         <div class="festival_list_text_box">
-                            <p><span>행사기간</span>${JSON.parse(data)[index].행사시작일}~${JSON.parse(data)[index].행사종료일}</p>
+                            <p><span>행사기간</span>${item.행사시작일}~${item.행사종료일}</p>
                             <a href="#none">
-                                <h4>${JSON.parse(data)[index].명칭}</h4>
+                                <h4>${item.명칭}</h4>
                             </a>
                             <div>
-                                <p>지역 : ${JSON.parse(data)[index].관리자}</p>
-                                <p>장소 : ${JSON.parse(data)[index].행사장소}</p>
-                                <p>연락처 : ${JSON.parse(data)[index].주최자연락처}</p>
+                                <p>지역 : ${item.관리자}</p>
+                                <p>장소 : ${item.행사장소}</p>
+                                <p>연락처 : ${item.주최자연락처}</p>
                             </div>
                         </div>
                     </li>
