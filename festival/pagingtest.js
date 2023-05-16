@@ -1,43 +1,41 @@
-$(document).ready(function () {
-  //실행할 내용
-  $.get('https://gist.githubusercontent.com/GyeungHoon/6b6f6a0638ebc61bc3ca9f38af9e9f99/raw/21029faff5a185673943099ffb1318444838c4ff/festival.json').done(function (data) {
-    const dataSet = JSON.parse(data);
+$.get('https://gist.githubusercontent.com/GyeungHoon/6b6f6a0638ebc61bc3ca9f38af9e9f99/raw/21029faff5a185673943099ffb1318444838c4ff/festival.json').done(function (data) {
+  const dataSet = JSON.parse(data);
 
-    const displayPageNav = perPage => {
+  const displayPageNav = perPage => {
 
-      let pagination = ``
-      const totalItems = dataSet.length
-      perPage = perPage ? perPage : 1
-      const pages = Math.ceil(totalItems / perPage)
+    let pagination = ``
+    const totalItems = dataSet.length
+    perPage = perPage ? perPage : 1
+    const pages = Math.ceil(totalItems / perPage)
 
-      for (let i = 1; i <= pages; i++) {
-        pagination += `<a href="#" onClick="displayItems(${i},${perPage})">${i}</a>`
-      }
-
-      document.getElementById('pagination').innerHTML = pagination
-
+    for (let i = 1; i <= pages; i++) {
+      pagination += `<a href="#" onClick="displayItems(${i},${perPage})" >${i}</a>`
     }
 
-    const displayItems = (page = 1, perPage = 2) => {
+    document.getElementById('pagination').innerHTML = pagination
 
-      let index, offSet
+  }
 
-      if (page == 1 || page <= 0) {
-        index = 0
-        offSet = perPage
-      } else if (page > dataSet.length) {
-        index = page - 1
-        offSet = dataSet.length
-      } else {
-        index = page * perPage - perPage
-        offSet = index + perPage
-      }
+  const displayItems = (page = 1, perPage = 2) => {
 
-      const slicedItems = dataSet.slice(index, offSet)
+    let index, offSet
 
-      const html = slicedItems.map(item =>
-        document.getElementById("festival_list_content_box").innerHTML +=
-        `<ul>
+    if (page == 1 || page <= 0) {
+      index = 0
+      offSet = perPage
+    } else if (page > dataSet.length) {
+      index = page - 1
+      offSet = dataSet.length
+    } else {
+      index = page * perPage - perPage
+      offSet = index + perPage
+    }
+
+    const slicedItems = dataSet.slice(index, offSet)
+
+    const html = slicedItems.map(item =>
+      document.getElementById("festival_list_content_box").innerHTML +=
+      `<ul>
                     <li>
                         <div class="festival_list_img_box">
                             <a href="#none">
@@ -57,16 +55,15 @@ $(document).ready(function () {
                         </div>
                     </li>
                 </ul>`
-                
-                
 
-      )
-      
 
-    }
-    let perPage=10;
-    displayPageNav(perPage);
-    displayItems(1, perPage);
-  })
 
+    )
+
+
+  }
+  let perPage = 10;
+  displayPageNav(perPage);
+  displayItems(1, perPage);
 })
+
