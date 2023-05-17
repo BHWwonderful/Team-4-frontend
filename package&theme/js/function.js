@@ -57,7 +57,7 @@ $(document).ready(() => {
     
     // package_wellness_travel슬라이드
     origin = 1770;
-    w_currentSlide = 0;
+    let w_currentSlide = 0;
     sliderWidth = 295;
     slideCount = 6;
     $(".package_wellness_travel .package_sliderBtn_next").on("click", function() {
@@ -74,7 +74,7 @@ $(document).ready(() => {
             w_currentSlide = -1;
             $(".package_wellness_travel .package_slider").css("right", "1770px");
         }
-        $(".package_wellness_travel .package_slider").stop().animate({ right: origin + w_currentSlide * sliderWidth + "px" }, "fast");
+        $(".package_wellness_travel .package_slider").stop().animate({right: origin + w_currentSlide * sliderWidth + "px" }, "fast");
     });
 
 // 좋아요 기능 숫자, 모양만
@@ -92,30 +92,36 @@ $(".package_card_likeImg").on("click", function(){
 })
 
 // 배너 자동 슬라이드 기능 구현
-let bannerSlide_width = 1180;
+let bannerWidth = 1180;
 let index = 0;
-    setInterval(BnSlide, 3000);
-    function BnSlide(){
-        // index++
-        console.log(index)
-        $(".package_banner_box").animate({right: `index*bannerSlide_width+"px"`})
+    let autoSlide = setInterval(bnSlide, 3000);
+    function bnSlide(){
+        index++
+        $(".package_banner_box").stop().animate({right : (index%3)*bannerWidth+"px"}, 1000)
+        $(`.package_banner_index div:eq(${index%3})`).addClass("dot_active");
+        $(`.package_banner_index div:eq(${index%3})`).siblings().removeClass("dot_active");
     }
-
     // 재생 정지 버튼
     $(".package_banner_index img").on("click", function(){
         $(".package_banner_stop").toggleClass("disabled")
         $(".package_banner_play").toggleClass("active")
+        if($(".package_banner_play").hasClass("active")) {
+            clearInterval(autoSlide)
+        }else{
+            autoSlide = setInterval(bnSlide, 3000);
+        }
     })
 
     //잡다구리 기능
-    $(".package_banner_index div").on("hover", function(){
-        $(this).css("backgroundColor", "#fff")
-    })
     $(".package_banner_index div").on("click", function(){
-        $(this).animate().toggleClass("dot_active");
+        $(this).addClass("dot_active");
         $(this).siblings().removeClass("dot_active");
+        if($(".package_banner_play").hasClass("disabled")){
+            clearInterval(autoSlide)
+            $(".package_banner_stop").toggleClass("disabled")
+            $(".package_banner_play").removeClass("disabled")
+            $(".package_banner_play").toggleClass("active")
+        }
     })
-
-
 
 });
