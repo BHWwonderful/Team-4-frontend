@@ -18,7 +18,6 @@ $(document).ready(()=>{
             currentSlide++;
             $(".sample_slideImg_box").stop().animate({left: -currentSlide * sliderWidth+"px"});
         }else if(currentSlide >= 4){
-            // $(".sample_slideImg_box").stop().animate({left: -currentSlide * sliderWidth+"px"});
             currentSlide = 1; 
             $(".sample_slideImg_box").css("left", "-1180px");
         }
@@ -28,12 +27,8 @@ $(document).ready(()=>{
             currentSlide--;
             $(".sample_slideImg_box").stop().animate({left: -currentSlide * sliderWidth+"px"});
         }else if(currentSlide <= 0){
-            // $(".sample_slideImg_box").stop().animate({left: -currentSlide * sliderWidth+"px"});
             currentSlide = 3;
             $(".sample_slideImg_box").css("left", "-3540px");
         }
     })
 });
-
-
-
