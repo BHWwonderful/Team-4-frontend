@@ -22,28 +22,32 @@
     padding:50px 0 30px;
     display: none;
 }
-.package_slider_box{
+.package_slider_wrap{
     position: relative;
 }
-.package_slider_box h4{
+.package_slider_wrap h4{
     font-size: 20px;
     padding: 100px 0 30px;
 }
 .package_travel_now h4{
     padding: 50px 0 30px;
 }
-.package_slider_box span{
+.package_slider_wrap span{
     margin-left: 5px;
     display: inline;
     font-size: 16px;
     font-weight: 100;
     color: #666666;
 }
-.package__slider{
+.package_slider_box{
     width: 1180px;
     height: 380px;
     overflow: hidden;
+}
+.package_slider{
     display: flex;
+    position: relative;
+    right: 1770px;
 }
 .package_card_bgImg{
     position: relative;
