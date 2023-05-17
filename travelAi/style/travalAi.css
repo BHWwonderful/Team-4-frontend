@@ -447,20 +447,51 @@
 .travelAi_yester_content {
     width: 100%;
     height: auto;
+    position: relative;
 }
 
+/* 제목 */
 .travelAi_yesterTitle_box {
     width: 100%;
     display: flex;
     padding-bottom: 28px;
+    align-items: center;
 }
 
 .travelAi_yesterTitle_box>h4 {
     font-size: 26px;
 }
 
+.travelAi_yesterTitle_box>button {
+    text-indent: -9999px;
+    width: 27px;
+    height: 28px;
+    background: url("../images/btn_tit_layer.png");
+    border: 0;
+    margin-left: 10px;
+}
+
 .travelAi_yesterSub_box {
-    display: none;
+    position: absolute;
+    border: 1px solid #cac9c9;
+    box-shadow: 4px 6px 18px 0px rgba(102, 102, 102, 0.16);
+    top: -25px;
+    left: 255px;
+    padding: 15px;
+    z-index: 10;
+    /* display: none; */
+}
+
+.travelAi_yesterSub_box::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: -10px;
+    width: 11px;
+    height: 9px;
+    background: url("../images/layer_arw02.png") no-repeat;
+    transform: rotate(-90deg);
+    
 }
 
 .travelAi_yesterList_box>ul>li>a>span {
