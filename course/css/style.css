@@ -463,7 +463,6 @@
         .courseContent_content_wrap{
             padding-top:30px;
             width:1180px;
-            margin-bottom:60px;
             border-bottom:1px solid #e6e6e6;
         }
 
@@ -484,8 +483,7 @@
             height:auto;
             background:#f3f2f2;
             padding-top:35px;
-            padding-bottom:35px;
-            margin-bottom:40px;
+            padding-bottom:10px;
         }
 
         /* 코스 4depth 페이지 슬라이더 */
@@ -515,7 +513,9 @@
 
         .swiper-button-prev{
             position:absolute;
-            top:58%;
+            width:30px;
+            height:30px;
+            top:60%;
             left:0;
             background-image:url(../images/btn_cos_prev.png);
             background-repeat: no-repeat;
@@ -525,7 +525,9 @@
 
         .swiper-button-next{
             position:absolute;
-            top:58%;
+            width:30px;
+            height:30px;
+            top:60%;
             right:0;
             background-image:url(../images/btn_cos_next.png);
             background-repeat: no-repeat;
@@ -593,7 +595,7 @@
             display:inline-block;
             position:absolute;
             top:14px;
-            left:50%;
+            left:47%;
             /* border-radius: 100%; */
             width:30px;
             height:30px;
@@ -619,7 +621,7 @@
             position:relative;
             width:233px;
             height:233px;
-            margin:0 auto;
+            /* margin:0 auto; */
         }
         
         .slide-link--on::before{
@@ -973,7 +975,7 @@
 
         .courseContent_sliderCourseContentMoreInfo_box{
             margin-top:14px;
-            margin-bottom:22.4px;
+            margin-bottom:14px;
         }
 
         .courseContent_sliderCourseContentMoreInfoIcon{
@@ -998,34 +1000,121 @@
         .courseContent_sliderCourseContentHashtagList{
             display:flex;
             flex-wrap:wrap;
-            margin-left:-10px;
+            margin-left:-15px;
         }
 
         .courseContent_sliderCourseContentHashtagListItem{
-            height:50px;
-            border: 1px solid black;
+            height:30px;
             text-align: center;
-            margin-left: 10px;
-            margin-bottom: 10px;
+            margin-left: 5px;
         }
 
         .courseContent_sliderCourseContentHashtagListItemLink{
             display:inline-block;
             height:100%;
             text-align: center;
-            line-height: 50px;
-            color:black;
-            padding:0 20px;
+            line-height: 30px;
+            color:#777777;
+            padding:0 10px;
         }
+
+        /* 지도 크기 */
 
         .map{
             width:1140px;
             height:700px;
         }
 
+        /* 해당 코스가 마음에 드시나요? */
+        .courseContent_like_wrap{
+            width:1140px;
+            position:relative;
+            padding:62px 0;
+            display:flex;
+            justify-content: space-between;
+        }
+
+        .courseContent_likeTitle_box{
+            position: relative;
+            padding-left:25px;
+        }
+
+        .courseContent_likeTitle{
+            font-size:25.2px;
+        }
+
+        .courseContent_likeTitle::after{
+            content:"";
+            background: url(../images/icon_user_expression02.png) no-repeat;
+            position: absolute;
+            top:0;
+            left:0;
+            width:20px;
+            height:20px;
+        }
+
+        .courseContent_likeText{
+            font-size:18.9px;
+            padding-top:7px;
+        }
+
+        .courseContent_likeIconLike{
+            position:relative;
+            display: inline-block;
+            width:152px;
+            height:71px;
+            margin-left:80px;
+            background-color: #f1f1f1;
+            font-size:18px;
+            text-align: center;
+            line-height:71px;
+            padding-left:60px;
+        }
+
+        .courseContent_likeIconLike::before{
+            content:"";
+            position: absolute;
+            background: url(../images/icon_user_expression.png) no-repeat 50% 0%;
+            top:50%;
+            transform: translateY(-50%);
+            left:21px;
+            display: block;
+            width:50px;
+            height:45px;
+        }
+
+        .courseContent_likeIconDislike{
+            position:relative;
+            display: inline-block;
+            width:152px;
+            height:71px;
+            background-color: #f1f1f1;
+            margin-left:20px;
+            font-size:18px;
+            text-align: center;
+            line-height:71px;
+            padding-left:60px;
+        }
+
+        .courseContent_likeIconDislike::before{
+            content:"";
+            position: absolute;
+            background: url(../images/icon_user_expression.png) no-repeat 50% 67%;
+            top:50%;
+            transform: translateY(-50%);
+            left:21px;
+            display: block;
+            width:50px;
+            height:45px;
+        }
+
         /* 숨기기 클래스 */
         .hidden{
             display:none;
+        }
+
+        .invisible{
+            visibility: hidden;
         }
 
         
