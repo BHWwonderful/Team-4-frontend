@@ -202,19 +202,19 @@
     padding-bottom: 28px;
 }
 
-.traverAi_today_hoverImg1 {
+.travelAi_today_hoverImg1 {
     background: url("../images/toDayRegion1.jpeg")
 }
 
-.traverAi_today_hoverImg2 {
+.travelAi_today_hoverImg2 {
     background: url("../images/toDayRegion2.jpeg")
 }
 
-.traverAi_today_hoverImg3 {
+.travelAi_today_hoverImg3 {
     background: url("../images/toDayRegion3.jpeg")
 }
 
-.traverAi_today_hoverImg4 {
+.travelAi_today_hoverImg4 {
     background: url("../images/toDayRegion4.jpeg")
 }
 
@@ -308,14 +308,14 @@
 }
 
 /* 내가 최근 본 여행지와 비슷한 여행지 추천! */
-.traverAi_recent_content {
+.travelAi_recent_content {
     margin-top: 35px;
     /* padding-bottom: 50px; */
     height: 505px;
     position: relative;
 }
 
-.traverAi_recent_content>h4 {
+.travelAi_recent_content>h4 {
     font-size: 26px;
     padding-bottom: 28px;
 }
@@ -340,35 +340,35 @@
     margin-right: 0;
 }
 
-.traverAi_recentImg1 {
+.travelAi_recentImg1 {
     background: url("../images/recentRegion1.jpeg");
 }
 
-.traverAi_recentImg2 {
+.travelAi_recentImg2 {
     background: url("../images/recentRegion2.jpeg");
 }
 
-.traverAi_recentImg3 {
+.travelAi_recentImg3 {
     background: url("../images/recentRegion3.jpeg");
 }
 
-.traverAi_recentImg4 {
+.travelAi_recentImg4 {
     background: url("../images/recentRegion4.jpeg");
 }
 
-.traverAi_recentImg5 {
+.travelAi_recentImg5 {
     background: url("../images/recentRegion5.jpeg");
 }
 
-.traverAi_recentImg6 {
+.travelAi_recentImg6 {
     background: url("../images/recentRegion6.jpeg");
 }
 
-.traverAi_recentImg7 {
+.travelAi_recentImg7 {
     background: url("../images/recentRegion7.jpeg");
 }
 
-.traverAi_recentImg8 {
+.travelAi_recentImg8 {
     background: url("../images/recentRegion8.jpeg");
 }
 
@@ -417,12 +417,12 @@
     cursor: pointer;
 }
 
-.travelAi_recent_wrap>.traverAi_recentSlide_prevBtn {
+.travelAi_recent_wrap>.travelAi_recentSlide_prevBtn {
     background-image: url("../images/recentslide_prev_btn.png");
     right: 38px;
 }
 
-.travelAi_recent_wrap>.traverAi_recentSlide_nextBtn {
+.travelAi_recent_wrap>.travelAi_recentSlide_nextBtn {
     background-image: url("../images/recentslide_next_btn.png");
     right: 0;
 }
@@ -469,6 +469,7 @@
     background: url("../images/btn_tit_layer.png");
     border: 0;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .travelAi_yesterSub_box {
@@ -479,7 +480,8 @@
     left: 255px;
     padding: 15px;
     z-index: 10;
-    /* display: none; */
+    color: #767676;
+    display: none;
 }
 
 .travelAi_yesterSub_box::after {
@@ -491,7 +493,6 @@
     height: 9px;
     background: url("../images/layer_arw02.png") no-repeat;
     transform: rotate(-90deg);
-
 }
 
 /* 리스트 */
@@ -590,6 +591,7 @@
     width: 100%;
     height: 100%;
     flex-shrink: 0;
+    position: relative;
 }
 
 .travelAi_yesterList_box>ul>li {

@@ -1,4 +1,5 @@
 var recentSlideX = 0;
+var yesterSlideX = 0;
 var recentBar = 0;
 $(".travelAi_guideList li:eq(2)").click(() => {
     $(".travelAi_3depthList").slideToggle("fast");
@@ -32,17 +33,17 @@ $(document).on("click", ".travelAi_likeBtn[title='o']", function () {
 // recent slide
 // 버튼 변경
 if (recentSlideX == 0) {
-    $(".travelAi_recent_wrap>.traverAi_recentSlide_prevBtn").css("background-position", "0 -36px");
+    $(".travelAi_recent_wrap>.travelAi_recentSlide_prevBtn").css("background-position", "0 -36px");
 }
 
 // 이전 버튼 클릭
-$(".traverAi_recentSlide_prevBtn").click(function () {
+$(".travelAi_recentSlide_prevBtn").click(function () {
     // 다음 버튼 원상태
-    $(".travelAi_recent_wrap>.traverAi_recentSlide_nextBtn").css("background-position", "50% 0");
+    $(".travelAi_recent_wrap>.travelAi_recentSlide_nextBtn").css("background-position", "50% 0");
 
     if (recentSlideX <= 0) {
         // 이전 버튼 투명 상태
-        $(".travelAi_recent_wrap>.traverAi_recentSlide_prevBtn").css("background-position", "0 -36px");
+        $(".travelAi_recent_wrap>.travelAi_recentSlide_prevBtn").css("background-position", "0 -36px");
         return false;
     }
     recentSlideX -= 300;
@@ -52,9 +53,9 @@ $(".traverAi_recentSlide_prevBtn").click(function () {
 });
 
 // 다음 버튼 클릭
-$(".traverAi_recentSlide_nextBtn").click(function () {
+$(".travelAi_recentSlide_nextBtn").click(function () {
     // 이전 버튼 원상태
-    $(".travelAi_recent_wrap>.traverAi_recentSlide_prevBtn").css("background-position", "50% 0");
+    $(".travelAi_recent_wrap>.travelAi_recentSlide_prevBtn").css("background-position", "50% 0");
     if (recentSlideX >= 1200) {
         return false;
     }
@@ -62,9 +63,55 @@ $(".traverAi_recentSlide_nextBtn").click(function () {
     recentBar += 236;
     if (recentSlideX == 1200) {
         // 다음 버튼 투명 상태
-        $(".travelAi_recent_wrap>.traverAi_recentSlide_nextBtn").css("background-position", "0 -36px");
+        $(".travelAi_recent_wrap>.travelAi_recentSlide_nextBtn").css("background-position", "0 -36px");
     }
     $(".travelAi_recent_wrap ul li").animate({ right: recentSlideX }, 200);
     $(".travelAi_scrollBar").animate({ left: recentBar }, 200);
-    console.log(recentSlideX);
+});
+
+
+
+
+
+
+
+
+
+
+// yester
+// 버튼 변경
+if (yesterSlideX == 0) {
+    $(".travelAi_yesterList_wrap>.travelAi_yesterSlide_prevBtn").css("background-position", "0 -36px");
+}
+
+// 이전 버튼 클릭
+$(".travelAi_yesterSlide_prevBtn").click(function () {
+    $(".travelAi_yesterList_box").animate({ right: 0 }, 200);
+
+    // 다음 버튼 원상태
+    $(".travelAi_yesterList_wrap>.travelAi_yesterSlide_nextBtn").css("background-position", "50% 0");
+
+    // 이전 버튼 투명 상태
+    $(".travelAi_yesterList_wrap>.travelAi_yesterSlide_prevBtn").css("background-position", "0 -36px");
+});
+
+// 다음 버튼 클릭
+$(".travelAi_yesterSlide_nextBtn").click(function () {
+    $(".travelAi_yesterList_box").animate({ right: 1180 }, 200);
+
+    // 이전 버튼 원상태
+    $(".travelAi_yesterList_wrap>.travelAi_yesterSlide_prevBtn").css("background-position", "50% 0");
+
+    // 다음 버튼 투명 상태
+    $(".travelAi_yesterList_wrap>.travelAi_yesterSlide_nextBtn").css("background-position", "0 -36px");
+});
+
+
+$(document).on("click", ".layerBtn[title='off']", function () {
+    $(".travelAi_yesterSub_box").show();
+    $(this).attr("title", "on");
+});
+$(document).on("click", ".layerBtn[title='on']", function () {
+    $(".travelAi_yesterSub_box").hide();
+    $(this).attr("title", "off");
 });
