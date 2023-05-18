@@ -973,7 +973,8 @@
                     <span class="courseContent_likeIconDislike">별로예요</span>
                 </div>
             </section>
-            <div class="courseContent_returnBtn_wrap">
+            <div class="courseContent_return_wrap">
+                <a class="courseContent_returnLink" href="#none">목록</a>
             </div>
         </div>
     </main>
@@ -1312,6 +1313,37 @@
                     }
                 })
             })
+        })
+
+        // 클릭시 좋아요! 별로예요 색깔 바뀌기
+        const likeButton = document.querySelector(".courseContent_likeIconLike");
+        const dislikeButton = document.querySelector(".courseContent_likeIconDislike");
+        typeof likeButton.className;
+        console.log(likeButton.className);
+        console.log(dislikeButton.className);
+
+        likeButton.addEventListener('click', function(){
+            dislikeButton.classList.remove('courseContent_likeIconDislike--on')
+            dislikeButton.classList.add('courseContent_likeIconDislike')
+            if(likeButton.className == "courseContent_likeIconLike"){
+                likeButton.classList.remove('courseContent_likeIconLike')
+                likeButton.classList.add('courseContent_likeIconLike--on')
+            } else{
+                likeButton.classList.remove('courseContent_likeIconLike--on')
+                likeButton.classList.add('courseContent_likeIconLike')
+            }
+        })
+
+        dislikeButton.addEventListener('click', function(){
+            likeButton.classList.remove('courseContent_likeIconLike--on');
+            likeButton.classList.add('courseContent_likeIconLike');
+            if(dislikeButton.className == "courseContent_likeIconDislike"){
+                dislikeButton.classList.remove('courseContent_likeIconDislike')
+                dislikeButton.classList.add('courseContent_likeIconDislike--on')
+            } else{
+                dislikeButton.classList.remove('courseContent_likeIconDislike--on')
+                dislikeButton.classList.add('courseContent_likeIconDislike')
+            }
         })
 
 
