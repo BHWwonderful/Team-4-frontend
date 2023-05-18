@@ -3,6 +3,7 @@ body{
 }
 .container{
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin: auto;
     width: 1180px;
     height: 600px;
