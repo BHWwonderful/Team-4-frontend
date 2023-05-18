@@ -1,0 +1,38 @@
+.travelAi_map {
+    width: 443px;
+    height: 758px;
+    background: url("/images/korea.png") no-repeat;
+    background-size: contain;
+    position: relative;
+    left: 100px;
+}
+
+.seoul {
+    display: block;
+    position: absolute;
+    width: 44px;
+    height: 35px;
+    background: url("/images/seoul_on.png") no-repeat;
+    top: 140px;
+    left: 120px;
+}
+
+.incheon {
+    display: block;
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: url("/images/incheon_on.png") no-repeat;
+    top: 119px;
+    left: 52px;
+}
+
+.gyeonggi-do {
+    display: block;
+    position: absolute;
+    width: 152px;
+    height: 193px;
+    background: url("/images/gyeonggi-do_on.png") no-repeat;
+    top: 62px;
+    left: 88px;
+}
