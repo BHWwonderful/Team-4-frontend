@@ -1,0 +1,11 @@
+body{
+    width: 100%;
+}
+.container{
+    display: grid;
+    margin: auto;
+    width: 1180px;
+    height: 600px;
+    background-color: gray;
+}
+
