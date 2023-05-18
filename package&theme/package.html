@@ -10,12 +10,13 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <link rel="stylesheet" type="text/css" href="css/package.css">
+    <link rel="stylesheet" type="text/css" href="css/add.css">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <title>여행 패키지 상품</title>
 </head>
 <body>
     <header id="header" class="header"></header>
-    <main class="main">
+    <main id="main" class="main">
         <div class="main_theme_title">
             <h2>여행 패키지 상품</h2>
         </div>
@@ -999,11 +1000,11 @@
         </section>
         <aside>
             <div class="package_banner_wrap">
-                <a class="package_banner_box" href="#none"side>
-                    <img src="img_package/41ce988a-09be-4fdd-bdaf-c2868b9ad0b6.png" alt="">
-                    <img src="img_package/c9d0dd69-c959-4ea8-a8ce-6eac34e54650.png" alt="">
-                    <img src="img_package/f8809722-cee4-4734-a654-2e68c46a2e35.png" alt="">
-                </a>
+                <div class="package_banner_box" href="#none"side>
+                    <a href="#none"><img src="img_package/41ce988a-09be-4fdd-bdaf-c2868b9ad0b6.png" alt="여행상품홍보관 소개서 다운"></a>
+                    <a href="#none"><img src="img_package/c9d0dd69-c959-4ea8-a8ce-6eac34e54650.png" alt="여행상품홍보관 상품 등록/수정"></a>
+                    <a href="../travel_subscribe/travelSubscribe.html"><img src="img_package/f8809722-cee4-4734-a654-2e68c46a2e35.png" alt="가볼래터로 이동"></a>
+                </div>
                 <a class="package_banner_index" href="#none">
                     <img class="package_banner_stop" src="img_package/btn_slide_stop01.png" alt="">
                     <img class="package_banner_play disabled" src="img_package/btn_slide_play01.png" alt="">
@@ -1012,13 +1013,10 @@
                     <div>○</div>
                 </a>
             </div>
-            <a href="#none" class="theme_float_btn">
-                
-            </a>
+            <a href="#none" class="theme_float_btn"></a>
         </aside>
     </main>
-
-    <footer class="footer"></footer>
+    <footer id="footer" class="footer"></footer>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="js/function.js"></script>
     <script>
@@ -1026,4 +1024,7 @@
         $(".header").load("../header/header.html");
     </script>
 </body>
+<div class="pop_up">
+    <div class="pop_up_cont"></div>
+</div>
 </html>
