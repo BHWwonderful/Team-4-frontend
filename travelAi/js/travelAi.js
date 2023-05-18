@@ -19,13 +19,13 @@ $(".travelAi_today_hover_wrap li").mouseleave(function () {
     $(".travelAi_today_hover_wrap ul li:first-child").css("box-shadow", "11px 12px 29px 0px rgba(32, 54, 90, 0.27)");
 })
 
-$(document).on("click", ".travelAi_today_likeBtn[title='x']", function () {
+$(document).on("click", ".travelAi_likeBtn[title='x']", function () {
     alert("좋아요를 저장하였습니다.");
-    $(this).addClass("travelAi_today_likeBtnOn");
+    $(this).addClass("travelAi_likeBtnOn");
     $(this).attr("title", "o");
 });
 
-$(document).on("click", ".travelAi_today_likeBtn[title='o']", function () {
+$(document).on("click", ".travelAi_likeBtn[title='o']", function () {
     alert("이미 좋아요를 한 콘텐츠입니다.");
 });
 
