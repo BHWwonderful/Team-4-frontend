@@ -2,7 +2,9 @@ body{
     width: 100%;
 }
 .container{
+    position: relative;
     display: grid;
+    top: 50vh;
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
     width: 1180px;
