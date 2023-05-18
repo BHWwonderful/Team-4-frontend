@@ -1,0 +1,195 @@
+.travelAi_map {
+    width: 391px;
+    height: 671px;
+    background: url("/images/korea.png") no-repeat;
+    background-size: contain;
+    position: relative;
+    left: 100px;
+}
+
+.seoul {
+    width: 38.48px;
+    height: 31.26px;
+    display: block;
+    position: absolute;
+    background: url("/images/seoul_on.png") no-repeat;
+    background-size: contain;
+    top: 123px;
+    left: 105px;
+}
+
+.incheon {
+    width: 57.19px;
+    height: 57.31px;
+    display: block;
+    position: absolute;
+    background: url("/images/incheon_on.png") no-repeat;
+    background-size: contain;
+    top: 105px;
+    left: 46px;
+}
+
+.gyeonggido {
+    width: 134.15px;
+    height: 170.88px;
+    display: block;
+    position: absolute;
+    background: url("/images/gyeonggi-do_on.png") no-repeat;
+    background-size: contain;
+    top: 54px;
+    left: 77px;
+}
+
+.gangwondo {
+    width: 256.85px;
+    height: 259.44px;
+    display: block;
+    position: absolute;
+    background: url("/images/Gangwon-do_on.png") no-repeat;
+    background-size: contain;
+    top: 0px;
+    left: 124px;
+}
+
+.chungnam {
+    width: 153.9px;
+    height: 136.49px;
+    display: block;
+    position: absolute;
+    background: url("/images/Chungnam_on.png") no-repeat;
+    background-size: contain;
+    top: 202px;
+    left: 35px;
+}
+
+.sejong {
+    width: 24.96px;
+    height: 45.84px;
+    display: block;
+    position: absolute;
+    background: url("/images/Sejong_on.png") no-repeat;
+    background-size: contain;
+    top: 246px;
+    left: 137px;
+}
+
+.daejeon {
+    width: 20.8px;
+    height: 33.34px;
+    display: block;
+    position: absolute;
+    background: url("/images/Daejeon_on.png") no-repeat;
+    background-size: contain;
+    top: 278px;
+    left: 157px;
+}
+
+.jeonbuk {
+    width: 174.7px;
+    height: 107.32px;
+    display: block;
+    position: absolute;
+    background: url("/images/Jeonbuk_on.png") no-repeat;
+    background-size: contain;
+    top: 322px;
+    left: 45px;
+}
+
+.gwangju {
+    width: 33.28px;
+    height: 22.92px;
+    display: block;
+    position: absolute;
+    background: url("/images/Gwangju_on.png") no-repeat;
+    background-size: contain;
+    top: 436px;
+    left: 93px;
+}
+
+.jeonnam {
+    width: 206.94px;
+    height: 171.92px;
+    display: block;
+    position: absolute;
+    background: url("/images/jeonnam_on.png") no-repeat;
+    background-size: contain;
+    top: 408px;
+    left: 0px;
+}
+
+.chungbuk {
+    width: 144.54px;
+    height: 156.29px;
+    display: block;
+    position: absolute;
+    background: url("/images/chungbuk_on.png") no-repeat;
+    background-size: contain;
+    top: 182px;
+    left: 151px;
+}
+
+.gyeongbuk {
+    width: 185.1px;
+    height: 199.01px;
+    display: block;
+    position: absolute;
+    background: url("/images/Gyeongbuk_on.png") no-repeat;
+    background-size: contain;
+    top: 198px;
+    left: 205px;
+}
+
+.daegu {
+    width: 40.56px;
+    height: 53.14px;
+    display: block;
+    position: absolute;
+    background: url("/images/daegu_on.png") no-repeat;
+    background-size: contain;
+    top: 336px;
+    left: 265px;
+}
+
+.ulsan {
+    width: 49.91px;
+    height: 47.93px;
+    display: block;
+    position: absolute;
+    background: url("/images/ulsan_on.png") no-repeat;
+    background-size: contain;
+    top: 378px;
+    left: 330px;
+}
+
+.busan {
+    width: 47.84px;
+    height: 39.59px;
+    display: block;
+    position: absolute;
+    background: url("/images/busan_on.png") no-repeat;
+    background-size: contain;
+    top: 422px;
+    left: 313px;
+}
+
+.gyeongnam {
+    width: 162.22px;
+    height: 153.16px;
+    display: block;
+    position: absolute;
+    background: url("/images/gyeongnam_on.png") no-repeat;
+    background-size: contain;
+    top: 354px;
+    left: 189px;
+}
+
+.jeju {
+    width: 83.19px;
+    height: 46.89px;
+    display: block;
+    position: absolute;
+    background: url("/images/jeju_on.png") no-repeat;
+    background-size: contain;
+    top: 621px;
+    left: 126px;
+}
