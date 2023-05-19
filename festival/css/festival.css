@@ -304,18 +304,64 @@ Noto Sans Kr
     background: none;
 }
 
-
-.festivalDetail_img_box {
-    width: 670px;
-    margin: auto;
-    padding: 50px 0;
-}
-
-.festivalDetail_img_box>div {
-    width: 100%;
-    display: flex;
+.slide_wrapper {
+    position: relative;
+    width: 660px;
+    height: 900px;
+    margin: 0 auto;
     overflow: hidden;
 }
+
+.slides {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.slides.animated {
+    transition: 0.5s ease-out;
+}
+
+.slides li {
+    width: 660px;
+    height: 900px;
+    background: #ccc;
+    float: left;
+}
+
+.slides li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.controls {
+    text-align: center;
+    position: relative;
+    top: -400px;
+}
+
+.controls .next {
+    display: inline-block;
+    position: absolute;
+    overflow: hidden;
+    right: 100px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/btn_slider_next.png) 0 0 no-repeat;
+    text-indent: -9999px;
+
+}
+
+.controls .prev {
+    display: inline-block;
+    position: absolute;
+    overflow: hidden;
+    left: 100px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/btn_slider_prev.png) 0 0 no-repeat;
+    text-indent: -9999px;
+}
+
 
 .festivalDetail_text_box h3 {
     margin: 10px 0;
