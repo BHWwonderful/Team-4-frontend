@@ -1,18 +1,18 @@
 $(document).ready(function () {
-    $.get('https://gist.githubusercontent.com/GyeungHoon/6b6f6a0638ebc61bc3ca9f38af9e9f99/raw/21029faff5a185673943099ffb1318444838c4ff/festival.json').done(function (data) {
+    $.get('https://gist.githubusercontent.com/GyeungHoon/6b6f6a0638ebc61bc3ca9f38af9e9f99/raw/8398f334ae257c716140e55485e174e0b6a596fd/festival.json').done(function (data) {
         for (var i = 0; i < 100; i++) {
             document.getElementById("festival_list_content_box").innerHTML +=
                 `<ul>
                 <li>
                     <div class="festival_list_img_box">
-                        <a href="#none">
+                        <a href="/festivalDetail.html">
                             <img src="../images/festival_img100/${JSON.parse(data)[i].명칭}_1_공공3유형.png" alt="">
                         </a>
                     </div>
                     <div class="festival_list_text_box">
                         <p><span>행사기간</span>${JSON.parse(data)[i].행사시작일}~${JSON.parse(data)[i].행사종료일}</p>
-                        <a href="#none">
-                            <h4>${JSON.parse(data)[i].명칭}</h4>
+                        <a href="/festivalDetail.html">
+                            <h4>4${JSON.parse(data)[i].명칭}</h4>
                         </a>
                         <div>
                             <p>지역 : ${JSON.parse(data)[i].관리자}</p>
@@ -32,7 +32,6 @@ const rows = document.querySelectorAll('#festival_list_content_box ul li');
 const rowsCount = rows.length;
 const pageCount = Math.ceil(rowsCount / rowsPerPage);
 const numbers = document.querySelector('#numbers');
-console.log(rowsCount);
 const prevPageBtn = document.querySelector('.pagination .fa-arrow-left');
 const nextPageBtn = document.querySelector('.pagination .fa-arrow-right');
 

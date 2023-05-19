@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         .psuedo_header{
             height:130px;
@@ -105,57 +105,43 @@
             </section>
             <section class="course_search_wrap">
                 <section class="course_search_box">
-                    <form>
+                    <form id="filterForm">
                         <div class="course_form">
                             <div class="course_formRegionHashtag_wrap">
                                 <div class="course_regionFilter_box">
                                     <label class="course_regionfilterLabel">지역</label>
-                                    <select class="course_regionFilterSelect">
-                                        <option>전체</option>
-                                        <option>서울</option>
-                                        <option>부산</option>
-                                        <option>대구</option>
-                                        <option>인천</option>
-                                        <option>광주</option>
-                                        <option>대전</option>
-                                        <option>울산</option>
-                                        <option>세종</option>
-                                        <option>경기</option>
-                                        <option>강원</option>
-                                        <option>충북</option>
-                                        <option>충남</option>
-                                        <option>경북</option>
-                                        <option>경남</option>
-                                        <option>전북</option>
-                                        <option>전남</option>
-                                        <option>제주</option>
+                                    <select id="regionFilter" class="course_regionFilterSelect">
+                                        <option value="">전체</option>
+                                        <option value="1">서울</option>
+                                        <option value="6">부산</option>
+                                        <option value="4">대구</option>
+                                        <option value="2">인천</option>
+                                        <option value="5">광주</option>
+                                        <option value="3">대전</option>
+                                        <option value="7">울산</option>
+                                        <option value="8">세종</option>
+                                        <option value="31">경기</option>
+                                        <option value="32">강원</option>
+                                        <option value="33">충북</option>
+                                        <option value="34">충남</option>
+                                        <option value="35">경북</option>
+                                        <option value="36">경남</option>
+                                        <option value="37">전북</option>
+                                        <option value="38">전남</option>
+                                        <option value="39">제주</option>
                                     </select>
                                 </div>
                                 <div class="course_hastagFilter_box">
                                     <label class="course_hashtagfilterLabel">해시태그</label>
-                                    <select class="course_hashtagFilterSelect">
-                                        <option>전체</option>
-                                        <option>#자연코스</option>
-                                        <option>#데이트코스</option>
-                                        <option>#자녀와함께</option>
-                                        <option>#연인코스</option>
-                                        <option>#가족코스</option>
-                                        <option>#친구와함께</option>
-                                        <option>#힐링코스</option>
-                                        <option>#한국관광의별</option>
-                                        <option>#휴가문화개선</option>
-                                        <option>#산업관광</option>
-                                        <option>#지역명사문화여행</option>
-                                        <option>#관광누리</option>
-                                        <option>#열린 관광 모두의 여행</option>
-                                        <option>#전통한옥</option>
-                                        <option>#생태녹색관광</option>
-                                        <option>#생활관광</option>
-                                        <option>#추천! 웰니스 관광지</option>
-                                        <option>#추천! 가볼만한 곳</option>
-                                        <option>#DMZ 평화관광</option>
-                                        <option>#한국관광품질인증</option>
-                                        <option>#한국관광100선</option>
+                                    <select id="courseFilter" class="course_hashtagFilterSelect">
+                                        <option value="">전체</option>
+                                        <option value="C0112">#가족코스</option>
+                                        <option value="C0113">#나홀로코스</option>
+                                        <option value="C0114">#힐링코스</option>
+                                        <option value="C0115">#도보코스</option>
+                                        <option value="C0116">#캠핑코스</option>
+                                        <option value="C0117">#맛코스</option>
+                                        
                                     </select>
                                 </div>
                             </div>
@@ -169,7 +155,7 @@
                 </section>
             </section>
             <section class="course_content_wrap">
-                <ul>
+                <ul class="course_contentListChange_box">
                     <li class="course_contentListItem">
                         <div class="course_contentListItemImg_box">
                             <a class="course_contentListItemLink" href="#none">
@@ -375,5 +361,76 @@
         </div>
     </main>
     <footer class="footer"></footer>
+    <script>
+        const filterButton = document.querySelector('.course_formButton');
+        const regionFilter = document.getElementById('regionFilter');
+        const filterForm = document.getElementById('filterForm');
+        const courseFilter = document.getElementById('courseFilter');
+        const courseContent = document.querySelector('.course_contentListChange_box');
+
+        filterForm.addEventListener('submit', (event)=>{
+            event.preventDefault();
+        })
+
+        filterButton.addEventListener('click', ()=>{
+            console.log(regionFilter.value);
+            console.log(courseFilter.value);
+            fetch(`http://apis.data.go.kr/B551011/KorService1/areaBasedList1?serviceKey=l7EHYHuiiu9sj%2FQ%2FdFHDmkz1KuLKAgruMyV8baTn%2BXdKBGLcfpeEDGf03M4tnfm6YRwOozTr1GXwSSK31gvFVg%3D%3D&pageNo=1&numOfRows=10&MobileApp=AppTest&MobileOS=ETC&arrange=Q&areaCode=${regionFilter.value}&contentTypeId=25&cat1=C01&cat2=${courseFilter.value}&_type=json`)
+                .then(response => response.json())
+                .then(json => {
+                    courseContent.innerHTML="";
+                    if(json.response.body.items.item){
+                        const dataArrays = json.response.body.items.item;
+                        dataArrays.forEach((dataArray, index)=>{
+                            console.log(dataArray);
+                            if(dataArray.firstimage){
+                                courseContent.innerHTML+=`<li class="course_contentListItem">
+                        <div class="course_contentListItemImg_box">
+                            <a class="course_contentListItemLink" href="#none">
+                                <img class="course_contentListItemLinkImg" src=${dataArray.firstimage} alt="">
+                            </a>
+                        </div>
+                        <div class="course_contentListItemText_box">
+                            <a class="course_contentListItemTextLink" href="#none">
+                                <h4 class="course_contentListItemTextLinkTitle">${dataArray.title}</h4>
+                                <p class="course_contentListItemTextLinkText">연천, 철원, 화천, 인제, 고성에서 태곳적 한반도를 엿볼 수 있다. 깊고 깊은 숲과 호수의 자연 속을 거니는 코스로 잘 가꿔진 수목원과 최전방 통일 전망대를 두루 만난다.</p>
+                            </a>
+                            <ul class="course_contentListItemTextList">
+                                <li class="course_contentListItemTextListRegion">경기 연천군</li>
+                                <li class="course_contentListItemTextListHashtag">#추천코스</li>
+                            </ul>
+                        </div>
+                    </li>`
+                            } else{
+                                courseContent.innerHTML+=`<li class="course_contentListItem">
+                        <div class="course_contentListItemImg_box">
+                            <a class="course_contentListItemLink" href="#none">
+                                <img class="course_contentListItemLinkImg" src=${dataArray.firstimage2} alt="">
+                            </a>
+                        </div>
+                        <div class="course_contentListItemText_box">
+                            <a class="course_contentListItemTextLink" href="#none">
+                                <h4 class="course_contentListItemTextLinkTitle">${dataArray.title}</h4>
+                                <p class="course_contentListItemTextLinkText">연천, 철원, 화천, 인제, 고성에서 태곳적 한반도를 엿볼 수 있다. 깊고 깊은 숲과 호수의 자연 속을 거니는 코스로 잘 가꿔진 수목원과 최전방 통일 전망대를 두루 만난다.</p>
+                            </a>
+                            <ul class="course_contentListItemTextList">
+                                <li class="course_contentListItemTextListRegion">경기 연천군</li>
+                                <li class="course_contentListItemTextListHashtag">#추천코스</li>
+                            </ul>
+                        </div>
+                    </li>`
+                            }
+                            
+                        })
+                    } else{
+                        console.log("Unvalid request");
+                    }
+                    
+                    // dataArrays.forEach((dataArray, index) => {
+                    //     console.log(dataArray);
+                    // });
+                })
+        })
+    </script>
 </body>
 </html>
