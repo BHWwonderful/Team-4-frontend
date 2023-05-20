@@ -23,7 +23,7 @@
     margin: auto;
     width: 1180px;
     height: 435px;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 .sample_slideImg_box{
     position: relative;
@@ -65,7 +65,6 @@
     margin: 0 10px;
     padding: 10px;
     border: 1px solid #e6e6e6;
-    border-radius: 10px;
     box-sizing: border-box;
 }
 .sample_card_type1:first-child{
@@ -80,7 +79,7 @@
 .sample_card_type1 img{
     width: 257px;
     height: 139px;
-    border-radius: 5px;
+    border: 1px solid #e6e6e690;
 }
 
 /* card type 2 */
@@ -91,7 +90,6 @@
 .sample_card_type2{
     width: 557px;
     border: 1px solid #e6e6e6;
-    border-radius: 10px;
     margin-bottom: 20px;
 }
 .sample_card_type2 h4{
@@ -114,7 +112,7 @@
 .sample_cardType2_parts img{
     width: 268px;
     height: 180px;
-    border-radius: 5px;
+    border: 1px solid #e6e6e690;
 }
 .sample_cardType2_parts h5{
     font-size: 16px;

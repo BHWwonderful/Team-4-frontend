@@ -73,7 +73,7 @@
     content: "";
     width: 30px;
     height: 50px;
-    background: url(../img_k/nav_arw.png) center no-repeat;
+    background: url(../img/nav_arw.png) center no-repeat;
     position: absolute;
     top: -18px;
     left: -50px
@@ -82,7 +82,7 @@
     content: "";
     width: 30px;
     height: 50px;
-    background: url(../img_k/nav_arw.png) center no-repeat;
+    background: url(../img/nav_arw.png) center no-repeat;
     background-size: cover;
     position: absolute;
     top: -18px;
@@ -321,7 +321,6 @@
     box-sizing: border-box;
     display: flex;
     border: 1px solid #e6e6e6;
-    border-radius: 10px;
 }
 .theme_mayFlex_card{
     padding: 10px 10px 0;
@@ -330,7 +329,6 @@
 .theme_mayFlex_card img{
     width: 267.5px;
     height: 178px;
-    border-radius: 5px;
 }
 .theme_mayFlex_text{
     margin-top: 10px;
@@ -352,7 +350,6 @@
 .theme_family_imgBox{
     padding:15px;
     border: 1px solid #e6e6e6;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     margin-right: 257.5px;
@@ -361,7 +358,6 @@
 .theme_family_imgBox img{
     width: 267.49px;
     height: 177.98px;
-    border-radius: 5px;
     margin: 10px 10px 0;
 }
 .theme_family_imgBox span{
@@ -374,14 +370,12 @@
 .theme_springImgBox_wrap{
     padding: 15px;
     border: 1px solid #e6e6e6;
-    border-radius: 10px;
     display: flex;
 }
 .theme_spring_imgBox1 img, .theme_spring_imgBox2 img{
     width: 267.49px;
     height: 177.98px;
     margin: 10px 10px 0;
-    border-radius: 5px;
 }
 .theme_springImgBox_wrap span{
     margin: 10px 10px 0;

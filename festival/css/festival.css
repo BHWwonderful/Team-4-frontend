@@ -109,10 +109,12 @@ Noto Sans Kr
     height: 200px;
     margin-right: 50px;
 }
-.festival_list_content_box ul li .festival_list_img_box img{
+
+.festival_list_content_box ul li .festival_list_img_box img {
     width: 100%;
     height: 200px;
 }
+
 /*축제목록 텍스트 정렬*/
 .festival_list_content_box ul li .festival_list_text_box div {
     display: flex;
@@ -142,21 +144,68 @@ Noto Sans Kr
 
 /*축제페이징 시작*/
 /*축제목록 페이징 가운데정렬*/
+/*pagenation*/
+.pagination {
+    background: #333;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination i {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#numbers {
+    padding: 0;
+    margin: 0 2rem;
+    list-style-type: none;
+    display: flex;
+
+}
+
+#numbers li a {
+    color: #fff;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    opacity: .7;
+
+}
+
+#numbers li a:hover {
+    opacity: 1;
+}
+
+#numbers li a:active {
+    opacity: 1;
+    background: #fff;
+    color: #333;
+}
+
+/*
 .festival_list_paging_box {
     text-align: center;
 }
+*/
 
 /*축제목록 페이징 테두리 추가, 안쪽여백 조절*/
+/*
 .festival_list_paging_box a {
     border: 1px solid #dfdfdf;
     padding: 10px;
 }
-
+*/
+/*
 .festival_list_paging_box a:hover {
     background: #0051A4;
     color: #fff;
     transition: all 0.3s;
 }
+*/
 
 /*축제페이징 끝*/
 
@@ -255,18 +304,64 @@ Noto Sans Kr
     background: none;
 }
 
-
-.festivalDetail_img_box {
-    width: 670px;
-    margin: auto;
-    padding: 50px 0;
-}
-
-.festivalDetail_img_box>div {
-    width: 100%;
-    display: flex;
+.slide_wrapper {
+    position: relative;
+    width: 660px;
+    height: 900px;
+    margin: 0 auto;
     overflow: hidden;
 }
+
+.slides {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.slides.animated {
+    transition: 0.5s ease-out;
+}
+
+.slides li {
+    width: 660px;
+    height: 900px;
+    background: #ccc;
+    float: left;
+}
+
+.slides li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.controls {
+    text-align: center;
+    position: relative;
+    top: -400px;
+}
+
+.controls .next {
+    display: inline-block;
+    position: absolute;
+    overflow: hidden;
+    right: 100px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/btn_slider_next.png) 0 0 no-repeat;
+    text-indent: -9999px;
+
+}
+
+.controls .prev {
+    display: inline-block;
+    position: absolute;
+    overflow: hidden;
+    left: 100px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/btn_slider_prev.png) 0 0 no-repeat;
+    text-indent: -9999px;
+}
+
 
 .festivalDetail_text_box h3 {
     margin: 10px 0;
@@ -329,9 +424,11 @@ Noto Sans Kr
     line-height: 24px;
     color: #333;
 }
+
 .user_expression span.good {
     margin-left: 80px;
 }
+
 .user_expression .form span {
     float: left;
     margin-left: 20px;
@@ -343,6 +440,7 @@ Noto Sans Kr
     padding: 13px 0 0;
     box-sizing: border-box;
 }
+
 .user_expression input[type="radio"] {
     position: absolute;
     width: 1px;
@@ -353,7 +451,8 @@ Noto Sans Kr
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
-.user_expression input[type="radio"] + label {
+
+.user_expression input[type="radio"]+label {
     position: relative;
     display: inline-block;
     min-height: 45px;
@@ -365,7 +464,7 @@ Noto Sans Kr
     vertical-align: middle;
 }
 
-.user_expression input[type="radio"] + label:before {
+.user_expression input[type="radio"]+label:before {
     content: '';
     position: absolute;
     left: 0;
@@ -378,11 +477,11 @@ Noto Sans Kr
     border: 0;
 }
 
-.user_expression .not input[type="radio"] + label:before {
+.user_expression .not input[type="radio"]+label:before {
     background-position: 0 -90px;
 }
 
-.user_expression input[type="radio"] + label:before {
+.user_expression input[type="radio"]+label:before {
     content: '';
     position: absolute;
     left: 0;
@@ -394,25 +493,32 @@ Noto Sans Kr
     background: url(/images/icon_user_expression.png) no-repeat;
     border: 0;
 }
-.festivalDetail_recommend_title{
+
+.festivalDetail_recommend_title {
     margin-bottom: 20px;
     font-size: 30px;
 }
-.festivalDetail_recommend_wrap{
+
+.festivalDetail_recommend_wrap {
     display: flex;
 }
-.festivalDetail_recommend_wrap .festivalDetail_recommendImg_box{
+
+.festivalDetail_recommend_wrap .festivalDetail_recommendImg_box {
     width: 380px;
 }
-.festivalDetail_recommend_wrap .festivalDetail_recommendImg_box div{
+
+.festivalDetail_recommend_wrap .festivalDetail_recommendImg_box div {
     margin: 0 20px 20px 0;
 }
-.festivalDetail_recommend_wrap .festivalDetail_recommendImg_box img{
+
+.festivalDetail_recommend_wrap .festivalDetail_recommendImg_box img {
     width: 100%
 }
-.festivalDetail_aiImg{
+
+.festivalDetail_aiImg {
     width: 360px;
 }
-.festivalDetail_aiImg img{
+
+.festivalDetail_aiImg img {
     width: 100%;
 }

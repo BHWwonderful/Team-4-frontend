@@ -1,0 +1,10 @@
+.disabled{
+    display: none;
+}
+.active{
+    display: block;
+}
+.liked{
+    position: relative;
+    top: -33px
+}
