@@ -199,7 +199,7 @@ div.package_card_region{
 }
 /* 진행중 */
 .package_card_text span{
-    /* display: none; */
+    display: none;
     font-size: 14px;
     color: #888;
     font-weight: lighter;
@@ -230,6 +230,7 @@ div.package_card_region{
     color: #fe686a;
     margin-right: 5px;
 }
+
 .package_card_content em::after{
     content: '|';
     color: #88888860;
@@ -238,6 +239,11 @@ div.package_card_region{
     padding-left: 5px;
 
 }
+
+.pop_up_cont .package_card_content em::after{
+    font-size: 18px;
+}
+
 .package_sliderBtn_prev{
     position: absolute;
     top: 220px;
