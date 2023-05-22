@@ -1,24 +1,30 @@
-.travelAi_content {
+.regionMap_content {
     width: 1180px;
     height: 888px;
     margin: auto;
-    display: flex;
+    text-align: center;
 }
 
-.travelAi_ {
+.regionMap_content>h2 {
+    font-size: 30px;
+}
+
+.regionMap_ {
     width: 590px;
     height: 776px;
+    float: left;
 }
 
-.travelAi_map_wrap {
+.regionMap_map_wrap {
     width: 590px;
     height: 776px;
     display: flex;
     position: relative;
     justify-content: center;
+    float: right;
 }
 
-.travelAi_map_box {
+.regionMap_map_box {
     width: 391px;
     height: 671px;
     background: url("../images/korea.png") no-repeat;
