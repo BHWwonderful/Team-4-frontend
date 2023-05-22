@@ -12,7 +12,7 @@ $(document).ready(function () {
                     <div class="festival_list_text_box">
                         <p><span>행사기간</span>${JSON.parse(data)[i].행사시작일}~${JSON.parse(data)[i].행사종료일}</p>
                         <a href="/festivalDetail.html">
-                            <h4>4${JSON.parse(data)[i].명칭}</h4>
+                            <h4>${JSON.parse(data)[i].명칭}</h4>
                         </a>
                         <div>
                             <p>지역 : ${JSON.parse(data)[i].관리자}</p>

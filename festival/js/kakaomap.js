@@ -5,3 +5,5 @@ var options = {
 };
 
 var map = new kakao.maps.Map(container, options);
+
+latlng(33.450701, 126.570667);

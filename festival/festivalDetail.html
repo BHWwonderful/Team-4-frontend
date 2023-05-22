@@ -13,11 +13,6 @@
     <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=619be0633be3c41159b3840f698b0688"></script>
 
-    <script>
-        $(document).ready(function () {
-            $(".header").load("../../header/header.html");
-        });
-    </script>
 </head>
 
 <body>
@@ -97,7 +92,7 @@
                     <p><strong>· 종료일</strong><span>2023. 6. 4.</span></p>
                     <p><strong>· 홈페이지</strong><span>http://jipf.jeonju.go.kr</span></p>
                     <p><strong>· 행사장소</strong><span>팔복예술공장 / 전주시립도서관</span></p>
-                    <p><strong>· 주관</strong><span>전주시 도서관본부</span></p>
+                    <p><strong>· 주관</strong><span id="a">전주시 도서관본부</span></p>
                     <p><strong>· 행사시간</strong><span>09:00 ~ 18:00</span></p>
                 </div>
             </div>
@@ -110,7 +105,7 @@
             <div class="form">
                 <span class="good">
                     <input type="radio" id="expressionForm01" name="userExpression">
-                    <label for="expressionForm01" onclick="clickUserExpressionLog(0)">좋아요!</label>
+                    <label for="expressionForm01" onclick="clickUserExpressionLog()">좋아요!</label>
                 </span>
                 <span class="not">
                     <input type="radio" id="expressionForm02" name="userExpression">
@@ -134,6 +129,7 @@
     </main>
     <script src="/js/kakaomap.js"></script>
     <script src="/js/slide.js"></script>
+    <script src="/js/festivalDetail.js"></script>
 </body>
 
 </html>
