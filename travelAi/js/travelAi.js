@@ -70,14 +70,6 @@ $(".travelAi_recentSlide_nextBtn").click(function () {
 });
 
 
-
-
-
-
-
-
-
-
 // yester
 // 버튼 변경
 if (yesterSlideX == 0) {

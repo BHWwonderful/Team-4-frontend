@@ -252,7 +252,7 @@ Noto Sans Kr
     text-indent: -9999px;
     width: 21px;
     height: 19px;
-    background: url(/images/ico_post01.png) no-repeat;
+    background: url(/festival/images/ico_post01.png) no-repeat;
 }
 
 .festival_postView {
@@ -262,7 +262,7 @@ Noto Sans Kr
     font-size: 0;
     width: 24px;
     height: 18px;
-    background: url(/images/ico_post07.png) no-repeat;
+    background: url(/festival/images/ico_post07.png) no-repeat;
 }
 
 .festivalDetail_postBook {
@@ -270,21 +270,21 @@ Noto Sans Kr
     position: relative;
     width: 16px;
     height: 18px;
-    background: url(/images/ico_post03.png) no-repeat;
+    background: url(/festival/images/ico_post03.png) no-repeat;
 }
 
 .festivalDetail_postPrint {
     text-indent: -9999px;
     width: 20px;
     height: 18px;
-    background: url(/images/ico_post04.png) no-repeat;
+    background: url(/festival/images/ico_post04.png) no-repeat;
 }
 
 .festivalDetail_postShare {
     text-indent: -9999px;
     width: 20px;
     height: 18px;
-    background: url(/images/ico_post02.png)no-repeat;
+    background: url(/festival/images/ico_post02.png)no-repeat;
 }
 
 
@@ -316,6 +316,7 @@ Noto Sans Kr
     position: absolute;
     left: 0;
     top: 0;
+    display: flex;
 }
 
 .slides.animated {
@@ -405,7 +406,6 @@ Noto Sans Kr
     justify-content: space-between;
     word-break: keep-all;
 }
-
 .user_expression strong:before {
     content: '';
     display: inline-block;
@@ -413,7 +413,7 @@ Noto Sans Kr
     height: 15px;
     margin-right: 10px;
     vertical-align: 14px;
-    background: url(/images/icon_user_expression02.png) no-repeat;
+    background: url(/festival/images/icon_user_expression02.png) no-repeat;
 }
 
 .user_expression strong {
@@ -424,9 +424,9 @@ Noto Sans Kr
     line-height: 24px;
     color: #333;
 }
-
-.user_expression span.good {
+.user_expression span .good {
     margin-left: 80px;
+
 }
 
 .user_expression .form span {
@@ -473,25 +473,22 @@ Noto Sans Kr
     height: 45px;
     margin-right: 10px;
     vertical-align: 14px;
-    background: url(/images/icon_user_expression.png) no-repeat;
+    background-position: 0 -90px;
+    background: url(/festival/images/icon_user_expression.png) no-repeat;
     border: 0;
+}
+.user_expression .good input[type="radio"]+label:before {
+    background-position: 0 0px;
+}
+.user_expression .goodClick input[type="radio"]+label:before {
+    background-position: 0 -45px;
 }
 
 .user_expression .not input[type="radio"]+label:before {
     background-position: 0 -90px;
 }
-
-.user_expression input[type="radio"]+label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 45px;
-    height: 45px;
-    margin-right: 10px;
-    vertical-align: 14px;
-    background: url(/images/icon_user_expression.png) no-repeat;
-    border: 0;
+.user_expression .notClick input[type="radio"]+label:before {
+    background-position: 0 -135px;
 }
 
 .festivalDetail_recommend_title {
