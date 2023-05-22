@@ -9,8 +9,16 @@ topBtn.onclick = () => {
     window.scrollTo({top:0, behavior:"smooth"});
 }
 
-// sample 슬라이드
 $(document).ready(() => {
+
+    // hover 이미지 키우기
+    $(".package_card_bgImg").hover(function(){
+        $(this).stop().animate({"backgroundSize":"auto"}, 400)
+    }, function(){
+        $(this).stop().animate({"backgroundSize":"cover"}, 400)
+    })
+
+// sample 슬라이드
     s_currentSlide = 1;
     s_sliderWidth = 1180;
     s_slideCount = 3;
@@ -30,10 +38,8 @@ $(document).ready(() => {
       }
       $(".sample_slideImg_box").stop().animate({ left: -s_currentSlide * s_sliderWidth + "px" }, "fast");
     })
-  });
 
 // package_travel_now 슬라이드
-$(document).ready(() => {
     origin = 1770;
     p_currentSlide = 0;
     sliderWidth = 295;
@@ -54,6 +60,11 @@ $(document).ready(() => {
     }
     $(".package_travel_now .package_slider").stop().animate({ right: origin + p_currentSlide * sliderWidth + "px" }, "fast");
     });
+
+    // 드래그 이벤트 
+    // $(".package_travel_now .package_slider").draggable({
+    //     axis: "x"
+    // });
     
     // package_wellness_travel슬라이드
     let w_currentSlide = 0;
@@ -74,6 +85,24 @@ $(document).ready(() => {
         $(".package_wellness_travel .package_slider").stop().animate({right: origin + w_currentSlide * sliderWidth + "px" }, "fast");
     });
 
+const burst = new mojs.Burst({
+  left: 0, top: 0,
+  radius:   { 4: 32 },
+  angle:    45,
+  count:    14,
+  children: {
+    radius:       2.5,
+    fill:         '#FD7932',
+    scale:        { 1: 0, easing: 'quad.in' },
+    pathScale:    [ .8, null ],
+    degreeShift:  [ 13, null ],
+    duration:     [ 500, 700 ],
+    easing:       'quint.out'
+  }
+});
+
+// new MojsPlayer({ add: burst, isPlaying: true, isRepeat: true });
+
 // 좋아요 기능 숫자, 모양만
 $(".package_card_likeImg").on("click", function(e){
     e.stopPropagation()
@@ -83,6 +112,10 @@ $(".package_card_likeImg").on("click", function(e){
     if($(this).find("img").hasClass("liked")){
         liked ++
         $(this).prev().text(liked)
+        const coords = { x: e.pageX, y: e.pageY };
+        burst
+        .tune(coords)
+        .replay();
     }else{
         liked --
         $(this).prev().text(liked)
@@ -123,24 +156,24 @@ let index = 0;
             index = dot_index;
         }
     })
-
     //popup 임시
     var clone;
     $(".package_card").on("click", function popup(){
         clone = $(this).clone().appendTo($(".pop_up_cont"))
-        $(".pop_up_cont").animate({top: "30vh"})
-        clone.css("cursor","auto");
-        clone.find(".package_card_like").css("top","230px")
-        clone.find(".package_card_bgImg").css("scale","1.5");
-        clone.find(".package_card_text").css("scale","1.5");
-        clone.find(".package_card_text").css("textAlign","center");
-        clone.find(".package_card_text").css("background","#fff");
-        clone.find(".package_card_text").css("margin-top","80px");
-        $(".pop_up").fadeIn(800);
+        $(".pop_up_cont").css("top", "25vh")
+        clone.find(".package_card_region").css({"top":"10px","margin-left":"20px","scale":"1.5"})
+        clone.find(".package_card_like").css({"margin-top":"20px","margin-right":"20px","scale":"1.5"})
+        clone.find(".package_card_bgImg").css({"width":"550px","height":"550px"})
+        clone.find(".package_card_text").css({"width":"550px","height":"300px","background":"#fff","margin-top":"-120px"});
+        clone.find(".package_card_text span").css({"padding":"0 20px","box-sizing":"border-box","font-size":"16px","padding-top":"10px"});
+        clone.find(".package_card_title").css({"font-size":"25px","padding":"20px","border-bottom":"1px solid #88888880"});
+        clone.find(".package_card_content").css({"display":"flex","justify-content":"space-around","width":"540px","height":"50px","padding-top":"20px","font-size":"20px"});
+        clone.find(".package_card_content em").css({"position":"relative","font-size":"20px"})
+        $(".pop_up").fadeIn();
     })
-    $(".pop_up").on("click", function(){
+    $(document).on("click",".pop_up",function(){
         $(".pop_up_cont").css("top", "20vh")
         $(".pop_up").css("display","none")
-        $(".pop_up_cont").find("a").remove()
+        $(".pop_up_cont").children("div").remove()
     })
-});
+});//document.ready
