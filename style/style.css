@@ -15,7 +15,8 @@
     background: url("/images/seoul_on.png") no-repeat;
     background-size: contain;
     top: 123px;
-    left: 105px;
+    left: 106px;
+    z-index: 5;
 }
 
 .incheon {
@@ -27,6 +28,7 @@
     background-size: contain;
     top: 105px;
     left: 46px;
+    z-index: 3;
 }
 
 .gyeonggido {
@@ -38,6 +40,7 @@
     background-size: contain;
     top: 54px;
     left: 77px;
+    z-index: 2;
 }
 
 .gangwondo {
@@ -49,6 +52,7 @@
     background-size: contain;
     top: 0px;
     left: 124px;
+    z-index: 1;
 }
 
 .chungnam {
@@ -60,6 +64,7 @@
     background-size: contain;
     top: 202px;
     left: 35px;
+    z-index: 2;
 }
 
 .sejong {
@@ -71,6 +76,7 @@
     background-size: contain;
     top: 246px;
     left: 137px;
+    z-index: 5;
 }
 
 .daejeon {
@@ -82,6 +88,7 @@
     background-size: contain;
     top: 278px;
     left: 157px;
+    z-index: 5;
 }
 
 .jeonbuk {
@@ -93,6 +100,7 @@
     background-size: contain;
     top: 322px;
     left: 45px;
+    z-index: 3;
 }
 
 .gwangju {
@@ -104,6 +112,7 @@
     background-size: contain;
     top: 436px;
     left: 93px;
+    z-index: 5;
 }
 
 .jeonnam {
@@ -115,6 +124,7 @@
     background-size: contain;
     top: 408px;
     left: 0px;
+    z-index: 2;
 }
 
 .chungbuk {
@@ -126,6 +136,7 @@
     background-size: contain;
     top: 182px;
     left: 151px;
+    z-index: 3;
 }
 
 .gyeongbuk {
@@ -137,6 +148,7 @@
     background-size: contain;
     top: 198px;
     left: 205px;
+    z-index: 2;
 }
 
 .daegu {
@@ -148,6 +160,7 @@
     background-size: contain;
     top: 336px;
     left: 265px;
+    z-index: 5;
 }
 
 .ulsan {
@@ -159,6 +172,7 @@
     background-size: contain;
     top: 378px;
     left: 330px;
+    z-index: 3;
 }
 
 .busan {
@@ -170,6 +184,7 @@
     background-size: contain;
     top: 422px;
     left: 313px;
+    z-index: 3;
 }
 
 .gyeongnam {
@@ -181,6 +196,7 @@
     background-size: contain;
     top: 354px;
     left: 189px;
+    z-index: 3;
 }
 
 .jeju {
