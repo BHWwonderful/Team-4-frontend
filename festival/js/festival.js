@@ -5,13 +5,13 @@ $(document).ready(function () {
                 `<ul>
                 <li>
                     <div class="festival_list_img_box">
-                        <a href="/festivalDetail.html">
-                            <img src="../images/festival_img100/${JSON.parse(data)[i].명칭}_1_공공3유형.png" alt="">
+                        <a href="/festival/festivalDetail.html">
+                            <img src="../festival/images/festival_img100/${JSON.parse(data)[i].명칭}_1_공공3유형.png" alt="">
                         </a>
                     </div>
                     <div class="festival_list_text_box">
                         <p><span>행사기간</span>${JSON.parse(data)[i].행사시작일}~${JSON.parse(data)[i].행사종료일}</p>
-                        <a href="/festivalDetail.html">
+                        <a href="/festival/festivalDetail.html">
                             <h4>${JSON.parse(data)[i].명칭}</h4>
                         </a>
                         <div>

@@ -252,7 +252,7 @@ Noto Sans Kr
     text-indent: -9999px;
     width: 21px;
     height: 19px;
-    background: url(/images/ico_post01.png) no-repeat;
+    background: url(/festival/images/ico_post01.png) no-repeat;
 }
 
 .festival_postView {
@@ -262,7 +262,7 @@ Noto Sans Kr
     font-size: 0;
     width: 24px;
     height: 18px;
-    background: url(/images/ico_post07.png) no-repeat;
+    background: url(/festival/images/ico_post07.png) no-repeat;
 }
 
 .festivalDetail_postBook {
@@ -270,21 +270,21 @@ Noto Sans Kr
     position: relative;
     width: 16px;
     height: 18px;
-    background: url(/images/ico_post03.png) no-repeat;
+    background: url(/festival/images/ico_post03.png) no-repeat;
 }
 
 .festivalDetail_postPrint {
     text-indent: -9999px;
     width: 20px;
     height: 18px;
-    background: url(/images/ico_post04.png) no-repeat;
+    background: url(/festival/images/ico_post04.png) no-repeat;
 }
 
 .festivalDetail_postShare {
     text-indent: -9999px;
     width: 20px;
     height: 18px;
-    background: url(/images/ico_post02.png)no-repeat;
+    background: url(/festival/images/ico_post02.png)no-repeat;
 }
 
 
@@ -412,7 +412,7 @@ Noto Sans Kr
     height: 15px;
     margin-right: 10px;
     vertical-align: 14px;
-    background: url(/images/icon_user_expression02.png) no-repeat;
+    background: url(/festival/images/icon_user_expression02.png) no-repeat;
 }
 
 .user_expression strong {
@@ -473,7 +473,7 @@ Noto Sans Kr
     margin-right: 10px;
     vertical-align: 14px;
     background-position: 0 -90px;
-    background: url(/images/icon_user_expression.png) no-repeat;
+    background: url(/festival/images/icon_user_expression.png) no-repeat;
     border: 0;
 }
 .user_expression .good input[type="radio"]+label:before {
