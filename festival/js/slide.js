@@ -1,3 +1,4 @@
+$(document).ready(function () {
 var slides = document.querySelector('.slides'),
     slide = document.querySelectorAll('.slides li'),
     currentIdx = 0,
@@ -64,3 +65,4 @@ function moveSlide(num) {
         }, 600);
     }
 }
+});
