@@ -12,6 +12,16 @@
     height: 31.26px;
     display: block;
     position: absolute;
+    top: 123px;
+    left: 106px;
+    z-index: 5;
+}
+
+.seoul_on {
+    width: 38.48px;
+    height: 31.26px;
+    display: block;
+    position: absolute;
     background: url("/images/seoul_on.png") no-repeat;
     background-size: contain;
     top: 123px;
@@ -20,6 +30,16 @@
 }
 
 .incheon {
+    width: 57.19px;
+    height: 57.31px;
+    display: block;
+    position: absolute;
+    top: 105px;
+    left: 46px;
+    z-index: 3;
+}
+
+.incheon_on {
     width: 57.19px;
     height: 57.31px;
     display: block;
@@ -36,6 +56,16 @@
     height: 170.88px;
     display: block;
     position: absolute;
+    top: 54px;
+    left: 77px;
+    z-index: 2;
+}
+
+.gyeonggido_on {
+    width: 134.15px;
+    height: 170.88px;
+    display: block;
+    position: absolute;
     background: url("/images/gyeonggi-do_on.png") no-repeat;
     background-size: contain;
     top: 54px;
@@ -44,6 +74,16 @@
 }
 
 .gangwondo {
+    width: 256.85px;
+    height: 259.44px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 124px;
+    z-index: 1;
+}
+
+.gangwondo_on {
     width: 256.85px;
     height: 259.44px;
     display: block;
@@ -60,6 +100,16 @@
     height: 136.49px;
     display: block;
     position: absolute;
+    top: 202px;
+    left: 35px;
+    z-index: 2;
+}
+
+.chungnam_on {
+    width: 153.9px;
+    height: 136.49px;
+    display: block;
+    position: absolute;
     background: url("/images/Chungnam_on.png") no-repeat;
     background-size: contain;
     top: 202px;
@@ -68,6 +118,16 @@
 }
 
 .sejong {
+    width: 24.96px;
+    height: 45.84px;
+    display: block;
+    position: absolute;
+    top: 246px;
+    left: 137px;
+    z-index: 5;
+}
+
+.sejong_on {
     width: 24.96px;
     height: 45.84px;
     display: block;
@@ -84,6 +144,16 @@
     height: 33.34px;
     display: block;
     position: absolute;
+    top: 278px;
+    left: 157px;
+    z-index: 5;
+}
+
+.daejeon_on {
+    width: 20.8px;
+    height: 33.34px;
+    display: block;
+    position: absolute;
     background: url("/images/Daejeon_on.png") no-repeat;
     background-size: contain;
     top: 278px;
@@ -92,6 +162,16 @@
 }
 
 .jeonbuk {
+    width: 174.7px;
+    height: 107.32px;
+    display: block;
+    position: absolute;
+    top: 322px;
+    left: 45px;
+    z-index: 3;
+}
+
+.jeonbuk_on {
     width: 174.7px;
     height: 107.32px;
     display: block;
@@ -108,6 +188,16 @@
     height: 22.92px;
     display: block;
     position: absolute;
+    top: 436px;
+    left: 93px;
+    z-index: 5;
+}
+
+.gwangju_on {
+    width: 33.28px;
+    height: 22.92px;
+    display: block;
+    position: absolute;
     background: url("/images/Gwangju_on.png") no-repeat;
     background-size: contain;
     top: 436px;
@@ -116,6 +206,16 @@
 }
 
 .jeonnam {
+    width: 206.94px;
+    height: 171.92px;
+    display: block;
+    position: absolute;
+    top: 408px;
+    left: 0px;
+    z-index: 2;
+}
+
+.jeonnam_on {
     width: 206.94px;
     height: 171.92px;
     display: block;
@@ -132,6 +232,16 @@
     height: 156.29px;
     display: block;
     position: absolute;
+    top: 182px;
+    left: 151px;
+    z-index: 3;
+}
+
+.chungbuk_on {
+    width: 144.54px;
+    height: 156.29px;
+    display: block;
+    position: absolute;
     background: url("/images/chungbuk_on.png") no-repeat;
     background-size: contain;
     top: 182px;
@@ -140,6 +250,16 @@
 }
 
 .gyeongbuk {
+    width: 185.1px;
+    height: 199.01px;
+    display: block;
+    position: absolute;
+    top: 198px;
+    left: 205px;
+    z-index: 2;
+}
+
+.gyeongbuk_on {
     width: 185.1px;
     height: 199.01px;
     display: block;
@@ -156,6 +276,16 @@
     height: 53.14px;
     display: block;
     position: absolute;
+    top: 336px;
+    left: 265px;
+    z-index: 5;
+}
+
+.daegu_on {
+    width: 40.56px;
+    height: 53.14px;
+    display: block;
+    position: absolute;
     background: url("/images/daegu_on.png") no-repeat;
     background-size: contain;
     top: 336px;
@@ -164,6 +294,16 @@
 }
 
 .ulsan {
+    width: 49.91px;
+    height: 47.93px;
+    display: block;
+    position: absolute;
+    top: 378px;
+    left: 330px;
+    z-index: 3;
+}
+
+.ulsan_on {
     width: 49.91px;
     height: 47.93px;
     display: block;
@@ -180,6 +320,16 @@
     height: 39.59px;
     display: block;
     position: absolute;
+    top: 422px;
+    left: 313px;
+    z-index: 3;
+}
+
+.busan_on {
+    width: 47.84px;
+    height: 39.59px;
+    display: block;
+    position: absolute;
     background: url("/images/busan_on.png") no-repeat;
     background-size: contain;
     top: 422px;
@@ -192,14 +342,33 @@
     height: 153.16px;
     display: block;
     position: absolute;
+    top: 354px;
+    left: 189px;
+    z-index: 2;
+}
+
+.gyeongnam_on {
+    width: 162.22px;
+    height: 153.16px;
+    display: block;
+    position: absolute;
     background: url("/images/gyeongnam_on.png") no-repeat;
     background-size: contain;
     top: 354px;
     left: 189px;
-    z-index: 3;
+    z-index: 2;
 }
 
 .jeju {
+    width: 83.19px;
+    height: 46.89px;
+    display: block;
+    position: absolute;
+    top: 621px;
+    left: 126px;
+}
+
+.jeju_on {
     width: 83.19px;
     height: 46.89px;
     display: block;

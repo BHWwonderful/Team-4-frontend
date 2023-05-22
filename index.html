@@ -43,11 +43,141 @@
     <script>
         // Header
         $(".header").load("../header/header.html");
-        $(".seoul").click(function () {
-            alert("서울");
-        })
-        $(".incheon").click(function () {
-            alert("인천");
+
+        // 서울
+        $(document).on("click", ".seoul", function () {
+            $(this).attr("class", "seoul_on");
+        });
+        $(document).on("click", ".seoul_on", function () {
+            $(this).attr("class", "seoul");
+        });
+
+        // 인천
+        $(document).on("click", ".incheon", function () {
+            $(this).attr("class", "incheon_on");
+        });
+        $(document).on("click", ".incheon_on", function () {
+            $(this).attr("class", "incheon");
+        });
+
+        // 경기도
+        $(document).on("click", ".gyeonggido", function () {
+            $(this).attr("class", "gyeonggido_on");
+        });
+        $(document).on("click", ".gyeonggido_on", function () {
+            $(this).attr("class", "gyeonggido");
+        });
+
+        // 강원도
+        $(document).on("click", ".gangwondo", function () {
+            $(this).attr("class", "gangwondo_on");
+        });
+        $(document).on("click", ".gangwondo_on", function () {
+            $(this).attr("class", "gangwondo");
+        });
+
+        // 충남
+        $(document).on("click", ".chungnam", function () {
+            $(this).attr("class", "chungnam_on");
+        });
+        $(document).on("click", ".chungnam_on", function () {
+            $(this).attr("class", "chungnam");
+        });
+
+        // 세종
+        $(document).on("click", ".sejong", function () {
+            $(this).attr("class", "sejong_on");
+        });
+        $(document).on("click", ".sejong_on", function () {
+            $(this).attr("class", "sejong");
+        });
+
+        // 대전
+        $(document).on("click", ".daejeon", function () {
+            $(this).attr("class", "daejeon_on");
+        });
+        $(document).on("click", ".daejeon_on", function () {
+            $(this).attr("class", "daejeon");
+        });
+
+        // 전북
+        $(document).on("click", ".jeonbuk", function () {
+            $(this).attr("class", "jeonbuk_on");
+        });
+        $(document).on("click", ".jeonbuk_on", function () {
+            $(this).attr("class", "jeonbuk");
+        });
+
+        // 광주
+        $(document).on("click", ".gwangju", function () {
+            $(this).attr("class", "gwangju_on");
+        });
+        $(document).on("click", ".gwangju_on", function () {
+            $(this).attr("class", "gwangju");
+        });
+
+        // 전남
+        $(document).on("click", ".jeonnam", function () {
+            $(this).attr("class", "jeonnam_on");
+        });
+        $(document).on("click", ".jeonnam_on", function () {
+            $(this).attr("class", "jeonnam");
+        });
+
+        // 충북
+        $(document).on("click", ".chungbuk", function () {
+            $(this).attr("class", "chungbuk_on");
+        });
+        $(document).on("click", ".chungbuk_on", function () {
+            $(this).attr("class", "chungbuk");
+        });
+
+        // 경북
+        $(document).on("click", ".gyeongbuk", function () {
+            $(this).attr("class", "gyeongbuk_on");
+        });
+        $(document).on("click", ".gyeongbuk_on", function () {
+            $(this).attr("class", "gyeongbuk");
+        });
+
+        // 대구
+        $(document).on("click", ".daegu", function () {
+            $(this).attr("class", "daegu_on");
+        });
+        $(document).on("click", ".daegu_on", function () {
+            $(this).attr("class", "daegu");
+        });
+
+        // 울산
+        $(document).on("click", ".ulsan", function () {
+            $(this).attr("class", "ulsan_on");
+        });
+        $(document).on("click", ".ulsan_on", function () {
+            $(this).attr("class", "ulsan");
+        });
+
+        // 부산
+        $(document).on("click", ".busan", function () {
+            $(this).attr("class", "busan_on");
+        });
+        $(document).on("click", ".busan_on", function () {
+            $(this).attr("class", "busan");
+        });
+
+        // 경남
+        $(document).on("click", ".gyeongnam", function () {
+            $(this).attr("class", "gyeongnam_on");
+        });
+        $(document).on("click", ".gyeongnam_on", function () {
+            $(this).attr("class", "gyeongnam");
+        });
+
+        // 제주
+        $(document).on("click", ".jeju", function () {
+            $(this).attr("class", "jeju_on");
+        });
+        $(document).on("click", ".jeju_on", function () {
+            $(this).attr("class", "jeju");
         });
     </script>
 </body>
