@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://korean.visitkorea.or.kr/resources/images/favicon.ico">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <title>대한민국 구석구석</title>
+</head>
+
+<body>
+    <header class="header"></header>
+
+    <main class="main">
+        <div class="travelAi_content">
+            <div class="travelAi_">
+
+            </div>
+            <div class="travelAi_map_wrap">
+                <div class="travelAi_map_box">
+                    <a href="#none" class="seoul_on"></a>
+                    <a href="#none" class="incheon"></a>
+                    <a href="#none" class="gyeonggido"></a>
+                    <a href="#none" class="gangwondo"></a>
+                    <a href="#none" class="chungnam"></a>
+                    <a href="#none" class="sejong"></a>
+                    <a href="#none" class="daejeon"></a>
+                    <a href="#none" class="jeonbuk"></a>
+                    <a href="#none" class="gwangju"></a>
+                    <a href="#none" class="jeonnam"></a>
+                    <a href="#none" class="chungbuk"></a>
+                    <a href="#none" class="gyeongbuk"></a>
+                    <a href="#none" class="daegu"></a>
+                    <a href="#none" class="ulsan"></a>
+                    <a href="#none" class="busan"></a>
+                    <a href="#none" class="gyeongnam"></a>
+                    <a href="#none" class="jeju"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Header
+        $(".header").load("../header/header.html");
+
+
+        $(document).on("click", ".travelAi_map_box a", function () {
+            // 클래스명 변수에 담기
+            var classNames = $(this).attr("class");
+            // 클래스명에 _on이 없을 때
+            if (!classNames.includes("_on")) {
+                // 클래스명에 _on 추가
+                classNames += "_on";
+            } else {
+                // 클래스명 _on 공백으로 변경
+                classNames = classNames.replace("_on", "");
+            }
+            // _on 추가된 클래스로 바꾸기
+            $(this).attr("class", classNames.trim());
+
+            // 다른 지역 _on 지우기
+            $(this).siblings().each(function () {
+                var otherclassNames = $(this).attr("class");
+                if (otherclassNames.includes("_on")) {
+                    otherclassNames = otherclassNames.replace("_on", "");
+                    $(this).attr("class", otherclassNames);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
