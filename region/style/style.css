@@ -222,6 +222,7 @@
 .region_destiImg_box {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .region_destiImg_box>a>img {
