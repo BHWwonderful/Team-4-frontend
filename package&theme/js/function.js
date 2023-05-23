@@ -175,7 +175,6 @@ $(document).ready(() => {
 			autoSlide = setInterval(bnSlide, 3000);
 		}
 	});
-
 	//banner_index 클릭시
 	$(".package_banner_index div").on("click", function () {
 		$(this).addClass("dot_active");
@@ -191,65 +190,19 @@ $(document).ready(() => {
 			index = dot_index;
 		}
 	});
-	//popup 임시
+	//popup 최종
 	var clone;
 	$(".package_card").on("click", function popup() {
 		clone = $(this).clone().appendTo($(".pop_up_cont"));
-		$(".pop_up_cont").css("top", "calc(50% - 200px)");
-		clone
-			.find(".package_card_region")
-			.css({ "top": "0px", "left": "10px","width":"40px","height":"40px","font-size":"14px"});
-		$(".pop_up_cont .liked").css({"position":"relative","top": "-20px"})
-		clone
-			.find(".package_card_like").css({"position":"absolute","top":"230px","z-index":"10000","scale":"0.8"})
-		clone
-			.find(".package_card_like span").css({"margin-right":"10px"})
-		clone
-			.find(".package_card_likeImg").css({"height":"20px"})
-		clone
-			.find(".package_likeImg")
-			.attr("src", "../img/btn_good01.png")
-		clone.find(".package_card_bgImg").css({ 
-			width: "400px", 
-			height: "300px" });
-		clone.find(".package_card_text").css({
-			width: "400px",
-			height: "100%",
-			background: "#fff",
-			"margin-top": "-50px",
-		});
-		clone.find(".package_card_title").css({
-			"font-size": "18px",
-			padding: "10px",
-			"border-bottom": "1px dashed #99999980",
-		});
+		clone.find(".package_likeImg").attr("src", "../img/btn_good01.png")
 		clone.find(".package_card_bgImg").append("<div class='bg_dark'></div>")
-		clone.find(".package_card_bgImg .bg_dark").css({"position":"absolute","top":"220px","width":"100%","height":"40px","background":"#00000090"})
-		clone.find(".package_card_text span").css({
-			position: "relative",
-			padding: "10px 10px",
-			"box-sizing": "border-box",
-			"font-size": "13px",
-			"display": "block",
-			"line-height":"1.2rem"
-		});
-		clone.find(".package_card_content").append("<button>지금 예약하기</button>")
-		
-		clone.find(".package_card_content").css({
-			position: "relative",
-			width: "400px",
-			height: "100%",
-			"font-size": "16px",
-			padding: "10px 0",
-		});
-		clone.find(".package_card_content button").css({"padding":"10px","margin-left":"50px","background":"gray","border-radius":"25px","color":"#fff"})
-		clone.find(".package_card_content em").css({ "font-size": "16px" });
+		clone.find(".package_card_content").append("<a href='https://www.hanatour.com/'>지금 예약하기</a>")
 		$(".pop_up").fadeIn();
 	});
 	$(".pop_up").on("click", function (e) {
 		let target = e.target.className;
 		console.log(target)
-		if(target === "pop_up_cont") {
+		if(target === "pop_up_cont" || target === "pop_up") {
 			$(".pop_up").css("display", "none");
 			$(".pop_up_cont").children("div").remove();
 		}

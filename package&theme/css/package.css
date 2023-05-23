@@ -227,26 +227,22 @@ div.package_card_region{
     border-top: 1px dashed #99999980;
 }
 .package_card_content em{
-    position: relative;
     font-size: 15px;
     color: #fe686a;
     margin-right: 5px;
-    padding-right: 30px;
 }
 
 .package_card_content em::after{
-    position: absolute;
     content: '|';
     color: #88888860;
     font-size: 14px;
-    left: 380px;
+    padding: 0 22px;
 }
 
 .pop_up_cont .package_card_content em::after{
-    position: absolute;
     font-size: 18px;
-    bottom: 0px;
-    left: 90px;
+    vertical-align: 1px;
+    padding-left: 25px 
 }
 
 .package_sliderBtn_prev{
@@ -360,7 +356,7 @@ aside{
 }
 .pop_up_cont{
     position: relative;
-    top: 20vh;
+    top: calc(50% - 220px);
     display: flex;
     align-items: center;
     justify-content: center;
