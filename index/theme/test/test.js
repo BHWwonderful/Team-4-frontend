@@ -3,8 +3,7 @@ $(document).ready(function () {
 	var allData = "";
 	var count = 15;
 	$.get(
-		"festival_data100.txt",
-		function (data) {
+		"https://gist.githubusercontent.com/GyeungHoon/483112e427915938240c7d2ab9ed59b2/raw/579100bba55992cad40e360704bffa16bcc07c71/festival.json", function (data) {
 			allData = JSON.parse(data);
 			for (var i = 0, len = Math.ceil(allData.length / count); i < len; i++) {
 				$("#paging").append(`<a href="#">${i + 1}</a>`);

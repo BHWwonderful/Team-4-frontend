@@ -70,16 +70,22 @@ Noto Sans Kr
 .festival_fillter_wrap .festival_concept_fillter_box button {
     width: 240px;
     height: 60px;
-    background: #fff;
     border: 1px solid #0051A4;
+    background:#fff;
     font-size: 18px;
 }
+
 
 /*여행목적선택 버튼 호버효과*/
 .festival_fillter_wrap .festival_concept_fillter_box button:hover {
     background: #0051A4;
     color: #fff;
     transition: all 0.3s;
+}
+/*여행목적선택 버튼 액티브 유지*/
+.festival_fillter_wrap .festival_concept_fillter_box .active {
+    background: #0051A4;
+    color: #fff;
 }
 
 /*여행목적필터 끝*/
