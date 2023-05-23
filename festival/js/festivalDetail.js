@@ -25,9 +25,9 @@ $(document).ready(function () {
                 `
 
                         document.querySelector(".slides").innerHTML = `
-                <li style="width:660px; height:900px"><img style="width:660px; height:900px"src="/festival/images/festival_img100/${JSON.parse(result)[i].명칭}_1_공공3유형.png" alt=""></li>
-                <li style="width:660px; height:900px"><img style="width:660px; height:900px"src="/festival/images/festival_img100/${JSON.parse(result)[i].명칭}_2_공공3유형.png" alt=""></li>
-                <li style="width:660px; height:900px"><img style="width:660px; height:900px"src="/festival/images/festival_img100/${JSON.parse(result)[i].명칭}_3_공공3유형.png" alt=""></li>
+                <li ><img src="/festival/images/festival_img100/${JSON.parse(result)[i].명칭}_2_공공3유형.png" alt=""></li>
+                <li ><img src="/festival/images/festival_img100/${JSON.parse(result)[i].명칭}_3_공공3유형.png" alt=""></li>
+                <li ><img src="/festival/images/festival_img100/${JSON.parse(result)[i].명칭}_4_공공3유형.png" alt=""></li>
                 `
                         document.getElementById("festivalDetail_text_box").innerHTML = `
                 <h3>상세정보</h3>

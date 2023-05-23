@@ -231,6 +231,9 @@
 .region_destinationCont_container>ul>li>a>h4 {
     font-size: 18px;
     padding: 8px 0 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /* 2줄 ellipse 기능 */
