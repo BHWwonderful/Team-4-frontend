@@ -3,7 +3,7 @@ $(document).ready(function () {
 	var allData = "";
 	var count = 15;
 	$.get(
-		"https://gist.githubusercontent.com/GyeungHoon/6b6f6a0638ebc61bc3ca9f38af9e9f99/raw/8398f334ae257c716140e55485e174e0b6a596fd/festival.json",
+		"festival_data100.txt",
 		function (data) {
 			allData = JSON.parse(data);
 			for (var i = 0, len = Math.ceil(allData.length / count); i < len; i++) {
