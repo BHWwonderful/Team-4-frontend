@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $.get('https://gist.githubusercontent.com/GyeungHoon/6b6f6a0638ebc61bc3ca9f38af9e9f99/raw/0e5f006706e2426147e4241fd6f4c6147a626e2b/festival.json').done(function (data) {
+    $.get('https://gist.githubusercontent.com/GyeungHoon/483112e427915938240c7d2ab9ed59b2/raw/579100bba55992cad40e360704bffa16bcc07c71/festival.json').done(function (data) {
         for (var i = 0; i < 100; i++) {
             document.getElementById("festival_list_content_box").innerHTML +=
                 `
@@ -40,7 +40,7 @@ $(document).ready(function () {
 
         let pageActiveIdx = 0; //현재 보고 있는 페이지그룹 번호
         let currentPageNum = 0;// 현재 보고 있는 페이지네이션 번호
-        let maxPageNum = 3; // 페이지그룹 최대 개수
+        let maxPageNum = 4; // 페이지그룹 최대 개수
 
         for (let i = 1; i <= pageCount; i++) {
             numbers.innerHTML += `<li><a href="#none" onclick="window.scrollTo(0,0);">${i}</a></li>`
@@ -119,7 +119,7 @@ $(document).ready(function () {
         });
 
         prevPageBtn.addEventListener('click', () => {
-            let nextPageNum = pageActiveIdx * maxPageNum - maxPageNum;
+            let nextPageNum = pageActiveIdx * maxPageNum - 1;
             displayRow(nextPageNum);
             --pageActiveIdx;
             displayPage(pageActiveIdx);
