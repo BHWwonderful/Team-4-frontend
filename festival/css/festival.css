@@ -306,8 +306,8 @@ Noto Sans Kr
 
 .slide_wrapper {
     position: relative;
-    width: 660px;
-    height: 900px;
+    width: 930px;
+    height: 627px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -317,6 +317,7 @@ Noto Sans Kr
     left: 0;
     top: 0;
     display: flex;
+    overflow: hidden;
 }
 
 .slides.animated {
@@ -324,12 +325,12 @@ Noto Sans Kr
 }
 
 .slides li {
-    width: 660px;
-    height: 900px;
+    width: 930px;
+    height: 627px;
     background: #ccc;
     float: left;
-}
 
+}
 .slides li:not(:last-child) {
     margin-right: 30px;
 }
@@ -337,14 +338,14 @@ Noto Sans Kr
 .controls {
     text-align: center;
     position: relative;
-    top: -400px;
+    top: -330px;
 }
 
 .controls .next {
     display: inline-block;
     position: absolute;
     overflow: hidden;
-    right: 100px;
+    right: 0;
     width: 40px;
     height: 40px;
     background: url(../images/btn_slider_next.png) 0 0 no-repeat;
@@ -356,7 +357,7 @@ Noto Sans Kr
     display: inline-block;
     position: absolute;
     overflow: hidden;
-    left: 100px;
+    left: 0px;
     width: 40px;
     height: 40px;
     background: url(../images/btn_slider_prev.png) 0 0 no-repeat;
