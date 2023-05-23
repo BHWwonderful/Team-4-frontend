@@ -1,5 +1,28 @@
+var region = document.querySelectorAll('.festival_region_fillter_box button');
+for (var i = 0; i < region.length; i++) {
+    region[i].addEventListener('click', function (e) {
+        setEventList(e.target.value);
+        console.log(e.target.value);
+
+    })
+}
+
+function setEventList(eventStatus) {
+
+    $('.festival_list_content_box ').children().remove()
+    $.get('https://gist.githubusercontent.com/GyeungHoon/483112e427915938240c7d2ab9ed59b2/raw/579100bba55992cad40e360704bffa16bcc07c71/festival.json').done(function (data) {
+
+        for (let i = 0; i < 100; i++) {
+            if (JSON.parse(data)[i].주소 == eventStatus) {
+                listRender(data.data[i])
+            }
+        }
+
+    })
+}
 $(document).ready(function () {
     $.get('https://gist.githubusercontent.com/GyeungHoon/483112e427915938240c7d2ab9ed59b2/raw/579100bba55992cad40e360704bffa16bcc07c71/festival.json').done(function (data) {
+
         for (var i = 0; i < 100; i++) {
             document.getElementById("festival_list_content_box").innerHTML +=
                 `
