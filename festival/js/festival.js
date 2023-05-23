@@ -119,7 +119,7 @@ $(document).ready(function () {
         });
 
         prevPageBtn.addEventListener('click', () => {
-            let nextPageNum = pageActiveIdx * maxPageNum - maxPageNum;
+            let nextPageNum = pageActiveIdx * maxPageNum - 1;
             displayRow(nextPageNum);
             --pageActiveIdx;
             displayPage(pageActiveIdx);
