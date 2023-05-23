@@ -40,7 +40,7 @@ $(document).ready(function () {
 
         let pageActiveIdx = 0; //현재 보고 있는 페이지그룹 번호
         let currentPageNum = 0;// 현재 보고 있는 페이지네이션 번호
-        let maxPageNum = 3; // 페이지그룹 최대 개수
+        let maxPageNum = 4; // 페이지그룹 최대 개수
 
         for (let i = 1; i <= pageCount; i++) {
             numbers.innerHTML += `<li><a href="#none" onclick="window.scrollTo(0,0);">${i}</a></li>`

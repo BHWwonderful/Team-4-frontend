@@ -146,7 +146,6 @@ Noto Sans Kr
 /*축제목록 페이징 가운데정렬*/
 /*pagenation*/
 .pagination {
-    background: #333;
     padding: 1rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -156,7 +155,6 @@ Noto Sans Kr
 }
 
 .pagination i {
-    color: #fff;
     font-size: 1.2em;
 }
 
@@ -169,8 +167,8 @@ Noto Sans Kr
 }
 
 #numbers li a {
-    color: #fff;
     padding: .5rem 1rem;
+    border: 1px solid black;
     text-decoration: none;
     opacity: .7;
 
@@ -179,11 +177,15 @@ Noto Sans Kr
 #numbers li a:hover {
     opacity: 1;
 }
-
+#numbers li .active {
+    opacity: 1;
+    background: #0051A4;
+    color: #fff;
+}
 #numbers li a:active {
     opacity: 1;
-    background: #fff;
-    color: #333;
+    background: #0051A4;
+    color: #fff;
 }
 
 /*
