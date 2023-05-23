@@ -24,11 +24,9 @@ $(document).ready(function () {
                 </li>
             </ul>
             `
-            
+
             localStorage.setItem('data', JSON.stringify(data));
         }
-
-
 
         const rowsPerPage = 10;
         const rows = document.querySelectorAll('#festival_list_content_box ul li');
@@ -127,3 +125,4 @@ $(document).ready(function () {
 
     });
 });
+
