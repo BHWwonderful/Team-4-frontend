@@ -188,7 +188,6 @@ div.package_card_region{
     overflow: hidden;
     width: 33px;
     height: 33px;
-    border-radius: 50%;
 }
 .package_card_text{
     position: relative;
@@ -214,7 +213,9 @@ div.package_card_region{
     -webkit-box-orient: vertical;
 }
 .package_card_content{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 0;
     width: 270px;
@@ -226,22 +227,26 @@ div.package_card_region{
     border-top: 1px dashed #99999980;
 }
 .package_card_content em{
+    position: relative;
     font-size: 15px;
     color: #fe686a;
     margin-right: 5px;
+    padding-right: 30px;
 }
 
 .package_card_content em::after{
+    position: absolute;
     content: '|';
     color: #88888860;
-    font-size: 12px;
-    vertical-align: 1px;
-    padding-left: 5px;
-
+    font-size: 14px;
+    left: 380px;
 }
 
 .pop_up_cont .package_card_content em::after{
+    position: absolute;
     font-size: 18px;
+    bottom: 0px;
+    left: 90px;
 }
 
 .package_sliderBtn_prev{

@@ -134,10 +134,12 @@ $(document).ready(() => {
 	// new MojsPlayer({ add: burst, isPlaying: true, isRepeat: true });
 
 	// 좋아요 기능 숫자, 모양만
+	
 	$(".package_card_likeImg").on("click", function (e) {
 		e.stopPropagation();
+		console.log(e)
 		$(this).find("img").toggleClass("liked");
-		let liked = $(this).prev().text();
+		var liked = $(this).prev().text();
 		liked = parseFloat(liked);
 		if ($(this).find("img").hasClass("liked")) {
 			liked++;
@@ -149,7 +151,6 @@ $(document).ready(() => {
 			$(this).prev().text(liked);
 		}
 	});
-
 	// 배너 자동 슬라이드 기능 구현
 	let bannerWidth = 1180;
 	let index = 0;
@@ -194,14 +195,23 @@ $(document).ready(() => {
 	var clone;
 	$(".package_card").on("click", function popup() {
 		clone = $(this).clone().appendTo($(".pop_up_cont"));
-		$(".pop_up_cont").css("top", "15vh");
+		$(".pop_up_cont").css("top", "calc(50% - 200px)");
 		clone
 			.find(".package_card_region")
-			.css({ top: "4px", "margin-left": "10px", scale: "1.2" });
+			.css({ "top": "0px", "left": "10px","width":"40px","height":"40px","font-size":"14px"});
+		$(".pop_up_cont .liked").css({"position":"relative","top": "-20px"})
 		clone
-			.find(".package_card_like")
-			.css({ "margin-top": "10px", "margin-right": "10px", scale: "1.2" });
-		clone.find(".package_card_bgImg").css({ width: "400px", height: "400px" });
+			.find(".package_card_like").css({"position":"absolute","top":"230px","z-index":"10000","scale":"0.8"})
+		clone
+			.find(".package_card_like span").css({"margin-right":"10px"})
+		clone
+			.find(".package_card_likeImg").css({"height":"20px"})
+		clone
+			.find(".package_likeImg")
+			.attr("src", "../img/btn_good01.png")
+		clone.find(".package_card_bgImg").css({ 
+			width: "400px", 
+			height: "300px" });
 		clone.find(".package_card_text").css({
 			width: "400px",
 			height: "100%",
@@ -210,30 +220,36 @@ $(document).ready(() => {
 		});
 		clone.find(".package_card_title").css({
 			"font-size": "18px",
-			padding: "20px",
+			padding: "10px",
 			"border-bottom": "1px dashed #99999980",
 		});
+		clone.find(".package_card_bgImg").append("<div class='bg_dark'></div>")
+		clone.find(".package_card_bgImg .bg_dark").css({"position":"absolute","top":"220px","width":"100%","height":"40px","background":"#00000090"})
 		clone.find(".package_card_text span").css({
 			position: "relative",
-			padding: "20px 10px",
+			padding: "10px 10px",
 			"box-sizing": "border-box",
 			"font-size": "13px",
-			display: "block",
+			"display": "block",
+			"line-height":"1.2rem"
 		});
+		clone.find(".package_card_content").append("<button>지금 예약하기</button>")
+		
 		clone.find(".package_card_content").css({
 			position: "relative",
 			width: "400px",
 			height: "100%",
 			"font-size": "16px",
-			padding: "20px 0",
+			padding: "10px 0",
 		});
+		clone.find(".package_card_content button").css({"padding":"10px","margin-left":"50px","background":"gray","border-radius":"25px","color":"#fff"})
 		clone.find(".package_card_content em").css({ "font-size": "16px" });
 		$(".pop_up").fadeIn();
 	});
 	$(".pop_up").on("click", function (e) {
 		let target = e.target.className;
-		if (target === "pop_up_cont") {
-			$(".pop_up_cont").css("top", "20vh");
+		console.log(target)
+		if(target === "pop_up_cont") {
 			$(".pop_up").css("display", "none");
 			$(".pop_up_cont").children("div").remove();
 		}
