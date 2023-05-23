@@ -196,6 +196,76 @@ $(document).ready(function () {
                 $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(3)`).text(data.chungnam[`${i}`].전화번호);
             }
         })
+        $(".gyeonbuk").click(function () {
+            for (var i = 0; i < data.gyeonbuk.length; i++) {
+                $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("h4").text(data.gyeonbuk[`${i}`].명칭);
+                $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("p").text(data.gyeonbuk[`${i}`].개요);
+                let arr = data.gyeonbuk[`${i}`].주소;
+                let splitarr = arr.split(" ");
+                
+                $(".region_destiImg_box").eq(i).find("a").find("img").attr({ "src": data.gyeonbuk[`${i}`].이미지경로 });
+                $(".region_destiImg_box").eq(i).find("a").find("img").attr({ "alt": data.gyeonbuk[`${i}`].명칭 });
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(1)`).text(splitarr[0]);
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(2)`).text(splitarr[1]);
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(3)`).text(data.gyeonbuk[`${i}`].전화번호);
+            }
+        })
+        $(".gyeonnam").click(function () {
+            for (var i = 0; i < data.gyeonnam.length; i++) {
+                $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("h4").text(data.gyeonnam[`${i}`].명칭);
+                $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("p").text(data.gyeonnam[`${i}`].개요);
+                let arr = data.gyeonnam[`${i}`].주소;
+                let splitarr = arr.split(" ");
+                
+                $(".region_destiImg_box").eq(i).find("a").find("img").attr({ "src": data.gyeonnam[`${i}`].이미지경로 });
+                $(".region_destiImg_box").eq(i).find("a").find("img").attr({ "alt": data.gyeonnam[`${i}`].명칭 });
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(1)`).text(splitarr[0]);
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(2)`).text(splitarr[1]);
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(3)`).text(data.gyeonnam[`${i}`].전화번호);
+            }
+        })
+        $(".jeonbuk").click(function () {
+            for (var i = 0; i < data.jeonbuk.length; i++) {
+                $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("h4").text(data.jeonbuk[`${i}`].명칭);
+                $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("p").text(data.jeonbuk[`${i}`].개요);
+                let arr = data.jeonbuk[`${i}`].주소;
+                let splitarr = arr.split(" ");
+                
+                $(".region_destiImg_box").eq(i).find("a").find("img").attr({ "src": data.jeonbuk[`${i}`].이미지경로 });
+                $(".region_destiImg_box").eq(i).find("a").find("img").attr({ "alt": data.jeonbuk[`${i}`].명칭 });
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(1)`).text(splitarr[0]);
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(2)`).text(splitarr[1]);
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(3)`).text(data.jeonbuk[`${i}`].전화번호);
+            }
+        })
+        $(".jeonnam").click(function () {
+            for (var i = 0; i < data.jeonnam.length; i++) {
+                $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("h4").text(data.jeonnam[`${i}`].명칭);
+                $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("p").text(data.jeonnam[`${i}`].개요);
+                let arr = data.jeonnam[`${i}`].주소;
+                let splitarr = arr.split(" ");
+                
+                $(".region_destiImg_box").eq(i).find("a").find("img").attr({ "src": data.jeonnam[`${i}`].이미지경로 });
+                $(".region_destiImg_box").eq(i).find("a").find("img").attr({ "alt": data.jeonnam[`${i}`].명칭 });
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(1)`).text(splitarr[0]);
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(2)`).text(splitarr[1]);
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(3)`).text(data.jeonnam[`${i}`].전화번호);
+            }
+        })
+        $(".jeju").click(function () {
+            for (var i = 0; i < data.jeju.length; i++) {
+                $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("h4").text(data.jeju[`${i}`].명칭);
+                $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("p").text(data.jeju[`${i}`].개요);
+                let arr = data.jeju[`${i}`].주소;
+                let splitarr = arr.split(" ");
+                
+                $(".region_destiImg_box").eq(i).find("a").find("img").attr({ "src": data.jeju[`${i}`].이미지경로 });
+                $(".region_destiImg_box").eq(i).find("a").find("img").attr({ "alt": data.jeju[`${i}`].명칭 });
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(1)`).text(splitarr[0]);
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(2)`).text(splitarr[1]);
+                $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(3)`).text(data.jeju[`${i}`].전화번호);
+            }
+        })
     }).fail(function (jqxhr, textStatus, error) {
         // 오류 발생 시 실행되는 콜백 함수
         var err = textStatus + ", " + error;
