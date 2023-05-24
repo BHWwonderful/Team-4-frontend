@@ -1,6 +1,17 @@
-.event_main_banner img{
-    width: 100%;
-    height: 330px;
+.event_main_banner{
+    background:url(../images/event_banner.jpeg) repeat-x center;
+    height:330px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.event_main_text{
+    color:#ffffff;
+    text-shadow: 2px 2px 4px #888888;
+    font-size:50px;
+    margin-left:62px;
+    margin-right:62px;
+    width:1180px;
 }
 .event_subGnb_wrap{
     width:100%;
