@@ -211,6 +211,8 @@ $(document).ready(function () {
     }
 });
 $(document).ready(function () {
+    localStorage.setItem('region', JSON.stringify("전체"));
+    localStorage.setItem('concept', JSON.stringify("전체"));
     $.get('https://gist.githubusercontent.com/GyeungHoon/9a5e27234702a6f14c2376cae1d24e38/raw/110270a38ef29a8d42ede56fb3d585b961bfc9f4/festival.json').done(function (data) {
         for (var i = 0; i < 100; i++) {
             document.getElementById("festival_list_content_box").innerHTML +=
