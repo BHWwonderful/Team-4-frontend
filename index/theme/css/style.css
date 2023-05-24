@@ -86,9 +86,6 @@ h2 > span::after{
     scale: 1.1;
     transition: all 1s;
 }
-.index_theme_bigBox a:hover{
-    text-decoration: underline solid #fff;
-}
 .index_theme_bigBox div{
     position: relative;
     width: 180px;

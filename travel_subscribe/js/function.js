@@ -117,7 +117,7 @@ const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    effect: 'fade',
+    effect: 'cards',
     
     // If we need pagination
     pagination: {

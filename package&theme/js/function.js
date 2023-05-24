@@ -1,146 +1,210 @@
 // 경로 선택
-$(".main_themeRoute_wrap h5 a").on("click", ()=>{
-    $(".main_themeRoute_wrap ul").slideToggle();
-})
+$(".main_themeRoute_wrap h5 a").on("click", () => {
+	$(".main_themeRoute_wrap ul").slideToggle();
+});
 
 // go to top 기능
-var topBtn = document.querySelector(".theme_float_btn")
+var topBtn = document.querySelector(".theme_float_btn");
 topBtn.onclick = () => {
-    window.scrollTo({top:0, behavior:"smooth"});
-}
+	window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
-// sample 슬라이드
 $(document).ready(() => {
-    s_currentSlide = 1;
-    s_sliderWidth = 1180;
-    s_slideCount = 3;
-    $(".sample_slideBtn_next").on("click", function() {
-      s_currentSlide++;
-      if (s_currentSlide > s_slideCount) {
-        s_currentSlide = 1;
-        $(".sample_slideImg_box").css("left", "0px");
-      }
-      $(".sample_slideImg_box").stop().animate({ left: -s_currentSlide * s_sliderWidth + "px" }, "fast");
-    });
-    $(".sample_slideBtn_prev").on("click", function() {
-      s_currentSlide--;
-      if (s_currentSlide < 1) {
-        s_currentSlide = s_slideCount;
-        $(".sample_slideImg_box").css("left", -1180 -s_currentSlide * s_sliderWidth + "px");
-      }
-      $(".sample_slideImg_box").stop().animate({ left: -s_currentSlide * s_sliderWidth + "px" }, "fast");
-    })
-  });
+	// hover 이미지 키우기
+	$(".package_card_bgImg").hover(
+		function () {
+			$(this).stop().animate({ backgroundSize: "auto" }, 400);
+		},
+		function () {
+			$(this).stop().animate({ backgroundSize: "cover" }, 400);
+		}
+	);
 
-// package_travel_now 슬라이드
-$(document).ready(() => {
-    origin = 1770;
-    p_currentSlide = 0;
-    sliderWidth = 295;
-    slideCount = 6;
-    $(".package_travel_now .package_sliderBtn_next").on("click", function() {
-      p_currentSlide++;
-      if (p_currentSlide > slideCount) {
-        p_currentSlide = 1;
-        $(".package_travel_now .package_slider").css("right", "1770px");
-    }
-    $(".package_travel_now .package_slider").stop().animate({ right: origin + p_currentSlide * sliderWidth + "px" }, "fast");
-    });
-    $(".package_travel_now .package_sliderBtn_prev").on("click", function() {
-      p_currentSlide--;
-      if (p_currentSlide < -slideCount) {
-        p_currentSlide = -1;
-        $(".package_travel_now .package_slider").css("right", "1770px");
-    }
-    $(".package_travel_now .package_slider").stop().animate({ right: origin + p_currentSlide * sliderWidth + "px" }, "fast");
-    });
-    
-    // package_wellness_travel슬라이드
-    let w_currentSlide = 0;
-    $(".package_wellness_travel .package_sliderBtn_next").on("click", function() {
-        w_currentSlide++;
-        if (w_currentSlide > slideCount) {
-            w_currentSlide = 1;
-            $(".package_wellness_travel .package_slider").css("right", "1770px");
-        }
-        $(".package_wellness_travel .package_slider").stop().animate({ right: origin + w_currentSlide * sliderWidth + "px" }, "fast");
-    });
-    $(".package_wellness_travel .package_sliderBtn_prev").on("click", function() {
-        w_currentSlide--;
-        if (w_currentSlide < -slideCount) {
-            w_currentSlide = -1;
-            $(".package_wellness_travel .package_slider").css("right", "1770px");
-        }
-        $(".package_wellness_travel .package_slider").stop().animate({right: origin + w_currentSlide * sliderWidth + "px" }, "fast");
-    });
+	// sample 슬라이드
+	s_currentSlide = 1;
+	s_sliderWidth = 1180;
+	s_slideCount = 3;
+	$(".sample_slideBtn_next").on("click", function () {
+		s_currentSlide++;
+		if (s_currentSlide > s_slideCount) {
+			s_currentSlide = 1;
+			$(".sample_slideImg_box").css("left", "0px");
+		}
+		$(".sample_slideImg_box")
+			.stop()
+			.animate({ left: -s_currentSlide * s_sliderWidth + "px" }, "fast");
+	});
+	$(".sample_slideBtn_prev").on("click", function () {
+		s_currentSlide--;
+		if (s_currentSlide < 1) {
+			s_currentSlide = s_slideCount;
+			$(".sample_slideImg_box").css(
+				"left",
+				-1180 - s_currentSlide * s_sliderWidth + "px"
+			);
+		}
+		$(".sample_slideImg_box")
+			.stop()
+			.animate({ left: -s_currentSlide * s_sliderWidth + "px" }, "fast");
+	});
 
-// 좋아요 기능 숫자, 모양만
-$(".package_card_likeImg").on("click", function(e){
-    e.stopPropagation()
-    $(this).find("img").toggleClass("liked");
-    let liked = $(this).prev().text();
-    liked = parseFloat(liked)
-    if($(this).find("img").hasClass("liked")){
-        liked ++
-        $(this).prev().text(liked)
-    }else{
-        liked --
-        $(this).prev().text(liked)
-    }
-})
+	// package_travel_now 슬라이드
+	origin = 1770;
+	p_currentSlide = 0;
+	sliderWidth = 295;
+	slideCount = 6;
+	$(".package_travel_now .package_sliderBtn_next").on("click", function () {
+		p_currentSlide++;
+		if (p_currentSlide > slideCount) {
+			p_currentSlide = 1;
+			$(".package_travel_now .package_slider").css("right", "1770px");
+		}
+		$(".package_travel_now .package_slider")
+			.stop()
+			.animate({ right: origin + p_currentSlide * sliderWidth + "px" }, "fast");
+	});
+	$(".package_travel_now .package_sliderBtn_prev").on("click", function () {
+		p_currentSlide--;
+		if (p_currentSlide < -slideCount) {
+			p_currentSlide = -1;
+			$(".package_travel_now .package_slider").css("right", "1770px");
+		}
+		$(".package_travel_now .package_slider")
+			.stop()
+			.animate({ right: origin + p_currentSlide * sliderWidth + "px" }, "fast");
+	});
 
-// 배너 자동 슬라이드 기능 구현
-let bannerWidth = 1180;
-let index = 0;
-    let autoSlide = setInterval(bnSlide, 3000);
-    function bnSlide(){
-        index++
-        $(".package_banner_box").stop().animate({right : (index%3)*bannerWidth+"px"}, 1000)
-        $(`.package_banner_index div:eq(${index%3})`).addClass("dot_active");
-        $(`.package_banner_index div:eq(${index%3})`).siblings().removeClass("dot_active");
-    }
-    // 재생 정지 버튼
-    $(".package_banner_index img").on("click", function(){
-        $(".package_banner_stop").toggleClass("disabled")
-        $(".package_banner_play").toggleClass("active")
-        if($(".package_banner_play").hasClass("active")) {
-            clearInterval(autoSlide)
-        }else{
-            autoSlide = setInterval(bnSlide, 3000);
-        }
-    })
+	// 드래그 이벤트
+	// $(".package_travel_now .package_slider").draggable({
+	//     axis: "x"
+	// });
 
-    //banner_index 클릭시
-    $(".package_banner_index div").on("click", function(){
-        $(this).addClass("dot_active");
-        $(this).siblings().removeClass("dot_active");
-        if($(".package_banner_play").hasClass("disabled")){
-            clearInterval(autoSlide)
-            $(".package_banner_stop").addClass("disabled")
-            $(".package_banner_play").addClass("active")
-            let dot_index = $(this).index() - 2;
-            $(".package_banner_box").stop().animate({right : (dot_index)*bannerWidth+"px"}, 1000)
-            index = dot_index;
-        }
-    })
+	// package_wellness_travel슬라이드
+	let w_currentSlide = 0;
+	$(".package_wellness_travel .package_sliderBtn_next").on(
+		"click",
+		function () {
+			w_currentSlide++;
+			if (w_currentSlide > slideCount) {
+				w_currentSlide = 1;
+				$(".package_wellness_travel .package_slider").css("right", "1770px");
+			}
+			$(".package_wellness_travel .package_slider")
+				.stop()
+				.animate(
+					{ right: origin + w_currentSlide * sliderWidth + "px" },
+					"fast"
+				);
+		}
+	);
+	$(".package_wellness_travel .package_sliderBtn_prev").on(
+		"click",
+		function () {
+			w_currentSlide--;
+			if (w_currentSlide < -slideCount) {
+				w_currentSlide = -1;
+				$(".package_wellness_travel .package_slider").css("right", "1770px");
+			}
+			$(".package_wellness_travel .package_slider")
+				.stop()
+				.animate(
+					{ right: origin + w_currentSlide * sliderWidth + "px" },
+					"fast"
+				);
+		}
+	);
 
-    //popup 임시
-    var clone;
-    $(".package_card").on("click", function popup(){
-        clone = $(this).clone().appendTo($(".pop_up_cont"))
-        $(".pop_up_cont").animate({top: "30vh"})
-        clone.css("cursor","auto");
-        clone.find(".package_card_like").css("top","230px")
-        clone.find(".package_card_bgImg").css("scale","1.5");
-        clone.find(".package_card_text").css("scale","1.5");
-        clone.find(".package_card_text").css("textAlign","center");
-        clone.find(".package_card_text").css("background","#fff");
-        clone.find(".package_card_text").css("margin-top","80px");
-        $(".pop_up").fadeIn(800);
-    })
-    $(".pop_up").on("click", function(){
-        $(".pop_up_cont").css("top", "20vh")
-        $(".pop_up").css("display","none")
-        $(".pop_up_cont").find("a").remove()
-    })
-});
+	const burst = new mojs.Burst({
+		left: 0,
+		top: 0,
+		radius: { 4: 32 },
+		angle: 45,
+		count: 14,
+		children: {
+			radius: 2.5,
+			fill: "#FD7932",
+			scale: { 1: 0, easing: "quad.in" },
+			pathScale: [0.8, null],
+			degreeShift: [13, null],
+			duration: [500, 700],
+			easing: "quint.out",
+		},
+	});
+
+	// new MojsPlayer({ add: burst, isPlaying: true, isRepeat: true });
+
+	// 좋아요 기능 숫자, 모양만
+	
+	$(".package_card_likeImg").on("click", function (e) {
+		e.stopPropagation();
+		console.log(e)
+		$(this).find("img").toggleClass("liked");
+		var liked = $(this).prev().text();
+		liked = parseFloat(liked);
+		if ($(this).find("img").hasClass("liked")) {
+			liked++;
+			$(this).prev().text(liked);
+			const coords = { x: e.pageX, y: e.pageY };
+			burst.tune(coords).replay();
+		} else {
+			liked--;
+			$(this).prev().text(liked);
+		}
+	});
+	// 배너 자동 슬라이드 기능 구현
+	let bannerWidth = 1180;
+	let index = 0;
+	let autoSlide = setInterval(bnSlide, 3000);
+	function bnSlide() {
+		index++;
+		$(".package_banner_box")
+			.stop()
+			.animate({ right: (index % 3) * bannerWidth + "px" }, 1000);
+		$(`.package_banner_index div:eq(${index % 3})`).addClass("dot_active");
+		$(`.package_banner_index div:eq(${index % 3})`)
+			.siblings()
+			.removeClass("dot_active");
+	}
+	// 재생 정지 버튼
+	$(".package_banner_index img").on("click", function () {
+		$(".package_banner_stop").toggleClass("disabled");
+		$(".package_banner_play").toggleClass("active");
+		if ($(".package_banner_play").hasClass("active")) {
+			clearInterval(autoSlide);
+		} else {
+			autoSlide = setInterval(bnSlide, 3000);
+		}
+	});
+	//banner_index 클릭시
+	$(".package_banner_index div").on("click", function () {
+		$(this).addClass("dot_active");
+		$(this).siblings().removeClass("dot_active");
+		if ($(".package_banner_play").hasClass("disabled")) {
+			clearInterval(autoSlide);
+			$(".package_banner_stop").addClass("disabled");
+			$(".package_banner_play").addClass("active");
+			let dot_index = $(this).index() - 2;
+			$(".package_banner_box")
+				.stop()
+				.animate({ right: dot_index * bannerWidth + "px" }, 1000);
+			index = dot_index;
+		}
+	});
+	//popup 최종
+	var clone;
+	$(".package_card").on("click", function popup() {
+		clone = $(this).clone().appendTo($(".pop_up_cont"));
+		clone.find(".package_likeImg").attr("src", "../img/btn_good01.png")
+		clone.find(".package_card_bgImg").append("<div class='bg_dark'></div>")
+		clone.find(".package_card_content").append("<a href='https://www.hanatour.com/'>지금 예약하기</a>")
+		$(".pop_up").fadeIn();
+	});
+	$(".pop_up").on("click", function (e) {
+		let target = e.target.className;
+		console.log(target)
+		if(target === "pop_up_cont" || target === "pop_up") {
+			$(".pop_up").css("display", "none");
+			$(".pop_up_cont").children("div").remove();
+		}
+	});
+}); //document.ready

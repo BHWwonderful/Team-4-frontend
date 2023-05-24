@@ -9,6 +9,7 @@ $(".travelAi_today_hover_wrap ul li").hover(
     function () {
         $(".travelAi_today_hover_wrap ul li").stop().animate({ width: "250" }, 100);
         $(this).stop().animate({ width: "370" }, 100);
+        $(".travelAi_today_hover_wrap ul li:first-child").css("box-shadow", "");
         $(this).css("box-shadow", "11px 12px 29px 0px rgba(32, 54, 90, 0.27)");
     }, function () {
         $(this).stop().animate({ width: "250" }, 100);
@@ -42,14 +43,19 @@ $(".travelAi_recentSlide_prevBtn").click(function () {
     $(".travelAi_recent_wrap>.travelAi_recentSlide_nextBtn").css("background-position", "50% 0");
 
     if (recentSlideX <= 0) {
-        // 이전 버튼 투명 상태
-        $(".travelAi_recent_wrap>.travelAi_recentSlide_prevBtn").css("background-position", "0 -36px");
         return false;
     }
+    
     recentSlideX -= 300;
     recentBar -= 236;
     $(".travelAi_recent_wrap ul li").animate({ right: recentSlideX }, 200);
     $(".travelAi_scrollBar").animate({ left: recentBar }, 200);
+    console.log(recentSlideX);
+
+    if (recentSlideX == 0) {
+        // 이전 버튼 투명 상태
+        $(".travelAi_recent_wrap>.travelAi_recentSlide_prevBtn").css("background-position", "0 -36px");
+    }
 });
 
 // 다음 버튼 클릭
@@ -67,15 +73,8 @@ $(".travelAi_recentSlide_nextBtn").click(function () {
     }
     $(".travelAi_recent_wrap ul li").animate({ right: recentSlideX }, 200);
     $(".travelAi_scrollBar").animate({ left: recentBar }, 200);
+    console.log(recentSlideX);
 });
-
-
-
-
-
-
-
-
 
 
 // yester

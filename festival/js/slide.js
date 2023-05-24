@@ -1,8 +1,9 @@
+$(document).ready(function () {
 var slides = document.querySelector('.slides'),
     slide = document.querySelectorAll('.slides li'),
     currentIdx = 0,
     slideCount = slide.length,
-    slideWidth = 680,
+    slideWidth = 940,
     slideMargin = 10,
     prevBtn = document.querySelector('.prev'),
     nextBtn = document.querySelector('.next');
@@ -64,3 +65,4 @@ function moveSlide(num) {
         }, 600);
     }
 }
+});

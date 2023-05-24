@@ -55,8 +55,8 @@
     height: 275px;
     margin: 10px;
     box-sizing: border-box;
+    cursor: pointer;
 }
-
 /* bgImg */
 .travel1{
     background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.8) 100%, transparent 80%, rgba(0,0,0,0.8) 100%),url(../img/bee87590-0b23-4d56-ac6c-8265b7c170c0.jpg)no-repeat center;
@@ -157,6 +157,7 @@
     background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.8) 100%, transparent 80%, rgba(0,0,0,0.8) 100%), url(../img/43bb5f05-e3ae-4670-8b87-3b9719a87707.jpg)no-repeat center;
     background-size: cover;
 }
+
 div.package_card_region{
     position: absolute;
     left: 10px;
@@ -187,13 +188,20 @@ div.package_card_region{
     overflow: hidden;
     width: 33px;
     height: 33px;
-    border-radius: 50%;
 }
 .package_card_text{
     position: relative;
     width: 275px;
     height: 85px;
     margin: 0 10px;
+    cursor: pointer;
+}
+/* 진행중 */
+.package_card_text span{
+    display: none;
+    font-size: 14px;
+    color: #888;
+    font-weight: lighter;
 }
 .package_card_title{
     font-size: 16px;
@@ -205,6 +213,9 @@ div.package_card_region{
     -webkit-box-orient: vertical;
 }
 .package_card_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     bottom: 0;
     width: 270px;
@@ -220,6 +231,20 @@ div.package_card_region{
     color: #fe686a;
     margin-right: 5px;
 }
+
+.package_card_content em::after{
+    content: '|';
+    color: #88888860;
+    font-size: 14px;
+    padding: 0 22px;
+}
+
+.pop_up_cont .package_card_content em::after{
+    font-size: 18px;
+    vertical-align: 1px;
+    padding-left: 25px 
+}
+
 .package_sliderBtn_prev{
     position: absolute;
     top: 220px;
@@ -331,7 +356,7 @@ aside{
 }
 .pop_up_cont{
     position: relative;
-    top: 20vh;
+    top: calc(50% - 220px);
     display: flex;
     align-items: center;
     justify-content: center;

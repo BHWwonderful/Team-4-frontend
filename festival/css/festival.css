@@ -70,16 +70,22 @@ Noto Sans Kr
 .festival_fillter_wrap .festival_concept_fillter_box button {
     width: 240px;
     height: 60px;
-    background: #fff;
     border: 1px solid #0051A4;
+    background:#fff;
     font-size: 18px;
 }
+
 
 /*여행목적선택 버튼 호버효과*/
 .festival_fillter_wrap .festival_concept_fillter_box button:hover {
     background: #0051A4;
     color: #fff;
     transition: all 0.3s;
+}
+/*여행목적선택 버튼 액티브 유지*/
+.festival_fillter_wrap .festival_concept_fillter_box .active {
+    background: #0051A4;
+    color: #fff;
 }
 
 /*여행목적필터 끝*/
@@ -146,7 +152,6 @@ Noto Sans Kr
 /*축제목록 페이징 가운데정렬*/
 /*pagenation*/
 .pagination {
-    background: #333;
     padding: 1rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -156,7 +161,6 @@ Noto Sans Kr
 }
 
 .pagination i {
-    color: #fff;
     font-size: 1.2em;
 }
 
@@ -169,8 +173,8 @@ Noto Sans Kr
 }
 
 #numbers li a {
-    color: #fff;
     padding: .5rem 1rem;
+    border: 1px solid black;
     text-decoration: none;
     opacity: .7;
 
@@ -179,11 +183,15 @@ Noto Sans Kr
 #numbers li a:hover {
     opacity: 1;
 }
-
+#numbers li .active {
+    opacity: 1;
+    background: #0051A4;
+    color: #fff;
+}
 #numbers li a:active {
     opacity: 1;
-    background: #fff;
-    color: #333;
+    background: #0051A4;
+    color: #fff;
 }
 
 /*
@@ -252,7 +260,7 @@ Noto Sans Kr
     text-indent: -9999px;
     width: 21px;
     height: 19px;
-    background: url(/images/ico_post01.png) no-repeat;
+    background: url(/festival/images/ico_post01.png) no-repeat;
 }
 
 .festival_postView {
@@ -262,7 +270,7 @@ Noto Sans Kr
     font-size: 0;
     width: 24px;
     height: 18px;
-    background: url(/images/ico_post07.png) no-repeat;
+    background: url(/festival/images/ico_post07.png) no-repeat;
 }
 
 .festivalDetail_postBook {
@@ -270,21 +278,21 @@ Noto Sans Kr
     position: relative;
     width: 16px;
     height: 18px;
-    background: url(/images/ico_post03.png) no-repeat;
+    background: url(/festival/images/ico_post03.png) no-repeat;
 }
 
 .festivalDetail_postPrint {
     text-indent: -9999px;
     width: 20px;
     height: 18px;
-    background: url(/images/ico_post04.png) no-repeat;
+    background: url(/festival/images/ico_post04.png) no-repeat;
 }
 
 .festivalDetail_postShare {
     text-indent: -9999px;
     width: 20px;
     height: 18px;
-    background: url(/images/ico_post02.png)no-repeat;
+    background: url(/festival/images/ico_post02.png)no-repeat;
 }
 
 
@@ -306,8 +314,8 @@ Noto Sans Kr
 
 .slide_wrapper {
     position: relative;
-    width: 660px;
-    height: 900px;
+    width: 930px;
+    height: 627px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -316,6 +324,8 @@ Noto Sans Kr
     position: absolute;
     left: 0;
     top: 0;
+    display: flex;
+    overflow: hidden;
 }
 
 .slides.animated {
@@ -323,12 +333,12 @@ Noto Sans Kr
 }
 
 .slides li {
-    width: 660px;
-    height: 900px;
+    width: 930px;
+    height: 627px;
     background: #ccc;
     float: left;
-}
 
+}
 .slides li:not(:last-child) {
     margin-right: 30px;
 }
@@ -336,14 +346,14 @@ Noto Sans Kr
 .controls {
     text-align: center;
     position: relative;
-    top: -400px;
+    top: -330px;
 }
 
 .controls .next {
     display: inline-block;
     position: absolute;
     overflow: hidden;
-    right: 100px;
+    right: 0;
     width: 40px;
     height: 40px;
     background: url(../images/btn_slider_next.png) 0 0 no-repeat;
@@ -355,7 +365,7 @@ Noto Sans Kr
     display: inline-block;
     position: absolute;
     overflow: hidden;
-    left: 100px;
+    left: 0px;
     width: 40px;
     height: 40px;
     background: url(../images/btn_slider_prev.png) 0 0 no-repeat;
@@ -405,7 +415,6 @@ Noto Sans Kr
     justify-content: space-between;
     word-break: keep-all;
 }
-
 .user_expression strong:before {
     content: '';
     display: inline-block;
@@ -413,7 +422,7 @@ Noto Sans Kr
     height: 15px;
     margin-right: 10px;
     vertical-align: 14px;
-    background: url(/images/icon_user_expression02.png) no-repeat;
+    background: url(/festival/images/icon_user_expression02.png) no-repeat;
 }
 
 .user_expression strong {
@@ -424,9 +433,9 @@ Noto Sans Kr
     line-height: 24px;
     color: #333;
 }
-
-.user_expression span.good {
+.user_expression span .good {
     margin-left: 80px;
+
 }
 
 .user_expression .form span {
@@ -473,25 +482,22 @@ Noto Sans Kr
     height: 45px;
     margin-right: 10px;
     vertical-align: 14px;
-    background: url(/images/icon_user_expression.png) no-repeat;
+    background-position: 0 -90px;
+    background: url(/festival/images/icon_user_expression.png) no-repeat;
     border: 0;
+}
+.user_expression .good input[type="radio"]+label:before {
+    background-position: 0 0px;
+}
+.user_expression .goodClick input[type="radio"]+label:before {
+    background-position: 0 -45px;
 }
 
 .user_expression .not input[type="radio"]+label:before {
     background-position: 0 -90px;
 }
-
-.user_expression input[type="radio"]+label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 45px;
-    height: 45px;
-    margin-right: 10px;
-    vertical-align: 14px;
-    background: url(/images/icon_user_expression.png) no-repeat;
-    border: 0;
+.user_expression .notClick input[type="radio"]+label:before {
+    background-position: 0 -135px;
 }
 
 .festivalDetail_recommend_title {
