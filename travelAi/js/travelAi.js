@@ -52,10 +52,9 @@ $(".travelAi_recentSlide_prevBtn").click(function () {
     $(".travelAi_scrollBar").animate({ left: recentBar }, 200);
     console.log(recentSlideX);
 
-    if (recentSlideX <= 0) {
+    if (recentSlideX == 0) {
         // 이전 버튼 투명 상태
         $(".travelAi_recent_wrap>.travelAi_recentSlide_prevBtn").css("background-position", "0 -36px");
-        return false;
     }
 });
 
