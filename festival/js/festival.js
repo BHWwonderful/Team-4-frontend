@@ -55,7 +55,7 @@ $(document).ready(function () {
     `)
 
         $('.festival_list_content_box').children().remove()
-        $.get('https://gist.githubusercontent.com/GyeungHoon/483112e427915938240c7d2ab9ed59b2/raw/579100bba55992cad40e360704bffa16bcc07c71/festival.json').done(function (data) {
+        $.get('https://gist.githubusercontent.com/GyeungHoon/483112e427915938240c7d2ab9ed59b2/raw/62db239a8ec9800739606d375f13cb1f86085dd5/festival.json').done(function (data) {
 
 
 
@@ -202,7 +202,7 @@ $(document).ready(function () {
     }
 });
 $(document).ready(function () {
-    $.get('https://gist.githubusercontent.com/GyeungHoon/483112e427915938240c7d2ab9ed59b2/raw/579100bba55992cad40e360704bffa16bcc07c71/festival.json').done(function (data) {
+    $.get('https://gist.githubusercontent.com/GyeungHoon/483112e427915938240c7d2ab9ed59b2/raw/62db239a8ec9800739606d375f13cb1f86085dd5/festival.json').done(function (data) {
 
         for (var i = 0; i < 100; i++) {
             document.getElementById("festival_list_content_box").innerHTML +=
