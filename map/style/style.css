@@ -2,14 +2,23 @@
     width: 1180px;
     height: 888px;
     margin: auto;
-    text-align: center;
 }
 
 .regionMap_content>h2 {
     font-size: 30px;
+    text-align: center;
 }
 
-.regionMap_ {
+.regionMap_content>h3 {
+    font-size: 28px;
+    text-align: center;
+}
+
+.regionMap_slide_wrap>h4 {
+    font-size: 26px;
+}
+
+.regionMap_slide_wrap {
     width: 590px;
     height: 776px;
     float: left;

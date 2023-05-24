@@ -9,7 +9,7 @@ $(".region_city_box a").click(function () {
 
 
 $(document).ready(function () {
-    $.getJSON("./json/data.json", function (data) {
+    $.getJSON("https://gist.githubusercontent.com/JaeHoon925/fda7b044cdc296532b470a88e7d8a611/raw/25815938c7c662f511520fb4ad9a4bf2efe66a9b/regionData.json", function (data) {
 
         for (var i = 0; i < data.seoul.length; i++) {
             $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("h4").text(data.seoul[`${i}`].명칭);
