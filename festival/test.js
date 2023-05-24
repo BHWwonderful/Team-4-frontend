@@ -1,7 +1,7 @@
 // JSON
 $(document).ready(function() {
     var allData = "";
-    $.get('https://gist.githubusercontent.com/GyeungHoon/483112e427915938240c7d2ab9ed59b2/raw/62db239a8ec9800739606d375f13cb1f86085dd5/festival.json', function(data) {
+    $.get('https://gist.githubusercontent.com/GyeungHoon/9a5e27234702a6f14c2376cae1d24e38/raw/018e4a0f776206583ff4341ed249547cd65d0219/festival.json', function(data) {
         allData = JSON.parse(data);
         for(var i = 0, len = allData.length; i < len; i++){
             var name = allData[i].명칭;
