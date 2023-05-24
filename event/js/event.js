@@ -15,7 +15,6 @@ $(document).ready( function(){
         // 최초 페이지 랜더링 종료
     }) 
 
-
     // 글로벌 네비게이션 li바 최초 숨기기 
     $("#event_gnb_li").children('ul:eq(0)').css("display","none")
     // 글로벌 네비게이션 바 클릭시 최초 숨긴 li요소 슬라이드 토글 메소드 실행 
@@ -68,11 +67,13 @@ $(document).ready( function(){
         return $('.event_main_board_content_wrap')
                 .append(
                     `<li>
+                    <a class="link" href="${data.link}">
                         <div class="event_content_img">
                             <img src="images/${data.img}" alt="">
                         </div>
                         <div class="event_content">
                             <p class="title">${data.title}</p>
+                            </a>
                             <p class="content">${data.content}</p>
                             <div class="event_main_bottom">
                                 <span class="writer">작성자</span>
@@ -85,4 +86,23 @@ $(document).ready( function(){
                     <hr>`
                 )
     }
+    $.getJSON( "./data/event.json", function(data) { // 제이슨 객체 불러오기 
+        console.log(data.data)
+    }) 
+    const 페이지네이션 = easyPagination({
+        // 항목
+        아이템,
+        // 페이지당 항목 수
+        행: 5,
+        // 페이지네이션 컨테이너
+        buttonsWrapper: "#페이지 나누기",
+        // 여기에서 항목 처리햐
+        handlePaginatedItems: () => {
+          const list = document.getElementById("목록");
+          list.innerHTML = "";
+          items.forEach((항목) => {
+            list.innerHTML += `<li class="list-group-item">${data.data}</li>`;
+          });
+        }
+  });
 })

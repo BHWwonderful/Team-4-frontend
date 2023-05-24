@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <script src="./js/event.js"></script>
+    <script src="./js/easyPagination.js"></script>
 </head>
 <body>
     <header class="header" id="header"></header>
@@ -105,8 +106,8 @@
                              <img src="images/event1.png" alt="">
                          </div>
                          <div class="event_content">
-                             <p class="title">2023 대한민국 관광공모전(사진) 개최</p>
-                             <p class="content">2023 대한민국 관광공모전 </p>
+                            <p class="title">2023 대한민국 관광공모전(사진) 개최</p>
+                             <p class="content">2023 대한민국 관광공모전</p>
                              <div class="event_main_bottom">
                                  <span class="writer">작성자</span>
                                  <b class="createdBy">콘텐츠 관리자</b>
@@ -116,13 +117,39 @@
                          </div>
                      </li> -->
                 </ul>
-            </div>
+            </div>  
         </div>
-    </div>
-    <div class="event_pagination">
-        <ul class="event_pagination float--right" id="pages">
-            
-        </ul>
+        <div class="container my-4">
+            <ul id="list" class="list-group">
+            </ul>
+            <div id="pagination" class="my-4"></div>
+        </div>
+        <script>
+
+        //     let items = [
+                
+        //     ];
+      
+        //     for (let i=0; i<100; i++) {
+        //       items.push("Item " + i);
+        //     }
+      
+        //     const pagination = easyPagination({
+        //       items,
+        //       rows: 5,
+        //       buttonsWrapper: "#pagination",
+        //       handlePaginatedItems: (items) => {
+        //         const list = document.getElementById("list");
+        //         list.innerHTML = "";
+        //         items.forEach((item) => {
+        //           list.innerHTML += `<li class="list-group-item">${item}</li>`;
+        //         });
+        //       }
+        //     });
+      
+        //     pagination.paginate();
+      
+        //   </script>      
     </div>
 </body>
 </html>
