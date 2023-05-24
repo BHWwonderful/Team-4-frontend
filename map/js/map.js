@@ -52,7 +52,7 @@ $(document).on("click", ".regionMap_map_box a", function () {
         // 클래스명 _on 공백으로 변경
         classNames = classNames.replace("_on", "");
     }
-    
+
     // 다른 지역 _on 클래스 지우기
     $(this).siblings().each(function () {
         // 클래스명 가져오기
@@ -69,7 +69,7 @@ $(document).on("click", ".regionMap_map_box a", function () {
 
 
 // 지역 json 이용
-$(document).ready(function() {
+$(document).ready(function () {
     $.getJSON("https://gist.githubusercontent.com/JaeHoon925/fda7b044cdc296532b470a88e7d8a611/raw/ea2a787229225ad7b4cf0d71a66a53f355b3bab5/regionData.json", function (data) {
 
         for (var i = 0; i < data.seoul.length; i++) {
@@ -79,7 +79,7 @@ $(document).ready(function() {
             var splitarr = arr.split(" ");
             let twoarr = "";
             twoarr += splitarr[0];
-            twoarr += " " +splitarr[1];
+            twoarr += " " + splitarr[1];
             $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
 
             $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.seoul[`${i}`].이미지경로 });
@@ -88,6 +88,10 @@ $(document).ready(function() {
         }
         // 서울
         $(".seoul").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.seoul.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.seoul[`${i}`].명칭);
                 // 주소 가공
@@ -95,9 +99,9 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.seoul[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.seoul[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.seoul[`${i}`].전화번호);
@@ -105,6 +109,10 @@ $(document).ready(function() {
         });
         // 인천
         $(".incheon").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.incheon.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.incheon[`${i}`].명칭);
                 // 주소 가공
@@ -112,16 +120,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.incheon[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.incheon[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.incheon[`${i}`].전화번호);
             }
         });
         // 경기
-        $(".gyeonggi").click(function () { 
+        $(".gyeonggi").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.gyeonggi.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.gyeonggi[`${i}`].명칭);
                 // 주소 가공
@@ -129,16 +141,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.gyeonggi[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.gyeonggi[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.gyeonggi[`${i}`].전화번호);
             }
         });
         // 강원
-        $(".gangwondo").click(function () { 
+        $(".gangwondo").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.gangwon.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.gangwon[`${i}`].명칭);
                 // 주소 가공
@@ -146,16 +162,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.gangwon[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.gangwon[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.gangwon[`${i}`].전화번호);
             }
         });
         // 충남
-        $(".chungnam").click(function () { 
+        $(".chungnam").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.chungnam.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.chungnam[`${i}`].명칭);
                 // 주소 가공
@@ -163,16 +183,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.chungnam[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.chungnam[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.chungnam[`${i}`].전화번호);
             }
         });
         // 세종
-        $(".sejong").click(function () { 
+        $(".sejong").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.sejong.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.sejong[`${i}`].명칭);
                 // 주소 가공
@@ -180,16 +204,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.sejong[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.sejong[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.sejong[`${i}`].전화번호);
             }
         });
         // 대전
-        $(".daejeon").click(function () { 
+        $(".daejeon").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.daejeon.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.daejeon[`${i}`].명칭);
                 // 주소 가공
@@ -197,16 +225,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.daejeon[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.daejeon[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.daejeon[`${i}`].전화번호);
             }
         });
         // 전북
-        $(".jeonbuk").click(function () { 
+        $(".jeonbuk").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.jeonbuk.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.jeonbuk[`${i}`].명칭);
                 // 주소 가공
@@ -214,16 +246,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.jeonbuk[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.jeonbuk[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.jeonbuk[`${i}`].전화번호);
             }
         });
         // 광주
-        $(".gwangju").click(function () { 
+        $(".gwangju").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.gwangju.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.gwangju[`${i}`].명칭);
                 // 주소 가공
@@ -231,16 +267,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.gwangju[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.gwangju[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.gwangju[`${i}`].전화번호);
             }
         });
         // 전남
-        $(".jeonnam").click(function () { 
+        $(".jeonnam").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.jeonnam.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.jeonnam[`${i}`].명칭);
                 // 주소 가공
@@ -248,16 +288,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.jeonnam[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.jeonnam[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.jeonnam[`${i}`].전화번호);
             }
         });
         // 충북
-        $(".chungbuk").click(function () { 
+        $(".chungbuk").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.chungbuk.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.chungbuk[`${i}`].명칭);
                 // 주소 가공
@@ -265,16 +309,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.chungbuk[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.chungbuk[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.chungbuk[`${i}`].전화번호);
             }
         });
         // 경북
-        $(".gyeongbuk").click(function () { 
+        $(".gyeongbuk").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.gyeongbuk.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.gyeongbuk[`${i}`].명칭);
                 // 주소 가공
@@ -282,16 +330,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.gyeongbuk[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.gyeongbuk[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.gyeongbuk[`${i}`].전화번호);
             }
         });
         // 대구
-        $(".daegu").click(function () { 
+        $(".daegu").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.daegu.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.daegu[`${i}`].명칭);
                 // 주소 가공
@@ -299,16 +351,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.daegu[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.daegu[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.daegu[`${i}`].전화번호);
             }
         });
         // 울산
-        $(".ulsan").click(function () { 
+        $(".ulsan").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.ulsan.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.ulsan[`${i}`].명칭);
                 // 주소 가공
@@ -316,16 +372,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.ulsan[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.ulsan[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.ulsan[`${i}`].전화번호);
             }
         });
         // 부산
-        $(".busan").click(function () { 
+        $(".busan").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.busan.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.busan[`${i}`].명칭);
                 // 주소 가공
@@ -333,16 +393,20 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.busan[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.busan[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.busan[`${i}`].전화번호);
             }
         });
         // 경남
-        $(".gyeongnam").click(function () { 
+        $(".gyeongnam").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.gyeongnam.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.gyeongnam[`${i}`].명칭);
                 // 주소 가공
@@ -350,15 +414,19 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.gyeongnam[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.gyeongnam[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.gyeongnam[`${i}`].전화번호);
             }
         });
-        $(".jeju").click(function () { 
+        $(".jeju").click(function () {
+            slideX = 0
+            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
+            $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             for (var i = 0; i < data.jeju.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.jeju[`${i}`].명칭);
                 // 주소 가공
@@ -366,9 +434,9 @@ $(document).ready(function() {
                 var splitarr = arr.split(" ");
                 let twoarr = "";
                 twoarr += splitarr[0];
-                twoarr += " " +splitarr[1];
+                twoarr += " " + splitarr[1];
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(0).text(twoarr);
-    
+
                 $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.jeju[`${i}`].이미지경로 });
                 $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.jeju[`${i}`].명칭 });
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.jeju[`${i}`].전화번호);
