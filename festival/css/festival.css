@@ -340,12 +340,20 @@ Noto Sans Kr
     transition: 0.12s ease-in;
 }
 
+.slides.animated.none{
+    transition: all 0s ease-in;
+}
+
 .slides li {
     width: 930px;
     height: 627px;
     background: #ccc;
     float: left;
+}
 
+.slides li img{
+    width: 930px;
+    height: 627px;
 }
 
 .slides li:not(:last-child) {
