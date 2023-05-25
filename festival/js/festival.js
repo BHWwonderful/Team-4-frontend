@@ -15,7 +15,7 @@ $(document).ready(function () {
             setEventList()
         });
     }
-    function setting(){
+    function setting() {
         localStorage.setItem('region', JSON.stringify("전체"));
         localStorage.setItem('concept', JSON.stringify("전체"));
         setEventList()
@@ -28,6 +28,7 @@ $(document).ready(function () {
         alert(`지역 : ${region} \n컨셉 : ${concept}`)
         $('.festival_list_content_box').children().remove()
         $.get('https://gist.githubusercontent.com/GyeungHoon/9a5e27234702a6f14c2376cae1d24e38/raw/110270a38ef29a8d42ede56fb3d585b961bfc9f4/festival.json').done(function (data) {
+            localStorage.setItem('data', JSON.stringify(data));
             for (let i = 0; i < 100; i++) {
                 if (JSON.parse(data)[i].주소.slice(0, 2) == region && JSON.parse(data)[i].여행컨셉 == concept || JSON.parse(data)[i].주소.slice(0, 4) == region && JSON.parse(data)[i].여행컨셉 == concept) {
                     console.log(`${JSON.parse(data)[i].여행컨셉} json  ${concept} 스토리지`);
@@ -54,7 +55,6 @@ $(document).ready(function () {
                         </li>
                     </ul>
                     `
-                    localStorage.setItem('data', JSON.stringify(data));
                 } else if (JSON.parse(data)[i].주소.slice(0, 2) == region && concept == "전체" || JSON.parse(data)[i].주소.slice(0, 4) == region && concept == "전체") {
                     document.getElementById("festival_list_content_box").innerHTML +=
                         `
@@ -79,7 +79,6 @@ $(document).ready(function () {
             </li>
         </ul>
         `
-        localStorage.setItem('data', JSON.stringify(data));
                 } else if (JSON.parse(data)[i].여행컨셉 == concept && region == "전체") {
                     document.getElementById("festival_list_content_box").innerHTML +=
                         `
@@ -104,7 +103,6 @@ $(document).ready(function () {
                             </li>
                         </ul>
                         `
-                        localStorage.setItem('data', JSON.stringify(data));
                 } else if (region == "전체" && concept == "전체") {
                     console.log(region + "+" + concept);
                     document.getElementById("festival_list_content_box").innerHTML +=
@@ -130,7 +128,6 @@ $(document).ready(function () {
                         </li>
                     </ul>
                     `
-                    localStorage.setItem('data', JSON.stringify(data));
                 }
             }
             const rowsPerPage = 5;
