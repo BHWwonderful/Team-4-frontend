@@ -1,16 +1,52 @@
 // 지역 여행지 슬라이드
 var slideX = 0;
+var dotSlideX = 0;
 
 // 이전 버튼 투명화
 $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
 
+// 슬라이드 도트
+$(".regionMap_slideDot_box>button").eq(0).css("background", "#000");
+
+// 도트 클릭시
+$(".regionMap_slideDot_box>button").click(function () {
+    dotSlideX = Number($(this).text());
+    $(".regionMap_slideDot_box>button").css("background", "#fff");
+    $(this).css("background", "#000");
+    slideX = dotSlideX * 610;
+    $(".regionMap_slide_box").animate({ right: slideX }, 200);
+
+
+    // 이전 다음 버튼 투명상태
+    // 첫 슬라이드
+    if (slideX == 0) {
+        $(".regionMap_slide_prevBtn").css("background-position", "0 -36px"); // 이전 반투명
+        $(".regionMap_slide_nextBtn").css("background-position", "0 0"); // 다음 원상태
+        // 마지막 슬라이드    
+    } else if (slideX == 1830) {
+        $(".regionMap_slide_prevBtn").css("background-position", "0 0"); // 이전 원상태
+        $(".regionMap_slide_nextBtn").css("background-position", "0 -36px"); // 다음 반투명
+        // 중간 슬라이드
+    } else if (slideX > 0 && slideX < 1830) {
+        $(".regionMap_slide_prevBtn").css("background-position", "0 0"); // 이전 원상태
+        $(".regionMap_slide_ntextBtn").css("background-position", "0 0"); // 다음 원상태
+    }
+});
+
+
+
 $(".regionMap_slide_prevBtn").click(function () {
-    // 슬라읻드 통제
+    // 슬라이드 통제
     if (slideX <= 0) {
         return false;
     }
     slideX -= 610;
-    $(".regionMap_slide_box").animate({ right: slideX }, 300);
+    $(".regionMap_slide_box").animate({ right: slideX }, 200);
+
+    // 슬라이드 도트
+    $(".regionMap_slideDot_box>button").css("background", "#fff");
+    $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+
     // 슬라이드 처음으로 왔을 때 이전 버튼 투명화 / 처음이 아닐 때 다음 버튼 원상태
     if (slideX == 0) {
         $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
@@ -26,8 +62,11 @@ $(".regionMap_slide_nextBtn").click(function () {
         return false;
     }
     slideX += 610;
-    $(".regionMap_slide_box").animate({ right: slideX }, 300);
-    console.log(slideX);
+    $(".regionMap_slide_box").animate({ right: slideX }, 200);
+
+    // 슬라이드 도트
+    $(".regionMap_slideDot_box>button").css("background", "#fff");
+    $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
     // 마지막 슬라이드일 때 다음 버튼 투명화
     if (slideX >= 1770) {
         $(".regionMap_slide_nextBtn").css("background-position", "0 -36px");
@@ -85,13 +124,21 @@ $(document).ready(function () {
             $(".regionMap_slideImg_box img").eq(i).attr({ "src": data.seoul[`${i}`].이미지경로 });
             $(".regionMap_slideImg_box img").eq(i).attr({ "alt": data.seoul[`${i}`].명칭 });
             $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("span").eq(1).text(data.seoul[`${i}`].전화번호);
+
+            $(".regionMap_slide_wrap>.regionMap_slide_box li a").eq(`${i}`).attr("value", data.seoul[`${i}`].명칭);
         }
         // 서울
         $(".seoul").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("서울");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.seoul.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.seoul[`${i}`].명칭);
                 // 주소 가공
@@ -109,10 +156,16 @@ $(document).ready(function () {
         });
         // 인천
         $(".incheon").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("인천");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.incheon.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.incheon[`${i}`].명칭);
                 // 주소 가공
@@ -130,10 +183,16 @@ $(document).ready(function () {
         });
         // 경기
         $(".gyeonggi").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("경기도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.gyeonggi.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.gyeonggi[`${i}`].명칭);
                 // 주소 가공
@@ -151,10 +210,16 @@ $(document).ready(function () {
         });
         // 강원
         $(".gangwondo").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("강원도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.gangwon.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.gangwon[`${i}`].명칭);
                 // 주소 가공
@@ -172,10 +237,16 @@ $(document).ready(function () {
         });
         // 충남
         $(".chungnam").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("충청남도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.chungnam.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.chungnam[`${i}`].명칭);
                 // 주소 가공
@@ -193,10 +264,16 @@ $(document).ready(function () {
         });
         // 세종
         $(".sejong").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("세종");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.sejong.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.sejong[`${i}`].명칭);
                 // 주소 가공
@@ -214,10 +291,16 @@ $(document).ready(function () {
         });
         // 대전
         $(".daejeon").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("대전");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.daejeon.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.daejeon[`${i}`].명칭);
                 // 주소 가공
@@ -235,10 +318,16 @@ $(document).ready(function () {
         });
         // 전북
         $(".jeonbuk").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("전라북도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.jeonbuk.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.jeonbuk[`${i}`].명칭);
                 // 주소 가공
@@ -256,10 +345,16 @@ $(document).ready(function () {
         });
         // 광주
         $(".gwangju").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("광주");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.gwangju.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.gwangju[`${i}`].명칭);
                 // 주소 가공
@@ -277,10 +372,16 @@ $(document).ready(function () {
         });
         // 전남
         $(".jeonnam").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("전라남도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.jeonnam.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.jeonnam[`${i}`].명칭);
                 // 주소 가공
@@ -298,10 +399,16 @@ $(document).ready(function () {
         });
         // 충북
         $(".chungbuk").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("충청북도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.chungbuk.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.chungbuk[`${i}`].명칭);
                 // 주소 가공
@@ -319,10 +426,16 @@ $(document).ready(function () {
         });
         // 경북
         $(".gyeongbuk").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("경상북도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.gyeongbuk.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.gyeongbuk[`${i}`].명칭);
                 // 주소 가공
@@ -340,10 +453,16 @@ $(document).ready(function () {
         });
         // 대구
         $(".daegu").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("대구");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.daegu.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.daegu[`${i}`].명칭);
                 // 주소 가공
@@ -361,10 +480,16 @@ $(document).ready(function () {
         });
         // 울산
         $(".ulsan").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("울산");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.ulsan.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.ulsan[`${i}`].명칭);
                 // 주소 가공
@@ -382,10 +507,16 @@ $(document).ready(function () {
         });
         // 부산
         $(".busan").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("부산");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.busan.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.busan[`${i}`].명칭);
                 // 주소 가공
@@ -403,10 +534,16 @@ $(document).ready(function () {
         });
         // 경남
         $(".gyeongnam").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("경상남도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.gyeongnam.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.gyeongnam[`${i}`].명칭);
                 // 주소 가공
@@ -423,10 +560,16 @@ $(document).ready(function () {
             }
         });
         $(".jeju").click(function () {
+            // 슬라이드 원위치
+            $(".regionMap_slide_container>h4>strong").text("제주도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 500);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
+            // 슬라이드 도트
+            $(".regionMap_slideDot_box>button").css("background", "#fff");
+            $(".regionMap_slideDot_box>button").eq(`${slideX / 610}`).css("background", "#000");
+            // 슬라이드 이미지 / 텍스트 지역에 맞게 뿌리기
             for (var i = 0; i < data.jeju.length; i++) {
                 $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.jeju[`${i}`].명칭);
                 // 주소 가공
