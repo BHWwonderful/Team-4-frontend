@@ -38,7 +38,6 @@ $(document).ready(function () {
     function setEventList() {
         region = JSON.parse(localStorage.getItem("region"));
         concept = JSON.parse(localStorage.getItem("concept"));
-        alert(`지역 : ${region} \n컨셉 : ${concept}`)
         $('.festival_list_content_box').children().remove()
         $.get('https://gist.githubusercontent.com/GyeungHoon/9a5e27234702a6f14c2376cae1d24e38/raw/110270a38ef29a8d42ede56fb3d585b961bfc9f4/festival.json').done(function (data) {
             localStorage.setItem('data', JSON.stringify(data));

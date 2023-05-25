@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+$(document).ready(function () {
     const receivedData = location.href.split('?')[1];
     let keys = Object.keys(localStorage);
     for (let i = 0; keys.length; i++) {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         marker.setMap(map);
 
 
-        LatLng(x, y);
+        latlng(x, y);
     }
     }
 });
