@@ -564,7 +564,7 @@ body {
     width: 100%;
 }
 
-.index_theme>a>h2 {
+.index_theme>h2 {
     width: 1180px;
     margin: auto;
     margin-bottom: 20px;
