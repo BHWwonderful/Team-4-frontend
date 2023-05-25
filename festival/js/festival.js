@@ -1,27 +1,40 @@
 var region = document.querySelectorAll('.festival_region_fillter_box button');
 var concept = document.querySelectorAll('.festival_concept_fillter_box button');
+
 $(document).ready(function () {
     for (var i = 0; i < region.length; i++) {
+
         region[i].addEventListener('click', function (e) {
+            var region = document.querySelectorAll('.festival_region_fillter_box button');
+            for (var i = 0; i < region.length; i++) {
+                region[i].classList.remove("active");
+            }
+            e.target.classList.add("active");
             localStorage.setItem('region', JSON.stringify(e.target.value));
-            // test() // setEventList()
             setEventList()
         });
     }
     for (var i = 0; i < concept.length; i++) {
         concept[i].addEventListener('click', function (e) {
+            var concept = document.querySelectorAll('.festival_concept_fillter_box button');
+            for (var i = 0; i < concept.length; i++) {
+                concept[i].classList.remove("active");
+            }
+            e.target.classList.add("active");
             localStorage.setItem('concept', JSON.stringify(e.target.value));
-            // test() // setEventList()
             setEventList()
         });
     }
     function setting() {
+        var region = document.querySelectorAll('.festival_region_fillter_box button');
+        var concept = document.querySelectorAll('.festival_concept_fillter_box button');
+        region[0].classList.add("active");
+        concept[0].classList.add("active");
         localStorage.setItem('region', JSON.stringify("전체"));
         localStorage.setItem('concept', JSON.stringify("전체"));
         setEventList()
     }
     setting();
-    // function setEventList(region, concept) {
     function setEventList() {
         region = JSON.parse(localStorage.getItem("region"));
         concept = JSON.parse(localStorage.getItem("concept"));
@@ -152,7 +165,6 @@ $(document).ready(function () {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
 
-                    //테이블 출력 함수
                     displayRow(idx);
                 });
             });

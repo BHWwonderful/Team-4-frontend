@@ -49,6 +49,12 @@ Noto Sans Kr
     border: 0;
 }
 
+/*active*/
+.festival_fillter_wrap .festival_region_fillter_box .active {
+    background: #0051A4;
+    color: #fff;
+}
+
 /*지역선택 버튼 호버효과 추가*/
 .festival_fillter_wrap .festival_region_fillter_box button:hover {
     background: #0051A4;
@@ -71,8 +77,13 @@ Noto Sans Kr
     width: 240px;
     height: 60px;
     border: 1px solid #0051A4;
-    background:#fff;
+    background: #fff;
     font-size: 18px;
+}
+/*여행목적선택 버튼 액티브 유지*/
+.festival_fillter_wrap .festival_concept_fillter_box .active {
+    background: #0051A4;
+    color: #fff;
 }
 
 
@@ -81,11 +92,6 @@ Noto Sans Kr
     background: #0051A4;
     color: #fff;
     transition: all 0.3s;
-}
-/*여행목적선택 버튼 액티브 유지*/
-.festival_fillter_wrap .festival_concept_fillter_box .active {
-    background: #0051A4;
-    color: #fff;
 }
 
 /*여행목적필터 끝*/
@@ -183,11 +189,13 @@ Noto Sans Kr
 #numbers li a:hover {
     opacity: 1;
 }
+
 #numbers li .active {
     opacity: 1;
     background: #0051A4;
     color: #fff;
 }
+
 #numbers li a:active {
     opacity: 1;
     background: #0051A4;
@@ -339,6 +347,7 @@ Noto Sans Kr
     float: left;
 
 }
+
 .slides li:not(:last-child) {
     margin-right: 30px;
 }
@@ -415,6 +424,7 @@ Noto Sans Kr
     justify-content: space-between;
     word-break: keep-all;
 }
+
 .user_expression strong:before {
     content: '';
     display: inline-block;
@@ -433,6 +443,7 @@ Noto Sans Kr
     line-height: 24px;
     color: #333;
 }
+
 .user_expression span .good {
     margin-left: 80px;
 
@@ -486,9 +497,11 @@ Noto Sans Kr
     background: url(/festival/images/icon_user_expression.png) no-repeat;
     border: 0;
 }
+
 .user_expression .good input[type="radio"]+label:before {
     background-position: 0 0px;
 }
+
 .user_expression .goodClick input[type="radio"]+label:before {
     background-position: 0 -45px;
 }
@@ -496,6 +509,7 @@ Noto Sans Kr
 .user_expression .not input[type="radio"]+label:before {
     background-position: 0 -90px;
 }
+
 .user_expression .notClick input[type="radio"]+label:before {
     background-position: 0 -135px;
 }
