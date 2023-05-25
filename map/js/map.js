@@ -14,7 +14,7 @@ $(".regionMap_slideDot_box>button").click(function () {
     $(".regionMap_slideDot_box>button").css("background", "#fff");
     $(this).css("background", "#000");
     slideX = dotSlideX * 610;
-    $(".regionMap_slide_box").animate({ right: slideX }, 300);
+    $(".regionMap_slide_box").animate({ right: slideX }, 200);
 
 
     // 이전 다음 버튼 투명상태
@@ -41,7 +41,7 @@ $(".regionMap_slide_prevBtn").click(function () {
         return false;
     }
     slideX -= 610;
-    $(".regionMap_slide_box").animate({ right: slideX }, 300);
+    $(".regionMap_slide_box").animate({ right: slideX }, 200);
 
     // 슬라이드 도트
     $(".regionMap_slideDot_box>button").css("background", "#fff");
@@ -62,7 +62,7 @@ $(".regionMap_slide_nextBtn").click(function () {
         return false;
     }
     slideX += 610;
-    $(".regionMap_slide_box").animate({ right: slideX }, 300);
+    $(".regionMap_slide_box").animate({ right: slideX }, 200);
 
     // 슬라이드 도트
     $(".regionMap_slideDot_box>button").css("background", "#fff");
@@ -132,7 +132,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("서울");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -159,7 +159,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("인천");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -186,7 +186,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("경기도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -213,7 +213,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("강원도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -240,7 +240,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("충청남도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -267,7 +267,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("세종");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -294,7 +294,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("대전");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -321,7 +321,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("전라북도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -348,7 +348,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("광주");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -375,7 +375,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("전라남도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -402,7 +402,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("충청북도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -429,7 +429,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("경상북도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -456,7 +456,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("대구");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -483,7 +483,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("울산");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -510,7 +510,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("부산");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -537,7 +537,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("경상남도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
@@ -563,7 +563,7 @@ $(document).ready(function () {
             // 슬라이드 원위치
             $(".regionMap_slide_container>h4>strong").text("제주도");
             slideX = 0
-            $(".regionMap_slide_box").animate({ right: slideX }, 300);
+            $(".regionMap_slide_box").animate({ right: slideX }, 200);
             $(".regionMap_slide_prevBtn").css("background-position", "0 -36px");
             $(".regionMap_slide_nextBtn").css("background-position", "0 0")
             // 슬라이드 도트
