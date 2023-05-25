@@ -27,7 +27,7 @@
 }
 
 .main_issue_section {
-    background-image: url(/issue_section/images/mcont2_bg.jpg);
+    background-image: url(/index/issue_section/images/mcont2_bg.jpg);
 }
 
 .main_issue_wrap {
@@ -41,7 +41,7 @@
 .main_issue_box1 {
     width: 393px;
     height: 500px;
-    background-image: url(/issue_section/images/해변.jpg);
+    background-image: url(/index/issue_section/images/해변.jpg);
     background-size: cover;
 }
 
@@ -54,7 +54,7 @@
 .main_issue_box2 {
     width: 393px;
     height: 500px;
-    background-image: url(/issue_section/images/Tv.jpg);
+    background-image: url(/index/issue_section/images/Tv.jpg);
     background-size: cover;
 }
 
@@ -67,7 +67,7 @@
 .main_issue_box3 {
     width: 393px;
     height: 500px;
-    background-image: url(/issue_section/images/핫플.jpg);
+    background-image: url(/index/issue_section/images/핫플.jpg);
     background-size: cover;
 }
 
@@ -128,7 +128,7 @@
     height: 49px;
     display: block;
     margin: 0 auto 20px;
-    background: url(/issue_section/images/main_ir.png) no-repeat -21px -4px;
+    background: url(/index/issue_section/images/main_ir.png) no-repeat -21px -4px;
 
 }
 
@@ -137,7 +137,7 @@
 	height: 54px;
     display: block;
     margin: 0 auto 20px;
-    background: url(/issue_section/images/main_ir.png)no-repeat -87px 0;
+    background: url(/index/issue_section/images/main_ir.png)no-repeat -87px 0;
 
 
 }
@@ -147,7 +147,7 @@
 	height: 56px;
     display: block;
     margin: 0 auto 20px;
-    background: url(/issue_section/images/main_ir.png) no-repeat -142px -1px;
+    background: url(/index/issue_section/images/main_ir.png) no-repeat -142px -1px;
 
 }
 
