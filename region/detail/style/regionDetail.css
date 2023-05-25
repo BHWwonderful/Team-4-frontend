@@ -156,28 +156,6 @@
     font-size: 30px;
 }
 
-.detail_city_box {
-    width: 1180px;
-    height: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    border-top: 1px solid #e6e6e6;
-    border-left: 1px solid #e6e6e6;
-    margin-top: 50px;
-}
-
-.detail_city_box a {
-    display: block;
-    width: 196.59px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 18px;
-    border-bottom: 1px solid #e6e6e6;
-    border-right: 1px solid #e6e6e6;
-    box-sizing: border-box;
-}
-
 .detail_city_box_active {
     background: #0051a4;
     color: #fff;
