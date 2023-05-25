@@ -149,7 +149,7 @@ $(document).ready(function () {
             const nextPageBtn = document.querySelector('.pagination .fa-arrow-right');
 
             let pageActiveIdx = 0; //현재 보고 있는 페이지그룹 번호
-            let currentPageNum = 0;// 현재 보고 있는 페이지네이션 번호
+            let currentPageNum = 1;// 현재 보고 있는 페이지네이션 번호
             let maxPageNum = 5; // 페이지그룹 최대 개수
             $('#numbers').children().remove();
             for (let i = 1; i <= pageCount; i++) {
@@ -181,8 +181,9 @@ $(document).ready(function () {
                 for (nb of numberBtn) {
                     nb.classList.remove('active');
                 }
-                numberBtn[idx].classList.add("active");
-            }//displayRow
+                numberBtn[idx].classList.add("active");   
+            }
+            //displayRow
             displayRow(0);
             //페이지네이션 그룹 표시 함수
             function displayPage(num) {
@@ -218,8 +219,8 @@ $(document).ready(function () {
                 displayPage(pageActiveIdx);
             });
             prevPageBtn.addEventListener('click', () => {
-                let nextPageNum = pageActiveIdx * maxPageNum - 1;
-                displayRow(nextPageNum);
+                let prevPageNum = pageActiveIdx * maxPageNum - currentPageNum;
+                displayRow(prevPageNum);
                 --pageActiveIdx;
                 displayPage(pageActiveIdx);
             });
