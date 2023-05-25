@@ -31,7 +31,6 @@ $(document).ready(function () {
             localStorage.setItem('data', JSON.stringify(data));
             for (let i = 0; i < 100; i++) {
                 if (JSON.parse(data)[i].주소.slice(0, 2) == region && JSON.parse(data)[i].여행컨셉 == concept || JSON.parse(data)[i].주소.slice(0, 4) == region && JSON.parse(data)[i].여행컨셉 == concept) {
-                    console.log(`${JSON.parse(data)[i].여행컨셉} json  ${concept} 스토리지`);
                     document.getElementById("festival_list_content_box").innerHTML +=
                         `
                         <ul>
@@ -104,7 +103,6 @@ $(document).ready(function () {
                         </ul>
                         `
                 } else if (region == "전체" && concept == "전체") {
-                    console.log(region + "+" + concept);
                     document.getElementById("festival_list_content_box").innerHTML +=
                         `
                         <ul>
