@@ -43,98 +43,101 @@ $(document).ready(function () {
             localStorage.setItem('data', JSON.stringify(data));
             for (let i = 0; i < 100; i++) {
                 if (JSON.parse(data)[i].주소.slice(0, 2) == region && JSON.parse(data)[i].여행컨셉 == concept || JSON.parse(data)[i].주소.slice(0, 4) == region && JSON.parse(data)[i].여행컨셉 == concept) {
-                    document.getElementById("festival_list_content_box").innerHTML += `
-                    <ul>
-                    <li>
-                        <div class="festival_list_img_box">
-                            <a href="/festival/festivalDetail.html?${i}" >
-                                <img src="../festival/images/festival_img100/${JSON.parse(data)[i].명칭}_1_공공3유형.png" alt="">
-                            </a>
-                        </div>
-                        <div class="festival_list_text_box">
-                            <p><span>행사기간</span>${JSON.parse(data)[i].행사시작일}~${JSON.parse(data)[i].행사종료일}</p>
-                            <a href="/festival/festivalDetail.html?${i}">    
-                                <h4>${JSON.parse(data)[i].명칭}</h4>
-                            </a>
-                            <div>
-                                <p>지역 : ${JSON.parse(data)[i].관리자}</p>
-                                <p>장소 : ${JSON.parse(data)[i].행사장소}</p>
-                                <p>연락처 : ${JSON.parse(data)[i].주최자연락처}</p>
+                    document.getElementById("festival_list_content_box").innerHTML +=
+                        `
+                        <ul>
+                        <li>
+                            <div class="festival_list_img_box">
+                                <a href="/festival/festivalDetail.html?${i}" >
+                                    <img src="../festival/images/festival_img100/${JSON.parse(data)[i].명칭}_1_공공3유형.png" alt="">
+                                </a>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-                `;
-                       
+                            <div class="festival_list_text_box">
+                                <p><span>행사기간</span>${JSON.parse(data)[i].행사시작일}~${JSON.parse(data)[i].행사종료일}</p>
+                                <a href="/festival/festivalDetail.html?${i}">    
+                                    <h4>${JSON.parse(data)[i].명칭}</h4>
+                                </a>
+                                <div>
+                                    <p>지역 : ${JSON.parse(data)[i].관리자}</p>
+                                    <p>장소 : ${JSON.parse(data)[i].행사장소}</p>
+                                    <p>연락처 : ${JSON.parse(data)[i].주최자연락처}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    `
                 } else if (JSON.parse(data)[i].주소.slice(0, 2) == region && concept == "전체" || JSON.parse(data)[i].주소.slice(0, 4) == region && concept == "전체") {
-                    document.getElementById("festival_list_content_box").innerHTML += `
-                    <ul>
-                    <li>
-                        <div class="festival_list_img_box">
-                            <a href="/festival/festivalDetail.html?${i}" >
-                                <img src="../festival/images/festival_img100/${JSON.parse(data)[i].명칭}_1_공공3유형.png" alt="">
-                            </a>
-                        </div>
-                        <div class="festival_list_text_box">
-                            <p><span>행사기간</span>${JSON.parse(data)[i].행사시작일}~${JSON.parse(data)[i].행사종료일}</p>
-                            <a href="/festival/festivalDetail.html?${i}">    
-                                <h4>${JSON.parse(data)[i].명칭}</h4>
-                            </a>
-                            <div>
-                                <p>지역 : ${JSON.parse(data)[i].관리자}</p>
-                                <p>장소 : ${JSON.parse(data)[i].행사장소}</p>
-                                <p>연락처 : ${JSON.parse(data)[i].주최자연락처}</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                `;
+                    document.getElementById("festival_list_content_box").innerHTML +=
+                        `
+            <ul>
+            <li>
+                <div class="festival_list_img_box">
+                    <a href="/festival/festivalDetail.html?${i}" >
+                        <img src="../festival/images/festival_img100/${JSON.parse(data)[i].명칭}_1_공공3유형.png" alt="">
+                    </a>
+                </div>
+                <div class="festival_list_text_box">
+                    <p><span>행사기간</span>${JSON.parse(data)[i].행사시작일}~${JSON.parse(data)[i].행사종료일}</p>
+                    <a href="/festival/festivalDetail.html?${i}">    
+                        <h4>${JSON.parse(data)[i].명칭}</h4>
+                    </a>
+                    <div>
+                        <p>지역 : ${JSON.parse(data)[i].관리자}</p>
+                        <p>장소 : ${JSON.parse(data)[i].행사장소}</p>
+                        <p>연락처 : ${JSON.parse(data)[i].주최자연락처}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        `
                 } else if (JSON.parse(data)[i].여행컨셉 == concept && region == "전체") {
-                    document.getElementById("festival_list_content_box").innerHTML += `
-                    <ul>
-                    <li>
-                        <div class="festival_list_img_box">
-                            <a href="/festival/festivalDetail.html?${i}" >
-                                <img src="../festival/images/festival_img100/${JSON.parse(data)[i].명칭}_1_공공3유형.png" alt="">
-                            </a>
-                        </div>
-                        <div class="festival_list_text_box">
-                            <p><span>행사기간</span>${JSON.parse(data)[i].행사시작일}~${JSON.parse(data)[i].행사종료일}</p>
-                            <a href="/festival/festivalDetail.html?${i}">    
-                                <h4>${JSON.parse(data)[i].명칭}</h4>
-                            </a>
-                            <div>
-                                <p>지역 : ${JSON.parse(data)[i].관리자}</p>
-                                <p>장소 : ${JSON.parse(data)[i].행사장소}</p>
-                                <p>연락처 : ${JSON.parse(data)[i].주최자연락처}</p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                `;
+                    document.getElementById("festival_list_content_box").innerHTML +=
+                        `
+                            <ul>
+                            <li>
+                                <div class="festival_list_img_box">
+                                    <a href="/festival/festivalDetail.html?${i}" >
+                                        <img src="../festival/images/festival_img100/${JSON.parse(data)[i].명칭}_1_공공3유형.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="festival_list_text_box">
+                                    <p><span>행사기간</span>${JSON.parse(data)[i].행사시작일}~${JSON.parse(data)[i].행사종료일}</p>
+                                    <a href="/festival/festivalDetail.html?${i}">    
+                                        <h4>${JSON.parse(data)[i].명칭}</h4>
+                                    </a>
+                                    <div>
+                                        <p>지역 : ${JSON.parse(data)[i].관리자}</p>
+                                        <p>장소 : ${JSON.parse(data)[i].행사장소}</p>
+                                        <p>연락처 : ${JSON.parse(data)[i].주최자연락처}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        `
                 } else if (region == "전체" && concept == "전체") {
-                    document.getElementById("festival_list_content_box").innerHTML +=`
-                    <ul>
-                    <li>
-                        <div class="festival_list_img_box">
-                            <a href="/festival/festivalDetail.html?${i}" >
-                                <img src="../festival/images/festival_img100/${JSON.parse(data)[i].명칭}_1_공공3유형.png" alt="">
-                            </a>
-                        </div>
-                        <div class="festival_list_text_box">
-                            <p><span>행사기간</span>${JSON.parse(data)[i].행사시작일}~${JSON.parse(data)[i].행사종료일}</p>
-                            <a href="/festival/festivalDetail.html?${i}">    
-                                <h4>${JSON.parse(data)[i].명칭}</h4>
-                            </a>
-                            <div>
-                                <p>지역 : ${JSON.parse(data)[i].관리자}</p>
-                                <p>장소 : ${JSON.parse(data)[i].행사장소}</p>
-                                <p>연락처 : ${JSON.parse(data)[i].주최자연락처}</p>
+                    document.getElementById("festival_list_content_box").innerHTML +=
+                        `
+                        <ul>
+                        <li>
+                            <div class="festival_list_img_box">
+                                <a href="/festival/festivalDetail.html?${i}" >
+                                    <img src="../festival/images/festival_img100/${JSON.parse(data)[i].명칭}_1_공공3유형.png" alt="">
+                                </a>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-                `;
+                            <div class="festival_list_text_box">
+                                <p><span>행사기간</span>${JSON.parse(data)[i].행사시작일}~${JSON.parse(data)[i].행사종료일}</p>
+                                <a href="/festival/festivalDetail.html?${i}">    
+                                    <h4>${JSON.parse(data)[i].명칭}</h4>
+                                </a>
+                                <div>
+                                    <p>지역 : ${JSON.parse(data)[i].관리자}</p>
+                                    <p>장소 : ${JSON.parse(data)[i].행사장소}</p>
+                                    <p>연락처 : ${JSON.parse(data)[i].주최자연락처}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    `
                 }
             }
             const rowsPerPage = 5;
