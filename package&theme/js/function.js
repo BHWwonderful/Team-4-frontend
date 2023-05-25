@@ -113,7 +113,8 @@ $(document).ready(() => {
 				);
 		}
 	);
-
+	
+	// new MojsPlayer({ add: burst, isPlaying: true, isRepeat: true });
 	const burst = new mojs.Burst({
 		left: 0,
 		top: 0,
@@ -131,8 +132,6 @@ $(document).ready(() => {
 		},
 	});
 
-	// new MojsPlayer({ add: burst, isPlaying: true, isRepeat: true });
-
 	// 좋아요 기능 숫자, 모양만
 	
 	$(".package_card_likeImg").on("click", function (e) {
@@ -146,6 +145,7 @@ $(document).ready(() => {
 			$(this).prev().text(liked);
 			const coords = { x: e.pageX, y: e.pageY };
 			burst.tune(coords).replay();
+			console.log(window.caches)
 		} else {
 			liked--;
 			$(this).prev().text(liked);
