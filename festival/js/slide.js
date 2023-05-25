@@ -28,7 +28,7 @@ function makeClone() {
     setInitalPos();
     setTimeout(() => {
         slides.classList.add('animated');
-    }, 100);
+    }, 120);
 
 }
 function updateWidth() {
@@ -59,10 +59,10 @@ function moveSlide(num) {
             slides.classList.remove('animated');
             slides.style.left = '0px';
             currentIdx = 0;
-        }, 500);
+        }, 120);
         setTimeout(() => {
             slides.classList.add('animated');
-        }, 600);
+        }, 120);
     }
 }
 });
