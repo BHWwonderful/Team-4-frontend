@@ -9,15 +9,10 @@ function clickNotLikeExpression() {
 // Object.keys 사용 
 $(document).ready(function () {
         const receivedData = location.href.split('?')[1];
-        console.log(receivedData);
         let keys = Object.keys(localStorage);
         for (let i = 0; keys.length; i++) {
                 if (i == receivedData) {
                         const result = JSON.parse(localStorage.getItem("data"));
-                        console.log(JSON.parse(result)[i]);
-
-
-
                         document.querySelector(".festivalDetail_title_box").innerHTML = `
                 <h2>${JSON.parse(result)[i].명칭}</h2>
                 <p>전북 전주시 : ${JSON.parse(result)[i].행사시작일} ~ ${JSON.parse(result)[i].행사종료일}</p>
