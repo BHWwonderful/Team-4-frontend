@@ -1,36 +1,8 @@
-var region = document.querySelectorAll('.festival_region_fillter_box button');
-var concept = document.querySelectorAll('.festival_concept_fillter_box button');
-
-var rowsPerPage;
-var rows;
-var rowsCount;
-var pageCount;
-var numbers;
-var prevPageBtn;
-var nextPageBtn;
-
-var pageActiveIdx;
-var currentPageNum;
-var maxPageNum;
-
-var numberBtn;
-
-var start;
-var end;
-var rowsArray;
-
-var totalPageCount;
-var pageArr;
-var pageListArr;
-
-var nextPageNum;
-var prevPageNum;
-
 $(document).ready(function () {
 
-
+    var region = document.querySelectorAll('.festival_region_fillter_box button');
+    var concept = document.querySelectorAll('.festival_concept_fillter_box button');
     for (var i = 0; i < region.length; i++) {
-
         region[i].addEventListener('click', function (e) {
             var region = document.querySelectorAll('.festival_region_fillter_box button');
             for (var i = 0; i < region.length; i++) {
@@ -101,22 +73,22 @@ $(document).ready(function () {
                     document.getElementById("festival_list_content_box").innerHTML += innerHtmltext;
                 }
             }
-            rowsPerPage = 5;
-            rows = document.querySelectorAll('#festival_list_content_box ul li');
-            rowsCount = rows.length;
-            pageCount = Math.ceil(rowsCount / rowsPerPage);
-            numbers = document.querySelector('#numbers');
-            prevPageBtn = document.querySelector('.pagination .fa-arrow-left');
-            nextPageBtn = document.querySelector('.pagination .fa-arrow-right');
+            var rowsPerPage = 5;
+            var rows = document.querySelectorAll('#festival_list_content_box ul li');
+            var rowsCount = rows.length;
+            var pageCount = Math.ceil(rowsCount / rowsPerPage);
+            var numbers = document.querySelector('#numbers');
+            var prevPageBtn = document.querySelector('.pagination .fa-arrow-left');
+            var nextPageBtn = document.querySelector('.pagination .fa-arrow-right');
 
-            pageActiveIdx = 0; //현재 보고 있는 페이지그룹 번호
-            currentPageNum = 1;// 현재 보고 있는 페이지네이션 번호
-            maxPageNum = 5; // 페이지그룹 최대 개수
+            var pageActiveIdx = 0; //현재 보고 있는 페이지그룹 번호
+            var currentPageNum = 1;// 현재 보고 있는 페이지네이션 번호
+            var maxPageNum = 5; // 페이지그룹 최대 개수
             $('#numbers').children().remove();
             for (let i = 1; i <= pageCount; i++) {
                 numbers.innerHTML += `<li><a href="#none" onclick="window.scrollTo(0,0);">${i}</a></li>`
             }
-            numberBtn = numbers.querySelectorAll('a');
+            var numberBtn = numbers.querySelectorAll('a');
             // 페이지네이션 번호 감추기
             for (nb of numberBtn) {
                 nb.style.display = 'none';
@@ -129,9 +101,9 @@ $(document).ready(function () {
                 });
             });
             function displayRow(idx) {
-                start = idx * rowsPerPage;
-                end = start + rowsPerPage;
-                rowsArray = [...rows];
+                var start = idx * rowsPerPage;
+                var end = start + rowsPerPage;
+                var rowsArray = [...rows];
                 for (ra of rowsArray) {
                     ra.style.display = 'none';
                 }
@@ -152,11 +124,11 @@ $(document).ready(function () {
                 for (nb of numberBtn) {
                     nb.style.display = 'none';
                 }
-                totalPageCount = Math.ceil(pageCount / maxPageNum);
-                pageArr = [...numberBtn];
-                start = num * maxPageNum;
-                end = start + maxPageNum;
-                pageListArr = pageArr.slice(start, end);
+                var totalPageCount = Math.ceil(pageCount / maxPageNum);
+                var pageArr = [...numberBtn];
+                var start = num * maxPageNum;
+                var end = start + maxPageNum;
+                var pageListArr = pageArr.slice(start, end);
 
                 for (let item of pageListArr) {
                     item.style.display = 'block';
