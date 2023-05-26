@@ -1,0 +1,127 @@
+.travelMap_cont_wrap{
+    
+}
+.travelMap_btn_wrap{
+    position: absolute;
+    top: calc(50vh - 60px);
+    left: 400px;
+    width: 59px;
+    height: 104px;
+    overflow: hidden;
+    z-index: 20;
+    transition: left 0.3s ease-in-out;
+}
+.travelMap_btn_wrap img:hover{
+    cursor: pointer;
+}
+.btn_change{
+    position: absolute;
+    top: -104px;
+}
+.btn_move{
+    left: 0px;
+    
+}
+.animated{
+    left: -400px;
+}
+.travelMap_category_box{
+    position: fixed;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #fff;
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px dashed rgb(206, 206, 206);
+    z-index: 100;
+}
+.travelMap_category_box h2{
+    text-align: center;
+    font-size: 25px;
+}
+.travelMap_category_card{
+    display: flex;
+    justify-content: space-around;
+}
+.travelMap_category_card a{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    text-align: center;
+}
+.travelMap_category_card img{
+    width: 40px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+.travelMap_cont_box{
+    position: absolute;
+    top: 290px;
+    left: 0;
+    width: 400px;
+    height: calc(100vh - 290px);
+    background-color: #fff;
+    z-index: 10;
+    transition: left 0.3s ease-in-out;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.travelMap_cont{
+}
+.travelMap_cont_card{
+    display: flex;
+    width: 400px;
+    height: 120px;
+    background: #fff;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+.travelMap_cont_card>a>img{
+    width: 90px;
+    height: 90px;
+}
+.travelMap_cont_info{
+    height: 90px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.travelMap_cont_info>a{
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 500;
+}
+.travelMap_cont_info>em{
+    font-size: 12px;
+    font-weight: 100;
+    color: #777
+}
+.travelMap_cont_info>span{
+    font-size: 12px;
+    font-weight: 100;
+    color: #777
+}
+
+/* cluster custom */
+.cluster_style{
+    background: #0049c8!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px!important;
+    height: 50px!important;
+    font-size: 20px!important;
+    font-weight: 300!important;
+    outline:  5px solid rgba(255, 255, 255, 0.3);
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    box-sizing: border-box;
+    opacity: 0.75;
+    color: white;
+}
