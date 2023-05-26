@@ -26,7 +26,7 @@ $.getJSON(url, function(data) {
         const value = data[key];
         allRegion = [...allRegion, ...value];
     }
-    console.log(allRegion)
+    // console.log(allRegion)
 
 
     let markers = allRegion.map(position => {
@@ -36,7 +36,72 @@ $.getJSON(url, function(data) {
     });
     // 클러스터러에 마커들을 추가합니다
     clusterer.addMarkers(markers);
+}).then(function() {
+    // 해변 필터
+    const filterText_b = ['해수', '해변']
+    const beach = allRegion.filter(el => filterText_b.some(text => el.명칭.includes(text)))
 
+    // 공원 필터
+    const park = allRegion.filter((el)=>{
+        return (el.명칭.includes('공원'));
+    })
+
+    // 숙박 필터
+    const filterText_h = ['호텔', '리조트', '펜션']
+    const hotel = allRegion.filter(el => filterText_h.some(text => el.명칭.includes(text)))
+
+    // 체험장 필터
+    const filterText_e = ['체험', '마을']
+    const experience = allRegion.filter(el => filterText_e.some(text => el.명칭.includes(text)))
+
+    // 캠핑장 필터
+    const camping = allRegion.filter((el)=>{
+        return (el.명칭.includes('캠핑'));
+    })
+
+    variable = allRegion;
+    for(var i = 0; i < variable.length; i++){
+        const keys = Object.keys(variable[i]);
+        const isParkable = keys.filter(v => v.includes('주차')).length > 0;
+        const isPaid = keys.filter(v => v.includes('요금')).length > 0;
+        $(".travelMap_cont").append(
+            `
+            <li class="travelMap_cont_card">
+            <a href="javascript:void(0)"><img src="../region/${variable[i].이미지경로}" alt=""></a>
+            <div class="travelMap_cont_info">
+            <a href="javascript:void(0)">${variable[i].명칭}</a>
+            <em>${variable[i].주소}</em>
+            <em>${(isParkable)? '주차가능': '주차불가'}${(isPaid)? ' · 유료': '' }</em>
+            </div>
+            </li>
+            `
+        );
+    }
+
+    $(".travelMap_category_card li").on("click", function(){
+        $(".travelMap_cont li").remove();
+
+        let category = { beach, park, hotel, experience, camping };
+        variable = category[$(this).find("img").attr("alt")];
+
+        for(var i = 0; i < variable.length; i++){
+            keys = Object.keys(variable[i]);
+            isParkable = keys.filter(v => v.includes('주차')).length > 0;
+            isPaid = keys.filter(v => v.includes('요금')).length > 0;
+            $(".travelMap_cont").append(
+                `
+                <li class="travelMap_cont_card">
+                <a href="javascript:void(0)"><img src="../region/${variable[i].이미지경로}" alt=""></a>
+                <div class="travelMap_cont_info">
+                <a href="javascript:void(0)">${variable[i].명칭}</a>
+                <em>${variable[i].주소}</em>
+                <em>${(isParkable)? '주차가능': '주차불가'}${(isPaid)? ' · 유료': '' }</em>
+                </div>
+                </li>
+                `
+            )
+        }
+    });
 });
 
 // 클러스터링이 완료됐을 때 발생한다.
@@ -50,64 +115,70 @@ kakao.maps.event.addListener(clusterer, 'clustered', function(clusters ) {
 });
 
 // 콘텐츠별 필터 
-$(window).on("load change",function(){
+$(window).on("load", function(){
+//     // 해변 필터
+//     const filterText_b = ['해수', '해변']
+//     const beach = allRegion.filter(el => filterText_b.some(text => el.명칭.includes(text)))
+ 
+//     // 공원 필터
+//     const park = allRegion.filter((el)=>{
+//         return (el.명칭.includes('공원'));
+//     })
+ 
+//     // 숙박 필터
+//    const filterText_h = ['호텔', '리조트', '펜션']
+//    const hotel = allRegion.filter(el => filterText_h.some(text => el.명칭.includes(text)))
     
-   // 해변 필터
-   const filterText_b = ['해수', '해변']
-   const beach = allRegion.filter(el => filterText_b.some(text => el.명칭.includes(text)))
-   console.log(beach)
+//    // 체험장 필터
+//    const filterText_e = ['체험', '마을']
+//    const experience = allRegion.filter(el => filterText_e.some(text => el.명칭.includes(text)))
+ 
+//    // 캠핑장 필터
+//     const camping = allRegion.filter((el)=>{
+//         return (el.명칭.includes('캠핑'));
+//     })
 
-   // 공원 필터
-   const park = allRegion.filter((el)=>{
-       return (el.명칭.includes('공원'));
-   })
-   console.log(park)
-
-   // 숙박 필터
-  const filterText_h = ['호텔', '리조트', '펜션']
-  const hotel = allRegion.filter(el => filterText_h.some(text => el.명칭.includes(text)))
-  console.log(hotel)
-   
-  // 체험장 필터
-  const filterText_e = ['체험', '마을']
-  const experience = allRegion.filter(el => filterText_e.some(text => el.명칭.includes(text)))
-  console.log(experience)
-
-  // 캠핑장 필터
-   const camping = allRegion.filter((el)=>{
-       return (el.명칭.includes('캠핑'));
-   })
-   console.log(camping)
-
-   // 주차 가능 여부
-//    const park_add = {주차시설:'정보없음'}
-//    const parking = allRegion.filter((el)=>{
-//     if(!el.주차시설){
-//         return {el,...park_add};
-//     }else{
-//         return el.주차시설
+//     variable = allRegion;
+//     for(var i = 0; i < variable.length; i++){
+//         const keys = Object.keys(variable[i]);
+//         const isParkable = keys.filter(v => v.includes('주차')).length > 0;
+//         const isPaid = keys.filter(v => v.includes('요금')).length > 0;
+//         $(".travelMap_cont").append(
+//             `
+//             <li class="travelMap_cont_card">
+//             <a href="javascript:void(0)"><img src="../region/${variable[i].이미지경로}" alt=""></a>
+//             <div class="travelMap_cont_info">
+//             <a href="javascript:void(0)">${variable[i].명칭}</a>
+//             <em>${variable[i].주소}</em>
+//             <em>${(isParkable)? '주차가능': '주차불가'}${(isPaid)? ' · 유료': '' }</em>
+//             </div>
+//             </li>
+//             `
+//         );
 //     }
-// })
-    // console.log(parking)
-    variable = allRegion;
-    $(".travelMap_category_card li").on("click", function(){
-        
-        variable = $(this).find("img").attr("alt")
-        console.log(variable)
-    })
-   for(var i = 0; i < variable.length; i++){
-       $(".travelMap_cont").append(
-        `
-        <li class="travelMap_cont_card">
-            <a href="javascript:void(0)"><img src="../region/${variable[i].이미지경로}" alt=""></a>
-            <div class="travelMap_cont_info">
-                <a href="javascript:void(0)">${variable[i].명칭}</a>
-                <em>${variable[i].주소}</em>
-                <span>주차 : ${variable[i].주차시설}</span>
-            </div>
-        </li>
-        `
-       )
-   }
-   
+
+//     $(".travelMap_category_card li").on("click", function(){
+//         $(".travelMap_cont li").remove();
+
+//         let category = { beach, park, hotel, experience, camping };
+//         variable = category[$(this).find("img").attr("alt")];
+
+//         for(var i = 0; i < variable.length; i++){
+//             keys = Object.keys(variable[i]);
+//             isParkable = keys.filter(v => v.includes('주차')).length > 0;
+//             isPaid = keys.filter(v => v.includes('요금')).length > 0;
+//             $(".travelMap_cont").append(
+//                 `
+//                 <li class="travelMap_cont_card">
+//                 <a href="javascript:void(0)"><img src="../region/${variable[i].이미지경로}" alt=""></a>
+//                 <div class="travelMap_cont_info">
+//                 <a href="javascript:void(0)">${variable[i].명칭}</a>
+//                 <em>${variable[i].주소}</em>
+//                 <em>${(isParkable)? '주차가능': '주차불가'}${(isPaid)? ' · 유료': '' }</em>
+//                 </div>
+//                 </li>
+//                 `
+//             )
+//         }
+//     });
 })
