@@ -1,0 +1,163 @@
+.main {
+    width: 100%;
+}
+
+.travelAiPlanner_content {
+    width: 1180px;
+    height: auto;
+    margin: auto;
+}
+
+.travelAiPlanner_img_box {
+    width: 100%;
+    height: 1235px;
+}
+
+.travelAiPlanner_img_box>img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 카드 배경  */
+.travelAiPlanner_card_content {
+    width: 100%;
+    height: 800px;
+    padding: 45px 0 50px;
+    background: #567ff2;
+}
+
+/* flip 되는 컨테이너 */
+.travelAiplanner_flip_container {
+    width: 600px;
+    height: 734px;
+    margin: auto;
+    perspective: 1000px;
+}
+
+.travelAiPlanner_card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+/* 앞 뒤 카드들 */
+.travelAiPlanner_frontCard_wrap,
+.travelAiPlanner_backCard_wrap {
+    width: 600px;
+    height: 734px;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 앞 */
+.travelAiPlanner_frontCard_wrap {
+    background: #fff;
+}
+
+/* 글씨 정리 */
+.travelAiPlanner_frontCard_wrap>p {
+    padding-top: 28px;
+    color: #333;
+    font-size: 18px;
+}
+
+.travelAiPlanner_frontCard_wrap>strong>span {
+    font-weight: 700;
+    color: #3569d8;
+}
+
+.travelAiPlanner_frontCard_wrap>strong {
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.travelAiPlanner_frontCard_wrap>img {
+    width: 100%;
+    height: auto;
+}
+
+/* 코스 만드기 및 AI콕콕 플래너 설명 버튼 */
+.travelAiPlanner_frontCard_wrap>a {
+    display: block;
+    width: 500px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    font-size: 19px;
+}
+
+.travelAiPlanner_frontCard_wrap>button {
+    margin-top: 13px;
+    border: none;
+    background: inherit;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.travelAiPlanner_frontCard_wrap>button::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    margin-left: 4px;
+    background: url("/travelAi/images/travelAiPlanner/btn_planner_view.png") 0 0 / 100% 100% no-repeat;
+}
+
+/* 뒤 */
+.travelAiPlanner_backCard_wrap {
+    transform: rotateY(180deg);
+}
+
+/* 
+.travelAiPlanner_card {
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.travelAiPlanner_front_card,
+.travelAiPlanner_back_card {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.travelAiPlanner_front_card_content,
+.travelAiPlanner_back_card_content {
+    width: 600px;
+    height: 734px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+    backface-visibility: hidden;
+}
+
+.travelAiPlanner_front_card_content {
+    background: #fff;
+}
+
+.travelAiPlanner_back_card_content {
+    background: #3460c2;
+    transform: rotateY(180deg);
+    opacity: 0.0;
+}
+
+.travelAiPlanner_front_card_content>img {
+    width: 600px;
+    height: auto;
+} */

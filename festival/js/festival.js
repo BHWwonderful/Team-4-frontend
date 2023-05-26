@@ -181,7 +181,7 @@ $(document).ready(function () {
                 for (nb of numberBtn) {
                     nb.classList.remove('active');
                 }
-                numberBtn[idx].classList.add("active");   
+                numberBtn[idx].classList.add("active");
             }
             //displayRow
             displayRow(0);
