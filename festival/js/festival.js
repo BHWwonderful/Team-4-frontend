@@ -1,33 +1,33 @@
+var region = document.querySelectorAll('.festival_region_fillter_box button');
+var concept = document.querySelectorAll('.festival_concept_fillter_box button');
 
+var rowsPerPage;
+var rows;
+var rowsCount;
+var pageCount;
+var numbers;
+var prevPageBtn;
+var nextPageBtn;
+
+var pageActiveIdx;
+var currentPageNum;
+var maxPageNum;
+
+var numberBtn;
+
+var start;
+var end;
+var rowsArray;
+
+var totalPageCount;
+var pageArr;
+var pageListArr;
+
+var nextPageNum;
+var prevPageNum;
 
 $(document).ready(function () {
-    var region = document.querySelectorAll('.festival_region_fillter_box button');
-    var concept = document.querySelectorAll('.festival_concept_fillter_box button');
 
-    var rowsPerPage;
-    var rows;
-    var rowsCount;
-    var pageCount;
-    var numbers;
-    var prevPageBtn;
-    var nextPageBtn;
-
-    var pageActiveIdx;
-    var currentPageNum;
-    var maxPageNum;
-
-    var numberBtn;
-
-    var start;
-    var end;
-    var rowsArray;
-
-    var totalPageCount;
-    var pageArr;
-    var pageListArr;
-
-    var nextPageNum;
-    var prevPageNum;
 
     for (var i = 0; i < region.length; i++) {
 
@@ -187,6 +187,7 @@ $(document).ready(function () {
                     displayPage(pageActiveIdx);
                 });
             }
+
         });
     };
 
