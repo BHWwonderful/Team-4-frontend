@@ -1,7 +1,7 @@
 $(document).ready(function () {
     const receivedData = location.href.split('?')[1];
-    let keys = Object.keys(localStorage);
-    for (let i = 0; keys.length; i++) {
+    let keys = JSON.parse(localStorage.getItem("data"));
+    for (let i = 0; i<=keys.length; i++) {
         if (i == receivedData) {
             const result = JSON.parse(localStorage.getItem("data"));
             const name = JSON.parse(result)[i].명칭;
@@ -36,7 +36,6 @@ $(document).ready(function () {
             });
             // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
             infowindow.open(map, marker);
-            latlng();
         }
         
     }
