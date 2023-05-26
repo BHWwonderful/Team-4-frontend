@@ -1,32 +1,31 @@
-var region = document.querySelectorAll('.festival_region_fillter_box button');
-var concept = document.querySelectorAll('.festival_concept_fillter_box button');
-
-var rowsPerPage;
-var rows;
-var rowsCount;
-var pageCount;
-var numbers;
-var prevPageBtn;
-var nextPageBtn;
-
-var pageActiveIdx;
-var currentPageNum;
-var maxPageNum;
-
-var numberBtn;
-
-var start;
-var end;
-var rowsArray;
-
-var totalPageCount;
-var pageArr;
-var pageListArr;
-
-var nextPageNum;
-var prevPageNum;
+    var rowsPerPage;
+    var rows;
+    var rowsCount;
+    var pageCount;
+    var numbers;
+    var prevPageBtn;
+    var nextPageBtn;
+    
+    var pageActiveIdx;
+    var currentPageNum;
+    var maxPageNum;
+    
+    var numberBtn;
+    
+    var start;
+    var end;
+    var rowsArray;
+    
+    var totalPageCount;
+    var pageArr;
+    var pageListArr;
+    
+    var nextPageNum;
+    var prevPageNum;
 
 $(document).ready(function () {
+    var region = document.querySelectorAll('.festival_region_fillter_box button');
+    var concept = document.querySelectorAll('.festival_concept_fillter_box button');
 
 
     for (var i = 0; i < region.length; i++) {
@@ -173,22 +172,22 @@ $(document).ready(function () {
                 };
             };
             displayPage(0);
-            window.onload = function () {
-                nextPageBtn.addEventListener('click', () => {
-                    nextPageNum = pageActiveIdx * maxPageNum + maxPageNum;
-                    displayRow(nextPageNum);
-                    ++pageActiveIdx;
-                    displayPage(pageActiveIdx);
-                });
-                prevPageBtn.addEventListener('click', () => {
-                    prevPageNum = pageActiveIdx * maxPageNum - currentPageNum;
-                    displayRow(prevPageNum);
-                    --pageActiveIdx;
-                    displayPage(pageActiveIdx);
-                });
-            }
-
+            nextPageBtn.addEventListener('click', () => {
+                nextPageNum = pageActiveIdx * maxPageNum + maxPageNum;
+                displayRow(nextPageNum);
+                ++pageActiveIdx;
+                displayPage(pageActiveIdx);
+            });
+            prevPageBtn.addEventListener('click', () => {
+                prevPageNum = pageActiveIdx * maxPageNum - currentPageNum;
+                displayRow(prevPageNum);
+                --pageActiveIdx;
+                displayPage(pageActiveIdx);
+            });
         });
     };
 
 });
+
+
+
