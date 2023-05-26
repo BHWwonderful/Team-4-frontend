@@ -1,7 +1,8 @@
+/* 임재훈 */
 /* 메인 지도 */
 .regionMap_content {
     width: 1180px;
-    height: 888px;
+    height: 834px;
     margin: auto;
 }
 
@@ -27,7 +28,7 @@
 
 .regionMap_slide_container {
     width: 590px;
-    height: 776px;
+    height: 671px;
     position: relative;
     float: left;
 }
@@ -39,10 +40,11 @@
 /* 슬라이드 */
 .regionMap_slide_wrap {
     width: 590px;
-    height: 756px;
+    height: 582px;
     display: flex;
     overflow: hidden;
     position: relative;
+    margin-top: 10px;
 }
 
 .regionMap_slide_box {
@@ -171,7 +173,7 @@
 /* 지도 */
 .regionMap_map_wrap {
     width: 590px;
-    height: 776px;
+    height: 671px;
     display: flex;
     position: relative;
     justify-content: center;
@@ -559,6 +561,162 @@
 }
 
 
+/* 박경훈 */
+.main_issue_title {
+    display: block;
+    margin: 0 0 50px;
+    font-size: 32px;
+    color: #282828;
+    font-family: 'cafe24';
+    text-align: center;
+}
+.main_issue_title b {
+    color: #25a261;
+}
+.main_issue_title b em{
+    position: relative;
+}
+.main_issue_title b em:before {
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 85%;
+    width: 5px;
+    height: 5px;
+    background: #25a261;
+    border-radius: 50%;
+    transform: translateX(-50%);
+  
+}
+
+.main_ {
+    background-image: url(/images/mcont2_bg.jpg);
+}
+
+.main_issue_wrap {
+    width: 1180px;
+    margin: auto;
+    display: flex;
+    position: relative;
+    top: -30px;
+}
+
+.main_issue_box1 {
+    width: 393px;
+    height: 500px;
+    background-image: url(/images/해변.jpg);
+    background-size: cover;
+}
+
+.main_issue_box1 a div {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.main_issue_box2 {
+    width: 393px;
+    height: 500px;
+    background-image: url(/images/Tv.jpg);
+    background-size: cover;
+}
+
+.main_issue_box2 a div {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.main_issue_box3 {
+    width: 393px;
+    height: 500px;
+    background-image: url(/images/핫플.jpg);
+    background-size: cover;
+}
+
+.main_issue_box3 a div {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.main_issue_box1 a div:hover {
+    background: rgba(0, 0, 0, 0);
+
+}
+
+.main_issue_box2 a div:hover {
+    background: rgba(0, 0, 0, 0);
+}
+
+.main_issue_box3 a div:hover {
+    background: rgba(0, 0, 0, 0);
+}
+
+.main_issue_box a div {
+    position: relative;
+    text-align: center;
+}
+.main_issue_box a div em {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    width: 210px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transform: translateX(-50%);
+    color: #fff;
+    line-height: 49px;
+    transition: all .5s;
+    text-align: center;
+}
+
+.main_issue_box a div:hover em {
+    bottom: 90px;
+    background: white;
+    color: black;
+
+}
+
+.main_issue_box a div strong {
+    position: relative;
+    top: 100px;
+    font-size: 20px;
+    color: white;
+}
+
+.main_issue_box a div strong .icon1 {
+    width: 63px;
+    height: 49px;
+    display: block;
+    margin: 0 auto 20px;
+    background: url(/images/main_ir.png) no-repeat -21px -4px;
+
+}
+
+.main_issue_box a div strong .icon2 {
+	width: 52px;
+	height: 54px;
+    display: block;
+    margin: 0 auto 20px;
+    background: url(/images/main_ir.png)no-repeat -87px 0;
+
+
+}
+
+.main_issue_box a div strong .icon3 {
+	width: 47px;
+	height: 56px;
+    display: block;
+    margin: 0 auto 20px;
+    background: url(/images/main_ir.png) no-repeat -142px -1px;
+
+}
+
+
+
+/* 장한옥 */
 /* 메인 테마 */
 body {
     width: 100%;
@@ -566,7 +724,7 @@ body {
 
 .index_theme>h2 {
     width: 1180px;
-    margin: auto;
+    margin: 50px auto 0;
     margin-bottom: 20px;
     font-size: 40px;
     font-weight: bold;
@@ -599,7 +757,7 @@ h2>span::after {
 
 .index_theme_wrap:first-child {
     position: relative;
-    background: #00000080 url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=234fc016-8c22-44f5-8f76-00b43132d798) no-repeat center;
+    background: #00000080 url(https:/cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=234fc016-8c22-44f5-8f76-00b43132d798) no-repeat center;
     background-size: cover;
 }
 
@@ -770,4 +928,56 @@ h2>span::after {
     color: #fff;
     font-size: 50px;
     font-weight: 300;
+}
+
+/* 박경훈 공지사항 */
+.main_notice_wrap {
+    width: 1180px;
+    margin: 60px auto 0;
+    padding: 10px;
+    display: flex;
+    background: #25a261;
+    font-size: 14px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.main_notice_box {
+    margin-left: 100px;
+    line-height: 2em;
+}
+
+.main_notice_title {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.main_notice_info {
+    display: flex;
+}
+
+.main_noticeDate {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.main_noticeDate_top {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.main_noticeDate_bottom {
+    font-size: 10px;
+}
+
+.main_notice_box {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
