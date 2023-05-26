@@ -176,7 +176,6 @@ $(document).ready(function () {
             window.onload = function () {
                 nextPageBtn.addEventListener('click', () => {
                     nextPageNum = pageActiveIdx * maxPageNum + maxPageNum;
-                    console.log(nextPageBtn + "adawd")
                     displayRow(nextPageNum);
                     ++pageActiveIdx;
                     displayPage(pageActiveIdx);
