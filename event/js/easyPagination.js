@@ -7,8 +7,8 @@ const easyPagination = ({
   buttonClass = "page-link",
   nextClass = "page-link",
   prevClass = "page-link",
-  nextText = "next >",
-  prevText = "< prev",
+  nextText = " >",
+  prevText = "< ",
   activeClass = "active",
 }) => {
   if (!items) {
@@ -38,7 +38,6 @@ const easyPagination = ({
       button.classList.add(buttonClass);
 
       if (currentPage == page) button.classList.add(activeClass);
-
       button.innerHTML = page;
 
       button.addEventListener("click", function () {
@@ -104,11 +103,19 @@ const easyPagination = ({
   let currentPage = 1;
   let pageCount = Math.ceil(items.length / rows);
   const hasButtons = typeof buttonsWrapper != "undefined";
+  const getCurrentPage = page =>{
+    let totalPage = Math.round(items.length/10)
+    if(totalPage == 0){
+      totalPage = 1
+    }
+    $(".event_main_total_content").children('span').empty()
+    $(".event_main_total_content").children('span').append((page+1)+"/"+totalPage+"검색결과 총 <font color='red' id='total_count_text'>"+items.length+"</font>건이 검색 되었습니다.</span>")
 
+   }
   const self = {
     paginate: (page = 1, loadButtons = true) => {
       page--;
-
+      getCurrentPage(page)
       let start = rows * page;
       let end = start + rows;
       let paginatedItems = items.slice(start, end);
@@ -172,7 +179,6 @@ const easyPagination = ({
       items = newItems;
       pageCount = Math.ceil(items.length / rows);
       currentPage = 1;
-
       self.paginate(1);
     },
   };
