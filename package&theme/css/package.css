@@ -197,7 +197,7 @@ div.package_card_region{
     cursor: pointer;
 }
 /* 진행중 */
-.package_card_text span{
+.package_card_text p{
     display: none;
     font-size: 14px;
     color: #888;
@@ -229,22 +229,13 @@ div.package_card_region{
 .package_card_content em{
     font-size: 15px;
     color: #fe686a;
-    margin-right: 5px;
 }
-
-.package_card_content em::after{
+.package_card_content span::before{
     content: '|';
     color: #88888860;
     font-size: 14px;
     padding: 0 22px;
 }
-
-.pop_up_cont .package_card_content em::after{
-    font-size: 18px;
-    vertical-align: 1px;
-    padding-left: 25px 
-}
-
 .package_sliderBtn_prev{
     position: absolute;
     top: 220px;
@@ -343,7 +334,6 @@ aside{
     background-color: #111;
     transition: all 0.3s;
 }
-
 .pop_up{
     display: none;
     position: fixed;
@@ -351,7 +341,8 @@ aside{
     left: 0;
     width: 100%;
     height: 100vh;
-    background: #00000090;
+    background-color: rgba( 0 0 0/0.65);
+    backdrop-filter: blur(2px);
     z-index: 10000;
 }
 .pop_up_cont{
@@ -361,4 +352,15 @@ aside{
     align-items: center;
     justify-content: center;
     margin: auto;
+}
+.pop_up_cont .package_card_bgImg{
+    margin: 0;
+    margin-bottom: 10px;
+}
+.pop_up_cont .package_card_text{
+    margin: 0;
+}
+.pop_up_cont .package_card{
+    border: 5px solid rgba(60 60 60/0.5);
+    box-sizing: border-box;
 }

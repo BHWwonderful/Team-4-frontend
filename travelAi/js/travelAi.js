@@ -50,7 +50,6 @@ $(".travelAi_recentSlide_prevBtn").click(function () {
     recentBar -= 236;
     $(".travelAi_recent_wrap ul li").animate({ right: recentSlideX }, 200);
     $(".travelAi_scrollBar").animate({ left: recentBar }, 200);
-    console.log(recentSlideX);
 
     if (recentSlideX == 0) {
         // 이전 버튼 투명 상태

@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>축제</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/festival/css/festival.css">
-    <link rel="stylesheet" href="/festival/css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/festival/css/reset.css">
+        <link rel="stylesheet" href="/festival/css/festival.css">
 </head>
-
 <body>
+    <header class="header" id="header"></header>
     <main id="main" class="main">
         <div id="festival_list_title" class="festival_list_title">
             <h2>축제 한눈에 보기</h2>
@@ -22,29 +24,29 @@
             <div class="festival_region_fillter_box">
                 <button type="button" value="전체">전체</button>
                 <button type="button" value="서울">서울</button>
-                <button type="button"  value="부산">부산</button>
-                <button type="button"  value="대구">대구</button>
-                <button type="button"  value="인천">인천</button>
-                <button type="button"  value="광주">광주</button>
-                <button type="button"  value="대전">대전</button>
-                <button type="button"  value="울산">울산</button>
-                <button type="button"  value="세종">세종</button>
-                <button type="button"  value="경기">경기</button>
-                <button type="button"  value="강원">강원</button>
-                <button type="button"  value="충청북도">충북</button>
-                <button type="button"  value="충남남도">충남</button>
-                <button type="button"  value="전라북도">전북</button>
-                <button type="button"  value="전라남도">전남</button>
-                <button type="button"  value="경상북도">경북</button>
-                <button type="button"  value="경상남도">경남</button>
-                <button type="button"  value="제주">제주</button>
+                <button type="button" value="부산">부산</button>
+                <button type="button" value="대구">대구</button>
+                <button type="button" value="인천">인천</button>
+                <button type="button" value="광주">광주</button>
+                <button type="button" value="대전">대전</button>
+                <button type="button" value="울산">울산</button>
+                <button type="button" value="세종">세종</button>
+                <button type="button" value="경기">경기</button>
+                <button type="button" value="강원">강원</button>
+                <button type="button" value="충청북도">충북</button>
+                <button type="button" value="충청남도">충남</button>
+                <button type="button" value="전라북도">전북</button>
+                <button type="button" value="전라남도">전남</button>
+                <button type="button" value="경상북도">경북</button>
+                <button type="button" value="경상남도">경남</button>
+                <button type="button" value="제주">제주</button>
             </div>
             <h3 class="screen_out">목적선택</h3>
             <div class="festival_concept_fillter_box">
-                <button type="button" value="전체" >전체</button>
-                <button type="button" value="먹거리" >먹거리</button>
-                <button type="button" value="힐링" >힐링</button>
-                <button type="button" value="전체" >여행 MBTI</button>
+                <button type="button" value="전체">전체</button>
+                <button type="button" value="먹거리">먹거리</button>
+                <button type="button" value="힐링">힐링</button>
+                <button type="button" value="전체">여행 MBTI</button>
             </div>
         </section>
 
@@ -60,11 +62,11 @@
                 <a href="#none" class="fa-solid fa-arrow-right" onclick="window.scrollTo(0,0);"></a>
             </div>
         </section>
-
-
     </main>
     <script src="../festival/js/festival.js"></script>
-
+    <script>
+        //Header
+        $(".header").load("../header/header.html");
+    </script>
 </body>
-
 </html>

@@ -19,17 +19,17 @@ $(".detail_sliderPrevBtn").click(function() {
     }
     slideX -= 1120;
     pageNum--;
-    $(".detail_imgSlider_box").animate({right: slideX}, 500);
+    $(".detail_imgSlider_box").animate({right: slideX}, 300);
     pageNumSpan.textContent = pageNum;
     
 })
 
 $(".detail_sliderNextBtn").click(function() {
-    if(slideX >= 5600) {
+    if(slideX >= 3360) {
         return false;
     }
     slideX += 1120;
     pageNum++;
-    $(".detail_imgSlider_box").animate({right: slideX}, 500);
+    $(".detail_imgSlider_box").animate({right: slideX}, 300);
     pageNumSpan.textContent = pageNum;
 })
