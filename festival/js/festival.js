@@ -145,7 +145,7 @@ $(document).ready(function () {
                 };
             };
             displayPage(0);
-            window.onload = function () {
+            
                 nextPageBtn.addEventListener('click', () => {
                     nextPageNum = pageActiveIdx * maxPageNum + maxPageNum;
                     displayRow(nextPageNum);
@@ -158,7 +158,7 @@ $(document).ready(function () {
                     --pageActiveIdx;
                     displayPage(pageActiveIdx);
                 });
-            }
+            
 
         });
     };
