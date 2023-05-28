@@ -1,11 +1,26 @@
 let url =
 	"https://gist.githubusercontent.com/JaeHoon925/fda7b044cdc296532b470a88e7d8a611/raw/ea2a787229225ad7b4cf0d71a66a53f355b3bab5/regionData.json";
-
-let map = new kakao.maps.Map(document.getElementById("travelMap"), {
+let lat;
+let long;
+let lev;
+let mapContainer = document.getElementById("travelMap"), 
+	mapOption = {
 	// 지도를 표시할 div
-	center: new kakao.maps.LatLng(36.2683, 127.6358), // 지도의 중심좌표
-	level: 11, // 지도의 확대 레벨
-});
+	center: new kakao.maps.LatLng(37.4979, 127.0276), // 지도의 중심좌표
+	level: 3, // 지도의 확대 레벨
+};
+let map = new kakao.maps.Map(mapContainer, mapOption);
+
+// 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+var mapTypeControl = new kakao.maps.MapTypeControl();
+
+// 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+// kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+var zoomControl = new kakao.maps.ZoomControl();
+map.addControl(zoomControl, kakao.maps.ControlPosition.BOTTOMRIGHT);
 
 // 마커 클러스터러를 생성합니다
 let clusterer = new kakao.maps.MarkerClusterer({
@@ -37,6 +52,7 @@ $.getJSON(url, function (data) {
 	});
 	// 클러스터러에 마커들을 추가합니다
 	clusterer.addMarkers(markers);
+
 }).then(function () {
 	// 해변 필터
 	const filterText_b = ["해수", "해변"];
@@ -67,52 +83,42 @@ $.getJSON(url, function (data) {
 	});
 
 	variable = allRegion;
-	for (var i = 0; i < variable.length; i++) {
-		const keys = Object.keys(variable[i]);
-		const isParkable = keys.filter((v) => v.includes("주차")).length > 0;
-		const isPaid = keys.filter((v) => v.includes("요금")).length > 0;
-		$(".travelMap_cont").append(
-			`
-            <li class="travelMap_cont_card">
-            <a href="javascript:void(0)"><img src="../region/${
-				variable[i].이미지경로
-			}" alt=""></a>
-            <div class="travelMap_cont_info">
-            <a href="javascript:void(0)">${variable[i].명칭}</a>
-            <em>${variable[i].주소}</em>
-            <span>${isParkable ? "주차가능" : "주차불가"}${
-				isPaid ? " · 유료" : ""
-			}</span>
-            </div>
-            </li>
-            `
-		);
-	}
-	for (var i = 0; i < variable.length; i++) {
-		const keys = Object.keys(variable[i]);
-		const isParkable = keys.filter((v) => v.includes("주차")).length > 0;
-		const isPaid = keys.filter((v) => v.includes("요금")).length > 0;
-		$(".travelMap_cont").append(
-			`
-            <li class="travelMap_cont_card">
-            <a href="javascript:void(0)"><img src="../region/${
-				variable[i].이미지경로
-			}" alt=""></a>
-            <div class="travelMap_cont_info">
-            <a href="javascript:void(0)">${variable[i].명칭}</a>
-            <em>${variable[i].주소}</em>
-            <span>${isParkable ? "주차가능" : "주차불가"}${
-				isPaid ? " · 유료" : ""
-			}</span>
-            </div>
-            </li>
-            `
-		);
-	}
+	
+	let count = 6;
+	let page = 2;
+	let isAllLoaded = false;
 
+	function loadMoreContent(index) {
+		for (var i = index; i < index + count; i++) {
+			if(i == variable.length) {
+				isAllLoaded = true;
+				break;
+			}
+			const keys = Object.keys(variable[i]);
+			const isParkable = keys.filter((v) => v.includes("주차")).length > 0;
+			const isPaid = keys.filter((v) => v.includes("요금")).length > 0;
+			$(".travelMap_cont").append(
+				`
+				<li class="travelMap_cont_card">
+				<a href="javascript:void(0)"><img src="../region/${
+					variable[i].이미지경로
+				}" alt=""></a>
+				<div class="travelMap_cont_info">
+				<a href="javascript:void(0)">${variable[i].명칭}</a>
+				<em>${variable[i].주소}</em>
+				<span>${isParkable ? "주차가능" : "주차불가"}${
+					isPaid ? " · 유료" : ""
+				}</span>
+				</div>
+				</li>
+				`
+			)
+		}
+	};
 	$(".travelMap_category_card li").on("click", function () {
 		$(".travelMap_cont li").remove();
-
+		$(this).scrollTop(0)
+		isAllLoaded = true;
 		let category = { beach, park, hotel, experience, camping };
 		variable = category[$(this).find("img").attr("alt")];
 
@@ -135,9 +141,17 @@ $.getJSON(url, function (data) {
                 </div>
                 </li>
                 `
-			);
+			)
 		}
-	});
+	})
+	loadMoreContent(0);
+	document.querySelector('.travelMap_cont_box').addEventListener('scroll', function() {
+		if (this.scrollTop + this.clientHeight >= this.scrollHeight && !isAllLoaded) {
+			let startIndex = (page - 1) * count;
+			loadMoreContent(startIndex);
+			page++;
+		}
+	});	
 });
 
 // 클러스터링이 완료됐을 때 발생한다.

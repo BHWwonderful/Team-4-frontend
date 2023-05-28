@@ -76,6 +76,8 @@ main {
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+
+/* scroll custom */
 .travelMap_cont_box::-webkit-scrollbar {
 	width: 10px;
 	background-color: #eee;
@@ -91,6 +93,10 @@ main {
 	background: #fff;
 	padding: 15px 20px;
 	box-sizing: border-box;
+}
+.travelMap_cont_card > a{
+	/* cursor: auto; */
+	cursor: pointer;
 }
 .travelMap_cont_card > a > img {
 	width: 90px;
@@ -111,17 +117,16 @@ main {
 	margin-bottom: 10px;
 }
 .travelMap_cont_info > em {
-	font-size: 13px;
+	width: 260px;
+	font-size: 12px;
 	color: #666666;
-	padding-right: 20px;
-	box-sizing: border-box;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
 	padding-bottom: 7px;
 }
 .travelMap_cont_info > span {
-	font-size: 13px;
+	font-size: 12px;
 	color: #bbb;
 }
 .animated {
@@ -149,4 +154,3 @@ main {
 	color: #fff;
 }
 
-/* scroll custom */
