@@ -1,13 +1,10 @@
 let url =
 	"https://gist.githubusercontent.com/JaeHoon925/fda7b044cdc296532b470a88e7d8a611/raw/ea2a787229225ad7b4cf0d71a66a53f355b3bab5/regionData.json";
-let lat;
-let long;
-let lev;
 let mapContainer = document.getElementById("travelMap"), 
 	mapOption = {
 	// 지도를 표시할 div
 	center: new kakao.maps.LatLng(37.4979, 127.0276), // 지도의 중심좌표
-	level: 3, // 지도의 확대 레벨
+	level: 9, // 지도의 확대 레벨
 };
 let map = new kakao.maps.Map(mapContainer, mapOption);
 
@@ -31,6 +28,14 @@ let clusterer = new kakao.maps.MarkerClusterer({
 
 let allRegion = [];
 let variable = null;
+var i = null
+function setCenter() {            
+    // 이동할 위도 경도 위치를 생성합니다 
+    var moveLatLon = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
+    
+    // 지도 중심을 이동 시킵니다
+	map.setCenter(moveLatLon);
+}
 // 데이터를 가져오기 위해 jQuery를 사용합니다
 // 데이터를 가져와 마커를 생성하고 클러스터러 객체에 넘겨줍니다
 $.getJSON(url, function (data) {
@@ -83,13 +88,12 @@ $.getJSON(url, function (data) {
 	});
 
 	variable = allRegion;
-	
 	let count = 6;
 	let page = 2;
 	let isAllLoaded = false;
-
+	
 	function loadMoreContent(index) {
-		for (var i = index; i < index + count; i++) {
+		for (i = index; i < index + count; i++) {
 			if(i == variable.length) {
 				isAllLoaded = true;
 				break;
@@ -121,8 +125,7 @@ $.getJSON(url, function (data) {
 		isAllLoaded = true;
 		let category = { beach, park, hotel, experience, camping };
 		variable = category[$(this).find("img").attr("alt")];
-
-		for (var i = 0; i < variable.length; i++) {
+		for (i = 0; i < variable.length; i++) {
 			keys = Object.keys(variable[i]);
 			isParkable = keys.filter((v) => v.includes("주차")).length > 0;
 			isPaid = keys.filter((v) => v.includes("요금")).length > 0;
@@ -141,9 +144,30 @@ $.getJSON(url, function (data) {
                 </div>
                 </li>
                 `
-			)
-		}
-	})
+				)
+			}
+			// 이미지 클릭시 위치로 이동 ( 테마 선택시 )
+			$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
+				let num = $(this).parents(".travelMap_cont_card").index();
+				i = num
+				setCenter();
+				panTo();
+			})
+		})
+
+	function setCenter() {            
+		// 이동할 위도 경도 위치를 생성합니다 
+		var moveLatLon = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
+		// 지도 중심을 이동 시킵니다
+		map.setCenter(moveLatLon);
+	}
+	function panTo() {
+		// 이동할 위도 경도 위치를 생성합니다 
+		var moveLatLon = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
+		// 지도 중심을 부드럽게 이동시킵니다
+		// 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+		map.panTo(moveLatLon);            
+	}        
 	loadMoreContent(0);
 	document.querySelector('.travelMap_cont_box').addEventListener('scroll', function() {
 		if (this.scrollTop + this.clientHeight >= this.scrollHeight && !isAllLoaded) {
@@ -151,7 +175,21 @@ $.getJSON(url, function (data) {
 			loadMoreContent(startIndex);
 			page++;
 		}
+		// 이미지 클릭시 위치로 이동 ( 무한 스크롤 전 )
+		$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
+			let num = $(this).parents(".travelMap_cont_card").index();
+			i = num
+			setCenter();
+			panTo();
+		})
 	});	
+	 // 이미지 클릭시 위치로 이동 ( 무한 스크롤 후 )
+	$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
+		let num = $(this).parents(".travelMap_cont_card").index();
+		i = num
+		setCenter();
+		panTo();
+	})
 });
 
 // 클러스터링이 완료됐을 때 발생한다.
