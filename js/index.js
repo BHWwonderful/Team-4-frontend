@@ -1,3 +1,78 @@
+// 메인 슬라이더(김준성)
+// 현재 나타나고 있는 슬라이드 인덱스
+let currentSlide=1;
+// 슬라이더 아이템
+const sliderItems = document.querySelectorAll('.index_sliderListItem');
+// 진행바 아이템
+const progressbars = document.querySelectorAll('.index_sliderProgressbar');
+// 자동 실행이 되고 있는지 확인
+let isInterval
+
+// 현재 슬라이더 인덱스
+const currentSlideIndex = document.querySelector('.index_currentPageText');
+// 이전 버튼
+const sliderPrevBtn = document.querySelector('.index_sliderPrevBtn');
+// 다음 버튼
+const sliderNextBtn = document.querySelector('.index_sliderNextBtn');
+// 재생 버튼
+const sliderPlayBtn = document.querySelector('.index_sliderPlayBtn');
+// 정지 버튼
+const sliderStopBtn = document.querySelector('.index_sliderStopBtn');
+
+sliderPrevBtn.addEventListener('click', function(){
+    currentSlide = currentSlide > 1 ? currentSlide - 1 : 4;
+    renderCurrentSlideIndex();
+})
+
+sliderNextBtn.addEventListener('click', function(){
+    addCurrentSlide();
+    renderCurrentSlideIndex();
+})
+
+sliderPlayBtn.addEventListener('click', function(){
+    runCurrentSlideInterval();
+    sliderPlayBtn.classList.add('hidden');
+    sliderStopBtn.classList.remove('hidden');
+})
+
+sliderStopBtn.addEventListener('click', function(){
+    clearInterval(isInterval);
+    sliderStopBtn.classList.add('hidden');
+    sliderPlayBtn.classList.remove('hidden');
+})
+
+runCurrentSlideInterval();
+
+function renderCurrentSlideIndex(){
+    currentSlideIndex.textContent=currentSlide;
+    showCurrentSlider();
+    showCurrentProgressbar();
+}
+
+function showCurrentSlider(){
+    sliderItems.forEach((sliderItem, sliderIndex)=>{
+        sliderItem.classList.add('hidden');
+    })
+    sliderItems[currentSlide-1].classList.remove('hidden');
+}
+
+function showCurrentProgressbar(){
+    progressbars.forEach((progressbar, barIndex)=>{
+        progressbar.classList.remove('index_sliderProgressbar--on')
+    })
+    progressbars[currentSlide-1].classList.add('index_sliderProgressbar--on')
+}
+
+
+function runCurrentSlideInterval(){
+    isInterval = setInterval(addCurrentSlide, 4000);
+}
+
+function addCurrentSlide(){
+    currentSlide = currentSlide < 4 ? currentSlide + 1 : 1;
+    renderCurrentSlideIndex();
+}
+
 // 메인 맵 (임재훈)
 // 지역 여행지 슬라이드
 var slideX = 0;
