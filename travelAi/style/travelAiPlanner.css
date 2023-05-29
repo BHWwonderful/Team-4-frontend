@@ -1,3 +1,196 @@
+/* 메인 상단 이미지 */
+.travelAiPlanner_topImg_wrap {
+    width: 100%;
+    height: 330px;
+    background: url("../images/travelAi/mainBackground.jpeg") center;
+    display: flex;
+    align-items: center;
+}
+
+.travelAiPlanner_topImgText_box {
+    width: 1180px;
+    margin: auto;
+    color: #fff;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px #888888;
+}
+
+/* 이미지 하단 가이드 바 */
+.travelAiPlanner_guideSns_container {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.travelAiPlanner_guideSns_wrap {
+    width: 1180px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.travelAiPlanner_guideList {
+    display: flex;
+    height: 100%;
+}
+
+.travelAiPlanner_guideList>li {
+    height: 100%;
+    padding: 0 35px 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/travelAi/nav_arw.png") no-repeat top left/contain
+}
+
+.travelAiPlanner_guideList>li:first-child {
+    background: none;
+    padding: 0;
+    justify-content: start;
+    width: 40px;
+}
+
+.travelAiPlanner_guideList>li:last-child {
+    position: relative;
+}
+
+.travelAiPlanner_guideList>li:last-child>a {
+    color: #5289e6;
+    position: relative;
+}
+
+.travelAiPlanner_guideList>li:last-child>a::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #5289e6;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+
+.travelAiPlanner_guideList>li:nth-child(3)>a::before {
+    content: '▼';
+    position: absolute;
+    top: 0;
+    right: -20px;
+}
+
+/* 가이드바 3depth */
+.travelAiPlanner_3depthList {
+    position: absolute;
+    background: #fff;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    display: none;
+}
+
+.travelAiPlanner_3depthList li:not(:last-child) {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.travelAiPlanner_3depthList li {
+    text-align: center;
+    line-height: 50px;
+}
+
+.travelAiPlanner_3depthList li:hover a {
+    background: #5289e6;
+    color: #fff;
+}
+
+.travelAiPlanner_3depthList li>a {
+    display: block;
+    color: #777;
+}
+
+/* 메일, 프린트, sns */
+.travelAiPlanner_share_box {
+    display: flex;
+    align-items: center;
+}
+
+.travelAiPlanner_share_box ul {
+    display: flex;
+}
+
+.travelAiPlanner_share_box ul li {
+    margin-left: 4px;
+}
+
+.travelAiPlanner_share_box ul li:first-child {
+    margin-left: 0;
+}
+
+.travelAiPlanner_sendList {
+    position: relative;
+}
+
+.travelAiPlanner_sendList li {
+    margin-right: 15px;
+}
+
+.travelAiPlanner_sendList::after {
+    content: '';
+    width: 1px;
+    height: 17px;
+    background: #e5e5e5;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+
+.travelAiPlanner_snsList {
+    margin-left: 15px;
+}
+
+.travelAiPlanner_content {
+    width: 1180px;
+    margin: auto;
+}
+
+.travelAiPlanner_content>h2 {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.travelAiPlanner_4dp_lnb_box {
+    width: 100%;
+    height: 60px;
+    margin-top: 50px;
+}
+
+.travelAiPlanner_4dp_lnb_box>ul {
+    width: 1180px;
+    height: 60px;
+    display: flex;
+}
+
+.travelAiPlanner_4dp_lnb_box>ul>li {
+    width: 590px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+.travelAiPlanner_4dp_lnb_box>ul>li>a>h3 {
+    display: block;
+    border: 1px solid #e6e6e6;
+}
+
+.travelAiPlanner_4dp_lnb_box>ul>li:first-child>a>h3 {
+    border-right: none;
+}
+
+.travelAiPlanner_4dp_focus {
+    background: #0051a4;
+    border-color: #0051a4;
+    color: #fff;
+}
+
 .main {
     width: 100%;
 }
@@ -5,7 +198,7 @@
 .travelAiPlanner_content {
     width: 1180px;
     height: auto;
-    margin: auto;
+    margin: 35px auto 0;
 }
 
 .travelAiPlanner_img_box {
@@ -243,46 +436,34 @@
     cursor: pointer;
 }
 
-/* 
-.travelAiPlanner_card {
-    position: relative;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-
-.travelAiPlanner_front_card,
-.travelAiPlanner_back_card {
+.tarvelAiPlanner_myCourse_content {
     width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 400px;
+    background: #f0f2f7;
+    text-align: center;
 }
 
-.travelAiPlanner_front_card_content,
-.travelAiPlanner_back_card_content {
-    width: 600px;
-    height: 734px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    position: relative;
-    cursor: pointer;
-    backface-visibility: hidden;
+.tarvelAiPlanner_myCourse_content>h3 {
+    padding-top: 30px;
+    font-size: 24px;
 }
 
-.travelAiPlanner_front_card_content {
-    background: #fff;
+.tarvelAiPlanner_myCourse_content>span {
+    display: block;
 }
 
-.travelAiPlanner_back_card_content {
-    background: #3460c2;
-    transform: rotateY(180deg);
-    opacity: 0.0;
+.tarvelAiPlanner_myCourse_content>span::before {
+    content: '';
+    display: block;
+    margin: 30px auto 13px;
+    width: 162px;
+    height: 172px;
+    background: url("/travelAi/images/travelAiPlanner/planner_list_cut.png");
 }
 
-.travelAiPlanner_front_card_content>img {
-    width: 600px;
-    height: auto;
-} */
+.tarvelAiPlanner_myCourse_content>strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
