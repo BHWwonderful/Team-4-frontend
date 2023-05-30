@@ -76,12 +76,14 @@ main {
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+
+/* scroll custom */
 .travelMap_cont_box::-webkit-scrollbar {
 	width: 10px;
 	background-color: #eee;
 }
 .travelMap_cont_box::-webkit-scrollbar-thumb {
-	background-color: #555;
+	background-color: #999;
 	border-radius: 4px;
 }
 .travelMap_cont_card {
@@ -92,6 +94,10 @@ main {
 	padding: 15px 20px;
 	box-sizing: border-box;
 }
+.travelMap_cont_card > a{
+	/* cursor: auto; */
+	cursor: pointer;
+}
 .travelMap_cont_card > a > img {
 	width: 90px;
 	height: 90px;
@@ -101,23 +107,27 @@ main {
 	margin-left: 20px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: flex-start;
 }
 .travelMap_cont_info > a {
 	font-size: 16px;
+	color: #333;
 	line-height: 23px;
 	font-weight: 500;
+	margin-bottom: 10px;
 }
 .travelMap_cont_info > em {
+	width: 260px;
 	font-size: 12px;
-	font-weight: 100;
-	color: #777;
+	color: #666666;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	padding-bottom: 7px;
 }
 .travelMap_cont_info > span {
 	font-size: 12px;
-	font-weight: 100;
-	color: #777;
+	color: #bbb;
 }
 .animated {
 	left: -400px;
@@ -125,7 +135,7 @@ main {
 
 /* cluster custom */
 .cluster_style {
-	background: #3944bc !important;
+	background: #007bff !important;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -133,7 +143,6 @@ main {
 	height: 50px !important;
 	font-size: 20px !important;
 	font-weight: 300 !important;
-	/* outline:  5px solid rgba(255, 255, 255, 0.3); */
 	border-top: 5px solid #ffffff55;
 	border-right: 5px solid #00000088;
 	border-bottom: 5px solid #00000088;
@@ -141,7 +150,6 @@ main {
 	border-radius: 50%;
 	box-sizing: border-box;
 	opacity: 0.75;
-	color: #fff;
+	color: #eee;
 }
 
-/* scroll custom */
