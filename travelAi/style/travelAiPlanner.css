@@ -68,6 +68,7 @@
     height: 16px;
     background: url("/images/btn_w_close_32x32.png") no-repeat 50% 50%;
     background-size: 16px auto;
+    cursor: pointer;
 }
 
 .onepass_login_content {
