@@ -5,27 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>코스 예시</title>
+    <link rel="icon" type="image/ico" href="../images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css" integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <style>
         .customoverlay {position:relative;bottom:60px;border-radius:0;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;}
         .customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
         .customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:0;font-size:20px;font-weight:bold;overflow:hidden;background: #d95050;background: rgba(45,88,160,1)}
         .customoverlay .title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:20px;font-weight:bold;}
-        .customoverlay .courseNumber01 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(images/1.png) no-repeat right center;}
-        .customoverlay .courseNumber02 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(images/2.png) no-repeat right center;}
-        .customoverlay .courseNumber03 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(images/3.png) no-repeat right center;}
-        .customoverlay .courseNumber04 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(images/4.png) no-repeat right center;}
-        .customoverlay .courseNumber05 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(images/5.png) no-repeat right center;}
-        .customoverlay .courseNumber06 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(images/6.png) no-repeat right center;}
-        .customoverlay .courseNumber07 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(images/7.png) no-repeat right center;}
-        .customoverlay .courseNumber08 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(images/8.png) no-repeat right center;}
+        .customoverlay .courseNumber01 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(../images/1.png) no-repeat right center;}
+        .customoverlay .courseNumber02 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(../images/2.png) no-repeat right center;}
+        .customoverlay .courseNumber03 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(../images/3.png) no-repeat right center;}
+        .customoverlay .courseNumber04 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(../images/4.png) no-repeat right center;}
+        .customoverlay .courseNumber05 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(../images/5.png) no-repeat right center;}
+        .customoverlay .courseNumber06 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(../images/6.png) no-repeat right center;}
+        .customoverlay .courseNumber07 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(../images/7.png) no-repeat right center;}
+        .customoverlay .courseNumber08 {position:absolute;bottom:0;right:13px;content:"";width:35px;height:48px;background:url(../images/8.png) no-repeat right center;}
         .customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
     </style>
     <!-- <link rel="stylesheet" href="../style/header.css"> -->
@@ -33,94 +34,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="header_container">
-            <div class="header_wrap">
-                <div class="header_logo_box">
-                    <h1>
-                        <svg id="pathicon1" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="510px" height="86px"
-                            viewBox="0 0 510 86" style="enable-background:new 0 0 510 86;" xml:space="preserve">
-                            <path class="text-path"
-                                d="M483.7,49.5h-39.2c-0.9,0-1.7,0.7-1.7,1.7c0,0.9,0.7,1.7,1.7,1.7h28.3v17c0,0.9,0.8,1.7,1.7,1.7c5.8,0,10.4-4.7,10.4-10.4V50.6C484.8,50,484.3,49.5,483.7,49.5z M453,41.3c3.3,3.8,8,5.4,13.7,5.4h1.8c0.9,0,1.7-0.7,1.7-1.7c0-0.9-0.7-1.7-1.7-1.7h0c-4.6,0-9.4-2.4-9.4-7.7V20.8c0-0.9-0.8-1.7-1.7-1.7h-8.7c-0.9,0-1.7,0.8-1.7,1.7v14.7c0,5.4-4.8,7.7-9.4,7.7h0c0,0-18.7,0-18.7,0c4.8-2,10.7-6.4,10.7-15.6v-6.8c0-0.9-0.8-1.7-1.7-1.7h-33.7c-0.9,0-1.7,0.7-1.7,1.7c0,0.9,0.7,1.7,1.7,1.7h23.3v5.2c0,15.3-7.7,15.6-7.7,15.6h-24.5c-0.9,0-1.7,0.7-1.7,1.7c0,0.9,0.7,1.7,1.7,1.7h19.7v23.2c0,0.9,0.8,1.7,1.7,1.7c5.8,0,10.4-4.7,10.4-10.4V46.6h22.3C445,46.6,449.7,45,453,41.3z M483.1,19.1h-8.7c-0.9,0-1.7,0.8-1.7,1.7v8.1h-4c-0.9,0-1.7,0.7-1.7,1.7s0.7,1.7,1.7,1.7h4v12.7c0,0.9,0.8,1.7,1.7,1.7h8.7c0.9,0,1.7-0.8,1.7-1.7V20.8C484.8,19.9,484.1,19.1,483.1,19.1z M467.1,0H351.6c-23.1,0-42,18.3-43,41.2H272C271,18.3,252.1,0,229,0c-23.7,0-43,19.3-43,43c0,23.7,19.3,43,43,43c23.1,0,42-18.3,43-41.2h36.6c1,22.9,19.9,41.2,43,41.2h115.5c23.7,0,43-19.3,43-43C510.1,19.3,490.8,0,467.1,0z M229,82.3c-21.7,0-39.3-17.6-39.3-39.3c0-21.7,17.6-39.3,39.3-39.3c21.7,0,39.3,17.6,39.3,39.3C268.3,64.7,250.7,82.3,229,82.3z M467.1,82.3H351.6c-21.7,0-39.3-17.6-39.3-39.3c0-21.7,17.6-39.3,39.3-39.3h115.5c21.7,0,39.3,17.6,39.3,39.3C506.4,64.7,488.7,82.3,467.1,82.3z M347.5,41.3c3.3,3.8,8,5.4,13.7,5.4h1.8c0.9,0,1.7-0.7,1.7-1.7c0-0.9-0.7-1.7-1.7-1.7h0c-4.6,0-9.4-2.4-9.4-7.7V20.8c0-0.9-0.8-1.7-1.7-1.7h-8.7c-0.9,0-1.7,0.8-1.7,1.7v14.7c0,5.4-4.8,7.7-9.4,7.7h0c-0.9,0-1.7,0.7-1.7,1.7c0,0.9,0.7,1.7,1.7,1.7h1.8C339.4,46.6,344.1,45,347.5,41.3z M377.6,19.1h-8.7c-0.9,0-1.7,0.8-1.7,1.7v8.1h-4c-0.9,0-1.7,0.7-1.7,1.7s0.7,1.7,1.7,1.7h4v12.7c0,0.9,0.8,1.7,1.7,1.7h8.7c0.9,0,1.7-0.8,1.7-1.7V20.8C379.3,19.9,378.5,19.1,377.6,19.1z M254.8,43.3h-18c4.8-2,10.7-6.4,10.7-15.7v-6.8c0-0.9-0.8-1.7-1.7-1.7h-33.7c-0.9,0-1.7,0.7-1.7,1.7c0,0.9,0.7,1.7,1.7,1.7h23.3v5.2c0,15.3-7.7,15.7-7.7,15.7h-24.5c-0.9,0-1.7,0.7-1.7,1.7c0,0.9,0.7,1.7,1.7,1.7h19.7v23.2c0,0.9,0.8,1.7,1.7,1.7c5.8,0,10.4-4.7,10.4-10.4V46.6h19.7c0.9,0,1.7-0.7,1.7-1.7C256.4,44,255.7,43.3,254.8,43.3z M378.1,49.5h-39.2c-0.9,0-1.7,0.7-1.7,1.7c0,0.9,0.7,1.7,1.7,1.7h28.3v17c0,0.9,0.8,1.7,1.7,1.7c5.8,0,10.4-4.7,10.4-10.4V50.6C379.3,50,378.8,49.5,378.1,49.5z"
-                                stroke="undefined" stroke-width="1"></path>
-                            <path class="text-path"
-                                d="M66.2,35.2c0-3.3-1.4-6.2-4.2-8h4.1c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5h-7.4v-4c0-0.6-0.5-1.1-1.1-1.1H53c-0.6,0-1.1,0.5-1.1,1.1v4h-7.4c-0.8,0-1.5,0.7-1.5,1.5c0,0.8,0.7,1.5,1.5,1.5h4.2c-2.7,1.8-4.2,4.7-4.2,8c0,5.4,3.9,9.8,10.9,9.8C62.4,45.1,66.2,40.7,66.2,35.2z M51.2,35.2c0-3.8,1.5-6.8,4.2-6.8c2.7,0,4.2,3.1,4.2,6.8c0,3.8-1.5,6.8-4.2,6.8C52.7,42.1,51.2,39,51.2,35.2z M35.4,19.6H31c-0.6,0-1.1,0.5-1.1,1.1v10.4h-4.2V21.1c0-0.6-0.5-1.1-1.1-1.1h-4.4c-0.6,0-1.1,0.5-1.1,1.1v21.8c-0.6,0.2-1.3,0.5-2.1,0.6c-0.9,0.2-1.9,0.3-3.1,0.3h-7V24.3H14c0.8,0,1.5-0.7,1.5-1.5c0-0.8-0.7-1.5-1.5-1.5H1c-0.6,0-1.1,0.5-1.1,1.1v23.4c0,0.6,0.5,1.1,1.1,1.1h12.6c1.3,0,2.4-0.1,3.3-0.4c0.9-0.3,1.6-0.6,2.2-1.1v15c0,0.6,0.5,1.1,1.1,1.1H22c2.1,0,3.7-1.6,3.7-3.7V35.1h4.2v25.9c0,0.6,0.5,1.1,1.1,1.1h1.8c2.1,0,3.7-1.6,3.7-3.7V20.7C36.5,20.1,36,19.6,35.4,19.6z M78.5,59H57.8v-9.6c0-0.6-0.5-1.1-1.1-1.1h-4.8c-0.6,0-1.1,0.5-1.1,1.1v11.5c0,0.6,0.5,1.1,1.1,1.1h26.6c0.8,0,1.5-0.7,1.5-1.5C80,59.7,79.3,59,78.5,59z M119,51h1.4c2.5,0,4.5-2,4.5-4.4V20.7c0-0.6-0.5-1.1-1.1-1.1H119c-0.6,0-1.1,0.5-1.1,1.1v29.1C117.9,50.5,118.4,51,119,51z M168.8,36h-5.3c0.5-0.6,0.9-1.6,1.2-3c0.3-1.4,0.5-2.6,0.5-3.8v-6.9c0-0.6-0.5-1.1-1.1-1.1h-27.3c-0.8,0-1.5,0.7-1.5,1.5c0,0.8,0.7,1.5,1.5,1.5h21.4v5.2c0,1.2-0.1,2.4-0.2,3.5c-0.1,1.2-0.3,2.2-0.7,3.1H132c-0.8,0-1.5,0.7-1.5,1.5c0,0.8,0.7,1.5,1.5,1.5h14.7v7.7h-10.1c-0.8,0-1.5,0.7-1.5,1.5c0,0.8,0.7,1.5,1.5,1.5h21.5v11.3c0,0.6,0.5,1.1,1.1,1.1h1.4c2.5,0,4.5-2,4.5-4.4v-9.9c0-0.6-0.5-1.1-1.1-1.1h-10.3v-7.7h15c0.8,0,1.5-0.7,1.5-1.5C170.3,36.6,169.6,36,168.8,36z M84,30.3h-5.5v-9.6c0-0.6-0.5-1.1-1.1-1.1h-4.8c-0.6,0-1.1,0.5-1.1,1.1v29.1c0,0.6,0.5,1.1,1.1,1.1H74c2.5,0,4.5-2,4.5-4.4V33.3H84c0.8,0,1.5-0.7,1.5-1.5C85.5,31,84.8,30.3,84,30.3z M124.8,59h-21.7V48.6c0-0.6-0.5-1.1-1.1-1.1h-4.8c-0.6,0-1.1,0.5-1.1,1.1v12.3c0,0.6,0.5,1.1,1.1,1.1h27.6c0.8,0,1.5-0.7,1.5-1.5C126.3,59.7,125.6,59,124.8,59z M111.8,38.5V22.3c0-0.6-0.5-1.1-1.1-1.1H90.9c-0.6,0-1.1,0.5-1.1,1.1v19.6c0,0.6,0.5,1.1,1.1,1.1h16.4C109.8,42.9,111.8,41,111.8,38.5z M104.8,40h-8V24.2h8V40z"
-                                stroke="undefined" stroke-width="1"></path>
-                        </svg>
-                    </h1>
-                </div>
-                <nav class="header_gnb_container">
-                    <ul class="gnb_1dp">
-                        <li>
-                            <a href="javascript:void(0);">여행정보</a>
-                            <div class="gnb_2dp_bg">
-                                <div class="gnb_2dpList_wrap">
-                                    <div class="gnb_2dpListTitle_box">
-                                        <h2>여행정보</h2>
-                                    </div>
-                                    <div class="gnb_2dpListCont_box">
-                                        <ul class="gnb_2dp">
-                                            <li>
-                                                <a href="">추천 코스</a>
-                                            </li>
-                                            <li>
-                                                <a href="">지역 여행지</a>
-                                            </li>
-                                            <li>
-                                                <a href="">여행 콕콕</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">행사</a>
-                            <div class="gnb_2dp_bg">
-                                <div class="gnb_2dpList_wrap">
-                                    <div class="gnb_2dpListTitle_box">
-                                        <h2>행사</h2>
-                                    </div>
-                                    <div class="gnb_2dpListCont_box">
-                                        <ul class="gnb_2dp">
-                                            <li>
-                                                <a href="">이벤트</a>
-                                            </li>
-                                            <li>
-                                                <a href="">축제</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);">패키지 & 테마</a>
-                            <div class="gnb_2dp_bg">
-                                <div class="gnb_2dpList_wrap">
-                                    <div class="gnb_2dpListTitle_box">
-                                        <h2>패키지 & 테마</h2>
-                                    </div>
-                                    <div class="gnb_2dpListCont_box">
-                                        <ul class="gnb_2dp">
-                                            <li>
-                                                <a href="">여행 패키지 상품</a>
-                                            </li>
-                                            <li>
-                                                <a href="">테마별 여행추천</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            여행지도
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        
     </header>
     <main class="main">
         <div class="course_title_wrap">
@@ -133,7 +47,7 @@
                 <ul class="course_subGnbList">
                     <li class="course_subGnbListFirstItem">
                         <a class="course_subGnbListFirstItemLink" href="#none">
-                            <img src="images/home_ic.jpg" alt="메인 페이지로">
+                            <img src="../images/home_ic.jpg" alt="메인 페이지로">
                         </a>
                     </li>
                     <li class="course_subGnbListItem">
@@ -151,39 +65,39 @@
                     <ul class="course_subGnbSnsFuncList">
                         <li class="course_subGnbSnsFuncListItem">
                             <a href="#none">
-                                <img src="images/mail_ic.png" alt="">
+                                <img src="../images/mail_ic.png" alt="">
                             </a>
                         </li>
                         <li class="course_subGnbSnsFuncListItem">
                             <a href="#none">
-                                <img src="images/print_ic.png" alt="">
+                                <img src="../images/print_ic.png" alt="">
                             </a>
                         </li>
                     </ul>
                     <ul class="course_subGnbSnsList">
                         <li class="course_subGnbSnsListItem course_subGnbSnsListItem--noMargin">
                             <a href="#none">
-                                <img class="course_subGnbSnsListItemLinkImg" src="images/copy2_ic.png" alt="">
+                                <img class="course_subGnbSnsListItemLinkImg" src="../images/copy2_ic.png" alt="">
                             </a>
                         </li>
                         <li class="course_subGnbSnsListItem">
                             <a href="#none">
-                                <img class="course_subGnbSnsListItemLinkImg" src="images/face_ic.png" alt="">
+                                <img class="course_subGnbSnsListItemLinkImg" src="../images/face_ic.png" alt="">
                             </a>
                         </li>
                         <li class="course_subGnbSnsListItem">
                             <a href="#none">
-                                <img class="course_subGnbSnsListItemLinkImg" src="images/twi_ic.png" alt="">
+                                <img class="course_subGnbSnsListItemLinkImg" src="../images/twi_ic.png" alt="">
                             </a>
                         </li>
                         <li class="course_subGnbSnsListItem">
                             <a href="#none">
-                                <img class="course_subGnbSnsListItemLinkImg" src="images/kakao_ic.png" alt="">
+                                <img class="course_subGnbSnsListItemLinkImg" src="../images/kakao_ic.png" alt="">
                             </a>
                         </li>
                         <li class="course_subGnbSnsListItem">
                             <a href="#none">
-                                <img class="course_subGnbSnsListItemLinkImg" src="images/naver_ic.png" alt="">
+                                <img class="course_subGnbSnsListItemLinkImg" src="../images/naver_ic.png" alt="">
                             </a>
                         </li>
                     </ul>
@@ -981,6 +895,10 @@
     <footer class="footer"></footer>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=09bb8f5c224835fb8bed2c80c6cc6742"></script>
     <script>
+        // 가져온 JSON 데아터를 할당하기 위한 변수들
+
+        
+
         var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
         var options = { //지도를 생성할 때 필요한 기본 옵션
             center: new kakao.maps.LatLng(38.3236958002495, 127.76357835959058), //지도의 중심좌표.
@@ -1024,7 +942,7 @@
             }
         ];
         
-        var imageSrc = 'images/location-dot-solid_1_white.png'; 
+        var imageSrc = '../images/location-dot-solid_1_white.png'; 
 
         for (var i = 0; i < positions.length; i ++) {
     
@@ -1235,7 +1153,7 @@
         // })
     </script>
     <script>
-        // $(".header").load("C:\Users\Administrator.User -2023XUCTP\Desktop\킹갓한국민국 구석구석\header.html");
+        $(".header").load("C:\Users\Administrator.User -2023XUCTP\Desktop\킹갓한국민국 구석구석\header.html");
     </script>
     <script>
         const swiper = new Swiper('.swiper', {
