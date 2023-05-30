@@ -438,8 +438,8 @@
                     createPageButtons(totalPages);
                     loadingPage.classList.add('hidden');
                 } catch(error){
-                    console.log(error);
                     buttonBox.innerHTML='';
+                    loadingPage.classList.add('hidden');
                     window.alert('검색된 데이터가 없습니다.');
                 }
             } else{
@@ -452,8 +452,8 @@
                     createPageButtons(totalPages);
                     loadingPage.classList.add('hidden');
                 } catch(error){
-                    console.log(error);
                     buttonBox.innerHTML='';
+                    loadingPage.classList.add('hidden');
                     window.alert('검색된 데이터가 없습니다.');
                 }
             }
