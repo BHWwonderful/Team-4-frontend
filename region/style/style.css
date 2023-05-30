@@ -2,7 +2,7 @@
 .region_topImg_wrap {
     width: 100%;
     height: 330px;
-    background: url("../images/mainBackground.jpeg") center;
+    background: url("/region/images/mainBackground.jpeg") center;
     display: flex;
     align-items: center;
 }
@@ -41,7 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../images/nav_arw.png") no-repeat top left/contain
+    background: url("/region/images/nav_arw.png") no-repeat top left/contain
 }
 
 .region_guideList>li:first-child {
@@ -88,7 +88,7 @@
     display: none;
 }
 
-.travelAi_3depthList li:not(:last-child) {
+.region_3depthList li:not(:last-child) {
     border-bottom: 1px solid #dfdfdf;
 }
 

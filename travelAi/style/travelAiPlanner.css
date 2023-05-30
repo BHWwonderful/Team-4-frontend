@@ -2,7 +2,7 @@
 .travelAiPlanner_topImg_wrap {
     width: 100%;
     height: 330px;
-    background: url("../images/travelAi/mainBackground.jpeg") center;
+    background: url("/travelAi/images/travelAi/mainBackground.jpeg") center;
     display: flex;
     align-items: center;
 }
@@ -41,7 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../images/travelAi/nav_arw.png") no-repeat top left/contain
+    background: url("/travelAi/images/travelAi/nav_arw.png") no-repeat top left/contain
 }
 
 .travelAiPlanner_guideList>li:first-child {

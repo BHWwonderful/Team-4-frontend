@@ -183,7 +183,7 @@ $(document).on("click", ".regionMap_map_box a", function () {
 
 // 지역 json 이용
 $(document).ready(function () {
-    $.getJSON("https://gist.githubusercontent.com/JaeHoon925/fda7b044cdc296532b470a88e7d8a611/raw/ea2a787229225ad7b4cf0d71a66a53f355b3bab5/regionData.json", function (data) {
+    $.getJSON("https://gist.githubusercontent.com/JaeHoon925/fda7b044cdc296532b470a88e7d8a611/raw/35f7624cd31db530db662d9ae1de2a15022ae058/regionData.json", function (data) {
 
         for (var i = 0; i < data.seoul.length; i++) {
             $(".regionMap_slide_wrap>.regionMap_slide_box li").eq(`${i}`).find("strong").text(data.seoul[`${i}`].명칭);
