@@ -57,7 +57,6 @@ $.getJSON(url, function (data) {
 	});
 	// 클러스터러에 마커들을 추가합니다
 	clusterer.addMarkers(markers);
-	markers.setMap(map);
 
 }).then(function () {
 	// 해변 필터
@@ -123,6 +122,7 @@ $.getJSON(url, function (data) {
 	$(".travelMap_category_card li").on("click", function () {
 		$(".travelMap_cont li").remove();
 		$(this).scrollTop(0)
+		zoomOut();
 		isAllLoaded = true;
 		let category = { beach, park, hotel, experience, camping };
 		variable = category[$(this).find("img").attr("alt")];
@@ -153,6 +153,20 @@ $.getJSON(url, function (data) {
 				i = num
 				setCenter();
 				panTo();
+				zoomIn();
+				// infowindow.close();        
+				var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+				iwPosition = new kakao.maps.LatLng(33.450701, 126.570667), //인포윈도우 표시 위치입니다
+				iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+
+				// 인포윈도우를 생성하고 지도에 표시합니다
+				var infowindow = new kakao.maps.InfoWindow({
+					map: map, // 인포윈도우가 표시될 지도
+					position : iwPosition, 
+					content : iwContent,
+					removable : iwRemoveable
+				});
+				// 아래 코드는 인포윈도우를 지도에서 제거합니다
 			})
 		})
 
@@ -172,7 +186,7 @@ $.getJSON(url, function (data) {
 	function zoomIn() {        
 		// 현재 지도의 레벨을 얻어옵니다
 		var level = map.getLevel();
-		level = 1;
+		level = 5;
 		map.setLevel(level);
 	}    
 	
@@ -195,17 +209,7 @@ $.getJSON(url, function (data) {
 			i = num
 			setCenter();
 			panTo();
-			var iwContent = '<div style="padding:5px;">Hello World! <br><a href="https://map.kakao.com/link/map/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/Hello World!,33.450701,126.570667" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-			iwPosition = new kakao.maps.LatLng(allRegion[0].위도, allRegion[0].경도); //인포윈도우 표시 위치입니다
-
-		// 인포윈도우를 생성합니다
-		var infowindow = new kakao.maps.InfoWindow({
-			position : iwPosition, 
-			content : iwContent 
-		});
-		
-		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-		infowindow.open(map, markers[0]); 
+			zoomIn();
 		})
 	});	
 	 // 이미지 클릭시 위치로 이동 ( 무한 스크롤 후 )
@@ -214,6 +218,7 @@ $.getJSON(url, function (data) {
 		i = num
 		setCenter();
 		panTo();
+		zoomIn();
 	})
 });
 
