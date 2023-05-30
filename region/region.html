@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="https://korean.visitkorea.or.kr/resources/images/favicon.ico">
-    <link rel="stylesheet" href="./style/reset.css">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="/region/style/reset.css">
+    <link rel="stylesheet" href="/region/style/style.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <title>대한민국 구석구석 - 지역</title>
@@ -30,7 +30,7 @@
                 <ul class="region_guideList">
                     <li>
                         <a href="">
-                            <img src="./images/home_icon.jpeg" alt="메인으로 이동">
+                            <img src="/region/images/home_icon.jpeg" alt="메인으로 이동">
                         </a>
                     </li>
                     <li>여행정보</li>
@@ -54,39 +54,39 @@
                     <ul class="region_sendList">
                         <li>
                             <a href="">
-                                <img src="./images/mail_icon.png" alt="sendMail">
+                                <img src="/region/images/mail_icon.png" alt="sendMail">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/print_icon.png" alt="프린트하기">
+                                <img src="/region/images/print_icon.png" alt="프린트하기">
                             </a>
                         </li>
                     </ul>
                     <ul class="region_snsList">
                         <li>
                             <a href="">
-                                <img src="./images/copyLink_icon.png" alt="URL복사">
+                                <img src="/region/images/copyLink_icon.png" alt="URL복사">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/facebook_icon.png" alt="페이스북">
+                                <img src="/region/images/facebook_icon.png" alt="페이스북">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/twi_icon.png" alt="공유트위터">
+                                <img src="/region/images/twi_icon.png" alt="공유트위터">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/kakao_icon.png" alt="공유카카오스토리">
+                                <img src="/region/images/kakao_icon.png" alt="공유카카오스토리">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/naver_icon.png" alt="공유네이버">
+                                <img src="/region/images/naver_icon.png" alt="공유네이버">
                             </a>
                         </li>
                     </ul>
@@ -447,10 +447,13 @@
     </main>
 
     <footer></footer>
-    <script src="./js/region.js"></script>
+    <script src="/region/js/region.js"></script>
     <script>
         // Header
-        $(".header").load("../header/header.html");
+        $(".header").load("/header/header.html");
+
+        // Footer
+        $(".footer").load("/footer/footer.html");
     </script>
 </body>
 
