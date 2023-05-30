@@ -1,3 +1,29 @@
+/* skip menu */
+.skip_menu {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.skip_menu a {
+    width: 100%;
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    top: -50px;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+
+.skip_menu a:active,
+.skip_menu a:focus {
+    top: 0;
+    z-index: 1001;
+}
+
 /* 김준성 */
 /* 메인 페이지 슬라이더 */
 .index_slider_wrap{
