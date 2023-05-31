@@ -12,35 +12,33 @@ let map = new kakao.maps.Map(mapContainer, mapOption);
 var mapTypeControl = new kakao.maps.MapTypeControl();
 
 // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
-// kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
 map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
 
 // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
 var zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.BOTTOMRIGHT);
-
+// 지도 확대 최대 레벨 지정
+map.setMaxLevel(13);
 // 마커 클러스터러를 생성합니다
 let clusterer = new kakao.maps.MarkerClusterer({
-	map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체
-	averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정
+	map: map, 
+	averageCenter: true, 
 	minLevel: 7, // 클러스터 할 최소 지도 레벨
 });
-
+var infowindow;
 let allRegion = [];
 let variable = null;
 var i = null
+let markers;
 function setCenter() {            
     // 이동할 위도 경도 위치를 생성합니다 
     var moveLatLon = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
-    
     // 지도 중심을 이동 시킵니다
 	map.setCenter(moveLatLon);
 }
 // 데이터를 가져오기 위해 jQuery를 사용합니다
-// 데이터를 가져와 마커를 생성하고 클러스터러 객체에 넘겨줍니다
 $.getJSON(url, function (data) {
 	// 데이터에서 좌표 값을 가지고 마커를 표시합니다
-	// 마커 클러스터러로 관리할 마커 객체는 생성할 때 지도 객체를 설정하지 않습니다
 	const keys = Object.keys(data);
 
 	for (let i = 0; i < keys.length; i++) {
@@ -50,12 +48,13 @@ $.getJSON(url, function (data) {
 	}
 	// console.log(allRegion)
 
-	let markers = allRegion.map((position) => {
+	markers = allRegion.map((position) => {
 		return new kakao.maps.Marker({
 			position: new kakao.maps.LatLng(position.위도, position.경도),
 		});
 	});
 	// 클러스터러에 마커들을 추가합니다
+	// markers.setMap(map);
 	clusterer.addMarkers(markers);
 
 }).then(function () {
@@ -154,33 +153,30 @@ $.getJSON(url, function (data) {
 				setCenter();
 				panTo();
 				zoomIn();
-				// infowindow.close();        
-				var iwContent = '<div style="padding:5px;">Hello World!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-				iwPosition = new kakao.maps.LatLng(33.450701, 126.570667), //인포윈도우 표시 위치입니다
-				iwRemoveable = true; // removeable 속성을 ture 로 설정하면 인포윈도우를 닫을 수 있는 x버튼이 표시됩니다
+				console.log(variable)
+				console.log(i)
+				console.log(variable[i])
+				iwContent = `<div style="padding:5px;font-size:16px;color:#000;font-weight:500;text-align:center">${variable[i].명칭}<br><span style="font-size:14px;color:#666;font-weight:300;text-overflow:ellipsis;overflow:hidden;white-space:nowrap">${variable[i].주소}</span><p style="font-size:12px;color:#aaa;font-weight:100;text-align:center">(우클릭시 텍스트 상자가 사라집니다.)</p></div>`,
+				iwPosition = new kakao.maps.LatLng(variable[i].위도,variable[i].경도);
+				iwRemoveable = true;
 
-				// 인포윈도우를 생성하고 지도에 표시합니다
-				var infowindow = new kakao.maps.InfoWindow({
-					map: map, // 인포윈도우가 표시될 지도
+				// 인포윈도우를 생성합니다
+				infowindow = new kakao.maps.InfoWindow({
 					position : iwPosition, 
 					content : iwContent,
 					removable : iwRemoveable
 				});
-				// 아래 코드는 인포윈도우를 지도에서 제거합니다
+				infowindow.open(map);
 			})
 		})
-
 	function setCenter() {            
-		// 이동할 위도 경도 위치를 생성합니다 
 		var moveLatLon = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
-		// 지도 중심을 이동 시킵니다
 		map.setCenter(moveLatLon);
 	}
 	function panTo() {
 		// 이동할 위도 경도 위치를 생성합니다 
 		var moveLatLon = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
-		// 지도 중심을 부드럽게 이동시킵니다
-		// 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+		// 지도 중심을 부드럽게 이동시킵니다 (만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다)
 		map.panTo(moveLatLon);            
 	}        
 	function zoomIn() {        
@@ -191,7 +187,6 @@ $.getJSON(url, function (data) {
 	}    
 	
 	function zoomOut() {    
-		// 현재 지도의 레벨을 얻어옵니다
 		var level = map.getLevel(); 
 		level = 7;
 		map.setLevel(level);
@@ -205,20 +200,36 @@ $.getJSON(url, function (data) {
 		}
 		// 이미지 클릭시 위치로 이동 ( 무한 스크롤 전 )
 		$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
-			let num = $(this).parents(".travelMap_cont_card").index();
-			i = num
-			setCenter();
-			panTo();
-			zoomIn();
+			// let num = $(this).parents(".travelMap_cont_card").index();
+			// i = num
+			// setCenter();
+			// panTo();
+			// zoomIn();
 		})
 	});	
 	 // 이미지 클릭시 위치로 이동 ( 무한 스크롤 후 )
 	$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
-		let num = $(this).parents(".travelMap_cont_card").index();
-		i = num
-		setCenter();
-		panTo();
-		zoomIn();
+		// let num = $(this).parents(".travelMap_cont_card").index();
+		// i = num
+		// setCenter();
+		// panTo();
+		// zoomIn();
+		// iwContent = `<div style="padding:5px;font-size:16px;color:#000;font-weight:500;text-align:center">${variable[i].명칭}<br><span style="font-size:14px;color:#666;font-weight:300;text-overflow:ellipsis;overflow:hidden;white-space:nowrap">${variable[i].주소}</span><p style="font-size:12px;color:#aaa;font-weight:100;text-align:center">(우클릭시 텍스트 상자가 사라집니다.)</p></div>`,
+    	// 		iwPosition = new kakao.maps.LatLng(variable[i].위도,variable[i].경도);
+		// 		iwRemoveable = true;
+
+		// 		// 인포윈도우를 생성합니다
+		// 		infowindow = new kakao.maps.InfoWindow({
+		// 			position : iwPosition, 
+		// 			content : iwContent,
+		// 			removable : iwRemoveable
+		// 		});
+		// 		infowindow.open(map, markers[i]);
+	})
+
+	// 우클릭시 인포윈도우 없애기
+	$("#travelMap").on("contextmenu", function(){
+		infowindow.close();
 	})
 });
 
