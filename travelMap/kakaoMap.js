@@ -23,13 +23,17 @@ map.setMaxLevel(13);
 let clusterer = new kakao.maps.MarkerClusterer({
 	map: map, 
 	averageCenter: true, 
-	minLevel: 7, // 클러스터 할 최소 지도 레벨
+	minLevel: 10, // 클러스터 할 최소 지도 레벨
 });
 var infowindow;
 var i = null
 let allRegion = [];
 let variable = null;
-let markers;
+let beach_markers;
+let nature_markers;
+let hotel_markers;
+let experience_markers;
+let camping_markers;
 
 let beach;
 let nature;
@@ -51,16 +55,6 @@ $.getJSON(url, function (data) {
 		const value = data[key];
 		allRegion = [...allRegion, ...value];
 	}
-	
-	// 마커(+ 클러스터)
-
-	// markers = allRegion.map((position) => {
-	// 	return new kakao.maps.Marker({
-	// 		position: new kakao.maps.LatLng(position.위도, position.경도),
-	// 	});
-	// });
-	// clusterer.addMarkers(markers);
-	
 
 }).then(function () {
 	// 해변 필터
@@ -88,10 +82,6 @@ $.getJSON(url, function (data) {
 	camping = allRegion.filter((el) =>
 		filterText_c.some((text) => el.명칭.includes(text))
 	);
-
-
-		// 마커(+ 클러스터)
-
 	beach_markers = beach.map((position) => {
 		return new kakao.maps.Marker({
 			position: new kakao.maps.LatLng(position.위도, position.경도),
@@ -118,14 +108,15 @@ $.getJSON(url, function (data) {
 		});
 	});
 
+	// 클러스터러에 마커 추가
 	clusterer.addMarkers(beach_markers);
 	clusterer.addMarkers(nature_markers);
 	clusterer.addMarkers(hotel_markers);
 	clusterer.addMarkers(experience_markers);
 	clusterer.addMarkers(camping_markers);
 	
-	allRegion = [...beach,...nature,...hotel,...experience,...camping]
-	variable = allRegion;
+	allCategory = [...beach,...nature,...hotel,...experience,...camping]
+	variable = allCategory;
 	let count = 7;
 	let page = 2;
 	let isAllLoaded = false;
@@ -189,20 +180,41 @@ $.getJSON(url, function (data) {
 			$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
 				let num = $(this).parents(".travelMap_cont_card").index();
 				i = num
+				if(i<=24){
+					variable = beach
+				}else if(i<=115&&i>24){
+					variable = nature
+				}else if(i<=138&&i>115){
+					variable = hotel
+				}else if(i<=171&&i>138){
+					variable = experience
+				}else if(i<=179&&i>171){
+					variable = camping
+				}
 				setCenter();
 				panTo();
-				// zoomIn();
-				// iwContent = `<div style="padding:5px;font-size:16px;color:#000;font-weight:500;text-align:center">${variable[i].명칭}<br><span style="font-size:14px;color:#666;font-weight:300;text-overflow:ellipsis;overflow:hidden;white-space:nowrap">${variable[i].주소}</span><p style="font-size:12px;color:#aaa;font-weight:100;text-align:center">(우클릭시 텍스트 상자가 사라집니다.)</p></div>`,
-				// iwPosition = new kakao.maps.LatLng(variable[i].위도,variable[i].경도);
-				// iwRemoveable = true;
-
-				// // 인포윈도우를 생성합니다
-				// infowindow = new kakao.maps.InfoWindow({
-				// 	position : iwPosition, 
-				// 	content : iwContent,
-				// 	removable : iwRemoveable
-				// });
-				// infowindow.open(map, markers[i]);
+				zoomIn();
+				var iwContent = `<div style="padding:10px 0px 0px;font-size: 16px;color: #333;line-height: 23px;font-weight: 500;text-align:center;">${variable[i].명칭}<br><span style="font-size:12px;color:#666666;font-weight:300;width:100%;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;">${variable[i].주소}</span><br><div style="display:flex;justify-content:space-around;width:100%;padding:3px 0;border-top:1px dashed #007bff"><a style="font-size: 12px;color:#007bff;" href="https://map.kakao.com/link/map/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="color:blue" target="_blank">큰지도보기</a><a href="https://map.kakao.com/link/to/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="font-size: 12px;color:#007bff;padding:auto;" target="_blank">길찾기</a></div></div>`, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+				iwPosition = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
+				iwRemoveable = true;
+				// 인포윈도우를 생성합니다
+				infowindow = new kakao.maps.InfoWindow({
+					position : iwPosition, 
+					content : iwContent,
+					removable : iwRemoveable
+		});
+		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+		if(i<=24){
+			infowindow.open(map, beach_markers[i]); 
+		}else if(i<=115&&i>24){
+			infowindow.open(map, nature_markers[i]); 
+		}else if(i<=138&&i>115){
+			infowindow.open(map, hotel_markers[i]); 
+		}else if(i<=171&&i>138){
+			infowindow.open(map, experience_markers[i]); 
+		}else if(i<=179&&i>171){
+			infowindow.open(map, camping_markers[i]); 
+		}
 			})
 		})
 	function setCenter() {            
@@ -238,45 +250,87 @@ $.getJSON(url, function (data) {
 		$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
 			let num = $(this).parents(".travelMap_cont_card").index();
 			i = num
+			if(i<=24){
+				variable = beach
+			}else if(i<=115&&i>24){
+				variable = nature
+			}else if(i<=138&&i>115){
+				variable = hotel
+			}else if(i<=171&&i>138){
+				variable = experience
+			}else if(i<=179&&i>171){
+				variable = camping
+			}
 			setCenter();
 			panTo();
-			// zoomIn();
-			// iwContent = `<div style="padding:5px;font-size:16px;color:#000;font-weight:500;text-align:center">${variable[i].명칭}<br><span style="font-size:14px;color:#666;font-weight:300;text-overflow:ellipsis;overflow:hidden;white-space:nowrap">${variable[i].주소}</span><p style="font-size:12px;color:#aaa;font-weight:100;text-align:center">(우클릭시 텍스트 상자가 사라집니다.)</p></div>`,
-    		// 	iwPosition = new kakao.maps.LatLng(variable[i].위도,variable[i].경도);
-			// 	iwRemoveable = true;
-
-			// 	// 인포윈도우를 생성합니다
-			// 	infowindow = new kakao.maps.InfoWindow({
-			// 		position : iwPosition, 
-			// 		content : iwContent,
-			// 		removable : iwRemoveable
-			// 	});
-			// 	infowindow.open(map, markers[i]);
+			zoomIn();
+			var iwContent = `<div style="padding:10px 0px 0px;font-size: 16px;color: #333;line-height: 23px;font-weight: 500;text-align:center;">${variable[i].명칭}<br><span style="font-size:12px;color:#666666;font-weight:300;width:100%text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">${variable[i].주소}</span><br><div style="display:flex;justify-content:space-around;width:100%;padding:3px 0;border-top:1px dashed #007bff"><a style="font-size: 12px;color:#007bff;" href="https://map.kakao.com/link/map/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="color:blue" target="_blank">큰지도보기</a><a href="https://map.kakao.com/link/to/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="font-size: 12px;color:#007bff;padding:auto;" target="_blank">길찾기</a></div></div>`, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+			iwPosition = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
+			iwRemoveable = true;
+			// 인포윈도우를 생성합니다
+			infowindow = new kakao.maps.InfoWindow({
+				position : iwPosition, 
+				content : iwContent,
+				removable : iwRemoveable
+		});
+		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+		if(i<=24){
+			infowindow.open(map, beach_markers[i]); 
+		}else if(i<=115&&i>24){
+			infowindow.open(map, nature_markers[i]); 
+		}else if(i<=138&&i>115){
+			infowindow.open(map, hotel_markers[i]); 
+		}else if(i<=171&&i>138){
+			infowindow.open(map, experience_markers[i]); 
+		}else if(i<=179&&i>171){
+			infowindow.open(map, camping_markers[i]); 
+		}
 		})
 	});	
-	 // 이미지 클릭시 위치로 이동 ( 무한 스크롤 후 )
+	 // 이미지 클릭시 위치로 이동 ( 무한 스크롤 전 )
 	$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
 		let num = $(this).parents(".travelMap_cont_card").index();
 		i = num
+		if(i<=24){
+			variable = beach
+		}else if(i<=115&&i>24){
+			variable = nature
+		}else if(i<=138&&i>115){
+			variable = hotel
+		}else if(i<=171&&i>138){
+			variable = experience
+		}else if(i<=179&&i>171){
+			variable = camping
+		}
 		setCenter();
 		panTo();
-		// zoomIn();
-		// iwContent = `<div style="padding:5px;font-size:16px;color:#000;font-weight:500;text-align:center">${variable[i].명칭}<br><span style="font-size:14px;color:#666;font-weight:300;text-overflow:ellipsis;overflow:hidden;white-space:nowrap">${variable[i].주소}</span><p style="font-size:12px;color:#aaa;font-weight:100;text-align:center">(우클릭시 텍스트 상자가 사라집니다.)</p></div>`,
-    	// 		iwPosition = new kakao.maps.LatLng(variable[i].위도,variable[i].경도);
-		// 		iwRemoveable = true;
-
-		// 		// 인포윈도우를 생성합니다
-		// 		infowindow = new kakao.maps.InfoWindow({
-		// 			position : iwPosition, 
-		// 			content : iwContent,
-		// 			removable : iwRemoveable
-		// 		});
-		// 		infowindow.open(map, markers[i]);
+		zoomIn();
+		var iwContent = `<div style="padding:10px 0px 0px;font-size: 16px;color: #333;line-height: 23px;font-weight: 500;text-align:center;">${variable[i].명칭}<br><span style="font-size:12px;color:#666666;font-weight:300;width:100%text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">${variable[i].주소}</span><br><div style="display:flex;justify-content:space-around;width:100%;padding:3px 0;border-top:1px dashed #007bff"><a style="font-size: 12px;color:#007bff;" href="https://map.kakao.com/link/map/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="color:blue" target="_blank">큰지도보기</a><a href="https://map.kakao.com/link/to/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="font-size: 12px;color:#007bff;padding:auto;" target="_blank">길찾기</a></div></div>`, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+		iwPosition = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
+		iwRemoveable = true;
+		// 인포윈도우를 생성합니다
+		infowindow = new kakao.maps.InfoWindow({
+			position : iwPosition, 
+			content : iwContent,
+			removable : iwRemoveable
+			
+		});
+		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+		if(i<=24){
+			infowindow.open(map, beach_markers[i]); 
+		}else if(i<=115&&i>24){
+			infowindow.open(map, nature_markers[i]); 
+		}else if(i<=138&&i>115){
+			infowindow.open(map, hotel_markers[i]); 
+		}else if(i<=171&&i>138){
+			infowindow.open(map, experience_markers[i]); 
+		}else if(i<=179&&i>171){
+			infowindow.open(map, camping_markers[i]); 
+		}
 	})
-
 	// 우클릭시 인포윈도우 없애기
-	$("#travelMap").on("contextmenu", function(){
-		infowindow.close();
+	$("#travelMap").on("mouseleave", function(){
+		// infowindow.close();
 	})
 });
 
