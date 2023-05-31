@@ -1220,3 +1220,9 @@ h2>span::after {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+.main_notice_info2 p a:hover{
+    border-bottom: 1px solid #fff;
+}
+.main_notice_box p span a:hover{
+    border-bottom: 1px solid #fff;
+}
