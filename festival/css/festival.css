@@ -24,8 +24,7 @@ Noto Sans Kr
 /*지역 필터 시작*/
 /*지역선택 배경색,테두리, 패팅 추가 버튼 정렬*/
 .festival_fillter_wrap .festival_region_fillter_box {
-    background: #eee;
-    border-top: 2px solid #999;
+    background: #fff;
     display: flex;
     justify-content: space-between;
 }
@@ -34,7 +33,8 @@ Noto Sans Kr
 .festival_fillter_wrap .festival_region_fillter_box button {
     padding: 15px;
     font-size: 16px;
-    border: 0;
+    border: solid 1px #0051A4;
+    background: #fff;
 }
 
 /*active*/
