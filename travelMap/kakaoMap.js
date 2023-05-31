@@ -53,18 +53,17 @@ $.getJSON(url, function (data) {
 		});
 	});
 	// 클러스터러에 마커들을 추가합니다
-	// markers.setMap(map);
 	clusterer.addMarkers(markers);
 
 }).then(function () {
 	// 해변 필터
-	const filterText_b = ["해수", "해변"];
+	const filterText_b = ["해수","해변","포구","해안","유람"];
 	const beach = allRegion.filter((el) =>
 		filterText_b.some((text) => el.명칭.includes(text))
 	);
 
-	// 공원 필터
-	const filterText_p = ["공원", "정원", "파크"];
+	// 자연 필터
+	const filterText_p = ["공원", "정원", "파크","자연","산","수목","생태","숲"];
 	const park = allRegion.filter((el) =>
 	filterText_p.some((text) => el.명칭.includes(text))
 	);
@@ -75,8 +74,8 @@ $.getJSON(url, function (data) {
 		filterText_h.some((text) => el.명칭.includes(text))
 	);
 
-	// 체험장 필터
-	const filterText_e = ["체험", "마을"];
+	// 체험 필터
+	const filterText_e = ["체험", "마을","시장","문화","랜드","과학","음악","테마"];
 	const experience = allRegion.filter((el) =>
 		filterText_e.some((text) => el.명칭.includes(text))
 	);
@@ -88,7 +87,7 @@ $.getJSON(url, function (data) {
 
 	allRegion = [...beach,...park,...hotel,...experience,...camping]
 	variable = allRegion;
-	let count = 6;
+	let count = 7;
 	let page = 2;
 	let isAllLoaded = false;
 	
@@ -153,7 +152,7 @@ $.getJSON(url, function (data) {
 				i = num
 				setCenter();
 				panTo();
-				zoomIn();
+				// zoomIn();
 				iwContent = `<div style="padding:5px;font-size:16px;color:#000;font-weight:500;text-align:center">${variable[i].명칭}<br><span style="font-size:14px;color:#666;font-weight:300;text-overflow:ellipsis;overflow:hidden;white-space:nowrap">${variable[i].주소}</span><p style="font-size:12px;color:#aaa;font-weight:100;text-align:center">(우클릭시 텍스트 상자가 사라집니다.)</p></div>`,
 				iwPosition = new kakao.maps.LatLng(variable[i].위도,variable[i].경도);
 				iwRemoveable = true;
@@ -202,7 +201,7 @@ $.getJSON(url, function (data) {
 			i = num
 			setCenter();
 			panTo();
-			zoomIn();
+			// zoomIn();
 			iwContent = `<div style="padding:5px;font-size:16px;color:#000;font-weight:500;text-align:center">${variable[i].명칭}<br><span style="font-size:14px;color:#666;font-weight:300;text-overflow:ellipsis;overflow:hidden;white-space:nowrap">${variable[i].주소}</span><p style="font-size:12px;color:#aaa;font-weight:100;text-align:center">(우클릭시 텍스트 상자가 사라집니다.)</p></div>`,
     			iwPosition = new kakao.maps.LatLng(variable[i].위도,variable[i].경도);
 				iwRemoveable = true;
@@ -222,7 +221,7 @@ $.getJSON(url, function (data) {
 		i = num
 		setCenter();
 		panTo();
-		zoomIn();
+		// zoomIn();
 		iwContent = `<div style="padding:5px;font-size:16px;color:#000;font-weight:500;text-align:center">${variable[i].명칭}<br><span style="font-size:14px;color:#666;font-weight:300;text-overflow:ellipsis;overflow:hidden;white-space:nowrap">${variable[i].주소}</span><p style="font-size:12px;color:#aaa;font-weight:100;text-align:center">(우클릭시 텍스트 상자가 사라집니다.)</p></div>`,
     			iwPosition = new kakao.maps.LatLng(variable[i].위도,variable[i].경도);
 				iwRemoveable = true;
