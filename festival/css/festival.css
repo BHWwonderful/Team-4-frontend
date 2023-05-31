@@ -550,3 +550,84 @@ Noto Sans Kr
 .festivalDetail_aiImg img {
     width: 100%;
 }
+
+/*loading*/
+.loading{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background-color: rgba(0,0,0,0.7)
+}
+
+.loading_element{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+    position:absolute;
+    width:65px;
+    height:65px;
+    background-color: none;
+    border-radius: 100%;
+}
+
+.loading--first{
+    animation: spin 2.5s infinite linear;
+    animation-delay: 0.20s;
+}
+
+.loading--second{
+    animation: spin 2.5s infinite linear;
+    animation-delay: 0.4s;
+}
+
+.loading--third{
+    animation: spin 2.5s infinite linear;
+    animation-delay: 0.6s;
+}
+
+.loading--fourth{
+    animation: spin 2.5s infinite linear;
+    animation-delay: 0.8s;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    } 
+    40%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.circle{
+    display: inline-block;
+    width:16px;
+    height:16px;
+    border-radius: 100%;
+}
+
+.circle--red{
+    background-color: rgb(137, 168, 79);
+}
+
+.circle--blue{
+    background-color: rgb(123, 175, 212);
+}
+
+.circle--green{
+    background-color: rgb(220, 68, 5);
+}
+
+.circle--yellow{
+    background-color: rgb(166, 3, 17);
+}
+.hidden{
+    display: none;
+}
