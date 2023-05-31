@@ -29,7 +29,7 @@
 .index_slider_wrap{
     min-width:1180px;
     position:relative;
-    margin-bottom:30px;
+    /* margin-bottom:30px; */
     height: 760px;
 }
 
@@ -247,11 +247,12 @@
 
 /* 제목 */
 .regionMap_content>h2 {
-    font-size: 40px;
+    font-size: 44px;
     font-weight: bold;
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-top: 120px;
 }
 
 .regionMap_content>h2>span {
@@ -962,10 +963,10 @@ body {
 }
 
 .index_theme>h2 {
-    width: 1180px;
-    margin: 50px auto 0;
+    width: 100%;
+    margin-top: 120px;
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: 44px;
     font-weight: bold;
     text-align: center;
 }
@@ -974,14 +975,15 @@ h2>span {
     position: relative;
     padding-left: 15px;
     color: #2d58a0;
+    /* text-emphasis: filled #2d58a0; */
 }
 
 h2>span::after {
     position: absolute;
     top: -25px;
-    left: 25px;
+    left: 26px;
     letter-spacing: 26px;
-    content: "\00B7\00B7\00B7\00B7";
+    content: "\00B7\00B7";
     color: #2d58a0;
 }
 
