@@ -227,7 +227,7 @@ Noto Sans Kr
 
 /*축제상세페이지 시작*/
 /*페이지 넓이 조정 콘텐츠 가운데 정렬*/
-.festivalDetail_main {
+.main {
     width: 1180px;
     margin: auto;
 }

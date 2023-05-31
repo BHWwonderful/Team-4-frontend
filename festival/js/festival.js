@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $('.loading').addClass('hidden');
     var region = document.querySelectorAll('.festival_region_fillter_box button');
@@ -161,8 +160,10 @@ $(document).ready(function () {
                     displayPage(pageActiveIdx);
                 });
                 $('.loading').addClass('hidden');
-              
         });
     };
-
+    //Header
+    $(".header").load("../header/header.html");
+    //Footer
+    $(".footer").load("../footer/footer.html");
 });
