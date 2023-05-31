@@ -162,6 +162,13 @@ $(document).ready(function () {
                 $('.loading').addClass('hidden');
         });
     };
+    
+    // 글로벌 네비게이션 li바 최초 숨기기 
+    $("#festival_gnb_li").children('ul:eq(0)').css("display","none")
+    // 글로벌 네비게이션 바 클릭시 최초 숨긴 li요소 슬라이드 토글 메소드 실행 
+    $("#festival_gnb_li").click(function () {
+        $("#festival_gnb_li").children('ul:eq(0)').slideToggle(500)
+    })
     //Header
     $(".header").load("../header/header.html");
     //Footer
