@@ -68,6 +68,7 @@ select{
 .footer_logo_box{
     list-style: none;
     padding-left: 0;
+    padding-top: 10px;
 }
 .footer_logo_box img{
     height: 30px;
@@ -97,7 +98,7 @@ select{
     height: 14px;
     float: left;
     margin-right: 10px;
-    padding: 5px;
+    /* padding: 5px; */
 }
 .fimg img{
     padding-left: 10px;
