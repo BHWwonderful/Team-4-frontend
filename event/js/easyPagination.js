@@ -1,3 +1,20 @@
+function getSiblings(element) {
+  let siblings = [];
+  let sibling = element.parentNode.firstChild;
+
+  while (sibling) {
+    if (sibling.nodeType === 1 && sibling !== element) {
+      siblings.push(sibling);
+    }
+    sibling = sibling.nextSibling;
+  }
+  // 첫 번째 형제와 마지막 형제를 제외합니다.
+  siblings.shift(); // 첫 번째 형제 제외
+  siblings.pop(); // 마지막 형제 제외
+  console.log(siblings)
+  return siblings;
+}
+
 const easyPagination = ({
   items,
   rows = 10,
@@ -32,17 +49,34 @@ const easyPagination = ({
       buttonsContainerClass
     );
 
+    
+
     let paginationButton = (page) => {
       let button = document.createElement("button");
       button.setAttribute("type", "button");
       button.classList.add(buttonClass);
 
-      if (currentPage == page) button.classList.add(activeClass);
+      if (currentPage == page){
+        button.classList.add(activeClass);
+        button.style.backgroundColor="#0051A4"
+        button.style.color="white"
+      } 
       button.innerHTML = page;
 
       button.addEventListener("click", function () {
         currentPage = page;
-
+        console.log(button.sibling)
+          button.style.backgroundColor="#0051A4"
+          button.style.color="white"
+        // here1        
+        let myElementSiblings = getSiblings(button);
+        myElementSiblings.forEach(function(sibling) {
+          // here2 [0]
+          sibling.style.backgroundColor="white"
+          sibling.style.color="black"
+          // 형제 요소들에 대한 작업을 수행합니다.
+        });
+        
         self.paginate(currentPage, false);
 
         let current_btn = getActiveBtn();
@@ -60,6 +94,8 @@ const easyPagination = ({
       prevBtn.classList.add(prevClass);
       prevBtn.innerHTML = prevText;
 
+
+      
       let nextBtn = document.createElement("button");
       nextBtn.setAttribute("type", "button");
       nextBtn.classList.add(nextClass);
@@ -95,6 +131,8 @@ const easyPagination = ({
   };
 
   const getActiveBtn = () => {
+    let  button= document.querySelector(`.${"pagination-" + uuid} button.active`)
+
     return document.querySelector(`.${"pagination-" + uuid} button.active`);
   };
 
@@ -141,6 +179,18 @@ const easyPagination = ({
         let current_btn = getActiveBtn();
         current_btn.classList.remove("active");
         current_btn.nextElementSibling.classList.add("active");
+        let nowBtn = current_btn.nextElementSibling
+        nowBtn.style.backgroundColor="#0051A4"
+        nowBtn.style.color = "white"
+       
+        let myElementSiblings = getSiblings(nowBtn);
+        myElementSiblings.forEach(function(sibling) {
+          // here2 [0]
+          sibling.style.backgroundColor="white"
+          sibling.style.color="black"
+          // 형제 요소들에 대한 작업을 수행합니다.
+        });
+        
       }
 
       if (handlePaginatedItems) {
@@ -160,6 +210,17 @@ const easyPagination = ({
         let currentButton = getActiveBtn();
         currentButton.classList.remove("active");
         currentButton.previousElementSibling.classList.add("active");
+        let nowBtn = currentButton.previousElementSibling
+        nowBtn.style.backgroundColor="#0051A4"
+        nowBtn.style.color ="white"
+
+        let myElementSiblings = getSiblings(nowBtn);
+        myElementSiblings.forEach(function(sibling) {
+          // here2 [0]
+          sibling.style.backgroundColor="white"
+          sibling.style.color="black"
+          // 형제 요소들에 대한 작업을 수행합니다.
+        });
       }
 
       if (handlePaginatedItems) {

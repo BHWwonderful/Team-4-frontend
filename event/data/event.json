@@ -86,7 +86,7 @@
             "content" :"한국 야간관광을 대표할 BI를 선택해 주세요!",
             "img":"../images/event9.png",
             "link":"https://korean.visitkorea.or.kr/detail/event_detail.do?cotid=fb98e49b-2e76-44cf-b35c-b1a27280f21f",
-            "eventStatus":"complete",
+            "eventStatus":"ing",
             "createdBy":"관리자",
             "createdAt":"2023-04-04"
         },
@@ -106,7 +106,7 @@
             "content" :"하이커가 받고 싶은 어린(른)이날 선물은?! ",
             "img":"../images/event11.png",
             "link":"https://korean.visitkorea.or.kr/detail/event_detail.do?cotid=f80a6aa5-66b7-4bda-ad9d-9988b66cdbd1",
-            "eventStatus":"ing",
+            "eventStatus":"due",
             "createdBy":"관리자",
             "createdAt":"2023-04-02"
         },
@@ -126,7 +126,7 @@
             "content" :"한국 야간관광 키워드 이벤트",
             "img":"../images/event13.jpg",
             "link":"https://form.office.naver.com/form/responseView.cmd?formkey=NDRiNjk4MWUtODVmNy00MzA2LTg3OGItOWI1Zjc1Yzc2YTJk&sourceId=urlshare",
-            "eventStatus":"due",
+            "eventStatus":"ing",
             "createdBy":"관리자",
             "createdAt":"2023-04-01"
         },
@@ -156,9 +156,9 @@
             "content" :"이 사진따라 여행하길",
             "img":"../images/event16.png",
             "link":"https://korean.visitkorea.or.kr/detail/event_detail.do?cotid=0f61468b-c59d-4f7f-9dc9-30f972bc906f",
-            "eventStatus":"ing",
+            "eventStatus":"complete",
             "createdBy":"관리자",
-            "createdAt":"2022-12-30"
+            "createdAt":"2023-04-30"
         },
         {
             "index": 17,
@@ -166,9 +166,9 @@
             "content" :"청렴 바로알기",
             "img":"../images/event17.png",
             "link":"https://korean.visitkorea.or.kr/detail/event_detail.do?cotid=6a651acc-bba2-481b-966d-ce1f3e9e54c5",
-            "eventStatus":"ing",
+            "eventStatus":"complete",
             "createdBy":"관리자",
-            "createdAt":"2022-12-28"
+            "createdAt":"2023-04-28"
         },
         {
             "index": 18,
@@ -176,9 +176,9 @@
             "content" :"유원시설 안전수칙, 어디까지 알고 있니?",
             "img":"../images/event18.png",
             "link":"https://www.apa.or.kr/portal/bbs142/bbsView.do?selectedSn=247&bbsMsg=&csrf=&searchBbsSn=142&cttSearchCondition=title&cttSearchKeyword=&pageIndex=1",
-            "eventStatus":"ing",
+            "eventStatus":"complete",
             "createdBy":"관리자",
-            "createdAt":"2022-12-08"
+            "createdAt":"2023-04-17"
         },
         {
             "index": 19,
@@ -186,9 +186,9 @@
             "content" :"유튜브 댓글이벤트",
             "img":"../images/event19.png",
             "link":"https://korean.visitkorea.or.kr/detail/event_detail.do?cotid=2cf06a9a-cf9e-471c-992c-d439a197e145",
-            "eventStatus":"ing",
+            "eventStatus":"complete",
             "createdBy":"관리자",
-            "createdAt":"2021-04-08"
+            "createdAt":"2023-04-08"
         },
         {
             "index": 20,
@@ -196,9 +196,9 @@
             "content" :"실감컨텐츠로 국내여행 하세요!",
             "img":"../images/event20.png",
             "link":"https://korean.visitkorea.or.kr/detail/event_detail.do?cotid=e33cc821-4f9a-49bc-ad68-82cc03056015",
-            "eventStatus":"ing",
+            "eventStatus":"complete",
             "createdBy":"관리자",
-            "createdAt":"2021-04-08"
+            "createdAt":"2023-04-08"
         }
     ]
 }

@@ -268,6 +268,9 @@
 .event_main_total_content span{
     color: #2d58a0;
 }
+.event_main_total_content{
+    color: #777777;
+}
 .event_content{
     padding-left: 50px;
 }
