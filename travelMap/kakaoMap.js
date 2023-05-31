@@ -250,17 +250,7 @@ $.getJSON(url, function (data) {
 		$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
 			let num = $(this).parents(".travelMap_cont_card").index();
 			i = num
-			if(i<=24){
-				variable = beach
-			}else if(i<=115&&i>24){
-				variable = nature
-			}else if(i<=138&&i>115){
-				variable = hotel
-			}else if(i<=171&&i>138){
-				variable = experience
-			}else if(i<=179&&i>171){
-				variable = camping
-			}
+			variable = beach
 			setCenter();
 			panTo();
 			zoomIn();
@@ -274,20 +264,10 @@ $.getJSON(url, function (data) {
 				removable : iwRemoveable
 		});
 		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-		if(i<=24){
 			infowindow.open(map, beach_markers[i]); 
-		}else if(i<=115&&i>24){
-			infowindow.open(map, nature_markers[i]); 
-		}else if(i<=138&&i>115){
-			infowindow.open(map, hotel_markers[i]); 
-		}else if(i<=171&&i>138){
-			infowindow.open(map, experience_markers[i]); 
-		}else if(i<=179&&i>171){
-			infowindow.open(map, camping_markers[i]); 
-		}
 		})
 	});	
-	 // 이미지 클릭시 위치로 이동 ( 무한 스크롤 전 )
+	 // 이미지 클릭시 위치로 이동 ( 무한 스크롤 후 )
 	$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
 		let num = $(this).parents(".travelMap_cont_card").index();
 		i = num
@@ -329,8 +309,10 @@ $.getJSON(url, function (data) {
 		}
 	})
 	// 우클릭시 인포윈도우 없애기
-	$("#travelMap").on("mouseleave", function(){
-		// infowindow.close();
+	$("#travelMap").on("contextmenu", function(){
+		setTimeout(()=>{
+			infowindow.close();
+		},500)
 	})
 });
 
