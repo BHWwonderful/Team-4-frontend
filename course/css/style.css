@@ -3,6 +3,8 @@
     /* main 제목 */
         .course_title_wrap{
             background:url(../images/course_recommendation.jpg) repeat-x center;
+            width:100%;
+            min-width:1180px;
             height:330px;
             display:flex;
             align-items: center;
@@ -205,6 +207,8 @@
         }
 
         .course_regionfilterLabel{
+            display: inline-block;
+            line-height: 30px;
             font-size:15.4px;
             width:40px;
         }
@@ -227,6 +231,8 @@
         }
 
         .course_hashtagfilterLabel{
+            display: inline-block;
+            line-height: 30px;
             width:70px;
             font-size:15.4px;
         }
@@ -259,6 +265,8 @@
         }
 
         .course_searchFilterLabel{
+            display: inline-block;
+            line-height: 30px;
             width:55px;
             font-size:15.4px;
         }
@@ -336,6 +344,10 @@
         }
 
         .course_contentListItemTextLinkText{
+            display:-webkit-box;
+            -webkit-line-clamp:2;
+            -webkit-box-orient:vertical;
+            overflow:hidden;
             font-size:15.4px;
             color:#777;
             margin-bottom:10px;
@@ -366,65 +378,40 @@
 
         .course_pageContent_box{
             display: flex;
+            justify-content: center;
             width:604px;
-            height:38px;
+            height:40px;
             margin:0 auto;
         }
 
-        .course_pageContentPrev_box{
-            margin-left:16px;
-            margin-right:16px;
-        }
-
-        .course_pageContentNext_box{
-            margin-left:16px;
-            margin-right:16px;
-        }
-
         .course_pageBtn{
-            display:inline-block;
             width:38px;
             height:38px;
-            text-align:center;
+            text-align: center;
             line-height:38px;
-            font-size:13px;
-            color:#555;
-            position:relative;
+            font-size: 13px;
+            background-color: #FFFFFF;
         }
 
-        .course_pageBtnPrevIcon{
-            width:38px;
-            height:38px;
-            position:absolute;
-            font-size:14px;
-            top:0px;
-            left:0px;
+        .course_pageBtn:hover{
+            background-color: #2d58a0;
+            color:#FFFFFF;
         }
 
-        .course_pageBtnNextIcon{
-            width:38px;
-            height:38px;
-            position:absolute;
-            font-size:14px;
-            top:0px;
-            left:0px;
+        .course_pageBtn--prev{
+            margin-right:16px;
         }
 
-        .course_pageBtnPrevAll{
-            border:1px solid #dfdfdf;
+        .course_pageBtn--next{
+            margin-left:16px;
         }
 
-        .course_pageBtnPrev{
-            border:1px solid #dfdfdf;
+        .course_pageBtn--on{
+            background-color: #5289E6;
+            color:#FFFFFF;
         }
 
-        .course_pageBtnNext{
-            border:1px solid #dfdfdf;
-        }
 
-        .course_pageBtnNextAll{
-            border:1px solid #dfdfdf;
-        }
 
         /* 코스 4 depth 웹 페이지 */
         
@@ -1235,7 +1222,18 @@
             color:#333333;
         }
 
+        .courseUser_filterListItemLink:hover{
+            display: inline-block;
+            width:100%;
+            height:100%;
+            background-color: #3F71D2;
+            color:#FFFFFF;
+        }
+
         .courseUser_filterListItemLink--on{
+            display: inline-block;
+            width:100%;
+            height:100%;
             background-color: #3F71D2;
             color:#FFFFFF;
         }
@@ -1260,16 +1258,22 @@
             text-align: center;
         }
 
+        .courseUser_filterBarListItemLink{
+            color:#FFFFFF;
+        }
+
+        .courseUser_filterBarListItemLink--on{
+            color:#fef344;
+        }
+
         .courseUser_filterBarListItemLinkText{
             font-size:21px;
-            color:#FFFFFF;
             line-height: 70px;
         }
 
         /* 클릭 시 나오는 컨텐츠 */
         .courseUser_content_wrap{
             margin-bottom:30px;
-            margin-left:22px;
         }
 
         .courseUser_content_box{
@@ -1389,6 +1393,131 @@
             white-space:nowrap;
             word-break: break-all;
             overflow:hidden;
+        }
+
+        .userCourse_pageButton_box{
+            display: flex;
+            justify-content: center;
+            width:604px;
+            height:40px;
+            margin: 0 auto;
+        }
+
+        .userCourse_pageButtonLink{
+            width:38px;
+            height:38px;
+            text-align: center;
+            line-height: 38px;
+        }
+
+        /* 페이지 버튼 */ 
+        .userCourse_pageButton_box{
+            display: flex;
+        }
+
+        .userCourse_pageButton--prev{
+            margin-right:16px;
+        }
+
+        .userCourse_pageButton{
+            width:38px;
+            height:38px;
+            font-size: 13px;
+            background-color: #FFFFFF;
+        }
+
+        .userCourse_pageButton--on{
+            background-color: #5289E6;
+            color:#FFFFFF;
+        }
+
+        .userCourse_pageButton:hover{
+            background-color: #2d58a0;
+            color:#FFFFFF;
+        }
+
+        .userCourse_pageButton--next{
+            margin-left:16px;
+        }
+
+        /* 로딩창 */
+        .loading{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            position:fixed;
+            top:0;
+            width:100vw;
+            height:100vh;
+            background-color: rgba(0,0,0,0.7);
+            z-index:9999;
+        }
+
+        .loading_element{
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            text-align: center;
+            position:absolute;
+            width:65px;
+            height:65px;
+            background-color: none;
+            border-radius: 100%;
+        }
+
+        .loading--first{
+            animation: spin 2.5s infinite linear;
+            animation-delay: 0.20s;
+        }
+
+        .loading--second{
+            animation: spin 2.5s infinite linear;
+            animation-delay: 0.4s;
+        }
+
+        .loading--third{
+            animation: spin 2.5s infinite linear;
+            animation-delay: 0.6s;
+        }
+
+        .loading--fourth{
+            animation: spin 2.5s infinite linear;
+            animation-delay: 0.8s;
+        }
+
+        @keyframes spin{
+            0%{
+                transform: rotate(0deg);
+            } 
+            40%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        .circle{
+            display: inline-block;
+            width:16px;
+            height:16px;
+            border-radius: 100%;
+        }
+
+        .circle--red{
+            background-color: rgb(137, 168, 79);
+        }
+
+        .circle--blue{
+            background-color: rgb(123, 175, 212);
+        }
+
+        .circle--green{
+            background-color: rgb(220, 68, 5);
+        }
+
+        .circle--yellow{
+            background-color: rgb(166, 3, 17);
         }
 
 

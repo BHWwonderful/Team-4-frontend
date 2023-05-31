@@ -2,7 +2,7 @@
 .travelAi_topImg_wrap {
     width: 100%;
     height: 330px;
-    background: url("../images/travelAi/mainBackground.jpeg") center;
+    background: url("/travelAi/images/travelAi/mainBackground.jpeg") center;
     display: flex;
     align-items: center;
 }
@@ -41,7 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../images/travelAi/nav_arw.png") no-repeat top left/contain
+    background: url("/travelAi/images/travelAi/nav_arw.png") no-repeat top left/contain
 }
 
 .travelAi_guideList>li:first-child {
@@ -204,19 +204,19 @@
 }
 
 .travelAi_today_hoverImg1 {
-    background: url("../images/travelAi/toDayRegion1.jpeg")
+    background: url("/travelAi/images/travelAi/toDayRegion1.jpeg")
 }
 
 .travelAi_today_hoverImg2 {
-    background: url("../images/travelAi/toDayRegion2.jpeg")
+    background: url("/travelAi/images/travelAi/toDayRegion2.jpeg")
 }
 
 .travelAi_today_hoverImg3 {
-    background: url("../images/travelAi/toDayRegion3.jpeg")
+    background: url("/travelAi/images/travelAi/toDayRegion3.jpeg")
 }
 
 .travelAi_today_hoverImg4 {
-    background: url("../images/travelAi/toDayRegion4.jpeg")
+    background: url("/travelAi/images/travelAi/toDayRegion4.jpeg")
 }
 
 .travelAi_today_slide_wrap {
@@ -296,7 +296,7 @@
     top: 17px;
     right: 17px;
     background-position: 50% 0;
-    background-image: url("../images/travelAi/like.png");
+    background-image: url("/travelAi/images/travelAi/like.png");
     border: 0 none;
     background-color: transparent;
     cursor: pointer;
@@ -341,35 +341,35 @@
 }
 
 .travelAi_recentImg1 {
-    background: url("../images/travelAi/recentRegion1.jpeg");
+    background: url("/travelAi/images/travelAi/recentRegion1.jpeg");
 }
 
 .travelAi_recentImg2 {
-    background: url("../images/travelAi/recentRegion2.jpeg");
+    background: url("/travelAi/images/travelAi/recentRegion2.jpeg");
 }
 
 .travelAi_recentImg3 {
-    background: url("../images/travelAi/recentRegion3.jpeg");
+    background: url("/travelAi/images/travelAi/recentRegion3.jpeg");
 }
 
 .travelAi_recentImg4 {
-    background: url("../images/travelAi/recentRegion4.jpeg");
+    background: url("/travelAi/images/travelAi/recentRegion4.jpeg");
 }
 
 .travelAi_recentImg5 {
-    background: url("../images/travelAi/recentRegion5.jpeg");
+    background: url("/travelAi/images/travelAi/recentRegion5.jpeg");
 }
 
 .travelAi_recentImg6 {
-    background: url("../images/travelAi/recentRegion6.jpeg");
+    background: url("/travelAi/images/travelAi/recentRegion6.jpeg");
 }
 
 .travelAi_recentImg7 {
-    background: url("../images/travelAi/recentRegion7.jpeg");
+    background: url("/travelAi/images/travelAi/recentRegion7.jpeg");
 }
 
 .travelAi_recentImg8 {
-    background: url("../images/travelAi/recentRegion8.jpeg");
+    background: url("/travelAi/images/travelAi/recentRegion8.jpeg");
 }
 
 .travelAi_recent_wrap>ul>li>a>span {
@@ -419,12 +419,12 @@
 }
 
 .travelAi_recent_wrap>.travelAi_recentSlide_prevBtn {
-    background-image: url("../images/travelAi/recentslide_prev_btn.png");
+    background-image: url("/travelAi/images/travelAi/recentslide_prev_btn.png");
     right: 38px;
 }
 
 .travelAi_recent_wrap>.travelAi_recentSlide_nextBtn {
-    background-image: url("../images/travelAi/recentslide_next_btn.png");
+    background-image: url("/travelAi/images/travelAi/recentslide_next_btn.png");
     right: 0;
 }
 
@@ -467,7 +467,7 @@
     text-indent: -9999px;
     width: 27px;
     height: 28px;
-    background: url("../images/travelAi/btn_tit_layer.png");
+    background: url("/travelAi/images/travelAi/btn_tit_layer.png");
     border: 0;
     margin-left: 10px;
     cursor: pointer;
@@ -492,7 +492,7 @@
     left: -10px;
     width: 11px;
     height: 9px;
-    background: url("../images/travelAi/layer_arw02.png") no-repeat;
+    background: url("/travelAi/images/travelAi/layer_arw02.png") no-repeat;
     transform: rotate(-90deg);
 }
 
@@ -525,67 +525,67 @@
 }
 
 .travelAi_yester_img1 {
-    background: url("../images/travelAi/yesterRegion1.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion1.jpeg");
 }
 
 .travelAi_yester_img2 {
-    background: url("../images/travelAi/yesterRegion2.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion2.jpeg");
 }
 
 .travelAi_yester_img3 {
-    background: url("../images/travelAi/yesterRegion3.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion3.jpeg");
 }
 
 .travelAi_yester_img4 {
-    background: url("../images/travelAi/yesterRegion4.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion4.jpeg");
 }
 
 .travelAi_yester_img5 {
-    background: url("../images/travelAi/yesterRegion5.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion5.jpeg");
 }
 
 .travelAi_yester_img6 {
-    background: url("../images/travelAi/yesterRegion6.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion6.jpeg");
 }
 
 .travelAi_yester_img7 {
-    background: url("../images/travelAi/yesterRegion7.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion7.jpeg");
 }
 
 .travelAi_yester_img8 {
-    background: url("../images/travelAi/yesterRegion8.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion8.jpeg");
 }
 
 .travelAi_yester_img9 {
-    background: url("../images/travelAi/yesterRegion9.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion9.jpeg");
 }
 
 .travelAi_yester_img10 {
-    background: url("../images/travelAi/yesterRegion10.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion10.jpeg");
 }
 
 .travelAi_yester_img11 {
-    background: url("../images/travelAi/yesterRegion11.bmp");
+    background: url("/travelAi/images/travelAi/yesterRegion11.bmp");
 }
 
 .travelAi_yester_img12 {
-    background: url("../images/travelAi/yesterRegion12.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion12.jpeg");
 }
 
 .travelAi_yester_img13 {
-    background: url("../images/travelAi/yesterRegion13.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion13.jpeg");
 }
 
 .travelAi_yester_img14 {
-    background: url("../images/travelAi/yesterRegion14.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion14.jpeg");
 }
 
 .travelAi_yester_img15 {
-    background: url("../images/travelAi/yesterRegion15.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion15.jpeg");
 }
 
 .travelAi_yester_img16 {
-    background: url("../images/travelAi/yesterRegion16.jpeg");
+    background: url("/travelAi/images/travelAi/yesterRegion16.jpeg");
 }
 
 .travelAi_yesterList_box {
@@ -635,11 +635,11 @@
 
 
 .travelAi_yesterSlide_prevBtn {
-    background-image: url("../images/travelAi/recentslide_prev_btn.png");
+    background-image: url("/travelAi/images/travelAi/recentslide_prev_btn.png");
     right: 38px;
 }
 
 .travelAi_yesterSlide_nextBtn {
-    background-image: url("../images/travelAi/recentslide_next_btn.png");
+    background-image: url("/travelAi/images/travelAi/recentslide_next_btn.png");
     right: 0;
 }

@@ -6,14 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="https://korean.visitkorea.or.kr/resources/images/favicon.ico">
-    <link rel="stylesheet" href="./style/reset.css">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/style.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <title>대한민국 구석구석</title>
 </head>
 
 <body>
+    <div class="skip_menu">
+        <a href="#main">본문으로 가기</a>
+    </div>
+
     <header class="header"></header>
 
     <main class="main">
@@ -97,7 +101,7 @@
             <h2>대한민국 구석구석<span>지역 </span><span>정보</span></h2>
             <h3>지도로 알아보기</h3>
             <div class="regionMap_slide_container">
-                <h4><strong>서울</strong>여행지</h4>
+                <h4><strong>서울</strong> 여행지</h4>
                 <div class="regionMap_slide_wrap">
                     <div class="regionMap_slide_box">
                         <ul>
@@ -350,7 +354,7 @@
         <section class="main_issue_section">
             <div class="main_issue_wrap">
                 <div class="main_issue_box main_issue_box1">
-                    <a href="#none">
+                    <a href="/event/event.html">
                         <div>
                             <strong><span class="icon1"></span>이벤트1</strong>
                             <em>자세히보기</em>
@@ -358,17 +362,17 @@
                     </a>
                 </div>
                 <div class="main_issue_box main_issue_box2">
-                    <a href="#none">
+                    <a href="/event/event.html">
                         <div>
-                            <strong><span class="icon2"></span>이벤트1</strong>
+                            <strong><span class="icon2"></span>이벤트2</strong>
                             <em>자세히보기</em>
                         </div>
                     </a>
                 </div>
                 <div class="main_issue_box main_issue_box3">
-                    <a href="#none">
+                    <a href="/event/event.html">
                         <div>
-                            <strong><span class="icon3"></span>이벤트1</strong>
+                            <strong><span class="icon3"></span>이벤트3</strong>
                             <em>자세히보기</em>
                         </div>
                     </a>
@@ -379,7 +383,7 @@
 
         <!-- 장한옥 -->
         <section class="index_theme">
-            <h2>함께 떠나는 힐링<span>테마여행</span></h2>
+            <h2>함께 떠나는 힐링<span>테마</span><span>여행</span></h2>
             <div class="index_theme_container">
                 <div class="index_theme_wrap">
                     <div class="theme_wrap_blur">backdrop-filter: blur(10px)</div>
@@ -437,21 +441,21 @@
             <div class="main_notice_box">
                 <div class="main_notice_title">
                     <h2>공지사항</h2>
-                    <span>더보기</span>
+                    <span class="screen_out">더보기</span>
                 </div>
                 <div class="main_notice_info">
                     <div class="main_noticeDate"><p class="main_noticeDate_top">15</p><p class="main_noticeDate_bottom">2023.05.</p></div>
-                    <div>
-                        <p>2023 상설문화관광프로그램 전동문화공연 안내</p>
-                        <p>□ 기간 - 관노가면극: 4~6월[토 15:00] / 9~10월[토 15:00/일11:00]</p>
+                    <div class="main_notice_info2">
+                        <p><a href="/notice/main_notice.html">2023 상설문화관광프로그램 전동문화공연 안내</a></p>
+                        <p><a href="/notice/main_notice.html">□ 기간 - 관노가면극: 4~6월[토 15:00] / 9~10월[토 15:00/일11:00]</a></p>
                     </div>
                 </div>
             </div>
             <div class="main_notice_box">
-                <p><span>·2023 강릉 버스킹 홀릭 행사 안내</span><span>2023.05.12</span></p>
-                <p><span>·강릉관광브랜드공연 프레페스티벌 개최 안내</span><span>2023.05.11</span></p>
-                <p><span>·2023 강릉 버스킹 홀릭 행사 안내</span><span>2023.05.12</span></p>
-                <p><span>·2023 강릉 버스킹 홀릭 행사 안내</span><span>2023.05.12</span></p>
+                <p><span><a href="/notice/main_notice.html">·2023 상설문화관광프로그램 전통문화공연 안내 2023.05.15</a></span></p>
+                <p><span><a href="/notice/main_notice.html">·강릉관광브랜드공연 프레페스티벌 개최 안내 2023.05.11</a></span></p>
+                <p><span><a href="/notice/main_notice.html">·2023 강릉 버스킹 홀릭 행사 안내 2023.05.12</a></span></p>
+                <p><span><a href="/notice/main_notice.html">·강릉시 인바운드여행사·관광기업 육성사업 공모전 개최 안내 2023.03.12</a></span></p>
             </div>
         </section>
     </main>
@@ -465,7 +469,7 @@
         // Footer
         $(".footer").load("/footer/footer.html");
     </script>
-    <script src="./js/index.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>

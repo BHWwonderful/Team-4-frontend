@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="https://korean.visitkorea.or.kr/resources/images/favicon.ico">
-    <link rel="stylesheet" href="../style/reset.css">
-    <link rel="stylesheet" href="./style/regionDetail.css">
+    <link rel="stylesheet" href="/region/style/reset.css">
+    <link rel="stylesheet" href="/region/detail/style/regionDetail.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-    <title>사당청소년문화의집</title>
+    <title>지역 여행지 - 구암서원 터</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                 <ul class="detail_guideList">
                     <li>
                         <a href="">
-                            <img src="../images/home_icon.jpeg" alt="메인으로 이동">
+                            <img src="/region/images/home_icon.jpeg" alt="메인으로 이동">
                         </a>
                     </li>
                     <li>여행정보</li>
@@ -46,39 +46,39 @@
                     <ul class="detail_sendList">
                         <li>
                             <a href="">
-                                <img src="../images/mail_icon.png" alt="sendMail">
+                                <img src="/region/images/mail_icon.png" alt="sendMail">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="../images/print_icon.png" alt="프린트하기">
+                                <img src="/region/images/print_icon.png" alt="프린트하기">
                             </a>
                         </li>
                     </ul>
                     <ul class="detail_snsList">
                         <li>
                             <a href="">
-                                <img src="../images/copyLink_icon.png" alt="URL복사">
+                                <img src="/region/images/copyLink_icon.png" alt="URL복사">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="../images/facebook_icon.png" alt="페이스북">
+                                <img src="/region/images/facebook_icon.png" alt="페이스북">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="../images/twi_icon.png" alt="공유트위터">
+                                <img src="/region/images/twi_icon.png" alt="공유트위터">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="../images/kakao_icon.png" alt="공유카카오스토리">
+                                <img src="/region/images/kakao_icon.png" alt="공유카카오스토리">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="../images/naver_icon.png" alt="공유네이버">
+                                <img src="/region/images/naver_icon.png" alt="공유네이버">
                             </a>
                         </li>
                     </ul>
@@ -95,16 +95,16 @@
             <div class="detail_imgSlider_container">
                 <div class="detail_imgSlider_wrap">
                     <div class="detail_imgSlider_box">
-                        <img src="../images/구암서원 터(구암정)_1_공공3유형.jpg" alt="">
+                        <img src="/region/images/구암서원 터(구암정)_1_공공3유형.jpg" alt="">
                     </div>
                     <div class="detail_imgSlider_box">
-                        <img src="../images/구암서원 터(구암정)_2_공공3유형.jpg" alt="">
+                        <img src="/region/images/구암서원 터(구암정)_2_공공3유형.jpg" alt="">
                     </div>
                     <div class="detail_imgSlider_box">
-                        <img src="../images/구암서원 터(구암정)_3_공공3유형.jpg" alt="">
+                        <img src="/region/images/구암서원 터(구암정)_3_공공3유형.jpg" alt="">
                     </div>
                     <div class="detail_imgSlider_box">
-                        <img src="../images/구암서원 터(구암정)_4_공공3유형.jpg" alt="">
+                        <img src="/region/images/구암서원 터(구암정)_4_공공3유형.jpg" alt="">
                     </div>
                     <a href="javascript:void(0);" class="detail_sliderPrevBtn">이전</a>
                     <a href="javascript:void(0);" class="detail_sliderNextBtn">다음</a>
@@ -164,7 +164,10 @@
     <script src="./js/regionDetail.js"></script>
     <script>
         // Header
-        $(".header").load("../../header/header.html");
+        $(".header").load("/header/header.html");
+
+        //Footer
+        $(".footer").load("/footer/footer.html");
     </script>
 </body>
 

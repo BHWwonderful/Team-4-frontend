@@ -1,9 +1,35 @@
+/* skip menu */
+.skip_menu {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.skip_menu a {
+    width: 100%;
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+    top: -50px;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+
+.skip_menu a:active,
+.skip_menu a:focus {
+    top: 0;
+    z-index: 1001;
+}
+
 /* 김준성 */
 /* 메인 페이지 슬라이더 */
 .index_slider_wrap{
     min-width:1180px;
     position:relative;
-    margin-bottom:30px;
+    /* margin-bottom:30px; */
     height: 760px;
 }
 
@@ -221,11 +247,12 @@
 
 /* 제목 */
 .regionMap_content>h2 {
-    font-size: 40px;
+    font-size: 44px;
     font-weight: bold;
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-top: 120px;
 }
 
 .regionMap_content>h2>span {
@@ -778,13 +805,14 @@
 .main_issue_title {
     display: block;
     margin: 0 0 50px;
-    font-size: 32px;
+    padding-top: 120px;
+    font-size: 44px;
     color: #282828;
     font-family: 'cafe24';
     text-align: center;
 }
 .main_issue_title b {
-    color: #25a261;
+    color: #2d58a0;
 }
 .main_issue_title b em{
     position: relative;
@@ -793,13 +821,12 @@
     position: absolute;
     content: '';
     top: 0px;
-    left: 85%;
-    width: 5px;
-    height: 5px;
-    background: #25a261;
+    left: 55%;
+    width: 7px;
+    height: 7px;
+    background: #2d58a0;
     border-radius: 50%;
     transform: translateX(-50%);
-  
 }
 
 .main_ {
@@ -936,10 +963,10 @@ body {
 }
 
 .index_theme>h2 {
-    width: 1180px;
-    margin: 50px auto 0;
+    width: 100%;
+    margin-top: 120px;
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: 44px;
     font-weight: bold;
     text-align: center;
 }
@@ -948,14 +975,15 @@ h2>span {
     position: relative;
     padding-left: 15px;
     color: #2d58a0;
+    /* text-emphasis: filled #2d58a0; */
 }
 
 h2>span::after {
     position: absolute;
     top: -25px;
-    left: 25px;
+    left: 26px;
     letter-spacing: 26px;
-    content: "\00B7\00B7\00B7\00B7";
+    content: "\00B7\00B7";
     color: #2d58a0;
 }
 
@@ -1146,10 +1174,10 @@ h2>span::after {
 /* 박경훈 공지사항 */
 .main_notice_wrap {
     width: 1180px;
-    margin: 60px auto 0;
+    margin: 120px auto 120px;
     padding: 10px;
     display: flex;
-    background: #25a261;
+    background: #2d58a0;
     font-size: 14px;
     color: white;
     box-sizing: border-box;
@@ -1193,4 +1221,10 @@ h2>span::after {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.main_notice_info2 p a:hover{
+    border-bottom: 1px solid #fff;
+}
+.main_notice_box p span a:hover{
+    border-bottom: 1px solid #fff;
 }

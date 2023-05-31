@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://korean.visitkorea.or.kr/resources/images/favicon.ico">
     <link rel="stylesheet" href="/travelAi/style/reset.css">
     <link rel="stylesheet" href="/travelAi/style/travelAiPlanner.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
@@ -13,6 +14,30 @@
 </head>
 
 <body>
+    <div class="skip_menu">
+        <a href="#main">본문으로 가기</a>
+    </div>
+
+    <div class="onepass_login_wrap">
+        <div class="onepass_login_title">
+            <h2>대한민국 구석구석 통합 로그인</h2>
+            <button>닫기</button>
+        </div>
+        <div class="onepass_login_content">
+            <span>TOUR ONEPASS</span>
+            <p>투어원패스는 한국관광공사 통합로그인 서비스로<br>
+                SNS인증을 통해 간편하게 이용할 수 있으며, <br>
+                한 번의 로그인으로 한국관광공사에서 운영하는<br>
+                다양한 서비스를 이용하실 수 있습니다.
+            </p>
+            <a href="javascipt:void(0)">투어원패스 로그인</a>
+            <div class="auto_login">
+                <a href="javascript:void(0)" value="off">자동 로그인</a>
+            </div>
+        </div>
+    </div>
+    <div class="onepass_login_on"></div>
+
     <header class="header"></header>
 
     <main class="main">
@@ -27,7 +52,7 @@
                 <ul class="travelAiPlanner_guideList">
                     <li>
                         <a href="">
-                            <img src="./images/travelAi/home_icon.jpeg" alt="메인으로 이동">
+                            <img src="/travelAi/images/travelAi/home_icon.jpeg" alt="메인으로 이동">
                         </a>
                     </li>
                     <li>여행정보</li>
@@ -51,39 +76,39 @@
                     <ul class="travelAiPlanner_sendList">
                         <li>
                             <a href="">
-                                <img src="./images/travelAi/mail_icon.png" alt="sendMail">
+                                <img src="/travelAi/images/travelAi/mail_icon.png" alt="sendMail">
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                <img src="./images/travelAi/print_icon.png" alt="프린트하기">
+                            <a href="" onclick="window.print()">
+                                <img src="/travelAi/images/travelAi/print_icon.png" alt="프린트하기">
                             </a>
                         </li>
                     </ul>
                     <ul class="travelAi_snsList">
                         <li>
                             <a href="">
-                                <img src="./images/travelAi/copyLink_icon.png" alt="URL복사">
+                                <img src="/travelAi/images/travelAi/copyLink_icon.png" alt="URL복사">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/travelAi/facebook_icon.png" alt="페이스북">
+                                <img src="/travelAi/images/travelAi/facebook_icon.png" alt="페이스북">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/travelAi/twi_icon.png" alt="공유트위터">
+                                <img src="/travelAi/images/travelAi/twi_icon.png" alt="공유트위터">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/travelAi/kakao_icon.png" alt="공유카카오스토리">
+                                <img src="/travelAi/images/travelAi/kakao_icon.png" alt="공유카카오스토리">
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="./images/travelAi/naver_icon.png" alt="공유네이버">
+                                <img src="/travelAi/images/travelAi/naver_icon.png" alt="공유네이버">
                             </a>
                         </li>
                     </ul>
@@ -117,27 +142,6 @@
                 <div class="travelAiPlanner_img_box">
                     <img src="/travelAi/images/travelAiPlanner/img_ai_planner.jpg" alt="">
                 </div>
-                <!-- <div class="travelAiPlanner_course_container">
-                <div class="travelAiPlanner_card">
-                    <div class="travelAiPlanner_front_card">
-                        <div class="travelAiPlanner_front_card_content">
-                            front
-                            <p>여행을 계획 중이신가요?</p>
-
-                            <strong>
-                                <span>취향저격 맞춤 여행코스</span>를<br>
-                                자동으로 만들어보세요!
-                            </strong>
-                            <img src="/travelAiPlanner/images/travelAiPlanner/img_ai_planner1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="travelAiPlanner_back_card">
-                        <div class="travelAiPlanner_back_card_content">
-                            back
-                        </div>
-                    </div>
-                </div>
-            </div> -->
                 <div class="travelAiPlanner_card_content">
                     <div class="travelAiplanner_flip_container">
                         <div class="travelAiPlanner_card">

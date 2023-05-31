@@ -9,7 +9,7 @@ $(".region_city_box a").click(function () {
 
 
 $(document).ready(function () {
-    $.getJSON("https://gist.githubusercontent.com/JaeHoon925/fda7b044cdc296532b470a88e7d8a611/raw/ea2a787229225ad7b4cf0d71a66a53f355b3bab5/regionData.json", function (data) {
+    $.getJSON("https://gist.githubusercontent.com/JaeHoon925/fda7b044cdc296532b470a88e7d8a611/raw/35f7624cd31db530db662d9ae1de2a15022ae058/regionData.json", function (data) {
 
         for (var i = 0; i < data.seoul.length; i++) {
             $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("h4").text(data.seoul[`${i}`].명칭);
@@ -273,5 +273,11 @@ $(document).ready(function () {
     });
 
 });
+
+
+
+
+
+
 
 

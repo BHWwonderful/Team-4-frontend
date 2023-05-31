@@ -2,7 +2,7 @@
 .detail_topImg_wrap {
     width: 100%;
     height: 330px;
-    background: url("../../images/mainBackground.jpeg") center;
+    background: url("/region/images/mainBackground.jpeg") center;
     display: flex;
     align-items: center;
 }
@@ -41,7 +41,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("../../images/nav_arw.png") no-repeat top left/contain
+    background: url("/region/images/nav_arw.png") no-repeat top left/contain
 }
 
 .detail_guideList>li:first-child {
@@ -208,7 +208,7 @@
     width: 63px;
     height: 63px;
     overflow: hidden;
-    background: url("../images/slide_prevbtn.png");
+    background: url("/region/detail/images/slide_prevbtn.png");
     top: 281px;
 }
 
@@ -253,13 +253,13 @@
 .detail_guideText_box>ul>h5 {
     padding-left: 40px;
     font-size: 24px;
-    background: url("../images/pinpoint.png") no-repeat left/contain;
+    background: url("/region/detail/images/pinpoint.png") no-repeat left/contain;
 }
 
 .detail_guideText_box>ul>li {
     padding-left: 30px;
     margin-top: 17px;
-    background: url("../images/listFlag.png") no-repeat left top;
+    background: url("/region/detail/images/listFlag.png") no-repeat left top;
     font-size: 18px;
     display: flex;
 }
