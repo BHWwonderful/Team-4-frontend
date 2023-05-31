@@ -64,10 +64,11 @@ $.getJSON(url, function (data) {
 	);
 
 	// 공원 필터
-	const park = allRegion.filter((el) => {
-		return el.명칭.includes("공원");
-	});
-
+	const filterText_p = ["공원", "정원", "파크"];
+	const park = allRegion.filter((el) =>
+	filterText_p.some((text) => el.명칭.includes(text))
+	);
+	
 	// 숙박 필터
 	const filterText_h = ["호텔", "리조트", "펜션"];
 	const hotel = allRegion.filter((el) =>
@@ -85,6 +86,7 @@ $.getJSON(url, function (data) {
 		return el.명칭.includes("캠핑");
 	});
 
+	allRegion = [...beach,...park,...hotel,...experience,...camping]
 	variable = allRegion;
 	let count = 6;
 	let page = 2;
