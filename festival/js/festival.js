@@ -1,5 +1,6 @@
-$(document).ready(function () {
 
+$(document).ready(function () {
+    $('.loading').addClass('hidden');
     var region = document.querySelectorAll('.festival_region_fillter_box button');
     var concept = document.querySelectorAll('.festival_concept_fillter_box button');
     for (var i = 0; i < region.length; i++) {
@@ -35,6 +36,7 @@ $(document).ready(function () {
     }
     setting();
     function setEventList() {
+        $('.loading').removeClass('hidden');
         region = JSON.parse(localStorage.getItem("region"));
         concept = JSON.parse(localStorage.getItem("concept"));
         $('.festival_list_content_box').children().remove()
@@ -158,8 +160,8 @@ $(document).ready(function () {
                     --pageActiveIdx;
                     displayPage(pageActiveIdx);
                 });
-            
-
+                $('.loading').addClass('hidden');
+              
         });
     };
 
