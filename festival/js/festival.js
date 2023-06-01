@@ -1,7 +1,27 @@
+
 $(document).ready(function () {
     $('.loading').addClass('hidden');
     var region = document.querySelectorAll('.festival_region_fillter_box button');
     var concept = document.querySelectorAll('.festival_concept_fillter_box button');
+    var rowsPerPage;
+    var rows;
+    var rowsCount;
+    var pageCount;
+    var numbers;
+    var prevPageBtn;
+    var nextPageBtn;
+    var pageActiveIdx;
+    var currentPageNum;
+    var maxPageNum;
+    var numberBtn;
+    var start;
+    var end;
+    var rowsArray;
+    var totalPageCount;
+    var pageArr;
+    var pageListArr;
+    var nextPageNum;
+    var prevPageNum;
     for (var i = 0; i < region.length; i++) {
         region[i].addEventListener('click', function (e) {
             var region = document.querySelectorAll('.festival_region_fillter_box button');
@@ -42,7 +62,7 @@ $(document).ready(function () {
         $.get('https://gist.githubusercontent.com/GyeungHoon/9a5e27234702a6f14c2376cae1d24e38/raw/110270a38ef29a8d42ede56fb3d585b961bfc9f4/festival.json').done(function (data) {
             localStorage.setItem('data', JSON.stringify(data));
             for (let i = 0; i < 100; i++) {
-                var innerHtmltext =  `
+                var innerHtmltext = `
                 <ul>
                 <li>
                     <div class="festival_list_img_box">
@@ -74,22 +94,21 @@ $(document).ready(function () {
                     document.getElementById("festival_list_content_box").innerHTML += innerHtmltext;
                 }
             }
-            var rowsPerPage = 5;
-            var rows = document.querySelectorAll('#festival_list_content_box ul li');
-            var rowsCount = rows.length;
-            var pageCount = Math.ceil(rowsCount / rowsPerPage);
-            var numbers = document.querySelector('#numbers');
-            var prevPageBtn = document.querySelector('.pagination .fa-arrow-left');
-            var nextPageBtn = document.querySelector('.pagination .fa-arrow-right');
-
-            var pageActiveIdx = 0; //현재 보고 있는 페이지그룹 번호
-            var currentPageNum = 1;// 현재 보고 있는 페이지네이션 번호
-            var maxPageNum = 5; // 페이지그룹 최대 개수
+            rowsPerPage = 5;
+            rows = document.querySelectorAll('#festival_list_content_box ul li');
+            rowsCount = rows.length;
+            pageCount = Math.ceil(rowsCount / rowsPerPage);
+            numbers = document.querySelector('#numbers');
+            prevPageBtn = document.querySelector('.pagination .fa-arrow-left');
+            nextPageBtn = document.querySelector('.pagination .fa-arrow-right');
+            pageActiveIdx = 0; //현재 보고 있는 페이지그룹 번호
+            currentPageNum = 1;// 현재 보고 있는 페이지네이션 번호
+            maxPageNum = 5; // 페이지그룹 최대 개수
             $('#numbers').children().remove();
             for (let i = 1; i <= pageCount; i++) {
                 numbers.innerHTML += `<li><a href="#none" onclick="window.scrollTo(0,0);">${i}</a></li>`
             }
-            var numberBtn = numbers.querySelectorAll('a');
+            numberBtn = numbers.querySelectorAll('a');
             // 페이지네이션 번호 감추기
             for (nb of numberBtn) {
                 nb.style.display = 'none';
@@ -97,14 +116,13 @@ $(document).ready(function () {
             numberBtn.forEach((item, idx) => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
-
                     displayRow(idx);
                 });
             });
             function displayRow(idx) {
-                var start = idx * rowsPerPage;
-                var end = start + rowsPerPage;
-                var rowsArray = [...rows];
+                start = idx * rowsPerPage;
+                end = start + rowsPerPage;
+                rowsArray = [...rows];
                 for (ra of rowsArray) {
                     ra.style.display = 'none';
                 }
@@ -125,12 +143,11 @@ $(document).ready(function () {
                 for (nb of numberBtn) {
                     nb.style.display = 'none';
                 }
-                var totalPageCount = Math.ceil(pageCount / maxPageNum);
-                var pageArr = [...numberBtn];
-                var start = num * maxPageNum;
-                var end = start + maxPageNum;
-                var pageListArr = pageArr.slice(start, end);
-
+                totalPageCount = Math.ceil(pageCount / maxPageNum);
+                pageArr = [...numberBtn];
+                start = num * maxPageNum;
+                end = start + maxPageNum;
+                pageListArr = pageArr.slice(start, end);
                 for (let item of pageListArr) {
                     item.style.display = 'block';
                 }
@@ -146,9 +163,10 @@ $(document).ready(function () {
                 };
             };
             displayPage(0);
-            
+            window.onload = function () {
                 nextPageBtn.addEventListener('click', () => {
                     nextPageNum = pageActiveIdx * maxPageNum + maxPageNum;
+                    console.log(nextPageBtn + "adawd")
                     displayRow(nextPageNum);
                     ++pageActiveIdx;
                     displayPage(pageActiveIdx);
@@ -159,18 +177,8 @@ $(document).ready(function () {
                     --pageActiveIdx;
                     displayPage(pageActiveIdx);
                 });
-                $('.loading').addClass('hidden');
+            }
+            $('.loading').addClass('hidden');
         });
     };
-    
-    // 글로벌 네비게이션 li바 최초 숨기기 
-    $("#festival_gnb_li").children('ul:eq(0)').css("display","none")
-    // 글로벌 네비게이션 바 클릭시 최초 숨긴 li요소 슬라이드 토글 메소드 실행 
-    $("#festival_gnb_li").click(function () {
-        $("#festival_gnb_li").children('ul:eq(0)').slideToggle(500)
-    })
-    //Header
-    $(".header").load("../header/header.html");
-    //Footer
-    $(".footer").load("../footer/footer.html");
 });

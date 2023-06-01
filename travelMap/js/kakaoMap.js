@@ -179,7 +179,7 @@ $.getJSON(url, function (data) {
 				setCenter();
 				panTo();
 				zoomIn();
-				var iwContent = `<div style="padding:10px 0px 0px;font-size: 16px;color: #333;line-height: 23px;font-weight: 500;text-align:center;">${variable[i].명칭}<br><span style="font-size:12px;color:#666666;font-weight:300;width:100%;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;">${variable[i].주소}</span><br><div style="display:flex;justify-content:space-around;width:100%;padding:3px 0;border-top:1px dashed #007bff"><a style="font-size: 12px;color:#007bff;" href="https://map.kakao.com/link/map/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="color:blue" target="_blank">큰지도보기</a><a href="https://map.kakao.com/link/to/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="font-size: 12px;color:#007bff;padding:auto;" target="_blank">길찾기</a></div></div>`, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+				var iwContent = `<div style="padding:10px 0px 0px;font-size: 16px;color: #333;line-height: 23px;font-weight: 500;text-align:center;">${variable[i].명칭}<br><span style="font-size:12px;color:#666666;font-weight:300;width:100px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;">${variable[i].주소}</span><br><div style="display:flex;justify-content:space-around;width:100%;padding:3px 0;border-top:1px dashed #007bff"><a style="font-size: 12px;color:#007bff;" href="https://map.kakao.com/link/map/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="color:blue" target="_blank">큰지도보기</a><a href="https://map.kakao.com/link/to/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="font-size: 12px;color:#007bff;padding:auto;" target="_blank">길찾기</a></div></div>`, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 				iwPosition = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
 				iwRemoveable = true;
 				// 인포윈도우를 생성합니다
@@ -236,15 +236,27 @@ $.getJSON(url, function (data) {
 			loadMoreContent(startIndex);
 			page++;
 		}
-		// 이미지 클릭시 위치로 이동 ( 무한 스크롤 전 )
+		// 이미지 클릭시 위치로 이동 ( 무한 스크롤 후 )
 		$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
 			let num = $(this).parents(".travelMap_cont_card").index();
 			i = num
-			variable = beach
+			console.log(i)
+			if(i<=24){
+				variable = beach
+			}else if(i<=115&&i>24){
+				variable = nature
+			}else if(i<=138&&i>115){
+				variable = hotel
+			}else if(i<=171&&i>138){
+				variable = experience
+			}else if(i<=179&&i>171){
+				variable = camping
+			}
+			console.log(variable)
 			setCenter();
 			panTo();
 			zoomIn();
-			var iwContent = `<div style="padding:10px 0px 0px;font-size: 16px;color: #333;line-height: 23px;font-weight: 500;text-align:center;">${variable[i].명칭}<br><span style="font-size:12px;color:#666666;font-weight:300;width:100%text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">${variable[i].주소}</span><br><div style="display:flex;justify-content:space-around;width:100%;padding:3px 0;border-top:1px dashed #007bff"><a style="font-size: 12px;color:#007bff;" href="https://map.kakao.com/link/map/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="color:blue" target="_blank">큰지도보기</a><a href="https://map.kakao.com/link/to/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="font-size: 12px;color:#007bff;padding:auto;" target="_blank">길찾기</a></div></div>`, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+			var iwContent = `<div style="padding:10px 0px 0px;font-size: 16px;color: #333;line-height: 23px;font-weight: 500;text-align:center;">${variable[i].명칭}<br><span style="font-size:12px;color:#666666;font-weight:300;width:100px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;">${variable[i].주소}</span><br><div style="display:flex;justify-content:space-around;width:100%;padding:3px 0;border-top:1px dashed #007bff"><a style="font-size: 12px;color:#007bff;" href="https://map.kakao.com/link/map/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="color:blue" target="_blank">큰지도보기</a><a href="https://map.kakao.com/link/to/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="font-size: 12px;color:#007bff;padding:auto;" target="_blank">길찾기</a></div></div>`, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 			iwPosition = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
 			iwRemoveable = true;
 			// 인포윈도우를 생성합니다
@@ -256,28 +268,28 @@ $.getJSON(url, function (data) {
 		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
 			array.push(infowindow);
 			closeInfoWindow();
-			infowindow.open(map, beach_markers[i]); 
+			if(i<=24){
+				infowindow.open(map, beach_markers[i]); 
+			}else if(i<=115&&i>24){
+				infowindow.open(map, nature_markers[i]); 
+			}else if(i<=138&&i>115){
+				infowindow.open(map, hotel_markers[i]); 
+			}else if(i<=171&&i>138){
+				infowindow.open(map, experience_markers[i]); 
+			}else if(i<=179&&i>171){
+				infowindow.open(map, camping_markers[i]); 
+			}
 		})
 	});	
-	 // 이미지 클릭시 위치로 이동 ( 무한 스크롤 후 )
+	 // 이미지 클릭시 위치로 이동 ( 무한 스크롤 전 )
 	$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
 		let num = $(this).parents(".travelMap_cont_card").index();
 		i = num
-		if(i<=24){
-			variable = beach
-		}else if(i<=115&&i>24){
-			variable = nature
-		}else if(i<=138&&i>115){
-			variable = hotel
-		}else if(i<=171&&i>138){
-			variable = experience
-		}else if(i<=179&&i>171){
-			variable = camping
-		}
+		variable = beach
 		setCenter();
 		panTo();
 		zoomIn();
-		var iwContent = `<div style="padding:10px 0px 0px;font-size: 16px;color: #333;line-height: 23px;font-weight: 500;text-align:center;">${variable[i].명칭}<br><span style="font-size:12px;color:#666666;font-weight:300;width:100%text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">${variable[i].주소}</span><br><div style="display:flex;justify-content:space-around;width:100%;padding:3px 0;border-top:1px dashed #007bff"><a style="font-size: 12px;color:#007bff;" href="https://map.kakao.com/link/map/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="color:blue" target="_blank">큰지도보기</a><a href="https://map.kakao.com/link/to/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="font-size: 12px;color:#007bff;padding:auto;" target="_blank">길찾기</a></div></div>`, // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+		var iwContent = `<div style="padding:10px 0px 0px;font-size: 16px;color: #333;line-height: 23px;font-weight: 500;text-align:center;">${variable[i].명칭}<br><span style="font-size:12px;color:#666666;font-weight:300;width:100px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;">${variable[i].주소}</span><br><div style="display:flex;justify-content:space-around;width:100%;padding:3px 0;border-top:1px dashed #007bff"><a style="font-size: 12px;color:#007bff;" href="https://map.kakao.com/link/map/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="color:blue" target="_blank">큰지도보기</a><a href="https://map.kakao.com/link/to/${variable[i].명칭},${variable[i].위도}, ${variable[i].경도}" style="font-size: 12px;color:#007bff;padding:auto;" target="_blank">길찾기</a></div></div>`,
 		iwPosition = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
 		iwRemoveable = true;
 		// 인포윈도우를 생성합니다
@@ -290,23 +302,7 @@ $.getJSON(url, function (data) {
 		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
 		array.push(infowindow);
 		closeInfoWindow();
-		if(i<=24){
-			infowindow.open(map, beach_markers[i]); 
-		}else if(i<=115&&i>24){
-			infowindow.open(map, nature_markers[i]); 
-		}else if(i<=138&&i>115){
-			infowindow.open(map, hotel_markers[i]); 
-		}else if(i<=171&&i>138){
-			infowindow.open(map, experience_markers[i]); 
-		}else if(i<=179&&i>171){
-			infowindow.open(map, camping_markers[i]); 
-		}
-	})
-	// 우클릭시 인포윈도우 없애기
-	$(document).on("contextmenu", function(){
-		setTimeout(()=>{
-			infowindow.close();
-		},500)
+		infowindow.open(map, beach_markers[i]); 
 	})
 });
 
