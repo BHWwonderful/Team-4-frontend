@@ -5,8 +5,6 @@ function clickUserExpressionLog() {
 function clickNotLikeExpression() {
         document.querySelector('.not').classList.toggle('notClick');
 }
-
-// Object.keys 사용 
 $(document).ready(function () {
         const receivedData = location.href.split('?')[1];
         let keys = Object.keys(localStorage);
@@ -32,13 +30,11 @@ $(document).ready(function () {
                     <p>● 9월 16일 (토) - 10월 22일 (일) 중 매주 토·일 여의도한강공원 개장 예정</p>
 
                     <h4>[행사내용]</h4>
-                    <p>2023년 한강달빛야시장에서는 푸드트럭 39팀과 일반 상인 60팀(총 99팀)이 함께한다. 한강공원의 아름다운 야경을 배경으로 다양한 먹거리, 수공예 상품, 체험 프로그램과
-                        함께
-                        서울형 야시장을 즐겨보자.</p>
+                    <p>2023년 한강달빛야시장에서는 푸드트럭 39팀과 일반 상인 60팀(총 99팀)이 함께한다. 한강공원의 아름다운 야경을 배경으로 
+                    다양한 먹거리, 수공예 상품, 체험 프로그램과 함께 서울형 야시장을 즐겨보자.</p>
                     <p>*푸드트럭 40팀, *수공예 상인 50팀, *체험 프로그램</p>
                 </div>
                 `
-
                         document.getElementById("festivalDetail_detailInfo_box").innerHTML = `
                 <div>
                     <p><strong>· 시작일</strong><span>${JSON.parse(result)[i].행사시작일}</span></p>
@@ -55,9 +51,7 @@ $(document).ready(function () {
                     <p><strong>· 행사시간</strong><span>${JSON.parse(result)[i].공연시간}</span></p>
                 </div>
                 `
-
                         break;
-
                 }
         }
             //Header
