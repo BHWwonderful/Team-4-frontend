@@ -11,6 +11,10 @@
             justify-content: center;
         }
 
+        .announcement_title_wrap{
+            background:url(../images/announcement.jpg) repeat-x center;
+        }
+
         .course_titleContent_box{
             margin-left:62px;
             margin-right:62px;
@@ -1520,6 +1524,74 @@
             background-color: rgb(166, 3, 17);
         }
 
+        /* 공지사항 */
+        .notice_content_wrap{
+            margin-top:70px;
+            border-top:1px solid #e6e6e6;
+        }
+
+        .notice_search_wrap{
+            margin-top:35px;
+            padding-bottom:15px;
+            display:flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #2d58a0;
+        }
+
+        .notice_totalPage_box{
+            display: flex;
+            font-size:14.7px;
+            align-items:end;
+        }
+
+        .notice_search_box{
+            font-size:15.4px;
+        }
+
+        .search_label{
+            margin-right:5px;
+        }
+
+        .currentPage{
+            color:#2d58a0;
+            margin-left:5px;
+            margin-right:5px;
+        }
+
+        .totalPage{
+            color:#2d58a0;
+            margin-left:5px;
+        }
+
+        .search_input{
+            width:194px;
+            height:30px;
+            padding-left:10px;
+            margin-right:7px;
+        }
+
+        .search_button{
+            width: 98px;
+            height:32px;
+            background: #4a8bf8 url(../images/search_btn.png) no-repeat 20% 50%;
+            color:#FFFFFF;
+            padding-left:20px;
+        }
+
+        .table_list{
+            width:100%;
+            text-align: center;
+        }
+
+        .table_item{
+            vertical-align: middle;
+            height:50px;
+        }
+
+        .title{
+            text-align: left;
+        }
+
 
         /* 숨기기 클래스 */
         .hidden{
@@ -1528,6 +1600,11 @@
 
         .invisible{
             visibility: hidden;
+        }
+
+        .hide{
+            position:absolute;
+            text-indent: -9999px;
         }
 
         

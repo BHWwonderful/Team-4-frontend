@@ -10,17 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .psuedo_header{
-            height:130px;
-            border-bottom:2px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="psuedo_header"></header>
+    <header class="header">
+        
+    </header>
     <main class="main">
         <div class="course_title_wrap">
             <div class="course_titleContent_box">
@@ -32,7 +29,7 @@
                 <ul class="course_subGnbList">
                     <li class="course_subGnbListFirstItem">
                         <a class="course_subGnbListFirstItemLink" href="#none">
-                            <img src="../images/home_ic.jpg" alt="메인 페이지로">
+                            <img src="images/home_ic.jpg" alt="메인 페이지로">
                         </a>
                     </li>
                     <li class="course_subGnbListItem">
@@ -50,39 +47,39 @@
                     <ul class="course_subGnbSnsFuncList">
                         <li class="course_subGnbSnsFuncListItem">
                             <a href="#none">
-                                <img src="../images/mail_ic.png" alt="">
+                                <img src="images/mail_ic.png" alt="">
                             </a>
                         </li>
                         <li class="course_subGnbSnsFuncListItem">
                             <a href="#none">
-                                <img src="../images/print_ic.png" alt="">
+                                <img src="images/print_ic.png" alt="">
                             </a>
                         </li>
                     </ul>
                     <ul class="course_subGnbSnsList">
                         <li class="course_subGnbSnsListItem course_subGnbSnsListItem--noMargin">
                             <a href="#none">
-                                <img class="course_subGnbSnsListItemLinkImg" src="../images/copy2_ic.png" alt="">
+                                <img class="course_subGnbSnsListItemLinkImg" src="images/copy2_ic.png" alt="">
                             </a>
                         </li>
                         <li class="course_subGnbSnsListItem">
                             <a href="#none">
-                                <img class="course_subGnbSnsListItemLinkImg" src="../images/face_ic.png" alt="">
+                                <img class="course_subGnbSnsListItemLinkImg" src="images/face_ic.png" alt="">
                             </a>
                         </li>
                         <li class="course_subGnbSnsListItem">
                             <a href="#none">
-                                <img class="course_subGnbSnsListItemLinkImg" src="../images/twi_ic.png" alt="">
+                                <img class="course_subGnbSnsListItemLinkImg" src="images/twi_ic.png" alt="">
                             </a>
                         </li>
                         <li class="course_subGnbSnsListItem">
                             <a href="#none">
-                                <img class="course_subGnbSnsListItemLinkImg" src="../images/kakao_ic.png" alt="">
+                                <img class="course_subGnbSnsListItemLinkImg" src="images/kakao_ic.png" alt="">
                             </a>
                         </li>
                         <li class="course_subGnbSnsListItem">
                             <a href="#none">
-                                <img class="course_subGnbSnsListItemLinkImg" src="../images/naver_ic.png" alt="">
+                                <img class="course_subGnbSnsListItemLinkImg" src="images/naver_ic.png" alt="">
                             </a>
                         </li>
                     </ul>
@@ -93,12 +90,12 @@
             <section class="course_courseLnb_box">
                 <ul class="course_courseLnbList">
                     <li class="course_courseLnbListItem">
-                        <a class="course_courseLnbListItemLink" href="../html/course.html">
+                        <a class="course_courseLnbListItemLink" href="../course/course.html">
                             <h3 class="course_courseLnbListItemLinkTitle course_courseLnbListItemLinkTitle--blue">지역, 테마별 코스</h3>
                         </a>
                     </li>
                     <li class="course_courseLnbListItem">
-                        <a class="course_courseLnbListItemLink" href="../html/courseUser.html">
+                        <a class="course_courseLnbListItemLink" href="../course/courseUser.html">
                             <h3 class="course_courseLnbListItemLinkTitle">프로계획러 사용자가 직접 만든 풀코스 여행</h3>
                         </a>
                     </li>
@@ -344,7 +341,9 @@
             </div>
         </div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        
+    </footer>
     <div class="loading hidden">
         <div class="loading_element loading--first">
             <div class="circle circle--red"></div>
@@ -359,6 +358,10 @@
             <div class="circle circle--yellow"></div>
         </div>        
     </div>
+    <script>
+        $(".header").load('../header/header.html');
+        $(".footer").load('../footer/footer.html');
+    </script>
     <script>
         // 로딩창
         const loadingPage = document.querySelector('.loading');
@@ -599,6 +602,40 @@
             loadingPage.classList.add('hidden');
         }
 
+    </script>
+    <script>
+        $(".gnb_1dp > li").mouseover(function () {
+        $(".gnb_2dp_bg").stop().slideUp(100);
+        $(this).find(".gnb_2dp_bg").stop().slideDown("fast");
+        })
+
+        $(".main").mouseover(function () {
+            $(".gnb_2dp_bg").stop().slideUp(100);
+        })
+
+        var path = window.location.pathname;
+
+        var arSplitPath = path.split("/");
+        var avx = $(".gnb_1dp_link:eq(0)")
+        $(window).on("scroll", function () {
+            let scroll = $(window).scrollTop();
+            if (scroll >= 381) {
+                if (arSplitPath[1] == "region" || arSplitPath[1] == "course") {
+                    $(".gnb_1dp_link:eq(0)").addClass("gnb_path_active");
+                }
+                if (arSplitPath[1] == "evnet" || arSplitPath[1] == "festival") {
+                    $(".gnb_1dp_link:eq(1)").addClass("gnb_path_active");
+                }
+                if (arSplitPath[1] == "package&theme") {
+                    $(".gnb_1dp_link:eq(2)").addClass("gnb_path_active");
+                }
+                if (arSplitPath[1] == "map" || arSplitPath[1] == "course") {
+                    $(".gnb_1dp_link:eq(3)").addClass("gnb_path_active");
+                }
+            } else {
+                $(".gnb_1dp li a").removeClass("gnb_path_active");
+            }
+        })
     </script>
     
 </body>
