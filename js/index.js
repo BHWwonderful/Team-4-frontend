@@ -6,7 +6,7 @@ const sliderItems = document.querySelectorAll('.index_sliderListItem');
 // 진행바 아이템
 const progressbars = document.querySelectorAll('.index_sliderProgressbar');
 // 자동 실행이 되고 있는지 확인
-let isInterval
+let isInterval;
 
 // 현재 슬라이더 인덱스
 const currentSlideIndex = document.querySelector('.index_currentPageText');
@@ -20,11 +20,15 @@ const sliderPlayBtn = document.querySelector('.index_sliderPlayBtn');
 const sliderStopBtn = document.querySelector('.index_sliderStopBtn');
 
 sliderPrevBtn.addEventListener('click', function(){
+    clearInterval(isInterval);
+    runCurrentSlideInterval();
     currentSlide = currentSlide > 1 ? currentSlide - 1 : 4;
     renderCurrentSlideIndex();
 })
 
 sliderNextBtn.addEventListener('click', function(){
+    clearInterval(isInterval);
+    runCurrentSlideInterval();
     addCurrentSlide();
     renderCurrentSlideIndex();
 })
@@ -42,6 +46,8 @@ sliderStopBtn.addEventListener('click', function(){
 })
 
 runCurrentSlideInterval();
+showCurrentSlider();
+showCurrentProgressbar();
 
 function renderCurrentSlideIndex(){
     currentSlideIndex.textContent=currentSlide;
@@ -62,7 +68,6 @@ function showCurrentProgressbar(){
     })
     progressbars[currentSlide-1].classList.add('index_sliderProgressbar--on')
 }
-
 
 function runCurrentSlideInterval(){
     isInterval = setInterval(addCurrentSlide, 4000);
