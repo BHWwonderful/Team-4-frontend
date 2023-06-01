@@ -6,8 +6,6 @@ $(document).ready(function () {
 		$(this).parent().toggleClass("btn_move");
 	});
 	control_mouse();
-
-	$(".travelMap_cont_box").on("scroll", function () {});
 });
 
 // 마우스 제어 (우클릭/ 드래그 차단)
