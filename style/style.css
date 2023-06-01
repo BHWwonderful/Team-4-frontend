@@ -29,7 +29,6 @@
 .index_slider_wrap{
     min-width:1180px;
     position:relative;
-    /* margin-bottom:30px; */
     height: 760px;
 }
 
@@ -47,30 +46,43 @@
     width:100%;
 }
 
+.index_sliderListItem::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index:10;
+}
+
 .index_sliderListItemText_box{
+    position: relative;
     display:flex;
     align-items: center;
     flex-direction: column;
+    z-index:11;
 }
 
 
 .sliderImg01{
-    background: url(../images/sliderImage_01.jpg) no-repeat center;
+    background: url(../images/slider-imagenew01.jpg) no-repeat center;
     background-size:cover;
 }
 
 .sliderImg02{
-    background: url(../images/sliderImage_02.jpg) no-repeat center;
+    background: url(../images/slider-imagenew02.jpg) no-repeat center;
     background-size:cover;
 }
 
 .sliderImg03{
-    background: url(../images/sliderImage_03.jpg) no-repeat center;
+    background: url(../images/slider-imagenew03.jpg) no-repeat center;
     background-size:cover;
 }
 
 .sliderImg04{
-    background: url(../images/sliderImage_04.jpg) no-repeat center;
+    background: url(../images/slider-imagenew04.JPG) no-repeat center;
     background-size:cover;
 }
 
@@ -116,6 +128,7 @@
     bottom:50px;
     color:#FFFFFF;
     font-size:50px;
+    z-index:11;
 }
 
 .index_sliderControlNavBtn_box{
@@ -125,6 +138,7 @@
     width:auto;
     height:43px;
     margin-right:25px;
+    z-index:11;
 }
 
 .index_sliderPrevBtn{
