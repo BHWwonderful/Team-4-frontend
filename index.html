@@ -17,7 +17,21 @@
     <div class="skip_menu">
         <a href="#main">본문으로 가기</a>
     </div>
-
+    <!-- 김준성 로딩창 -->
+    <div class="loading">
+        <div class="loading_element loading--first">
+            <div class="circle circle--red"></div>
+        </div>
+        <div class="loading_element loading--second">
+            <div class="circle circle--blue"></div>
+        </div>
+        <div class="loading_element loading--third">
+            <div class="circle circle--green"></div>
+        </div>
+        <div class="loading_element loading--fourth">
+            <div class="circle circle--yellow"></div>
+        </div>        
+    </div>
     <header class="header"></header>
 
     <main class="main">
@@ -70,25 +84,25 @@
                     <ul class="index_sliderProgressbarList">
                         <li class="index_sliderProgressbarListItem">
                             <a class="index_sliderProgressbarListItemLink" href="#none">
-                                설레는 봄 피크닉
+                                추천! 가볼만한 곳
                                 <span class="index_sliderProgressbar index_sliderProgressbar--on"></span>
                             </a>
                         </li>
                         <li class="index_sliderProgressbarListItem">
                             <a class="index_sliderProgressbarListItemLink" href="#none">
-                                SNS속 인기 여행지
+                                신규 생태테마 관광지
                                 <span class="index_sliderProgressbar"></span>
                             </a>
                         </li>
                         <li class="index_sliderProgressbarListItem">
                             <a class="index_sliderProgressbarListItemLink" href="#none">
-                                이색 웨딩 촬영지
+                                힐링코스
                                 <span class="index_sliderProgressbar"></span>
                             </a>
                         </li>
                         <li class="index_sliderProgressbarListItem">
                             <a class="index_sliderProgressbarListItemLink" href="#none">
-                                체험 관광지
+                                부산가볼만한 곳
                                 <span class="index_sliderProgressbar"></span>
                             </a>
                         </li>
@@ -461,7 +475,7 @@
     </main>
 
     <footer class="footer"></footer>
-
+    
     <script>
         // Header
         $(".header").load("/header/header.html");
@@ -470,6 +484,12 @@
         $(".footer").load("/footer/footer.html");
     </script>
     <script src="/js/index.js"></script>
+    <script>
+        const loadingPage = document.querySelector('.loading');
+        window.onload = function(){
+            loadingPage.classList.add('hidden');
+        }
+    </script>
 </body>
 
 </html>
