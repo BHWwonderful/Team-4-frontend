@@ -40,12 +40,8 @@ let nature;
 let hotel;
 let experience;
 let camping;
-function setCenter() {            
-    // 이동할 위도 경도 위치를 생성합니다 
-    var moveLatLon = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
-    // 지도 중심을 이동 시킵니다
-	map.setCenter(moveLatLon);
-}
+
+var array = [];
 // 데이터를 가져오기 위해 jQuery를 사용합니다
 $.getJSON(url, function (data) {
 	// 데이터에서 좌표 값을 가지고 마커를 표시합니다
@@ -180,17 +176,6 @@ $.getJSON(url, function (data) {
 			$(".travelMap_cont_card > a, .travelMap_cont_info > a").on("click", function () {
 				let num = $(this).parents(".travelMap_cont_card").index();
 				i = num
-				if(i<=24){
-					variable = beach
-				}else if(i<=115&&i>24){
-					variable = nature
-				}else if(i<=138&&i>115){
-					variable = hotel
-				}else if(i<=171&&i>138){
-					variable = experience
-				}else if(i<=179&&i>171){
-					variable = camping
-				}
 				setCenter();
 				panTo();
 				zoomIn();
@@ -203,20 +188,21 @@ $.getJSON(url, function (data) {
 					content : iwContent,
 					removable : iwRemoveable
 		});
-		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-		if(i<=24){
-			infowindow.open(map, beach_markers[i]); 
-		}else if(i<=115&&i>24){
-			infowindow.open(map, nature_markers[i]); 
-		}else if(i<=138&&i>115){
-			infowindow.open(map, hotel_markers[i]); 
-		}else if(i<=171&&i>138){
-			infowindow.open(map, experience_markers[i]); 
-		}else if(i<=179&&i>171){
-			infowindow.open(map, camping_markers[i]); 
-		}
+			array.push(infowindow);
+			closeInfoWindow();
+			if(variable == beach){
+				infowindow.open(map, beach_markers[i]); 
+			}else if(variable == nature){
+				infowindow.open(map, nature_markers[i]); 
+			}else if(variable == hotel){
+				infowindow.open(map, hotel_markers[i]); 
+			}else if(variable == experience){
+				infowindow.open(map, experience_markers[i]); 
+			}else if(variable == camping){
+				infowindow.open(map, camping_markers[i]); 
+			}
 			})
-		})
+		});
 	function setCenter() {            
 		var moveLatLon = new kakao.maps.LatLng(variable[i].위도, variable[i].경도);
 		map.setCenter(moveLatLon);
@@ -233,12 +219,16 @@ $.getJSON(url, function (data) {
 		level = 5;
 		map.setLevel(level);
 	}    
-	
 	function zoomOut() {    
 		var level = map.getLevel(); 
 		level = 7;
 		map.setLevel(level);
 	}    
+	function closeInfoWindow(){
+		for(var idx=0; idx<array.length; idx++){
+			array[idx].close();
+		}
+	}
 	loadMoreContent(0);
 	document.querySelector('.travelMap_cont_box').addEventListener('scroll', function() {
 		if (this.scrollTop + this.clientHeight >= this.scrollHeight && !isAllLoaded) {
@@ -264,6 +254,8 @@ $.getJSON(url, function (data) {
 				removable : iwRemoveable
 		});
 		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+			array.push(infowindow);
+			closeInfoWindow();
 			infowindow.open(map, beach_markers[i]); 
 		})
 	});	
@@ -296,6 +288,8 @@ $.getJSON(url, function (data) {
 			
 		});
 		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+		array.push(infowindow);
+		closeInfoWindow();
 		if(i<=24){
 			infowindow.open(map, beach_markers[i]); 
 		}else if(i<=115&&i>24){
@@ -309,7 +303,7 @@ $.getJSON(url, function (data) {
 		}
 	})
 	// 우클릭시 인포윈도우 없애기
-	$("#travelMap").on("contextmenu", function(){
+	$(document).on("contextmenu", function(){
 		setTimeout(()=>{
 			infowindow.close();
 		},500)
