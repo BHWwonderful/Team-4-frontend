@@ -133,10 +133,6 @@ $(document).ready(() => {
 	});
 
 	// 좋아요 기능 숫자, 모양만
-<<<<<<< HEAD
-=======
-	
->>>>>>> 368f003552796d16744501d03b9cd88a3fb3f76f
 	$(".package_card_likeImg").on("click", function (e) {
 		e.stopPropagation();
 		console.log(e)
