@@ -147,10 +147,19 @@ $.getJSON(url, function (data) {
 	$(".travelMap_category_card li").on("click", function () {
 		$(".travelMap_cont li").remove();
 		$(this).scrollTop(0)
+		
 		zoomOut();
+		if(infowindow){
+			infowindow.close();
+		}
 		isAllLoaded = true;
 		let category = { beach, nature, hotel, experience, camping };
 		variable = category[$(this).find("img").attr("alt")];
+		function setCenter() {            
+			var zoomOut = new kakao.maps.LatLng(36.26, 128.0951);
+			map.setCenter(zoomOut);
+		}
+		setCenter();
 		for (i = 0; i < variable.length; i++) {
 			keys = Object.keys(variable[i]);
 			isnatureable = keys.filter((v) => v.includes("주차")).length > 0;
@@ -221,7 +230,7 @@ $.getJSON(url, function (data) {
 	}    
 	function zoomOut() {    
 		var level = map.getLevel(); 
-		level = 7;
+		level = 12;
 		map.setLevel(level);
 	}    
 	function closeInfoWindow(){
