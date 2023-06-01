@@ -25,9 +25,9 @@ $(document).ready(function(){
         };
         easyPagination(paginationOptions).paginate();
         
-    }) 
-    $("#ing_filter_btn").click(function(){
-        
+    })
+    $("#event_url").click(function(){
+        alert("URL이 복사되었습니다.")
     })
     // 글로벌 네비게이션 li바 최초 숨기기 
     $("#event_gnb_li").children('ul:eq(0)').css("display","none")
