@@ -133,7 +133,6 @@ $(document).ready(() => {
 	});
 
 	// 좋아요 기능 숫자, 모양만
-	
 	$(".package_card_likeImg").on("click", function (e) {
 		e.stopPropagation();
 		console.log(e)
