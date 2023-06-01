@@ -20,11 +20,21 @@ const sliderPlayBtn = document.querySelector('.index_sliderPlayBtn');
 const sliderStopBtn = document.querySelector('.index_sliderStopBtn');
 
 sliderPrevBtn.addEventListener('click', function(){
+<<<<<<< HEAD
+=======
+    clearInterval(isInterval);
+    runCurrentSlideInterval();
+>>>>>>> 368f003552796d16744501d03b9cd88a3fb3f76f
     currentSlide = currentSlide > 1 ? currentSlide - 1 : 4;
     renderCurrentSlideIndex();
 })
 
 sliderNextBtn.addEventListener('click', function(){
+<<<<<<< HEAD
+=======
+    clearInterval(isInterval);
+    runCurrentSlideInterval();
+>>>>>>> 368f003552796d16744501d03b9cd88a3fb3f76f
     addCurrentSlide();
     renderCurrentSlideIndex();
 })
