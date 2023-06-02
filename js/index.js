@@ -116,7 +116,6 @@ $(".regionMap_slideDot_box>button").click(function () {
 });
 
 
-
 $(".regionMap_slide_prevBtn").click(function () {
     // 슬라이드 통제
     if (slideX <= 0) {
