@@ -45,7 +45,7 @@ $(".travelAi_recentSlide_prevBtn").click(function () {
     if (recentSlideX <= 0) {
         return false;
     }
-    
+
     recentSlideX -= 300;
     recentBar -= 236;
     $(".travelAi_recent_wrap ul li").animate({ right: recentSlideX }, 200);
