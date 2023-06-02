@@ -455,7 +455,7 @@
     font-size: 18px;
 }
 
-.travelAiPlanner_frontCard_wrap>button::after {
+.travelAiPlanner_frontMakeMore_box>button::after {
     content: '';
     display: inline-block;
     width: 6px;
