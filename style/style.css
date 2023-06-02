@@ -329,6 +329,10 @@
     display:none;
 }
 
+.invisible{
+    visibility: hidden;
+}
+
 /* 임재훈 */
 /* 메인 지도 */
 .regionMap_content {
