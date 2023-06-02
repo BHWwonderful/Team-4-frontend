@@ -9,7 +9,6 @@ $(".region_city_box a").click(function () {
 
 
 $(document).ready(function () {
-    $(".loading").addClass("hidden");
     $.getJSON("https://gist.githubusercontent.com/JaeHoon925/fda7b044cdc296532b470a88e7d8a611/raw/35f7624cd31db530db662d9ae1de2a15022ae058/regionData.json", function (data) {
 
         for (var i = 0; i < data.seoul.length; i++) {
@@ -43,7 +42,6 @@ $(document).ready(function () {
         });
 
         $(".busan").click(function () {
-            $(".loading").removeClass("hidden");
             for (var i = 0; i < data.busan.length; i++) {
                 $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("h4").text(data.busan[`${i}`].명칭);
                 $(".region_destinationCont_container>ul>li>a").eq(`${i}`).find("p").text(data.busan[`${i}`].개요);
@@ -56,7 +54,6 @@ $(document).ready(function () {
                 $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(2)`).text(splitarr[1]);
                 $(`.region_destinationCont_container>ul>li:nth-child(${i + 1})>.region_destiAddr_box span:nth-child(3)`).text(data.busan[`${i}`].전화번호);
             }
-            $(".loading").addClass("hidden");
         })
         
         $(".daegu").click(function () {
