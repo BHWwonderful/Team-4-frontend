@@ -140,7 +140,6 @@ $(document).ready(() => {
 			$(this).prev().text(liked);
 			const coords = { x: e.pageX, y: e.pageY };
 			burst.tune(coords).replay();
-			console.log(window.caches)
 		} else {
 			liked--;
 			$(this).prev().text(liked);
