@@ -4,7 +4,7 @@ let mapContainer = document.getElementById("travelMap"),
 	mapOption = {
 	// 지도를 표시할 div
 	center: new kakao.maps.LatLng(37.4979, 127.0276), // 지도의 중심좌표
-	level: 7, // 지도의 확대 레벨
+	level: 10, // 지도의 확대 레벨
 };
 let map = new kakao.maps.Map(mapContainer, mapOption);
 
@@ -13,8 +13,8 @@ var beach_imageSrc = 'img/beach-icon.png', // 마커이미지의 주소입니다
 	hotel_imageSrc = 'img/hotel-icon.png', // 마커이미지의 주소입니다    
 	experience_imageSrc = 'img/experience-icon.png', // 마커이미지의 주소입니다    
 	camping_imageSrc = 'img/camping-icon.png', // 마커이미지의 주소입니다    
-    imageSize = new kakao.maps.Size(50, 50), // 마커이미지의 크기입니다
-    imageOption = {offset: new kakao.maps.Point(27, 69)};
+    imageSize = new kakao.maps.Size(45, 45), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(22, 69)};
 var beach_markerImage = new kakao.maps.MarkerImage(beach_imageSrc, imageSize, imageOption)
 var nature_markerImage = new kakao.maps.MarkerImage(nature_imageSrc, imageSize, imageOption)
 var hotel_markerImage = new kakao.maps.MarkerImage(hotel_imageSrc, imageSize, imageOption)
@@ -36,7 +36,7 @@ map.setMaxLevel(13);
 let clusterer = new kakao.maps.MarkerClusterer({
 	map: map, 
 	averageCenter: true, 
-	minLevel: 10, // 클러스터 할 최소 지도 레벨
+	minLevel: 12, // 클러스터 할 최소 지도 레벨
 });
 var infowindow;
 var i = null
@@ -53,7 +53,7 @@ let nature;
 let hotel;
 let experience;
 let camping;
-
+var level = map.getLevel();
 var array = [];
 // 데이터를 가져오기 위해 jQuery를 사용합니다
 $.getJSON(url, function (data) {
@@ -128,7 +128,6 @@ $.getJSON(url, function (data) {
 	clusterer.addMarkers(hotel_markers);
 	clusterer.addMarkers(experience_markers);
 	clusterer.addMarkers(camping_markers);
-	
 	allCategory = [...beach,...nature,...hotel,...experience,...camping]
 	variable = allCategory;
 	let count = 7;
@@ -222,6 +221,9 @@ $.getJSON(url, function (data) {
 			}else if(variable == camping){
 				infowindow.open(map, camping_markers[i]); 
 			}
+			kakao.maps.event.addListener(beach_markers[i], "click", function() {
+				infowindow.open(map, beach_markers[i]);  
+			});
 			})
 		});
 	function setCenter() {            
@@ -273,7 +275,6 @@ $.getJSON(url, function (data) {
 			}else if(i<=179&&i>171){
 				variable = camping
 			}
-			console.log(variable)
 			setCenter();
 			panTo();
 			zoomIn();
@@ -300,6 +301,9 @@ $.getJSON(url, function (data) {
 			}else if(i<=179&&i>171){
 				infowindow.open(map, camping_markers[i]); 
 			}
+			kakao.maps.event.addListener(beach_markers[i], "click", function() {
+				infowindow.open(map, beach_markers[i]);  
+				});
 		})
 	});	
 	 // 이미지 클릭시 위치로 이동 ( 무한 스크롤 전 )
@@ -318,14 +322,21 @@ $.getJSON(url, function (data) {
 			position : iwPosition, 
 			content : iwContent,
 			removable : iwRemoveable
-			
 		});
 		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
 		array.push(infowindow);
 		closeInfoWindow();
-		infowindow.open(map, beach_markers[i]); 
+		infowindow.open(map, beach_markers[i]);
+		
+		kakao.maps.event.addListener(beach_markers[i], "click", function() {
+			infowindow.open(map, beach_markers[i]);  
+		});
 	})
 });
+// for(i=0;i<beach.length;i++){
+// 	infowindow.open(map, beach_markers[i]);  
+// }
+
 
 // 클러스터링이 완료됐을 때 발생한다.
 kakao.maps.event.addListener(clusterer, "clustered", function (clusters) {
