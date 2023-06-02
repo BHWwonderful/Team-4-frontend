@@ -57,9 +57,9 @@ function renderCurrentSlideIndex(){
 
 function showCurrentSlider(){
     sliderItems.forEach((sliderItem, sliderIndex)=>{
-        sliderItem.classList.add('hidden');
+        sliderItem.classList.add('invisible');
     })
-    sliderItems[currentSlide-1].classList.remove('hidden');
+    sliderItems[currentSlide-1].classList.remove('invisible');
 }
 
 function showCurrentProgressbar(){

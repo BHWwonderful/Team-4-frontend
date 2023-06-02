@@ -77,7 +77,7 @@ $(document).ready(function () {
                         </a>
                         <div>
                             <p>지역 : ${JSON.parse(data)[i].관리자}</p>
-                            <p>장소 : ${JSON.parse(data)[i].행사장소}</p>
+                            <p>장소 : ${JSON.parse(data)[i].행사장소}</p>   
                             <p>연락처 : ${JSON.parse(data)[i].주최자연락처}</p>
                         </div>
                     </div>
