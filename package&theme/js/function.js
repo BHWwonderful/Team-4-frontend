@@ -74,10 +74,6 @@ $(document).ready(() => {
 			.animate({ right: origin + p_currentSlide * sliderWidth + "px" }, "fast");
 	});
 
-	// 드래그 이벤트
-	// $(".package_travel_now .package_slider").draggable({
-	//     axis: "x"
-	// });
 
 	// package_wellness_travel슬라이드
 	let w_currentSlide = 0;
@@ -133,7 +129,6 @@ $(document).ready(() => {
 	});
 
 	// 좋아요 기능 숫자, 모양만
-	
 	$(".package_card_likeImg").on("click", function (e) {
 		e.stopPropagation();
 		console.log(e)

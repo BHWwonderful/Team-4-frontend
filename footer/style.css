@@ -13,6 +13,20 @@
 
 .sel_button{
     margin-right: 10px;
+    margin-left: 10px;
+    background-color: #777676;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin-left: 10px;
+}
+.footer_bt{
+    margin-left: 10px;
+    background-color: #777676;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin-left: 10px;
 }
 select{
     border: 0;
@@ -20,15 +34,6 @@ select{
     width: 145px;
     color: #666;
     padding-left: 10px;
-}
-.sel_info button{
-    width: 45px;
-    height: 35px;
-    background-color: #777676;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    margin-left: 10px;
 }
 select{
     border-radius: 5px;
@@ -38,6 +43,9 @@ select{
     justify-content: space-between;
     border-top: 1px solid #e6e6e6;
     padding-top: 30px;
+}
+.footer_img_banner img{
+    width: 220px;
 }
 .footer_text{
     margin: 0;
@@ -68,6 +76,8 @@ select{
 .footer_logo_box{
     list-style: none;
     padding-left: 0;
+    padding-top: 10px;
+    margin-top: 0px;
 }
 .footer_logo_box img{
     height: 30px;
@@ -77,14 +87,14 @@ select{
     border-top: 1px solid #e6e6e6;
     clear: both;
     margin: 0 auto;
-    width: 940px;
+    width:1180px;
     display: flex;
     flex-direction: column;
 }
 .footer_wrap_wrap {
     display: flex;
     flex-direction: column;
-    width: 940px;
+    width: 1180px;
     margin: 0 auto;
     margin-bottom: 25px;
 }
@@ -97,7 +107,7 @@ select{
     height: 14px;
     float: left;
     margin-right: 10px;
-    padding: 5px;
+    /* padding: 5px; */
 }
 .fimg img{
     padding-left: 10px;

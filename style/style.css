@@ -29,7 +29,6 @@
 .index_slider_wrap{
     min-width:1180px;
     position:relative;
-    margin-bottom:30px;
     height: 760px;
 }
 
@@ -47,30 +46,43 @@
     width:100%;
 }
 
+.index_sliderListItem::after{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index:10;
+}
+
 .index_sliderListItemText_box{
+    position: relative;
     display:flex;
     align-items: center;
     flex-direction: column;
+    z-index:11;
 }
 
 
 .sliderImg01{
-    background: url(../images/sliderImage_01.jpg) no-repeat center;
+    background: url(../images/slider-imagenew01.jpg) no-repeat center;
     background-size:cover;
 }
 
 .sliderImg02{
-    background: url(../images/sliderImage_02.jpg) no-repeat center;
+    background: url(../images/slider-imagenew02.jpg) no-repeat center;
     background-size:cover;
 }
 
 .sliderImg03{
-    background: url(../images/sliderImage_03.jpg) no-repeat center;
+    background: url(../images/slider-imagenew03.jpg) no-repeat center;
     background-size:cover;
 }
 
 .sliderImg04{
-    background: url(../images/sliderImage_04.jpg) no-repeat center;
+    background: url(../images/slider-imagenew04.JPG) no-repeat center;
     background-size:cover;
 }
 
@@ -116,6 +128,7 @@
     bottom:50px;
     color:#FFFFFF;
     font-size:50px;
+    z-index:11;
 }
 
 .index_sliderControlNavBtn_box{
@@ -125,6 +138,7 @@
     width:auto;
     height:43px;
     margin-right:25px;
+    z-index:11;
 }
 
 .index_sliderPrevBtn{
@@ -233,6 +247,84 @@
     100%{width:100%}
 }
 
+.loading{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    width:100vh;
+    height:100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 99999;
+}
+
+.loading_element{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+    position:absolute;
+    width:65px;
+    height:65px;
+    background-color: none;
+    border-radius: 100%;
+}
+
+.loading--first{
+    animation: spin 2.5s infinite linear;
+    animation-delay: 0.20s;
+}
+
+.loading--second{
+    animation: spin 2.5s infinite linear;
+    animation-delay: 0.4s;
+}
+
+.loading--third{
+    animation: spin 2.5s infinite linear;
+    animation-delay: 0.6s;
+}
+
+.loading--fourth{
+    animation: spin 2.5s infinite linear;
+    animation-delay: 0.8s;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    } 
+    40%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.circle{
+    display: inline-block;
+    width:16px;
+    height:16px;
+    border-radius: 100%;
+}
+
+.circle--red{
+    background-color: rgb(137, 168, 79);
+}
+
+.circle--blue{
+    background-color: rgb(123, 175, 212);
+}
+
+.circle--green{
+    background-color: rgb(220, 68, 5);
+}
+
+.circle--yellow{
+    background-color: rgb(166, 3, 17);
+}
+
 .hidden{
     display:none;
 }
@@ -247,11 +339,12 @@
 
 /* 제목 */
 .regionMap_content>h2 {
-    font-size: 40px;
+    font-size: 44px;
     font-weight: bold;
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-top: 120px;
 }
 
 .regionMap_content>h2>span {
@@ -804,13 +897,14 @@
 .main_issue_title {
     display: block;
     margin: 0 0 50px;
-    font-size: 32px;
+    padding-top: 120px;
+    font-size: 44px;
     color: #282828;
     font-family: 'cafe24';
     text-align: center;
 }
 .main_issue_title b {
-    color: #25a261;
+    color: #2d58a0;
 }
 .main_issue_title b em{
     position: relative;
@@ -819,13 +913,12 @@
     position: absolute;
     content: '';
     top: 0px;
-    left: 85%;
-    width: 5px;
-    height: 5px;
-    background: #25a261;
+    left: 55%;
+    width: 7px;
+    height: 7px;
+    background: #2d58a0;
     border-radius: 50%;
     transform: translateX(-50%);
-  
 }
 
 .main_ {
@@ -962,10 +1055,10 @@ body {
 }
 
 .index_theme>h2 {
-    width: 1180px;
-    margin: 50px auto 0;
+    width: 100%;
+    margin-top: 120px;
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: 44px;
     font-weight: bold;
     text-align: center;
 }
@@ -974,14 +1067,15 @@ h2>span {
     position: relative;
     padding-left: 15px;
     color: #2d58a0;
+    /* text-emphasis: filled #2d58a0; */
 }
 
 h2>span::after {
     position: absolute;
     top: -25px;
-    left: 25px;
+    left: 26px;
     letter-spacing: 26px;
-    content: "\00B7\00B7\00B7\00B7";
+    content: "\00B7\00B7";
     color: #2d58a0;
 }
 
@@ -1172,10 +1266,10 @@ h2>span::after {
 /* 박경훈 공지사항 */
 .main_notice_wrap {
     width: 1180px;
-    margin: 60px auto 0;
+    margin: 120px auto 120px;
     padding: 10px;
     display: flex;
-    background: #25a261;
+    background: #2d58a0;
     font-size: 14px;
     color: white;
     box-sizing: border-box;
@@ -1219,4 +1313,10 @@ h2>span::after {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.main_notice_info2 p a:hover{
+    border-bottom: 1px solid #fff;
+}
+.main_notice_box p span a:hover{
+    border-bottom: 1px solid #fff;
 }

@@ -25,24 +25,33 @@ $(document).ready(function(){
         };
         easyPagination(paginationOptions).paginate();
         
-    }) 
-
+    })
+    $("#event_url").click(function(){
+        alert("URL이 복사되었습니다.")
+    })
     // 글로벌 네비게이션 li바 최초 숨기기 
     $("#event_gnb_li").children('ul:eq(0)').css("display","none")
     // 글로벌 네비게이션 바 클릭시 최초 숨긴 li요소 슬라이드 토글 메소드 실행 
     $("#event_gnb_li").click(function () {
         $("#event_gnb_li").children('ul:eq(0)').slideToggle(500)
     })
-
     // 필터 버튼 누르면 이벤트 리스트 새로 세팅하는 함수한테 전달
+      //ing_filter_btn getElement<- 
     $("#ing_filter_btn").click(function(){
+        // add click change background-color <-?
+       $("#ing_filter_btn").css({"background-color":"#0051A4","color":"white"})
+       $("#ing_filter_btn").siblings().css({"background-color":"white","color":"black"})
         // id: ing_filter_btn 버튼을 누르면 어트리뷰트 value값 setEventList함수에 전달
         setEventList($("#ing_filter_btn").attr('value'))
     })
     $("#due_filter_btn").click(function(){
+        $("#due_filter_btn").css({"background-color":"#0051A4","color":"white"})
+        $("#due_filter_btn").siblings().css({"background-color":"white","color":"black"})
         setEventList($("#due_filter_btn").attr('value'))
     })
     $("#complete_filter_btn").click(function(){
+        $("#complete_filter_btn").css({"background-color":"#0051A4","color":"white"})
+        $("#complete_filter_btn").siblings().css({"background-color":"white","color":"black"})
         setEventList($("#complete_filter_btn").attr('value'))
     })
     
@@ -91,8 +100,9 @@ $(document).ready(function(){
         // event_main_board_content_wrap 요소 자식으로 랜더링하기 
         return $('.event_main_board_content_wrap')
                 .append(
-                    `<li>
-                    <a class="link" href="${data.link}">
+                    `
+                    <li>
+                        <a class="link" href="${data.link}">
                         <div class="event_content_img">
                             <img src="images/${data.img}" alt="">
                         </div>
@@ -108,8 +118,8 @@ $(document).ready(function(){
                             </div>
                         </div>
                     </li>
-                    <hr>`
+                    <hr>
+                    `
                 )
     }
-
 })

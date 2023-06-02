@@ -16,10 +16,91 @@
 
 <body>
     <header class="header" id="header"></header>
-    <main id="main" class="main">
-        <div id="festival_list_title" class="festival_list_title">
-            <h2>축제 한눈에 보기</h2>
+    <div class="loading">
+        <div class="loading_element loading--first">
+            <div class="circle circle--red"></div>
         </div>
+        <div class="loading_element loading--second">
+            <div class="circle circle--blue"></div>
+        </div>
+        <div class="loading_element loading--third">
+            <div class="circle circle--green"></div>
+        </div>
+        <div class="loading_element loading--fourth">
+            <div class="circle circle--yellow"></div>
+        </div>
+    </div>
+    <div class="festival_main_banner">
+        <h2 class="festival_main_text">행사/축제안내</h2>
+    </div>
+    <div class="festival_subGnb_wrap">
+        <div class="festival_subGnbContent_wrap">
+            <ul class="festival_subGnbList">
+                <li class="festival_subGnbListFirstItem">
+                    <a class="festival_subGnbListFirstItemLink" href="#none">
+                        <img src="images/home_ic.jpg" alt="메인 페이지로">
+                    </a>
+                </li>
+                <li class="festival_subGnbListItem">
+                    <span class="festival_subGnbListItemText">행사</span>
+                </li>
+                <a class="festival_subGnbListItemLink" href="#none">
+                    <li class="festival_subGnbListItem" id="festival_gnb_li"> <span
+                            style="color: #5289e6; border-bottom: 1px solid #5289e6;">축제 ▾</span>
+                        <ul id="festival_ul">
+                            <a href="/event/event.html">
+                                <li class="festival_ho">이벤트</li>
+                            </a>
+                        </ul>
+                        <!-- <span class="festival_subGnbListItemLinkText"></span>
+                        <i class="fa-solid fa-caret-down festival_subGnbListItemLinkTriangle"></i> -->
+                    </li>
+                </a>
+            </ul>
+            <div class="festival_subGnbSns_box">
+                <ul class="festival_subGnbSnsFuncList">
+                    <li class="festival_subGnbSnsFuncListItem">
+                        <a href="#none">
+                            <img src="images/mail_ic.png" alt="">
+                        </a>
+                    </li>
+                    <li class="festival_subGnbSnsFuncListItem">
+                        <a href="#none">
+                            <img src="images/print_ic.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="festival_subGnbSnsList">
+                    <li class="festival_subGnbSnsListItem festival_subGnbSnsListItem--noMargin">
+                        <a href="#none">
+                            <img class="festival_subGnbSnsListItemLinkImg" src="images/copy2_ic.png" alt="">
+                        </a>
+                    </li>
+                    <li class="festival_subGnbSnsListItem">
+                        <a href="#none">
+                            <img class="festival_subGnbSnsListItemLinkImg" src="images/face_ic.png" alt="">
+                        </a>
+                    </li>
+                    <li class="festival_subGnbSnsListItem">
+                        <a href="#none">
+                            <img class="festival_subGnbSnsListItemLinkImg" src="images/twi_ic.png" alt="">
+                        </a>
+                    </li>
+                    <li class="festival_subGnbSnsListItem">
+                        <a href="#none">
+                            <img class="festival_subGnbSnsListItemLinkImg" src="images/kakao_ic.png" alt="">
+                        </a>
+                    </li>
+                    <li class="festival_subGnbSnsListItem">
+                        <a href="#none">
+                            <img class="festival_subGnbSnsListItemLinkImg" src="images/naver_ic.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <main id="main" class="main">
         <section class="festival_fillter_wrap">
             <h3 class="screen_out">지역선택</h3>
             <div class="festival_region_fillter_box">
@@ -47,7 +128,7 @@
                 <button type="button" value="전체">전체</button>
                 <button type="button" value="먹거리">먹거리</button>
                 <button type="button" value="힐링">힐링</button>
-                <button type="button" value="전체">여행 MBTI</button>
+                <button type="button" onclick="location.href='https://poomang.com/festival'">여행 MBTI</button>
             </div>
         </section>
 
@@ -66,12 +147,7 @@
     </main>
     <footer class="footer" id="footer"></footer>
     <script src="../festival/js/festival.js"></script>
-    <script>
-        //Header
-        $(".header").load("../header/header.html");
-        //Footer
-        $(".footer").load("../footer/footer.html");
-    </script>
+
 </body>
 
 </html>
