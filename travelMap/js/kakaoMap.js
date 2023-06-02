@@ -8,6 +8,19 @@ let mapContainer = document.getElementById("travelMap"),
 };
 let map = new kakao.maps.Map(mapContainer, mapOption);
 
+var beach_imageSrc = 'img/beach-icon.png', // 마커이미지의 주소입니다    
+	nature_imageSrc = 'img/nature-icon.png', // 마커이미지의 주소입니다    
+	hotel_imageSrc = 'img/hotel-icon.png', // 마커이미지의 주소입니다    
+	experience_imageSrc = 'img/experience-icon.png', // 마커이미지의 주소입니다    
+	camping_imageSrc = 'img/camping-icon.png', // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(50, 50), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(27, 69)};
+var beach_markerImage = new kakao.maps.MarkerImage(beach_imageSrc, imageSize, imageOption)
+var nature_markerImage = new kakao.maps.MarkerImage(nature_imageSrc, imageSize, imageOption)
+var hotel_markerImage = new kakao.maps.MarkerImage(hotel_imageSrc, imageSize, imageOption)
+var experience_markerImage = new kakao.maps.MarkerImage(experience_imageSrc, imageSize, imageOption)
+var camping_markerImage = new kakao.maps.MarkerImage(camping_imageSrc, imageSize, imageOption)
+
 // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
 var mapTypeControl = new kakao.maps.MapTypeControl();
 
@@ -81,26 +94,31 @@ $.getJSON(url, function (data) {
 	beach_markers = beach.map((position) => {
 		return new kakao.maps.Marker({
 			position: new kakao.maps.LatLng(position.위도, position.경도),
+			image: beach_markerImage
 		});
 	});
 	nature_markers = nature.map((position) => {
 		return new kakao.maps.Marker({
 			position: new kakao.maps.LatLng(position.위도, position.경도),
+			image: nature_markerImage
 		});
 	});
 	hotel_markers = hotel.map((position) => {
 		return new kakao.maps.Marker({
 			position: new kakao.maps.LatLng(position.위도, position.경도),
+			image: hotel_markerImage
 		});
 	});
 	experience_markers = experience.map((position) => {
 		return new kakao.maps.Marker({
 			position: new kakao.maps.LatLng(position.위도, position.경도),
+			image: experience_markerImage
 		});
 	});
 	camping_markers = camping.map((position) => {
 		return new kakao.maps.Marker({
 			position: new kakao.maps.LatLng(position.위도, position.경도),
+			image: camping_markerImage
 		});
 	});
 
