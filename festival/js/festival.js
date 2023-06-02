@@ -163,7 +163,8 @@ $(document).ready(function () {
                 };
             };
             displayPage(0);
-      
+
+            $(document).ready(function () {
                 nextPageBtn.addEventListener('click', () => {
                     nextPageNum = pageActiveIdx * maxPageNum + maxPageNum;
                     displayRow(nextPageNum);
@@ -176,9 +177,11 @@ $(document).ready(function () {
                     --pageActiveIdx;
                     displayPage(pageActiveIdx);
                 });
-       
+            });
             $('.loading').addClass('hidden');
+
         });
+
     };
     //Header
     $(".header").load("../header/header.html");
