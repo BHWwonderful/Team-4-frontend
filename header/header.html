@@ -108,7 +108,7 @@
     $(window).on("scroll", function () {
         let scroll = $(window).scrollTop();
         if (scroll >= 381) {
-            if (arSplitPath[1] == "region" || arSplitPath[1] == "course") {
+            if (arSplitPath[1] == "region" || arSplitPath[1] == "course" || arSplitPath[1] == "travelAi") {
                 $(".gnb_1dp_link:eq(0)").addClass("gnb_path_active");
             }
             if (arSplitPath[1] == "evnet" || arSplitPath[1] == "festival") {
@@ -117,11 +117,13 @@
             if (arSplitPath[1] == "package&theme") {
                 $(".gnb_1dp_link:eq(2)").addClass("gnb_path_active");
             }
-            if (arSplitPath[1] == "map" || arSplitPath[1] == "course") {
-                $(".gnb_1dp_link:eq(3)").addClass("gnb_path_active");
-            }
+
         } else {
             $(".gnb_1dp li a").removeClass("gnb_path_active");
         }
-    })
+    });
+
+    if (arSplitPath[1] == "travelMap") {
+        $(".gnb_1dp_link:eq(3)").addClass("gnb_path_active");
+    }
 </script>

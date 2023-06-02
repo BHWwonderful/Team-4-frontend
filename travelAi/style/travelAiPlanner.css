@@ -455,7 +455,7 @@
     font-size: 18px;
 }
 
-.travelAiPlanner_frontCard_wrap>button::after {
+.travelAiPlanner_frontMakeMore_box>button::after {
     content: '';
     display: inline-block;
     width: 6px;
@@ -554,6 +554,7 @@
     width: 24px;
     height: 24px;
     background: url("/travelAi/images/travelAiPlanner/btn_curation_area_mclose.png") center no-repeat;
+    background-size: 24px auto;
     position: absolute;
     top: 8px;
     left: 8px;
