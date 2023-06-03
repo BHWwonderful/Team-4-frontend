@@ -96,30 +96,60 @@ $(document).ready(function(){
 
 
     function listRender(data) {
+      
         // data 파라미터 전달 받은후 데이터 세팅 
         // event_main_board_content_wrap 요소 자식으로 랜더링하기 
-        return $('.event_main_board_content_wrap')
-                .append(
-                    `
-                    <li>
-                        <a class="link" href="${data.link}">
-                        <div class="event_content_img">
-                            <img src="images/${data.img}" alt="">
+
+        if(data.eventStatus!=="complete"){
+            $('.event_main_board_content_wrap')
+            .append(
+                `
+                <li class="event_main_li_content_wrap">
+                    <a class="link" href="${data.link}">
+                    <div class="event_content_img">
+                        <img src="images/${data.img}" alt="">
+                    </div>
+                    <div class="event_content">
+                        <p class="title">${data.title}</p>
+                        </a>
+                        <p class="content">${data.content}</p>
+                        <div class="event_main_bottom">
+                            <span class="writer">작성자</span>
+                            <b class="createdBy">${data.createdBy}</b>
+                            <span class="writerDate">작성일</span>
+                            <span>${data.createdAt}</span>
                         </div>
-                        <div class="event_content">
-                            <p class="title">${data.title}</p>
-                            </a>
-                            <p class="content">${data.content}</p>
-                            <div class="event_main_bottom">
-                                <span class="writer">작성자</span>
-                                <b class="createdBy">${data.createdBy}</b>
-                                <span class="writerDate">작성일</span>
-                                <span>${data.createdAt}</span>
-                            </div>
+                    </div>
+                </li>
+                <hr>
+                `
+            )
+       
+        } else {
+            $('.event_main_board_content_wrap')
+            .append(
+                `
+                <li class="event_main_li_content_wrap">
+                    <a class="link" href="${data.link}">
+                    <div class="event_content_img">
+                        <img src="images/${data.img}" alt="" style="filter: brightness(30%);">
+                    </div>
+                    <div class="event_content">
+                        <p class="title">${data.title}</p>
+                        </a>
+                        <p class="content">${data.content}</p>
+                        <div class="event_main_bottom">
+                            <span class="writer">작성자</span>
+                            <b class="createdBy">${data.createdBy}</b>
+                            <span class="writerDate">작성일</span>
+                            <span>${data.createdAt}</span>
                         </div>
-                    </li>
-                    <hr>
-                    `
-                )
+                    </div>
+                </li>
+                <hr>
+                `
+            )
+        }
+     
     }
 })
