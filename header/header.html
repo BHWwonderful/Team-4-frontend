@@ -92,14 +92,17 @@
 </div>
 
 <script type="text/javascript">
-    $(".gnb_1dp > li").mouseover(function () {
-        $(".gnb_2dp_bg").stop().slideUp(100);
-        $(this).find(".gnb_2dp_bg").stop().slideDown("fast");
-    })
+    window.onload = function () {
+        $(".gnb_1dp > li").mouseover(function () {
+            $(".gnb_2dp_bg").stop().slideUp(100);
+            $(this).find(".gnb_2dp_bg").stop().slideDown("fast");
+        })
 
-    $(".main").mouseover(function () {
-        $(".gnb_2dp_bg").stop().slideUp(100);
-    })
+        $(".main").mouseover(function () {
+            $(".gnb_2dp_bg").stop().slideUp(100);
+        })
+    }
+
 
     var path = window.location.pathname;
 
@@ -117,11 +120,13 @@
             if (arSplitPath[1] == "package&theme") {
                 $(".gnb_1dp_link:eq(2)").addClass("gnb_path_active");
             }
-            if (arSplitPath[1] == "map" || arSplitPath[1] == "course") {
-                $(".gnb_1dp_link:eq(3)").addClass("gnb_path_active");
-            }
+
         } else {
             $(".gnb_1dp li a").removeClass("gnb_path_active");
         }
-    })
+    });
+
+    if (arSplitPath[1] == "travelmap") {
+        $(".gnb_1dp_link:eq(3)").addClass("gnb_path_active");
+    }
 </script>
