@@ -36,7 +36,7 @@
                                         <a href="/region/region.html">지역 여행지</a>
                                     </li>
                                     <li>
-                                        <a href="/travelai/travelai.html">여행 콕콕</a>
+                                        <a href="/travelAi/travelAi.html">여행 콕콕</a>
                                     </li>
                                 </ul>
                             </div>
@@ -107,9 +107,10 @@
     var path = window.location.pathname;
 
     var arSplitPath = path.split("/");
-    $(window).on("scroll", function () {
+        $(window).on("scroll", function () {
         let scroll = $(window).scrollTop();
         if (scroll >= 381) {
+            $(".gnb_1dp li a").removeClass("gnb_path_active");
             if (arSplitPath[1] == "region" || arSplitPath[1] == "course" || arSplitPath[1] == "travelAi") {
                 $(".gnb_1dp_link:eq(0)").addClass("gnb_path_active");
             }
@@ -119,8 +120,7 @@
             if (arSplitPath[1] == "package&theme") {
                 $(".gnb_1dp_link:eq(2)").addClass("gnb_path_active");
             }
-        } else {
-            $(".gnb_1dp li a").removeClass("gnb_path_active");
+
         }
     });
 
