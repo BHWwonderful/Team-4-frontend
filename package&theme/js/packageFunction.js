@@ -10,44 +10,6 @@ topBtn.onclick = () => {
 };
 
 $(document).ready(() => {
-	// hover 이미지 키우기
-	$(".package_card_bgImg").hover(
-		function () {
-			$(this).stop().animate({ backgroundSize: "auto" }, 400);
-		},
-		function () {
-			$(this).stop().animate({ backgroundSize: "cover" }, 400);
-		}
-	);
-
-	// sample 슬라이드
-	s_currentSlide = 1;
-	s_sliderWidth = 1180;
-	s_slideCount = 3;
-	$(".sample_slideBtn_next").on("click", function () {
-		s_currentSlide++;
-		if (s_currentSlide > s_slideCount) {
-			s_currentSlide = 1;
-			$(".sample_slideImg_box").css("left", "0px");
-		}
-		$(".sample_slideImg_box")
-			.stop()
-			.animate({ left: -s_currentSlide * s_sliderWidth + "px" }, "fast");
-	});
-	$(".sample_slideBtn_prev").on("click", function () {
-		s_currentSlide--;
-		if (s_currentSlide < 1) {
-			s_currentSlide = s_slideCount;
-			$(".sample_slideImg_box").css(
-				"left",
-				-1180 - s_currentSlide * s_sliderWidth + "px"
-			);
-		}
-		$(".sample_slideImg_box")
-			.stop()
-			.animate({ left: -s_currentSlide * s_sliderWidth + "px" }, "fast");
-	});
-
 	// package_travel_now 슬라이드
 	origin = 1770;
 	p_currentSlide = 0;
